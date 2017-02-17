@@ -11,7 +11,7 @@ class HomeTop extends Component{
 
 class RecommendBox extends Component{
     render(){
-        return <div>{this.props.children}</div>
+        return <div className={style.recommendBox}>{this.props.children}</div>
     }
 }
 

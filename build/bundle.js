@@ -26646,7 +26646,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                null,
+	                { className: _home2.default.recommendBox },
 	                this.props.children
 	            );
 	        }
@@ -27198,11 +27198,12 @@
 
 
 	// module
-	exports.push([module.id, "html,body{\r\n    padding: 0;\r\n    margin: 0;\r\n    height: 100%;\r\n}\r\n\r\nhtml{\r\n    font-size: 10px;\r\n}\r\n\r\nbody{\r\n    font-family: 'Microsoft YaHei';\r\n    font-size: 1.6rem;\r\n}\r\n\r\na{\r\n    text-decoration: none;\r\n    color: #666;\r\n}\r\n\r\n.home__homeTop-1lDmB{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 60px;\r\n    line-height: 60px;\r\n    font-size: 2.4rem;\r\n    font-weight: bold;\r\n    background-color: #fff;\r\n    opacity: 0.8;\r\n    padding: 0 20px;\r\n}\r\n\r\n.home__homeTop-1lDmB::after{\r\n    content: '+';\r\n    float: right;\r\n}\r\n\r\n.home__recommendItem-3ELmm{\r\n    margin: 20px;\r\n    padding: 20px;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n\r\n.home__recommendImg-atweB{\r\n    height: 200px;\r\n    background-color: #999;\r\n}\r\n\r\n.home__time-z1Irv{\r\n    color: #999;\r\n}", ""]);
+	exports.push([module.id, "html,body{\r\n    padding: 0;\r\n    margin: 0;\r\n    height: 100%;\r\n}\r\n\r\nhtml{\r\n    font-size: 10px;\r\n}\r\n\r\nbody{\r\n    font-family: 'Microsoft YaHei';\r\n    font-size: 1.6rem;\r\n}\r\n\r\na{\r\n    text-decoration: none;\r\n    color: #666;\r\n}\r\n\r\n.home__homeTop-1lDmB{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 60px;\r\n    line-height: 60px;\r\n    font-size: 2.4rem;\r\n    font-weight: bold;\r\n    background-color: #fff;\r\n    opacity: 0.8;\r\n    padding: 0 20px;\r\n}\r\n\r\n.home__homeTop-1lDmB::after{\r\n    content: '+';\r\n    float: right;\r\n}\r\n\r\n.home__recommendBox-7ndF7{\r\n    margin-bottom: 50px;\r\n}\r\n\r\n.home__recommendItem-3ELmm{\r\n    margin: 20px;\r\n    padding: 20px;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n\r\n.home__recommendImg-atweB{\r\n    height: 200px;\r\n    background-color: #999;\r\n}\r\n\r\n.home__time-z1Irv{\r\n    color: #999;\r\n}", ""]);
 
 	// exports
 	exports.locals = {
 		"homeTop": "home__homeTop-1lDmB",
+		"recommendBox": "home__recommendBox-7ndF7",
 		"recommendItem": "home__recommendItem-3ELmm",
 		"recommendImg": "home__recommendImg-atweB",
 		"time": "home__time-z1Irv"
