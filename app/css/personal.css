@@ -1,0 +1,59 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Microsoft YaHei';
+    font-size: 1.2rem;
+}
+
+a{
+    text-decoration: none;
+    color: #666;
+}
+
+.personal{
+    background-color: #efefef;
+    height: 100vh;
+}
+
+.headBox{
+    background-color: #444;
+    padding: 20px 0;
+}
+
+.headImg{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url("../images/pen.png");
+    background-size: cover; 
+    margin: 0 auto;
+}
+
+.headInfo{
+    text-align: center;
+    color: #fff;
+}
+
+.settingItem{
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px solid #ccc;
+    padding: 0 25px;
+    position: relative;
+    background-color: #fff;
+}
+
+.settingItem::after{
+    content: ">";
+    position: absolute;
+    right: 20px;
+
+}
