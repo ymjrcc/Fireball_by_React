@@ -1,0 +1,61 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Microsoft YaHei';
+    font-size: 1.6rem;
+}
+
+a{
+    text-decoration: none;
+    color: #666;
+}
+
+.discoverTop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #f8f8f8;
+    opacity: 0.8;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.discoverBox{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #f3f3f3;
+}
+
+.discoverSection{
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-top: 1px solid #f3f3f3;
+    padding: 0 20px;
+}
+
+.sectionImgBox{
+    display: flex;
+    padding-bottom: 20px;
+}
+.sectionImg{
+    flex: 1;
+    height: 100px;
+    background-color: #eee;
+}
+
+.sectionImg:nth-child(even){
+    margin: 0 20px;
+}

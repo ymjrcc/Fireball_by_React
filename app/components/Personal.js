@@ -17,11 +17,11 @@ class HeaderInfo extends Component{
             <div className={style.headInfo}>
                 <p>{this.props.name}</p>
                 <p>
-                    {'买到' + this.props.goods + '个好物'}
+                    {'买到 ' + this.props.goods + ' 个好物'}
                     {' · '}
-                    {this.props.subscription + '个订阅'}
+                    {this.props.subscription + ' 个订阅'}
                     {' · '}
-                    {this.props.likes + '喜欢'}
+                    {this.props.likes + ' 喜欢'}
                 </p>
             </div>
         )

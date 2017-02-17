@@ -1,0 +1,53 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Microsoft YaHei';
+    font-size: 1.6rem;
+}
+
+a{
+    text-decoration: none;
+    color: #666;
+}
+
+.homeTop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    line-height: 60px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    background-color: #fff;
+    opacity: 0.8;
+    padding: 0 20px;
+}
+
+.homeTop::after{
+    content: '+';
+    float: right;
+}
+
+.recommendItem{
+    margin: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.recommendImg{
+    height: 200px;
+    background-color: #999;
+}
+
+.time{
+    color: #999;
+}
