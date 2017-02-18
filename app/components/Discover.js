@@ -7,7 +7,12 @@ let DiscoverTop = ()=>(<div className={style.discoverTop}>发 现</div>);
 
 class DiscoverTopRow extends Component{
     render(){
-        return (<div>DiscoverTopRow</div>)
+        return (
+            <div className={style.discoverTopRow}>
+                <div className={style.discoverTopItem}>本周好物排行</div>
+                <div className={style.discoverTopItem}>所有买手</div>
+            </div>
+        )
     }
 }
 
@@ -29,13 +34,49 @@ class DiscoverSection extends Component{
 
 class DiscoverBanner extends Component{
     render(){
-        return (<div>DiscoverBanner</div>)
+        return (
+            <div className={style.discoverBanner}>
+                <div className={style.discoverBannerImg}></div>
+                <div className={style.discoverBannerImg}></div>
+            </div>
+        )
+    }
+}
+
+class RecommendItem extends Component{
+    render(){
+        return (
+            <div className={style.recommendItem}>
+                <div className={style.recommendItemImg}></div>
+                <div className={style.recommendItemName}>{this.props.name}</div>
+                <div className={style.recommendItemDesc}>{this.props.desc}</div>
+                <RecommendFollowBtn />
+            </div>
+        )
+    }
+}
+
+class RecommendFollowBtn extends Component{
+    render(){
+        return (
+            <button className={style.recommendFollowBtn}>关注</button>
+        )
     }
 }
 
 class RecommendSection extends Component{
     render(){
-        return (<div>RecommendSection</div>)
+        return (
+            <div className={style.recommendSection}>
+                <h3>本周推荐</h3>
+                <p>3个推荐买手</p>
+                <div className={style.recommendItemBox}>
+                    <RecommendItem name="Irena. T" desc="健身×乐趣=生活" />
+                    <RecommendItem name="自然选择号" desc="李叔带你发现好东西" />
+                    <RecommendItem name="盐" desc="一个盐系男子的日常" />
+                </div>
+            </div>
+        )
     }
 }
 

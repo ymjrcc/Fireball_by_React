@@ -14,7 +14,7 @@ import Settings from './components/Settings'
 ReactDOM.render(
     (
         <Router history={hashHistory}>
-            <Route path="/" component={Personal} />
+            <Route path="/" component={Home} />
             <Route path="/home" component={Home} />
             <Route path="/discover" component={Discover} />
             <Route path="/personal" component={Personal} />
