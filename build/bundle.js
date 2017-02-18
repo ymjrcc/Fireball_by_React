@@ -97,7 +97,7 @@
 	_reactDom2.default.render(_react2.default.createElement(
 	    _reactRouter.Router,
 	    { history: _reactRouter.hashHistory },
-	    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Personal2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Home2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/home', component: _Home2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/discover', component: _Discover2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/personal', component: _Personal2.default }),
@@ -27198,7 +27198,7 @@
 
 
 	// module
-	exports.push([module.id, "html,body{\r\n    padding: 0;\r\n    margin: 0;\r\n    height: 100%;\r\n}\r\n\r\nhtml{\r\n    font-size: 10px;\r\n}\r\n\r\nbody{\r\n    font-family: 'Microsoft YaHei';\r\n    font-size: 1.6rem;\r\n}\r\n\r\na{\r\n    text-decoration: none;\r\n    color: #666;\r\n}\r\n\r\n.home__homeTop-1lDmB{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 60px;\r\n    line-height: 60px;\r\n    font-size: 2.4rem;\r\n    font-weight: bold;\r\n    background-color: #fff;\r\n    opacity: 0.8;\r\n    padding: 0 20px;\r\n}\r\n\r\n.home__homeTop-1lDmB::after{\r\n    content: '+';\r\n    float: right;\r\n}\r\n\r\n.home__recommendBox-7ndF7{\r\n    margin-bottom: 50px;\r\n}\r\n\r\n.home__recommendItem-3ELmm{\r\n    margin: 20px;\r\n    padding: 20px;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n\r\n.home__recommendImg-atweB{\r\n    height: 200px;\r\n    background-color: #999;\r\n}\r\n\r\n.home__time-z1Irv{\r\n    color: #999;\r\n}", ""]);
+	exports.push([module.id, ".home__homeTop-1lDmB{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 60px;\r\n    line-height: 60px;\r\n    font-size: 2.4rem;\r\n    font-weight: bold;\r\n    background-color: #fff;\r\n    opacity: 0.8;\r\n    padding: 0 20px;\r\n}\r\n\r\n.home__homeTop-1lDmB::after{\r\n    content: '+';\r\n    float: right;\r\n}\r\n\r\n.home__recommendBox-7ndF7{\r\n    margin-bottom: 50px;\r\n}\r\n\r\n.home__recommendItem-3ELmm{\r\n    margin: 20px;\r\n    padding: 20px;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n\r\n.home__recommendImg-atweB{\r\n    height: 200px;\r\n    background-color: #999;\r\n}\r\n\r\n.home__time-z1Irv{\r\n    color: #999;\r\n}", ""]);
 
 	// exports
 	exports.locals = {
@@ -27265,8 +27265,17 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                null,
-	                'DiscoverTopRow'
+	                { className: _discover2.default.discoverTopRow },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _discover2.default.discoverTopItem },
+	                    '\u672C\u5468\u597D\u7269\u6392\u884C'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _discover2.default.discoverTopItem },
+	                    '\u6240\u6709\u4E70\u624B'
+	                )
 	            );
 	        }
 	    }]);
@@ -27327,8 +27336,9 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                null,
-	                'DiscoverBanner'
+	                { className: _discover2.default.discoverBanner },
+	                _react2.default.createElement('div', { className: _discover2.default.discoverBannerImg }),
+	                _react2.default.createElement('div', { className: _discover2.default.discoverBannerImg })
 	            );
 	        }
 	    }]);
@@ -27336,8 +27346,65 @@
 	    return DiscoverBanner;
 	}(_react.Component);
 
-	var RecommendSection = function (_Component4) {
-	    _inherits(RecommendSection, _Component4);
+	var RecommendItem = function (_Component4) {
+	    _inherits(RecommendItem, _Component4);
+
+	    function RecommendItem() {
+	        _classCallCheck(this, RecommendItem);
+
+	        return _possibleConstructorReturn(this, (RecommendItem.__proto__ || Object.getPrototypeOf(RecommendItem)).apply(this, arguments));
+	    }
+
+	    _createClass(RecommendItem, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _discover2.default.recommendItem },
+	                _react2.default.createElement('div', { className: _discover2.default.recommendItemImg }),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _discover2.default.recommendItemName },
+	                    this.props.name
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _discover2.default.recommendItemDesc },
+	                    this.props.desc
+	                ),
+	                _react2.default.createElement(RecommendFollowBtn, null)
+	            );
+	        }
+	    }]);
+
+	    return RecommendItem;
+	}(_react.Component);
+
+	var RecommendFollowBtn = function (_Component5) {
+	    _inherits(RecommendFollowBtn, _Component5);
+
+	    function RecommendFollowBtn() {
+	        _classCallCheck(this, RecommendFollowBtn);
+
+	        return _possibleConstructorReturn(this, (RecommendFollowBtn.__proto__ || Object.getPrototypeOf(RecommendFollowBtn)).apply(this, arguments));
+	    }
+
+	    _createClass(RecommendFollowBtn, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'button',
+	                { className: _discover2.default.recommendFollowBtn },
+	                '\u5173\u6CE8'
+	            );
+	        }
+	    }]);
+
+	    return RecommendFollowBtn;
+	}(_react.Component);
+
+	var RecommendSection = function (_Component6) {
+	    _inherits(RecommendSection, _Component6);
 
 	    function RecommendSection() {
 	        _classCallCheck(this, RecommendSection);
@@ -27350,8 +27417,24 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                null,
-	                'RecommendSection'
+	                { className: _discover2.default.recommendSection },
+	                _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    '\u672C\u5468\u63A8\u8350'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    '3\u4E2A\u63A8\u8350\u4E70\u624B'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _discover2.default.recommendItemBox },
+	                    _react2.default.createElement(RecommendItem, { name: 'Irena. T', desc: '\u5065\u8EAB\xD7\u4E50\u8DA3=\u751F\u6D3B' }),
+	                    _react2.default.createElement(RecommendItem, { name: '\u81EA\u7136\u9009\u62E9\u53F7', desc: '\u674E\u53D4\u5E26\u4F60\u53D1\u73B0\u597D\u4E1C\u897F' }),
+	                    _react2.default.createElement(RecommendItem, { name: '\u76D0', desc: '\u4E00\u4E2A\u76D0\u7CFB\u7537\u5B50\u7684\u65E5\u5E38' })
+	                )
 	            );
 	        }
 	    }]);
@@ -27359,8 +27442,8 @@
 	    return RecommendSection;
 	}(_react.Component);
 
-	var DiscoverBox = function (_Component5) {
-	    _inherits(DiscoverBox, _Component5);
+	var DiscoverBox = function (_Component7) {
+	    _inherits(DiscoverBox, _Component7);
 
 	    function DiscoverBox() {
 	        _classCallCheck(this, DiscoverBox);
@@ -27391,8 +27474,8 @@
 	    return DiscoverBox;
 	}(_react.Component);
 
-	var Discover = function (_Component6) {
-	    _inherits(Discover, _Component6);
+	var Discover = function (_Component8) {
+	    _inherits(Discover, _Component8);
 
 	    function Discover() {
 	        _classCallCheck(this, Discover);
@@ -27453,15 +27536,26 @@
 
 
 	// module
-	exports.push([module.id, "html,body{\r\n    padding: 0;\r\n    margin: 0;\r\n    height: 100%;\r\n}\r\n\r\nhtml{\r\n    font-size: 10px;\r\n}\r\n\r\nbody{\r\n    font-family: 'Microsoft YaHei';\r\n    font-size: 1.6rem;\r\n}\r\n\r\na{\r\n    text-decoration: none;\r\n    color: #666;\r\n}\r\n\r\n.discover__discoverTop-HspIP{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 50px;\r\n    line-height: 50px;\r\n    font-size: 2rem;\r\n    font-weight: bold;\r\n    background-color: #f8f8f8;\r\n    opacity: 0.8;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ddd;\r\n}\r\n\r\n.discover__discoverBox-24RGv{\r\n    margin-top: 50px;\r\n    margin-bottom: 50px;\r\n    background-color: #f3f3f3;\r\n}\r\n\r\n.discover__discoverSection-2h8hz{\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px;\r\n}\r\n\r\n.discover__sectionImgBox-20_bn{\r\n    display: flex;\r\n    padding-bottom: 20px;\r\n}\r\n.discover__sectionImg-3M5wQ{\r\n    flex: 1;\r\n    height: 100px;\r\n    background-color: #eee;\r\n}\r\n\r\n.discover__sectionImg-3M5wQ:nth-child(even){\r\n    margin: 0 20px;\r\n}", ""]);
+	exports.push([module.id, ".discover__discoverTop-HspIP{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 50px;\r\n    line-height: 50px;\r\n    font-size: 2rem;\r\n    font-weight: bold;\r\n    background-color: #f8f8f8;\r\n    opacity: 0.8;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ddd;\r\n}\r\n\r\n.discover__discoverBox-24RGv{\r\n    margin-top: 50px;\r\n    margin-bottom: 50px;\r\n    background-color: #f3f3f3;\r\n    overflow-x: hidden;\r\n}\r\n\r\n.discover__discoverTopRow-3octI{\r\n    display: flex;\r\n    padding: 20px;\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx{\r\n    flex: 1;\r\n    height: 80px;\r\n    line-height: 80px;\r\n    background-color: #eee;\r\n    text-align: center;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx:first-child{\r\n    margin-right: 20px;\r\n}\r\n\r\n.discover__discoverSection-2h8hz{\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px;\r\n}\r\n\r\n.discover__sectionImgBox-20_bn{\r\n    display: flex;\r\n    padding-bottom: 20px;\r\n}\r\n.discover__sectionImg-3M5wQ{\r\n    flex: 1;\r\n    height: 100px;\r\n    background-color: #eee;\r\n}\r\n\r\n.discover__sectionImg-3M5wQ:nth-child(even){\r\n    margin: 0 20px;\r\n}\r\n\r\n.discover__discoverBanner-3M_yZ{\r\n    margin: 20px 10px;\r\n    overflow-x: hidden;\r\n    width: 900%;\r\n}\r\n\r\n.discover__discoverBannerImg-1dlDI{\r\n    display: inline-block;\r\n    width: 80vw;\r\n    height: 100px;\r\n    margin: 0 10px;\r\n    background-color: #eee;\r\n    border: 1px solid #999;\r\n    border-radius: 10px;\r\n}\r\n\r\n.discover__recommendSection-aZ8W2{\r\n    background-color: #fff;\r\n    margin-bottom: 50px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px 30px;\r\n}\r\n\r\n.discover__recommendItemBox-oGHTb{\r\n    display: flex;\r\n}\r\n\r\n.discover__recommendItem-1hDAE{\r\n    flex: 1;\r\n    text-align: center;\r\n}\r\n\r\n.discover__recommendItemImg-1EIxm{\r\n    width: 80px;\r\n    height: 80px;\r\n    background-color: #eee;\r\n    border-radius: 50%;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendItemName-2hgdv{\r\n    width: 100px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    font-size: 1.8rem;\r\n    margin: 10px auto;\r\n}\r\n\r\n.discover__recommendItemDesc-2qIP7{\r\n    font-size: 1.4rem;\r\n    color: #999;\r\n    width: 90px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendFollowBtn-26_9S{\r\n    background-color: #fff;\r\n    border: 1px solid indianred;\r\n    color: indianred;\r\n    border-radius: 2px;\r\n    width: 60px;\r\n    height: 28px;\r\n    line-height: 28px;\r\n}", ""]);
 
 	// exports
 	exports.locals = {
 		"discoverTop": "discover__discoverTop-HspIP",
 		"discoverBox": "discover__discoverBox-24RGv",
+		"discoverTopRow": "discover__discoverTopRow-3octI",
+		"discoverTopItem": "discover__discoverTopItem-2AGnx",
 		"discoverSection": "discover__discoverSection-2h8hz",
 		"sectionImgBox": "discover__sectionImgBox-20_bn",
-		"sectionImg": "discover__sectionImg-3M5wQ"
+		"sectionImg": "discover__sectionImg-3M5wQ",
+		"discoverBanner": "discover__discoverBanner-3M_yZ",
+		"discoverBannerImg": "discover__discoverBannerImg-1dlDI",
+		"recommendSection": "discover__recommendSection-aZ8W2",
+		"recommendItemBox": "discover__recommendItemBox-oGHTb",
+		"recommendItem": "discover__recommendItem-1hDAE",
+		"recommendItemImg": "discover__recommendItemImg-1EIxm",
+		"recommendItemName": "discover__recommendItemName-2hgdv",
+		"recommendItemDesc": "discover__recommendItemDesc-2qIP7",
+		"recommendFollowBtn": "discover__recommendFollowBtn-26_9S"
 	};
 
 /***/ },
@@ -27699,7 +27793,7 @@
 
 
 	// module
-	exports.push([module.id, "html,body{\n    padding: 0;\n    margin: 0;\n    height: 100%;\n}\n\nhtml{\n    font-size: 10px;\n}\n\nbody{\n    font-family: 'Microsoft YaHei';\n    font-size: 1.6rem;\n}\n\na{\n    text-decoration: none;\n    color: #666;\n}\n\n.personal__personal-jvg88{\n    background-color: #efefef;\n    height: 100vh;\n}\n\n.personal__headBox-TXmdM{\n    background-color: #444;\n    padding: 20px 0;\n}\n\n.personal__headImg-JTpbE{\n    width: 80px;\n    height: 80px;\n    border-radius: 50%;\n    background-image: url(" + __webpack_require__(247) + ");\n    background-size: cover; \n    margin: 0 auto;\n}\n\n.personal__headInfo-eFuZk{\n    text-align: center;\n    color: #fff;\n}\n\n.personal__settingItem-2PHWd{\n    height: 36px;\n    line-height: 36px;\n    border-bottom: 1px solid #ccc;\n    padding: 0 25px;\n    position: relative;\n    background-color: #fff;\n}\n\n.personal__settingItem-2PHWd::after{\n    content: \">\";\n    position: absolute;\n    right: 20px;\n\n}", ""]);
+	exports.push([module.id, ".personal__personal-jvg88{\n    background-color: #efefef;\n    height: 100vh;\n}\n\n.personal__headBox-TXmdM{\n    background-color: #444;\n    padding: 20px 0;\n}\n\n.personal__headImg-JTpbE{\n    width: 80px;\n    height: 80px;\n    border-radius: 50%;\n    background-image: url(" + __webpack_require__(247) + ");\n    background-size: cover; \n    margin: 0 auto;\n}\n\n.personal__headInfo-eFuZk{\n    text-align: center;\n    color: #fff;\n}\n\n.personal__settingItem-2PHWd{\n    height: 36px;\n    line-height: 36px;\n    border-bottom: 1px solid #ccc;\n    padding: 0 25px;\n    position: relative;\n    background-color: #fff;\n}\n\n.personal__settingItem-2PHWd::after{\n    content: \">\";\n    position: absolute;\n    right: 20px;\n\n}", ""]);
 
 	// exports
 	exports.locals = {
