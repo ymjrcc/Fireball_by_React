@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import {Link} from 'react-router'
 import BottomTab from './BottomTab'
 import style from '../css/home.css'
+import homeData from '../data/homeData.json'
 
 class HomeTop extends Component{
     render(){
@@ -18,31 +19,44 @@ class RecommendBox extends Component{
 class RecommendItem extends Component{
     render(){
         return (
-            <div className={style.recommendItem}>
-                <div className={style.recommendImg}></div>
-                <p>
-                    <span className={style.author}>{this.props.author}</span>
-                    {' · '}
-                    <span className={style.time}>{this.props.time}</span>
-                </p>
-                <h2 className={style.title}>{this.props.title}</h2>
-            </div>
+            <Link to="/detail">
+                <div className={style.recommendItem}>
+                    <div className={style.recommendImgBox}>
+                        <img className={style.recommendImg} src={require('../images/'+this.props.img)} />
+                    </div>
+                    <p>
+                        <span className={style.author}>{this.props.author}</span>
+                        {' · '}
+                        <span className={style.date}>{this.props.date}</span>
+                    </p>
+                    <h2 className={style.title}>{this.props.title}</h2>
+                </div>
+            </Link>
         )
     }
 }
 
 class Home extends Component{
 
-    componentDidMount(){
-        function ajax(url){
-            var xhr = new XMLHttpRequest;
-            xhr.onload = function() {
-                console.log(this.response);
-            };
-            xhr.open("get", url, true);
-            xhr.send();
+    // ajax方法获取本地数据，这个路径在build模式下有效
+    // componentDidMount(){
+    //     function ajax(url){
+    //         var xhr = new XMLHttpRequest;
+    //         xhr.onload = function() {
+    //             console.log(this.response);
+    //         };
+    //         xhr.open("get", url, true);
+    //         xhr.send();
+    //     }
+    //     ajax("../app/data/homeData.json");
+    // }
+
+    renderRecommendBox(data){
+        let dataArr = [];
+        for(let i = 0; i < data.length; i++){
+            dataArr.push(<RecommendItem key={data[i].id} img={data[i].img} author={data[i].author} date={data[i].date} title={data[i].title} />);
         }
-        ajax("../app/data/homeData.json");
+        return dataArr;
     }
 
     render(){
@@ -50,10 +64,7 @@ class Home extends Component{
             <div>
                 <HomeTop />
                 <RecommendBox>
-                    <RecommendItem author="Yiming" time="today" title="今天开始好好学习" />
-                    <RecommendItem author="ChrisLee" time="today" title="野蛮生长" />
-                    <RecommendItem author="XY" time="today" title="我要发论文" />
-                    <RecommendItem author="头条新闻" time="today" title="明天有雾霾" />
+                    {this.renderRecommendBox(homeData)}
                 </RecommendBox>
                 <BottomTab />
             </div>

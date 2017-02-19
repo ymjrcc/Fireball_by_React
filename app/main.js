@@ -10,20 +10,25 @@ import MyLikes from './components/MyLikes'
 import Coupons from './components/Coupons'
 import Helps from './components/Helps'
 import Settings from './components/Settings'
+import Detail from './components/Detail'
 
 ReactDOM.render(
     (
         <Router history={hashHistory}>
             <Route path="/" component={Home} />
+
             <Route path="/home" component={Home} />
             <Route path="/discover" component={Discover} />
             <Route path="/personal" component={Personal} />
+
             <Route path="/personal/order" component={MyOrders} />
             <Route path="/personal/subscription" component={MySubscriptions} />
             <Route path="/personal/like" component={MyLikes} />
             <Route path="/personal/coupon" component={Coupons} />
             <Route path="/personal/help" component={Helps} />
             <Route path="/personal/setting" component={Settings} />
+
+            <Route path="/detail" component={Detail} />
         </Router>
     ),
     document.getElementById('content')

@@ -13,4 +13,4 @@ class Coupons extends Component{
     }
 }
 
-export  default Coupons;
+export default Coupons;

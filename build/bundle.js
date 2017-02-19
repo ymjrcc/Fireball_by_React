@@ -60,37 +60,41 @@
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Discover = __webpack_require__(241);
+	var _Discover = __webpack_require__(247);
 
 	var _Discover2 = _interopRequireDefault(_Discover);
 
-	var _Personal = __webpack_require__(244);
+	var _Personal = __webpack_require__(250);
 
 	var _Personal2 = _interopRequireDefault(_Personal);
 
-	var _MyOrders = __webpack_require__(248);
+	var _MyOrders = __webpack_require__(253);
 
 	var _MyOrders2 = _interopRequireDefault(_MyOrders);
 
-	var _MySubscriptions = __webpack_require__(249);
+	var _MySubscriptions = __webpack_require__(254);
 
 	var _MySubscriptions2 = _interopRequireDefault(_MySubscriptions);
 
-	var _MyLikes = __webpack_require__(250);
+	var _MyLikes = __webpack_require__(255);
 
 	var _MyLikes2 = _interopRequireDefault(_MyLikes);
 
-	var _Coupons = __webpack_require__(251);
+	var _Coupons = __webpack_require__(256);
 
 	var _Coupons2 = _interopRequireDefault(_Coupons);
 
-	var _Helps = __webpack_require__(252);
+	var _Helps = __webpack_require__(257);
 
 	var _Helps2 = _interopRequireDefault(_Helps);
 
-	var _Settings = __webpack_require__(253);
+	var _Settings = __webpack_require__(258);
 
 	var _Settings2 = _interopRequireDefault(_Settings);
+
+	var _Detail = __webpack_require__(259);
+
+	var _Detail2 = _interopRequireDefault(_Detail);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -106,7 +110,8 @@
 	    _react2.default.createElement(_reactRouter.Route, { path: '/personal/like', component: _MyLikes2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/personal/coupon', component: _Coupons2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/personal/help', component: _Helps2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/personal/setting', component: _Settings2.default })
+	    _react2.default.createElement(_reactRouter.Route, { path: '/personal/setting', component: _Settings2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/detail', component: _Detail2.default })
 	), document.getElementById('content'));
 
 /***/ },
@@ -26601,6 +26606,10 @@
 
 	var _home2 = _interopRequireDefault(_home);
 
+	var _homeData = __webpack_require__(241);
+
+	var _homeData2 = _interopRequireDefault(_homeData);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26668,28 +26677,36 @@
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
-	                'div',
-	                { className: _home2.default.recommendItem },
-	                _react2.default.createElement('div', { className: _home2.default.recommendImg }),
+	                _reactRouter.Link,
+	                { to: '/detail' },
 	                _react2.default.createElement(
-	                    'p',
-	                    null,
+	                    'div',
+	                    { className: _home2.default.recommendItem },
 	                    _react2.default.createElement(
-	                        'span',
-	                        { className: _home2.default.author },
-	                        this.props.author
+	                        'div',
+	                        { className: _home2.default.recommendImgBox },
+	                        _react2.default.createElement('img', { className: _home2.default.recommendImg, src: __webpack_require__(242)("./" + this.props.img) })
 	                    ),
-	                    ' · ',
 	                    _react2.default.createElement(
-	                        'span',
-	                        { className: _home2.default.time },
-	                        this.props.time
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: _home2.default.author },
+	                            this.props.author
+	                        ),
+	                        ' · ',
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: _home2.default.date },
+	                            this.props.date
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'h2',
+	                        { className: _home2.default.title },
+	                        this.props.title
 	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'h2',
-	                    { className: _home2.default.title },
-	                    this.props.title
 	                )
 	            );
 	        }
@@ -26708,17 +26725,28 @@
 	    }
 
 	    _createClass(Home, [{
-	        key: 'componentDidMount',
-	        value: function componentDidMount() {
-	            function ajax(url) {
-	                var xhr = new XMLHttpRequest();
-	                xhr.onload = function () {
-	                    console.log(this.response);
-	                };
-	                xhr.open("get", url, true);
-	                xhr.send();
+	        key: 'renderRecommendBox',
+
+
+	        // ajax方法获取本地数据，这个路径在build模式下有效
+	        // componentDidMount(){
+	        //     function ajax(url){
+	        //         var xhr = new XMLHttpRequest;
+	        //         xhr.onload = function() {
+	        //             console.log(this.response);
+	        //         };
+	        //         xhr.open("get", url, true);
+	        //         xhr.send();
+	        //     }
+	        //     ajax("../app/data/homeData.json");
+	        // }
+
+	        value: function renderRecommendBox(data) {
+	            var dataArr = [];
+	            for (var i = 0; i < data.length; i++) {
+	                dataArr.push(_react2.default.createElement(RecommendItem, { key: data[i].id, img: data[i].img, author: data[i].author, date: data[i].date, title: data[i].title }));
 	            }
-	            ajax("../app/data/homeData.json");
+	            return dataArr;
 	        }
 	    }, {
 	        key: 'render',
@@ -26730,10 +26758,7 @@
 	                _react2.default.createElement(
 	                    RecommendBox,
 	                    null,
-	                    _react2.default.createElement(RecommendItem, { author: 'Yiming', time: 'today', title: '\u4ECA\u5929\u5F00\u59CB\u597D\u597D\u5B66\u4E60' }),
-	                    _react2.default.createElement(RecommendItem, { author: 'ChrisLee', time: 'today', title: '\u91CE\u86EE\u751F\u957F' }),
-	                    _react2.default.createElement(RecommendItem, { author: 'XY', time: 'today', title: '\u6211\u8981\u53D1\u8BBA\u6587' }),
-	                    _react2.default.createElement(RecommendItem, { author: '\u5934\u6761\u65B0\u95FB', time: 'today', title: '\u660E\u5929\u6709\u96FE\u973E' })
+	                    this.renderRecommendBox(_homeData2.default)
 	                ),
 	                _react2.default.createElement(_BottomTab2.default, null)
 	            );
@@ -27211,19 +27236,103 @@
 
 
 	// module
-	exports.push([module.id, ".home__homeTop-1lDmB{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 60px;\r\n    line-height: 60px;\r\n    font-size: 2.4rem;\r\n    font-weight: bold;\r\n    background-color: #fff;\r\n    opacity: 0.8;\r\n    padding: 0 20px;\r\n}\r\n\r\n.home__homeTop-1lDmB::after{\r\n    content: '+';\r\n    float: right;\r\n}\r\n\r\n.home__recommendBox-7ndF7{\r\n    margin-bottom: 50px;\r\n    background-color: #fff;\r\n}\r\n\r\n.home__recommendItem-3ELmm{\r\n    margin: 20px;\r\n    padding: 20px;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n\r\n.home__recommendImg-atweB{\r\n    height: 200px;\r\n    background-color: #999;\r\n}\r\n\r\n.home__time-z1Irv{\r\n    color: #999;\r\n}", ""]);
+	exports.push([module.id, ".home__homeTop-1lDmB{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 60px;\r\n    line-height: 60px;\r\n    font-size: 2.4rem;\r\n    font-weight: bold;\r\n    background-color: #fff;\r\n    opacity: 0.8;\r\n    padding: 0 20px;\r\n}\r\n\r\n.home__homeTop-1lDmB::after{\r\n    content: '+';\r\n    float: right;\r\n}\r\n\r\n.home__recommendBox-7ndF7{\r\n    margin: 60px 0;\r\n    background-color: #fff;\r\n}\r\n\r\n.home__recommendItem-3ELmm{\r\n    margin: 20px;\r\n    padding: 20px;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n\r\n.home__recommendImgBox-1gMr0{\r\n    height: 200px;\r\n    background-color: #eee;\r\n    overflow: hidden;\r\n}\r\n\r\n.home__recommendImg-atweB{\r\n    height: 100%;\r\n    display: block;\r\n    margin: 0 auto;\r\n}\r\n\r\n.home__date-18DcC{\r\n    color: #999;\r\n}", ""]);
 
 	// exports
 	exports.locals = {
 		"homeTop": "home__homeTop-1lDmB",
 		"recommendBox": "home__recommendBox-7ndF7",
 		"recommendItem": "home__recommendItem-3ELmm",
+		"recommendImgBox": "home__recommendImgBox-1gMr0",
 		"recommendImg": "home__recommendImg-atweB",
-		"time": "home__time-z1Irv"
+		"date": "home__date-18DcC"
 	};
 
 /***/ },
 /* 241 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"id": 0,
+			"img": "ym.jpg",
+			"author": "Yiming",
+			"date": "2017-02-19",
+			"title": "今天一鸣写代码了吗？"
+		},
+		{
+			"id": 1,
+			"img": "daomadan.jpg",
+			"author": "ChrisLee",
+			"date": "2017-02-18",
+			"title": "向着阳光，野蛮生长"
+		},
+		{
+			"id": 2,
+			"img": "boxman.jpg",
+			"author": "boxman",
+			"date": "2017-02-17",
+			"title": "孤独的流浪"
+		},
+		{
+			"id": 3,
+			"img": "pen.png",
+			"author": "头条新闻",
+			"date": "2017-02-16",
+			"title": "明天要下雨，后天有雾霾"
+		}
+	];
+
+/***/ },
+/* 242 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var map = {
+		"./boxman.jpg": 243,
+		"./daomadan.jpg": 244,
+		"./pen.png": 245,
+		"./ym.jpg": 246
+	};
+	function webpackContext(req) {
+		return __webpack_require__(webpackContextResolve(req));
+	};
+	function webpackContextResolve(req) {
+		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
+	};
+	webpackContext.keys = function webpackContextKeys() {
+		return Object.keys(map);
+	};
+	webpackContext.resolve = webpackContextResolve;
+	module.exports = webpackContext;
+	webpackContext.id = 242;
+
+
+/***/ },
+/* 243 */
+/***/ function(module, exports) {
+
+	module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wgARCADTANUDASIAAhEBAxEB/8QAGgAAAwEBAQEAAAAAAAAAAAAAAAECAwQFBv/EABgBAQEBAQEAAAAAAAAAAAAAAAEAAgME/9oADAMBAAIQAxAAAAHBqvB7iys6RSFTU1MXGsxFxvMRU6zE3DklyilzomLlIm5SJtapKE+kvO/F6bvO86qHNEtUpvPRGd5bwpJ1mU5QliRNS0qpSZtJCpJIxve0578nfoMGOyyJ0eTq83KRFZ6zOdRvIkkqUMgSEiZIEUtQCE9Z5Hn67PIHYyJ2MXWqzGqCXMRrnohOdDkTNCgSSCFRImBCehWT471edDYmIkqus6ayWji/TTxp+rmvk5+rUfJr6xp8jP1Py2iUlqchSEN3Nvjp3NjQGdKLloqa0aOaSve8H383Ljz4j1Z8l6Np5St/M7OHeYROxqXTAb1HoediqZqXdjgulNzG8bIZCX9B817mbhyzRrPY4k3HKHB08miEl0HUXVDK9t0/LQ6cqk5pC1TGsaM89Y1Z9XJCSvQ8PGuwimmK403xcaEmtRcXVgF77zrzjcFq3I1CFM3locKUmHLev43s+Rz26wes3z6S0Y9XNohXLKk2oQHt1i+Do83OhKq4J0iFoSaSby3Lp5ljjcm2OsTOmKvDbLRCuWkaoEN6ryvha3jRrV5UNSjQSPQpuUiNM0z9nx/fxrwM9VqzTlEqliWJKZMjK7Kp8kuay0ImVfenm19D6afKdn1KD57q6OCurKlHmc/v8us+N3dug+Zp7EZ3wZewx+a5vstG+GPtBvlMPoefj08e/pfR68/A9X0eUOl4xUbVMZ3PGxvxQ59LmjKI10hM6M0wa6Jd5Zj0Pj559g88zr6iwHPQKz5Qj0eYJzwCEwTGQSfOBz62QFlzgmuAMrBubrCvIAt//8QALRAAAgIBAgQGAQMFAAAAAAAAAQIAAxEEEgUQExQVICEwMkAxIjNQIzRBQkP/2gAIAQEAAQUC/gj5DD/FD2j9PPLPlP08zMzM8s+Q/RzyzMzMzMzMzM/Vzyzyz5j72Zn3TMfZ0uk7meEmeDmeDNPBWnghngkv4MyVn0P0uH/h9Zqep3mpnd6idzfO4unXunVtjks/0uHfGz9yb0LYjOEAbcI3y8uOWOeJiYmJjnmcP+NnzgqUPHQOAAqx/l58csTExMTExDz0Su1F1u2zPKw2bv8AELAF/l5ce7RqG073bC/VSdVZ1VnVENyzchLHJ5j6GsrXo7ACEE2CbYV9foHmeWv9LMeo5GAerD6B8vEf7qZmeSx/x7mZnzVfv6451iVb6emZ05sgGI/482Zn3NOM6rVNnV7j251CzuRO4Wb8kn6pmgTdXNsx7Q55mfa4b6ViN+PaHspTbZF0GoMXhlhi8LrnY6JJ0axDoqhG06kLpUz2enjcO9b+GbQvChs8Kh4cxnYWzsrptmPKEZynD9S8r4YgippKSztC6iWajpg3PYdjMnSdF/5hHzt2RPUf0QW/UEsuw2pcEX1k4V3Zjll5qjO1XDbXiaLSVgbFX1hVms6bV17Fm2tWZkdqq66lHo7GB2UZO0bi+SI9jFuiXAq2Rt+5a3Jeps5bD1iLo7LYnDqawh6cxCbCykRq0yECqSTFCoDWWtCYc2WGKXMDDCotS/IEbhkIq42lCpbIj11vL+kg/cC/iutNlYFlf+oUMXGGLEPtEz6Veoc5m1QuBtb9NIgJ6VljBMDLfnERQah8h8iMtcxWsfqlUudu4//EAB4RAAIBBQADAAAAAAAAAAAAAAARAQIQIDBAITFQ/9oACAEDAQE/AeB7GMfwXtgV51RhPTPZT72sdokY4PAiqlDHgx4MYyd3/8QAIxEAAgEDBAEFAAAAAAAAAAAAAAERAhAgEiEwMQMTIjJAQf/aAAgBAgEBPwHBC5ULigiyFwwQQQQL6EmpGpCc5q9fQr04TdCtWtiDu1OavEihmwoFx09XWau+j8N7LNYeT48cks3IJGbnuNVSPUZRXOUZQQLrNYsR/8QAOxAAAQMBBAcCDAUFAAAAAAAAAQACESEDEjFBECIzQFFhcYGSEyAjMjRSYnKRobHhBEKCotFDgJPB8f/aAAgBAQAGPwL+wB2vdhbb9q247i9JHc+69JH+P7r0kdz7r0j9ivWT759WFGe5v7E4C1OPALalbV/xW2tO8ttad8rbWvfK21p3iiSZO52id10XQa6KqRoO5vjiE7rovV0VUDQdztLlo5hnJOEZ6RdFBpjdJFWnEIuLvksdGazWavRuv4cXR5smnindrNvBiHiHdYX6fFO62Y4uCenvLouxlvNl7ytOqcG+sFsytmV5hR3Wmi17N7ttA3TUs3O7FVt3qVrva34qXWj4z1YVSXO6/wAIizHg2dsql74qLpELEnlKGs5vVeTtGObxlN8DrcVXFFaujDx4a1zjyXmXPeovL2vc+68m0zxifmobA4F+a1j2Ao+Csr3tSqtxiuEINaxwH1VHXRwxX0opcSeQxUuqM5K1uMtI/hTrSa6xV+zn3WvHyorus2M4qUKAt48foogt55IFtoDGQWHiQ1pJ5KbSLMfFSZtOtUWtBA4Ci9VvWFqlw54qMerkcwfijrG9HJEPFMBXFG5QGkBflrxdUp12pzxhVMvzuKS0kqoLRCpXtUOsg4cSUJutn1f+IN8ITHJQ12pnq/7UyLs/0jgg42uHFVJ+WjVFOJV61tC6OwIMYy632Qq15IXYYzOBioF0xjGSvRj+WMVDacgoIaApuimCvHDqpN9xyu5ImIyWEN9YnFXGlornVQAK5gQsZRkLJUIXmj9KxaOSrcvZ65WpV3VaxLbuGai+4R7LSg67WE17quhN7VXiruUJtTocnE4oqghAoxRM5hGqdBzhdijqgqiaqMkVVSFXIJoyITxNAv/EACgQAAIBAwMDBAMBAQAAAAAAAAABESExQRBRYXGRoSCBscEw0fDx4f/aAAgBAQABPyFEVZBFOdcVHgd70PkY/I3DH55NzNjGjjV+pCQoyIapTTB/Gc6NDMy9FSYHcY9IH6FXVPcVhzgni4x9R7wPyMcDgkZnRj1jWNGhCcFORe2jdbaSNroPQx0G/TgY9H6IEUwIN0I2JpapPFTeCTwHfAxxkb1n8c9zzOo6tE0JYJJGxhjZJNCdHpP4EEy8u0YHIYuMBvHYpsPT4GyxOs6TrOiZMklnAne5KeCSwbJG+Boi4nFRp6TpT0z6SEk9RFlpJIupO06ZGhB8Boggj8EkiEY0eiZJNRSXgx2jSLj2oeBX85G56tYkt0+n/Qyw+7Qb6CNzJpKNPGk+jqIWisROjJFomLJezVP7CywSZJcnTS2y/tQH/wB6T3/s5H/EfI/7L5HimXbdfVBAkLAipFCJnRIQkJx7lXWQs9f8kCd0nRNn7CE1Ex6aRsnRFxGhIiohLRYUFkTTTNzFmKn8vkkh+q6WxJBpwqqDEhD0T0kWkbkVkW5EbeoD2CPDGZEsso5VVo6VFVA5OSwmhUF8hMyah/A2VwqXfQiNEeCCNhUElsUMF7kcjQ0ogyfMQY8EU3Qx8OEdcf8AmHt9hsQ0TPK5JF7+khEEcmCohWHXPUiUN/8ANHaw6MbEVUtykibbSyRELJA0GkCXSyNRpGq1pWhJZewmudOTA2oGG9rDaYxJSlk07j7gaBMck6hEvShCfcT3nVPSaEjYxJUYpbW6hhWEXyOZT0otl3UL66EySZ+xPcmZLKkicE6NDFTYwPJ0LHwhNSRMpbk5iW/gbLPge76lWmPU8CSS5YwPHo6jIlwf2JqVR0KuV6RaV5Bzx5BTDhorMCGvXIuouomLvB7nYgxpyO2j3aHwVOsCV4z9hqR2vqWFPwJ86J0/xoboSSpE1pHB1GNDqVx9jUG85NPwqZ0IWrZNySaVJ9pN1R3EkrTg+hxRnaF9kh9SifxkjxdUN3HgNBmy7UGeMsR3Xs3nsRJinWv7GbarpF/DG7Ju7pr6ExeW0YGQibcxqU1xY1ydBM27ZVdIGouoQS2NttN9jiCCyy+Rbv8A6ImSuIqH1u7C3OXGh7reCC5iJmP+SMJTHEc9yo2lqqn1sIdJtYlHbZtTUn2ibblx1TE9ehQFJipS5raO4olG03P14KFN2Uu4aJG1OfgQMnWbCSUeza7Jmk1RZnv+x7gij+aCuVyd8Dul1nsKzCZNtsF3Ft4d2j7DzYRksQsQREEHEP0kkuoKuy/ZXBbt8F9iShFIVXYlG5aYv4S/YhwCmbt+aJU5fQVRuqW/vp8CTc2J2lahFkyBVqS9of8Ahtt+5K/ZTjck7EqLvkWROGDa/Y2uNVtVEbg96/BUM6qfBz1HF28US37wcQlLV/YsEoV39BKR10lXhfZP0U1W0z9yIyytQjyxpEHKht5Rx/XHTLK6VXSt90Juqb9/u0JyN92lKryNq1B98YQ4XQaVL7+BEOYrwV+/cqp1Gz7UknGo2kU/ZzYgOc/ggbrMGiwnuMSoTkGrxi3WRc2yiI6Ida7qma8dSakziSUnIkRsqNpdN+w7miW59iJtwVWRu8kDWW6SOWQtWwxHu1RLrK7iklQnHOG4KAsTFC/bFr2u9MoXIQUwMrCDM0VUkSJM1DzYZPqxWFEjaUuos2SUsTbfMOqlDiLcJhZc/ZFF5KrMEWE1yzK9Nyy+BjI4ad5RNR5U3LUq1U4CTiOozXcz0EHplTDgZ0DjZgoKJwrqNL4QIQnXIjtTO51GcewSVd23FPqfvyMMKcxMCW1qVDOJ3UvkUuwopwf/2gAMAwEAAgADAAAAECwtYk/StpoOA2MS6lUoNQdGfhuxzo1dPJIsF2oTKHz992FML17XMKd3sd3S09HebCnSaW8OqTAqlxYABmYGjMQMMsOo5Fmc7aQPOX3c/HZxJ9zWMmRIfrMhqExxpsPgpk0MMKtM7oJAvGpOmstxw9btGSgsu6ZnPSFDS7kiTGzB4j+I3w0XLZcvXoXwogPAnwnPfv/EABwRAQEBAAIDAQAAAAAAAAAAAAEAERAgITFRQf/aAAgBAwEBPxAjjZZZZZZ6jDw2WWW3o8bHI2WW3jew222yy9N423gYbbbeNsS8POxHRZ+ZHywsIB0GGG22WfmW9T1EQ28LbnknS17EcvPtbPUjqHm/W89giybOkfvYI4bbxILf5a/bL3A+QvssfqxexI/LXGZLlsnUtsP2Piz6YqVdvy+cPrl6Ee+P/8QAHBEBAQACAwEBAAAAAAAAAAAAAQAQESAhMUFh/9oACAECAQE/EGcBDAiCCIjDMEGAi1EREYScGoYBBBawRyAgiDGoggxqTAWoLyDki8Y1amcCCDCurz219vUFrJeAGKLUb9RvyHfIIREgabUtQQHDUEERBjztR1LqM6wYGFpMDrr8j8WnAzqciIvaOtRgzsnAhfnED73fpiNfLfXu3t032YR6cB3j8WtZXXlr6wnvEgNX3JxfI8j0w8X/xAAmEAEAAgICAQQDAQEBAQAAAAABABEhMUFRYXGBkfChscHR8RDh/9oACAEBAAE/ENW/196l3ABXX37UFhPU88QFHY5qv7EbwexfmVe3PfvA2DrPSzYcbaxfvE5CEcTICOH5mhnOb5/EVDQvCuJ0FLh+/cQlIJ0prJGuT7RSlJOrzUsMB+aI2m8nEVNpqK3Vc5Y61z3Nv9jQ0+kTuJjzE85gYw/M0oT3LYTWKCqvcvrdu9wPvdyxW5thQYw1uY4InIcS1Y8eiVeTk1mZBVCjNVnGolYdb3AJpOol5cJTr1iK4cmXH6inBl2DFBviuWKHQ+UiLDk0TIUenUuGN9zlX0jVZMRsVzBuJ59YnGoAc/JCK6HnO/u4PXm9P7gY5vwSouyc1U2WjnHmUq1Q7iNUTw+9TpeLlaKouM1mHDkDO5giKaY5ma5vvFcxpyN+uJ2F0bqORee+Jk6N7vNRC3Hjr7iOvPfrPkTT0lPNNVEORY+WN6iblcHzOktJbUtpis0/8icF6dQWDlVVxiZG6bzFw3etTIyc3aeJfAuPycyjVg95hPB7j7C3m/n75jLGrL6zGBd+a1LK75p6qJnfocxW1LTz+5YL+KI0q5A67i5f5Hbnq7lm3HvBn8RwFdwF8/ER34j4NRM51uNnFx2UYo9X5+7g2ENKaOZusEqCq0E6lFg35yRLsyuwvPmO+y14ltpWVi2ODbWK9Y27vLQl+34m5VGaKqNDd3vNff8AsS21uAmRu4tv+QcZfQJS3XjMsDOjL4i0UmWb6Rlpqs8RPiPOo4C6uNRMMX6TRel57+/ezPyxdwV7NNtZvEGqoOff1lEtbOvebqaeePiOTBvfEuXizfvHGxPz+IbfL67ibRLac5Ov1H4tyNYTzMzWwwv+RWstksUtz5nlk3uerTVGItu+ZZecnLLZfxUebo6nmXjPMspu/iZl1L+3NnBWU1/yJRVK3dwGGMm8Wd11C2WdmNspWWy8l1HLLBhpq2CCld7+/wBi1gzrF4e5bQq/K1NQB8/cwAbF0HqisbV7Mxvj0uK0huxvgivFft8yiq7l23ipa7ynPpBKbW/EVbP5HJvbqLnc0ebi4x7xc1NGL1UG0W+dS+FnbZlgzF3nJNI5XGuZSC16u5Re9s+kK8ucagbFpd5riWuAdOZm+ui8EuHyJace8XfRx+dymsn6/wDsEOfaN3da6lri1WvmKtj6EvxiW/7iWXliv/2OTL4uovpOdD6y1IFHcK1fT1YaOOVDmFnPuizldcQbGqboV1FFsVrQ+sHWH8bjZK0OeojyN2hmWu+jxj1l+tL8xNCq6YWgt11BCs+WCqtmAdvqRWqis7mRj5i14imfxLDuWdy+iKTPcKtiUHzNm7sizYt6WJrFGmYt3fPEQbw4yHmXNbbu5arkz734gA2e/iDxQvvVSpazJVPcybE5HExRjzjcYG0BZLa8/idNpvl/YkwlcpuboAeti67o6tGS1ZNxL0P7jQ8sInbur8O++FzQ0CK5E7i73HldTxmXXMWbTaHh6xMdJfl+YdDm+ZfARtrEcGdaxio4MY9Ytnf5+/yOWA3GvxuXZwVq4xeXJWCKqLiucQJhkhLEagxPgCgQQpxX6f4TbtxtB8TtV/XcrvwS/Uct/Ezrofeh6mZZWKLX2i7inPtL/EuL5llMvtKnLnuYkLqWKF70YgR/WtwBThPH7iF2emZSnmsSkqy038Sobq+bIMHd9Rq3jDcqFINjOInC3X8MSnZdLvlGubycsFDkwDSnAzKxWqlxwLQC1eqj1mnZqbGKD8+I/kjCf+DWoN4ghXTjH+wFZM8cQW8UcJxEC79iXQlInxES2/YljdCc3LVn2xcx0t4IAHrUcAZvErhZf3UoWW1xA8VMgclOuojlr8OrUCFc9x8ouobLXfEaObyJMWiCOn5bgQkLGdvmPDjJ5jvPjH6ix3F9IYYmTDUBXLOPvpMcWDh4x/2BVIq6xmGtMau/iCXWOu4FC/a3niDS0r34iMZBOE36RdOB7jLg40xV6qsIEGrTW6qW5OiuYCxgy8pRxbxWoveQFc3KPqLu/MByvusVOFIXJT63qXsCA0uV1+497wZ1xBKqnVbt7iu3mv1F3/4f+TDbBF1dZz1MHXavmLBKD1hnaTPyQCzVY3juJbU9U4O9wDmrO3+wchz7fuIWyDhJfbRN/MK7A9HOJUIpvuJg5q/xHIFIZ1Hh4S2oZl4slc+GXAuijLbMTTdOnEXji2P/AFN86fL8wVr8B/sfRoRaa1zALKOEY6Ybmk04gDdvpj6RwaSzhK+ItMDHD3xKpXWNVqXln1lKccUU8TKwX4vLxUCPlhl+4+YWBM1etZ3KDe06ezHea8Q0v2jsD2v+zs2am5olACgt53cqeCmIwLv0mZxx1zCICj03LYswpz+qiEcMSoGYTuC1iveCNBuXk6V+Zpejm5eQGzRgNn+PecttUYTbDIJo1XcpBZfK6qAPl+OfiHhGqdpF6U+fWCIusgMYTPPGMRVLgOcXcKyq1XqP4SzTf+GABqz1pg7U9oAP4gerSpfMT4iROIEyPMF/9jAmbFVxAz+iXSqlYMxRKburvZv6wKcONU2/cSy7Kxafz+wCBpVz19uULrTtrj7UJeV4piZR4ydx5VrrmWufNcS1uacZgHVfVfiK2hgj5f2PJNl8Y0/5MDOb8Rju5etumzMNu/WIFHzEolXfcSuJUJfmbtugxUq2ZqsOSYACWbxuWRS2RgW2OD/IpDNOuY2yFvPxEih4zF3kPXmKw7PPpMWjVaL+/j/sBy3fBKmjmWPNqeog2LSm/T/7QFhFGwmjeOO9xLSfNRDnHXfrz4lw5tXitT4ETERTE8yswLlxXGhgm7z6IXOVz7wOl5g6U2PD5xForSuqnLhxxLqi95++sU745zLoLwd5upn0DdmyKPb8R3hEb2cRjGwsJ0/4lgWPF8jX8myZQNG8fiKo6dGri6h5MH+TINXVkq292L3Q6zKyxusbib7ibif+hSs2Zq5W6elXE1ilmm/3ALKPSUx6moBwj+xtXEIpqsmCOK89rUDuuL4mqoWJzxBoOeu44EX2JYbBaYCzcnKWsZYocKxcilx8QAx2o9dTHQf5KsqF9xXn4lbjGV3EjiJdtANHrEI054F+3A8X+4K6X/IIxy/CK4T0SDbF5waju7OqimFtcTQx/wDZl1uuSPqfcxNmXmG7u2JnuIqMtb8H+oNr1WL4YARzl8xyekRrwTuO4ja6jz5leZU1ykWQCvMtW++NxXzxcbi318wTI4vUze8GfSV0j63yRwWXJR99oY0ue4ZVA98Qamu2/wAPzF+racvtZlTqATm+qK+gyoom1dTe+PJZG30wpHJkCps5yhXImAVFUBtzm8tbwMKAKKjVpbpTRi8TbnKE0vi15X5DimkTWxMoTDhPapZgNC7nYlqrMusyYtPu13zLKr/ww5aDOi/chdOllQwgYpKggN4Ys3F6u+kUSiBCvOGUGTergbOm/iW103wTb+T79zNFoF5HoWxRQAKpnxQNq8QR3ClgXYULtVUXvmGVODb47bDs0g1hQc7DUzXDWzLTeIbLNlhrZUEBXFbuCVAqCN5WRq88eZRw2tbIVTewmuA4UdvRWeLcHIugueGC0wolBFzsWdardYK1BxZoMgPW7toJi64jnaBF0TCigKHFt2VrIxElNwlaKa3abuOFkZhiFFBF0UFvDKKvoMj3OshkwGrrEy0VL0U7NVC4KdYNLQYyvg1FznXYWC6g2PVluCgbV8KUO2giPo03oSz1gS+WZonocHYNlX+olLODu4Lus8XzAm6M4YnaYO4GYsqlXeNHmX40s/fsqt7EVCFwrLFhWJrAY6T2E96I3zd3qKZe2ZFegHFP6QdJAq005ugHFFVtHeYaY28kBXXTlzHaBBppxVsGC8XfxS4lCqB3RQC+vZWbdhwJtLTij2c5g8GGOuRttwFKoYsmRIXiH6BThkOiFlBgIm6VS9Ys94lVxNwYHCNaLaDg9atc7ww20wPWveUaUubQuUB6bTzBe0M9LwIJfDh41qUSqC9zcj3XLWbhakQNATdLhQChdxdaIU1usA86KMmMQmIw5HngCjdl1fKo6aBVDGmUWFZkq7W6NoIulJyVYutgmuqnIQDDnYJTdbdccplPbGYpcfb19ZpXjQxjYdOa08su5DUkrAnS5uxeU6NjYCpgBu2GkSoLX148xTpIYchlgs9tObxMhQbmgtpjKzFlmFzCNrEFqVoCVnN3lq8SrGhagN803x3UJSBMyES6CzzvcBz0sGM9MtFdQRjrh8YwWvJd6JRlK+a8Woz2thb1msIctNsLsDptAXzCzWY0MMFFGenXpGZQpdKbC91e75wR0myipW6VXnb8alxB5lqTNOa+YVChAGMunQm/asSsU60FPinXvcupFZA3QFLjUJjBsbNq1EwcaiYr1jAecrxzWPWGhLG2v4AReaKi5dQzoh3St5xfuRyrYRJk6LNY7gwc3l6vOHrDcGm9Q7ZzTg0SsNFpw50aL01sxLQELM1hjUYgXIUi3trb6zNK91pWkq1nl5gFQtCIiu73/JTdNZHhm6OH5ZbKi2iHgaNcQywMBboxcsySLRW2557ivdmYB97QKgyNaquJgCvIXe3PmOA6btnOpvunBsPjfncatqAi0VzlzGSWqUYyVU5MiJtLddzPxiNs+XMdZ0/aIAPbfuG3MbVexv2mBZqDdZ8QFuENU+25poR3lUZvcNGAGjWHM//Z"
+
+/***/ },
+/* 244 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/2ddd4401.daomadan.jpg";
+
+/***/ },
+/* 245 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/2c04d755.pen.png";
+
+/***/ },
+/* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/97eaacb1.ym.jpg";
+
+/***/ },
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27244,7 +27353,7 @@
 
 	var _BottomTab2 = _interopRequireDefault(_BottomTab);
 
-	var _discover = __webpack_require__(242);
+	var _discover = __webpack_require__(248);
 
 	var _discover2 = _interopRequireDefault(_discover);
 
@@ -27532,13 +27641,13 @@
 	exports.default = Discover;
 
 /***/ },
-/* 242 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(243);
+	var content = __webpack_require__(249);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -27558,7 +27667,7 @@
 	}
 
 /***/ },
-/* 243 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -27590,7 +27699,7 @@
 	};
 
 /***/ },
-/* 244 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27611,7 +27720,7 @@
 
 	var _BottomTab2 = _interopRequireDefault(_BottomTab);
 
-	var _personal = __webpack_require__(245);
+	var _personal = __webpack_require__(251);
 
 	var _personal2 = _interopRequireDefault(_personal);
 
@@ -27790,13 +27899,13 @@
 	exports.default = Personal;
 
 /***/ },
-/* 245 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(246);
+	var content = __webpack_require__(252);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -27816,7 +27925,7 @@
 	}
 
 /***/ },
-/* 246 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(237)();
@@ -27824,7 +27933,7 @@
 
 
 	// module
-	exports.push([module.id, ".personal__personal-jvg88{\n    background-color: #efefef;\n    height: 100vh;\n}\n\n.personal__headBox-TXmdM{\n    background-color: #444;\n    padding: 20px 0;\n}\n\n.personal__headImg-JTpbE{\n    width: 80px;\n    height: 80px;\n    border-radius: 50%;\n    background-image: url(" + __webpack_require__(247) + ");\n    background-size: cover; \n    margin: 0 auto;\n}\n\n.personal__headInfo-eFuZk{\n    text-align: center;\n    color: #fff;\n}\n\n.personal__settingItem-2PHWd{\n    height: 36px;\n    line-height: 36px;\n    border-bottom: 1px solid #ccc;\n    padding: 0 25px;\n    position: relative;\n    background-color: #fff;\n}\n\n.personal__settingItem-2PHWd::after{\n    content: \">\";\n    position: absolute;\n    right: 20px;\n\n}", ""]);
+	exports.push([module.id, ".personal__personal-jvg88{\n    background-color: #efefef;\n    height: 100vh;\n}\n\n.personal__headBox-TXmdM{\n    background-color: #444;\n    padding: 20px 0;\n}\n\n.personal__headImg-JTpbE{\n    width: 80px;\n    height: 80px;\n    border-radius: 50%;\n    background-image: url(" + __webpack_require__(245) + ");\n    background-size: cover; \n    margin: 0 auto;\n}\n\n.personal__headInfo-eFuZk{\n    text-align: center;\n    color: #fff;\n}\n\n.personal__settingItem-2PHWd{\n    height: 36px;\n    line-height: 36px;\n    border-bottom: 1px solid #ccc;\n    padding: 0 25px;\n    position: relative;\n    background-color: #fff;\n}\n\n.personal__settingItem-2PHWd::after{\n    content: \">\";\n    position: absolute;\n    right: 20px;\n\n}", ""]);
 
 	// exports
 	exports.locals = {
@@ -27836,13 +27945,7 @@
 	};
 
 /***/ },
-/* 247 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/2c04d755.pen.png";
-
-/***/ },
-/* 248 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27899,7 +28002,7 @@
 	exports.default = MyOrders;
 
 /***/ },
-/* 249 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27956,7 +28059,7 @@
 	exports.default = MySubscriptions;
 
 /***/ },
-/* 250 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28013,7 +28116,7 @@
 	exports.default = MyLikes;
 
 /***/ },
-/* 251 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28070,7 +28173,7 @@
 	exports.default = Coupons;
 
 /***/ },
-/* 252 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28127,7 +28230,7 @@
 	exports.default = Helps;
 
 /***/ },
-/* 253 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28182,6 +28285,282 @@
 	}(_react.Component);
 
 	exports.default = Settings;
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _detail = __webpack_require__(260);
+
+	var _detail2 = _interopRequireDefault(_detail);
+
+	var _reactRouter = __webpack_require__(178);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var DetailTop = function (_Component) {
+	    _inherits(DetailTop, _Component);
+
+	    function DetailTop() {
+	        _classCallCheck(this, DetailTop);
+
+	        return _possibleConstructorReturn(this, (DetailTop.__proto__ || Object.getPrototypeOf(DetailTop)).apply(this, arguments));
+	    }
+
+	    _createClass(DetailTop, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _detail2.default.detailTop },
+	                _react2.default.createElement('div', { className: _detail2.default.topHeadImg }),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.topMain },
+	                    _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '\u7231\u751F\u6D3B\u7684\u9A6C\u514B\u541B'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '6\u5C0F\u65F6\u524D'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return DetailTop;
+	}(_react.Component);
+
+	var DetailMain = function (_Component2) {
+	    _inherits(DetailMain, _Component2);
+
+	    function DetailMain() {
+	        _classCallCheck(this, DetailMain);
+
+	        return _possibleConstructorReturn(this, (DetailMain.__proto__ || Object.getPrototypeOf(DetailMain)).apply(this, arguments));
+	    }
+
+	    _createClass(DetailMain, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _detail2.default.detailMain },
+	                '\u697C\u4E0A\u6709\u4E2A\u63D0\u5230eneloop\u7684\u5F69\u8679\u7535\u6C60\u7136\u540E\u4E00\u526F\u77EB\u60C5\u6A21\u6837\u7684\u987A\u4FBF\u8FD8\u5728\u56DE\u7B54\u91CC\u5047\u88C5\u7EA0\u7ED3\u81EA\u5DF1\u8FD9\u662F\u4E0D\u662F\u77EB\u60C5\u7684\u61D2\u5F97\u827E\u7279\u59D3\u540D\u7684\u54E5\u4EEC\uFF0C\u6211\u60F3\u8BF4\uFF0C\u6CA1\u9519\u4F60\u8FD9\u5C31\u662F\u77EB\u60C5\uFF0C\u77EB\u60C5\u7684\u8DDF\u4E2A\u59D1\u5A18\u4F3C\u7684\uFF0C\u77EB\u60C5\u5F97\u8BA9\u6211\u770B\u5B8C\u4F60\u7684\u7B54\u6848\u5C31\u6D51\u8EAB\u96BE\u53D7\u3002',
+	                _react2.default.createElement('br', null),
+	                '\u5C0F\u7C73\u6240\u63A8\u51FA\u7684\u4E00\u7CFB\u5217\u751F\u6D3B\u4E0A\u7684\u5C0F\u4EA7\u54C1\uFF0C\u4ECE\u6765\u90FD\u4E0D\u662F\u9762\u5411\u6240\u8C13\u7684geek\u7684\uFF0C\u4ED6\u4EEC\u53EA\u662F\u4E3A\u666E\u901A\u5927\u4F17\u6D88\u8D39\u8005\u63D0\u4F9B\u4E86\u66F4\u591A\u7684\u6D88\u8D39\u9009\u62E9\uFF0C\u5E76\u4E14\u4E00\u76F4\u662F\u4F18\u8D28\u4F4E\u4EF7\u7684\uFF08\u76F8\u6BD4\u540C\u4EF7\u4F4D\uFF09\u6240\u4EE5\u6700\u70E6\u8FD9\u4E9B\u6240\u8C13geek\u4EE5\u4E00\u526F\u7AD9\u5728\u884C\u4E1A\u6700\u9AD8\u70B9\u7684\u59FF\u6001\u5BF9\u5E73\u6C11\u4EA7\u54C1\u8BC4\u5934\u8BBA\u8DB3\uFF0C\u6307\u6307\u70B9\u70B9\u3002\u672C\u6765\u4E5F\u4E0D\u662F\u5356\u7ED9\u4F60\u7684\u73A9\u610F\u513F\u548B\u90A3\u4E48\u591A\u5E9F\u8BDD\u5462\u3002',
+	                _react2.default.createElement('br', null),
+	                '\u6709\u8C01\u770B\u8FC7\u7C73\u5176\u6797\u4E09\u661F\u5927\u53A8\u4F1A\u5BF9\u65E9\u9910\u644A\u5B50\u7684\u5305\u5B50\u8BF4"\u770B\u4E86\u4ED6\u5305\u5B50\uFF0C\u8FD9\u8BA9\u6211\u4E00\u6574\u5929\u90FD\u4E0D\u592A\u8212\u670D\uFF0C\u56E0\u4E3A\u4ED6\u8BA9\u6211\u60F3\u5230\u4E86\u514B\u91CC\u65AF\u4E01\u7684\u86CB\u7CD5\uFF0C\u5E76\u4E14\u4F60\u4EEC\u770B\uFF0C\u957F\u7684\u662F\u4E0D\u662F\u5F88\u50CF"\u2026\u5475\u5475\u4F60\u4E00\u8138\u2026',
+	                _react2.default.createElement('br', null),
+	                '\u4F5C\u8005\uFF1ADr.Waltson',
+	                _react2.default.createElement('br', null),
+	                '\u94FE\u63A5\uFF1Ahttps://www.zhihu.com/question/36980488/answer/69987224',
+	                _react2.default.createElement('br', null),
+	                '\u6765\u6E90\uFF1A\u77E5\u4E4E',
+	                _react2.default.createElement('br', null),
+	                '\u8457\u4F5C\u6743\u5F52\u4F5C\u8005\u6240\u6709\uFF0C\u8F6C\u8F7D\u8BF7\u8054\u7CFB\u4F5C\u8005\u83B7\u5F97\u6388\u6743\u3002'
+	            );
+	        }
+	    }]);
+
+	    return DetailMain;
+	}(_react.Component);
+
+	var DetailBottom = function (_Component3) {
+	    _inherits(DetailBottom, _Component3);
+
+	    function DetailBottom() {
+	        _classCallCheck(this, DetailBottom);
+
+	        return _possibleConstructorReturn(this, (DetailBottom.__proto__ || Object.getPrototypeOf(DetailBottom)).apply(this, arguments));
+	    }
+
+	    _createClass(DetailBottom, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _detail2.default.detailBottom },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.bottomLeft },
+	                    _react2.default.createElement(GoBackBtn, null),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: _detail2.default.bottomItem },
+	                        '\u559C\u6B22'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: _detail2.default.bottomItem },
+	                        '\u5206\u4EAB'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.bottomRight },
+	                    _react2.default.createElement(ToBuyBtn, null)
+	                )
+	            );
+	        }
+	    }]);
+
+	    return DetailBottom;
+	}(_react.Component);
+
+	var GoBackBtn = function (_Component4) {
+	    _inherits(GoBackBtn, _Component4);
+
+	    function GoBackBtn() {
+	        _classCallCheck(this, GoBackBtn);
+
+	        return _possibleConstructorReturn(this, (GoBackBtn.__proto__ || Object.getPrototypeOf(GoBackBtn)).apply(this, arguments));
+	    }
+
+	    _createClass(GoBackBtn, [{
+	        key: 'handleClick',
+	        value: function handleClick() {
+	            _reactRouter.hashHistory.goBack();
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'span',
+	                {
+	                    className: _detail2.default.bottomItem,
+	                    onClick: this.handleClick.bind(this)
+	                },
+	                '\u8FD4\u56DE'
+	            );
+	        }
+	    }]);
+
+	    return GoBackBtn;
+	}(_react.Component);
+
+	var ToBuyBtn = function (_Component5) {
+	    _inherits(ToBuyBtn, _Component5);
+
+	    function ToBuyBtn() {
+	        _classCallCheck(this, ToBuyBtn);
+
+	        return _possibleConstructorReturn(this, (ToBuyBtn.__proto__ || Object.getPrototypeOf(ToBuyBtn)).apply(this, arguments));
+	    }
+
+	    _createClass(ToBuyBtn, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'button',
+	                { className: _detail2.default.toBuyBtn },
+	                '\uFFE5 28 \u8D2D\u4E70 >'
+	            );
+	        }
+	    }]);
+
+	    return ToBuyBtn;
+	}(_react.Component);
+
+	var Detail = function (_Component6) {
+	    _inherits(Detail, _Component6);
+
+	    function Detail() {
+	        _classCallCheck(this, Detail);
+
+	        return _possibleConstructorReturn(this, (Detail.__proto__ || Object.getPrototypeOf(Detail)).apply(this, arguments));
+	    }
+
+	    _createClass(Detail, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _detail2.default.detailBox },
+	                _react2.default.createElement(DetailTop, null),
+	                _react2.default.createElement(DetailMain, null),
+	                _react2.default.createElement(DetailBottom, null)
+	            );
+	        }
+	    }]);
+
+	    return Detail;
+	}(_react.Component);
+
+	exports.default = Detail;
+
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(261);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/.npminstall/css-loader/0.26.1/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./detail.css", function() {
+				var newContent = require("!!./../../node_modules/.npminstall/css-loader/0.26.1/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./detail.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 261 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".detail__detailBox-1b6ne{\r\n    position: relative;\r\n}\r\n\r\n.detail__detailTop-y67pU{\r\n    display: flex;\r\n    position: relative;\r\n    height: 40px;\r\n    padding: 10px 20px;\r\n    border-bottom: 1px solid #eee;\r\n    background-color: #fff;\r\n    z-index: 5;\r\n}\r\n\r\n.detail__topHeadImg-1F-dC{\r\n    width: 40px;\r\n    height: 40px;\r\n    border-radius: 50%;\r\n    background-color: #eee;\r\n    margin-right: 15px;\r\n}\r\n\r\n.detail__topMain-2ocL_{\r\n    flex: 1;\r\n    position: relative;\r\n}\r\n\r\n.detail__detailTop-y67pU::after{\r\n    content: \">\";\r\n    position: absolute;\r\n    right: 20px;\r\n    top: 20px;\r\n}\r\n\r\n.detail__detailMain-2FgJ8{\r\n    background-color: #fff;\r\n    padding: 0 20px 20px;\r\n    margin-bottom: 80px;\r\n    line-height: 200%;\r\n    font-size: 1.8rem;\r\n    word-wrap: break-word;\r\n}\r\n\r\n.detail__detailBottom-wwWK5{\r\n    position: fixed;\r\n    display: flex;\r\n    height: 40px;\r\n    padding: 10px 20px;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    background-color: #fff;\r\n    z-index: 5;\r\n}\r\n\r\n.detail__bottomLeft-2hXUT,\r\n.detail__bottomRight-25V45{\r\n    flex: 1;\r\n}\r\n\r\n.detail__bottomLeft-2hXUT{\r\n    display: flex;\r\n    padding-right: 30px;\r\n}\r\n\r\n.detail__bottomItem-3w1Vl{\r\n    flex:1;\r\n    margin-right: 10px;\r\n    line-height: 40px;\r\n}\r\n\r\n.detail__toBuyBtn-2Ie37{\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 5px;\r\n    background-color: indianred;\r\n    color: #fff;\r\n    text-align: center;\r\n    outline: none;\r\n    border: none;\r\n    font-size: 1.8rem;\r\n}", ""]);
+
+	// exports
+	exports.locals = {
+		"detailBox": "detail__detailBox-1b6ne",
+		"detailTop": "detail__detailTop-y67pU",
+		"topHeadImg": "detail__topHeadImg-1F-dC",
+		"topMain": "detail__topMain-2ocL_",
+		"detailMain": "detail__detailMain-2FgJ8",
+		"detailBottom": "detail__detailBottom-wwWK5",
+		"bottomLeft": "detail__bottomLeft-2hXUT",
+		"bottomRight": "detail__bottomRight-25V45",
+		"bottomItem": "detail__bottomItem-3w1Vl",
+		"toBuyBtn": "detail__toBuyBtn-2Ie37"
+	};
 
 /***/ }
 /******/ ]);

@@ -18,7 +18,7 @@
 }
 
 .recommendBox{
-    margin-bottom: 50px;
+    margin: 60px 0;
     background-color: #fff;
 }
 
@@ -28,11 +28,18 @@
     border-bottom: 1px solid #ccc;
 }
 
-.recommendImg{
+.recommendImgBox{
     height: 200px;
-    background-color: #999;
+    background-color: #eee;
+    overflow: hidden;
 }
 
-.time{
+.recommendImg{
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.date{
     color: #999;
 }

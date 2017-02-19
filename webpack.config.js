@@ -23,6 +23,10 @@ module.exports = {//注意这里是exports不是export
             {
     　　　　　　test: /\.(png|jpg)$/,
     　　　　　　loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'
+    　　　　},
+            {
+    　　　　　　test: /\.json$/,
+    　　　　　　loader: 'json-loader'
     　　　　}
         ]
     },
