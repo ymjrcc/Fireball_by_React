@@ -57,9 +57,30 @@ class RecommendItem extends Component{
 }
 
 class RecommendFollowBtn extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            className: "recommendFollowBtn",
+            content: "关注"
+        }
+    }
+
+    handleClick(){
+        this.setState({
+            className: this.state.className=="recommendFollowBtn"?"recommendFollowingBtn":"recommendFollowBtn",
+            content: this.state.content=="关注"?"已关注":"关注"
+        })
+    }
+
     render(){
         return (
-            <button className={style.recommendFollowBtn}>关注</button>
+            <button 
+                className={style[this.state.className]}
+                onClick={this.handleClick.bind(this)}
+            >
+                {this.state.content}
+            </button>
         )
     }
 }

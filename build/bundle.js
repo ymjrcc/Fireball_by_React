@@ -26708,6 +26708,19 @@
 	    }
 
 	    _createClass(Home, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            function ajax(url) {
+	                var xhr = new XMLHttpRequest();
+	                xhr.onload = function () {
+	                    console.log(this.response);
+	                };
+	                xhr.open("get", url, true);
+	                xhr.send();
+	            }
+	            ajax("../app/data/homeData.json");
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -27198,7 +27211,7 @@
 
 
 	// module
-	exports.push([module.id, ".home__homeTop-1lDmB{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 60px;\r\n    line-height: 60px;\r\n    font-size: 2.4rem;\r\n    font-weight: bold;\r\n    background-color: #fff;\r\n    opacity: 0.8;\r\n    padding: 0 20px;\r\n}\r\n\r\n.home__homeTop-1lDmB::after{\r\n    content: '+';\r\n    float: right;\r\n}\r\n\r\n.home__recommendBox-7ndF7{\r\n    margin-bottom: 50px;\r\n}\r\n\r\n.home__recommendItem-3ELmm{\r\n    margin: 20px;\r\n    padding: 20px;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n\r\n.home__recommendImg-atweB{\r\n    height: 200px;\r\n    background-color: #999;\r\n}\r\n\r\n.home__time-z1Irv{\r\n    color: #999;\r\n}", ""]);
+	exports.push([module.id, ".home__homeTop-1lDmB{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 60px;\r\n    line-height: 60px;\r\n    font-size: 2.4rem;\r\n    font-weight: bold;\r\n    background-color: #fff;\r\n    opacity: 0.8;\r\n    padding: 0 20px;\r\n}\r\n\r\n.home__homeTop-1lDmB::after{\r\n    content: '+';\r\n    float: right;\r\n}\r\n\r\n.home__recommendBox-7ndF7{\r\n    margin-bottom: 50px;\r\n    background-color: #fff;\r\n}\r\n\r\n.home__recommendItem-3ELmm{\r\n    margin: 20px;\r\n    padding: 20px;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n\r\n.home__recommendImg-atweB{\r\n    height: 200px;\r\n    background-color: #999;\r\n}\r\n\r\n.home__time-z1Irv{\r\n    color: #999;\r\n}", ""]);
 
 	// exports
 	exports.locals = {
@@ -27383,19 +27396,36 @@
 	var RecommendFollowBtn = function (_Component5) {
 	    _inherits(RecommendFollowBtn, _Component5);
 
-	    function RecommendFollowBtn() {
+	    function RecommendFollowBtn(props) {
 	        _classCallCheck(this, RecommendFollowBtn);
 
-	        return _possibleConstructorReturn(this, (RecommendFollowBtn.__proto__ || Object.getPrototypeOf(RecommendFollowBtn)).apply(this, arguments));
+	        var _this5 = _possibleConstructorReturn(this, (RecommendFollowBtn.__proto__ || Object.getPrototypeOf(RecommendFollowBtn)).call(this, props));
+
+	        _this5.state = {
+	            className: "recommendFollowBtn",
+	            content: "关注"
+	        };
+	        return _this5;
 	    }
 
 	    _createClass(RecommendFollowBtn, [{
+	        key: 'handleClick',
+	        value: function handleClick() {
+	            this.setState({
+	                className: this.state.className == "recommendFollowBtn" ? "recommendFollowingBtn" : "recommendFollowBtn",
+	                content: this.state.content == "关注" ? "已关注" : "关注"
+	            });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'button',
-	                { className: _discover2.default.recommendFollowBtn },
-	                '\u5173\u6CE8'
+	                {
+	                    className: _discover2.default[this.state.className],
+	                    onClick: this.handleClick.bind(this)
+	                },
+	                this.state.content
 	            );
 	        }
 	    }]);
@@ -27536,7 +27566,7 @@
 
 
 	// module
-	exports.push([module.id, ".discover__discoverTop-HspIP{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 50px;\r\n    line-height: 50px;\r\n    font-size: 2rem;\r\n    font-weight: bold;\r\n    background-color: #f8f8f8;\r\n    opacity: 0.8;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ddd;\r\n}\r\n\r\n.discover__discoverBox-24RGv{\r\n    margin-top: 50px;\r\n    margin-bottom: 50px;\r\n    background-color: #f3f3f3;\r\n    overflow-x: hidden;\r\n}\r\n\r\n.discover__discoverTopRow-3octI{\r\n    display: flex;\r\n    padding: 20px;\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx{\r\n    flex: 1;\r\n    height: 80px;\r\n    line-height: 80px;\r\n    background-color: #eee;\r\n    text-align: center;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx:first-child{\r\n    margin-right: 20px;\r\n}\r\n\r\n.discover__discoverSection-2h8hz{\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px;\r\n}\r\n\r\n.discover__sectionImgBox-20_bn{\r\n    display: flex;\r\n    padding-bottom: 20px;\r\n}\r\n.discover__sectionImg-3M5wQ{\r\n    flex: 1;\r\n    height: 100px;\r\n    background-color: #eee;\r\n}\r\n\r\n.discover__sectionImg-3M5wQ:nth-child(even){\r\n    margin: 0 20px;\r\n}\r\n\r\n.discover__discoverBanner-3M_yZ{\r\n    margin: 20px 10px;\r\n    overflow-x: hidden;\r\n    width: 900%;\r\n}\r\n\r\n.discover__discoverBannerImg-1dlDI{\r\n    display: inline-block;\r\n    width: 80vw;\r\n    height: 100px;\r\n    margin: 0 10px;\r\n    background-color: #eee;\r\n    border: 1px solid #999;\r\n    border-radius: 10px;\r\n}\r\n\r\n.discover__recommendSection-aZ8W2{\r\n    background-color: #fff;\r\n    margin-bottom: 50px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px 30px;\r\n}\r\n\r\n.discover__recommendItemBox-oGHTb{\r\n    display: flex;\r\n}\r\n\r\n.discover__recommendItem-1hDAE{\r\n    flex: 1;\r\n    text-align: center;\r\n}\r\n\r\n.discover__recommendItemImg-1EIxm{\r\n    width: 80px;\r\n    height: 80px;\r\n    background-color: #eee;\r\n    border-radius: 50%;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendItemName-2hgdv{\r\n    width: 100px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    font-size: 1.8rem;\r\n    margin: 10px auto;\r\n}\r\n\r\n.discover__recommendItemDesc-2qIP7{\r\n    font-size: 1.4rem;\r\n    color: #999;\r\n    width: 90px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendFollowBtn-26_9S{\r\n    background-color: #fff;\r\n    border: 1px solid indianred;\r\n    color: indianred;\r\n    border-radius: 2px;\r\n    width: 60px;\r\n    height: 28px;\r\n    line-height: 28px;\r\n}", ""]);
+	exports.push([module.id, ".discover__discoverTop-HspIP{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 50px;\r\n    line-height: 50px;\r\n    font-size: 2rem;\r\n    font-weight: bold;\r\n    background-color: #f8f8f8;\r\n    opacity: 0.8;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ddd;\r\n}\r\n\r\n.discover__discoverBox-24RGv{\r\n    margin-top: 50px;\r\n    margin-bottom: 50px;\r\n    background-color: #f3f3f3;\r\n    overflow-x: hidden;\r\n}\r\n\r\n.discover__discoverTopRow-3octI{\r\n    display: flex;\r\n    padding: 20px;\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx{\r\n    flex: 1;\r\n    height: 80px;\r\n    line-height: 80px;\r\n    background-color: #eee;\r\n    text-align: center;\r\n    border-radius: 5px;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx:first-child{\r\n    margin-right: 20px;\r\n}\r\n\r\n.discover__discoverSection-2h8hz{\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px;\r\n}\r\n\r\n.discover__sectionImgBox-20_bn{\r\n    display: flex;\r\n    padding-bottom: 20px;\r\n}\r\n.discover__sectionImg-3M5wQ{\r\n    flex: 1;\r\n    height: 100px;\r\n    background-color: #eee;\r\n    border-radius: 5px;\r\n}\r\n\r\n.discover__sectionImg-3M5wQ:nth-child(even){\r\n    margin: 0 20px;\r\n}\r\n\r\n.discover__discoverBanner-3M_yZ{\r\n    margin: 20px 10px;\r\n    overflow-x: hidden;\r\n    width: 900%;\r\n}\r\n\r\n.discover__discoverBannerImg-1dlDI{\r\n    display: inline-block;\r\n    width: 80vw;\r\n    height: 100px;\r\n    margin: 0 10px;\r\n    background-color: #eee;\r\n    border: 1px solid #999;\r\n    border-radius: 10px;\r\n}\r\n\r\n.discover__recommendSection-aZ8W2{\r\n    background-color: #fff;\r\n    margin-bottom: 50px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px 30px;\r\n}\r\n\r\n.discover__recommendItemBox-oGHTb{\r\n    display: flex;\r\n}\r\n\r\n.discover__recommendItem-1hDAE{\r\n    flex: 1;\r\n    text-align: center;\r\n}\r\n\r\n.discover__recommendItemImg-1EIxm{\r\n    width: 80px;\r\n    height: 80px;\r\n    background-color: #eee;\r\n    border-radius: 50%;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendItemName-2hgdv{\r\n    width: 100px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    font-size: 1.8rem;\r\n    margin: 10px auto;\r\n}\r\n\r\n.discover__recommendItemDesc-2qIP7{\r\n    font-size: 1.4rem;\r\n    color: #999;\r\n    width: 90px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendFollowBtn-26_9S{\r\n    background-color: #fff;\r\n    border: 1px solid indianred;\r\n    color: indianred;\r\n    border-radius: 2px;\r\n    width: 60px;\r\n    height: 28px;\r\n    line-height: 28px;\r\n    outline: none;\r\n}\r\n\r\n.discover__recommendFollowingBtn-2AyEM{\r\n    background-color: #eee;\r\n    border: 1px solid #eee;\r\n    color: #666;\r\n    border-radius: 2px;\r\n    width: 60px;\r\n    height: 28px;\r\n    line-height: 28px;\r\n    outline: none;\r\n}", ""]);
 
 	// exports
 	exports.locals = {
@@ -27555,7 +27585,8 @@
 		"recommendItemImg": "discover__recommendItemImg-1EIxm",
 		"recommendItemName": "discover__recommendItemName-2hgdv",
 		"recommendItemDesc": "discover__recommendItemDesc-2qIP7",
-		"recommendFollowBtn": "discover__recommendFollowBtn-26_9S"
+		"recommendFollowBtn": "discover__recommendFollowBtn-26_9S",
+		"recommendFollowingBtn": "discover__recommendFollowingBtn-2AyEM"
 	};
 
 /***/ },

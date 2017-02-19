@@ -32,6 +32,19 @@ class RecommendItem extends Component{
 }
 
 class Home extends Component{
+
+    componentDidMount(){
+        function ajax(url){
+            var xhr = new XMLHttpRequest;
+            xhr.onload = function() {
+                console.log(this.response);
+            };
+            xhr.open("get", url, true);
+            xhr.send();
+        }
+        ajax("../app/data/homeData.json");
+    }
+
     render(){
         return (
             <div>

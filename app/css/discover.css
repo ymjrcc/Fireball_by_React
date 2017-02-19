@@ -33,6 +33,7 @@
     line-height: 80px;
     background-color: #eee;
     text-align: center;
+    border-radius: 5px;
 }
 
 .discoverTopItem:first-child{
@@ -54,6 +55,7 @@
     flex: 1;
     height: 100px;
     background-color: #eee;
+    border-radius: 5px;
 }
 
 .sectionImg:nth-child(even){
@@ -127,4 +129,16 @@
     width: 60px;
     height: 28px;
     line-height: 28px;
+    outline: none;
+}
+
+.recommendFollowingBtn{
+    background-color: #eee;
+    border: 1px solid #eee;
+    color: #666;
+    border-radius: 2px;
+    width: 60px;
+    height: 28px;
+    line-height: 28px;
+    outline: none;
 }
