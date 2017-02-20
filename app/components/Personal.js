@@ -81,4 +81,4 @@ class Personal extends Component{
     }
 }
 
-export  default Personal;
+export default Personal;

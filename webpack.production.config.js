@@ -7,10 +7,13 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     devtool: false,
-    entry:  __dirname + '/app/main.js',
+    entry:  {
+        bundle: __dirname + '/app/main.js',
+        vendor: ['react','react-dom','react-router']
+    },
     output: {
         path: __dirname + "/build",
-        filename: "bundle.js"
+        filename: "[name].js"
     },
 
     module: {
@@ -37,7 +40,10 @@ module.exports = {
     },
 
     plugins:  [
-      new ExtractTextPlugin("styles.css"),  
+      new ExtractTextPlugin("styles.css"),
+      new webpack.optimize.CommonsChunkPlugin({
+            names: ['vendor','manifest']
+        })
 ],
 
 };
