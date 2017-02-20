@@ -35,6 +35,73 @@ class DetailMain extends Component{
     }
 }
 
+class DetailFooter1 extends Component{
+    render(){
+        return (
+            <div className={style.footer1Box}>
+                <div className={style.footer1Item}>1026人喜欢</div>
+                <div className={style.footer1Item}>86人告诉朋友</div>
+            </div>
+        )
+    }
+}
+
+class DetailFooter2 extends Component{
+    render(){
+        return (
+            <div className={style.footer2Box}>
+                限时分享奖励
+            </div>
+        )
+    }
+}
+
+class DetailFooter3 extends Component{
+    render(){
+        return (
+            <div className={style.footer3Box}>
+                <div className={style.footer3Title}>此商品</div>
+                <div className={style.footer3Div}>
+                    <div className={style.footer3Item}>3个工作日发货</div>
+                    <div className={style.footer3Item}>正品保障</div>
+                    <div className={style.footer3Item}>无忧退货</div>
+                </div>
+            </div>
+        )
+    }
+}
+
+class DetailFooter4 extends Component{
+    render(){
+        return (
+            <div className={style.footer4Box}>
+                <div className={style.footer4Title}>常见问题</div>
+                <p className={style.que}>火球买手的商品从哪里发货？</p>
+                <p className={style.ans}>多仓直发，每个买手有多个合作商家。</p>
+                <p className={style.que}>火球买手的商品从哪里发货？</p>
+                <p className={style.ans}>多仓直发，每个买手有多个合作商家。</p>
+                <p className={style.que}>火球买手的商品从哪里发货？</p>
+                <p className={style.ans}>多仓直发，每个买手有多个合作商家。</p>
+                <p className={style.que}>火球买手的商品从哪里发货？</p>
+                <p className={style.ans}>多仓直发，每个买手有多个合作商家。</p>
+            </div>
+        )
+    }
+}
+
+class DetailFooter extends Component{
+    render(){
+        return (
+            <div className={style.detailFooter}>
+                <DetailFooter1 />
+                <DetailFooter2 />
+                <DetailFooter3 />
+                <DetailFooter4 />
+            </div>
+        )
+    }
+}
+
 class DetailBottom extends Component{
     render(){
         return (
@@ -84,6 +151,7 @@ class Detail extends Component{
             <div className={style.detailBox}>
                 <DetailTop />
                 <DetailMain />
+                <DetailFooter />
                 <DetailBottom />
             </div>
         )

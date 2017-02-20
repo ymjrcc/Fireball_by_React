@@ -28451,8 +28451,202 @@
 	    return DetailMain;
 	}(_react.Component);
 
-	var DetailBottom = function (_Component3) {
-	    _inherits(DetailBottom, _Component3);
+	var DetailFooter1 = function (_Component3) {
+	    _inherits(DetailFooter1, _Component3);
+
+	    function DetailFooter1() {
+	        _classCallCheck(this, DetailFooter1);
+
+	        return _possibleConstructorReturn(this, (DetailFooter1.__proto__ || Object.getPrototypeOf(DetailFooter1)).apply(this, arguments));
+	    }
+
+	    _createClass(DetailFooter1, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _detail2.default.footer1Box },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.footer1Item },
+	                    '1026\u4EBA\u559C\u6B22'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.footer1Item },
+	                    '86\u4EBA\u544A\u8BC9\u670B\u53CB'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return DetailFooter1;
+	}(_react.Component);
+
+	var DetailFooter2 = function (_Component4) {
+	    _inherits(DetailFooter2, _Component4);
+
+	    function DetailFooter2() {
+	        _classCallCheck(this, DetailFooter2);
+
+	        return _possibleConstructorReturn(this, (DetailFooter2.__proto__ || Object.getPrototypeOf(DetailFooter2)).apply(this, arguments));
+	    }
+
+	    _createClass(DetailFooter2, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _detail2.default.footer2Box },
+	                '\u9650\u65F6\u5206\u4EAB\u5956\u52B1'
+	            );
+	        }
+	    }]);
+
+	    return DetailFooter2;
+	}(_react.Component);
+
+	var DetailFooter3 = function (_Component5) {
+	    _inherits(DetailFooter3, _Component5);
+
+	    function DetailFooter3() {
+	        _classCallCheck(this, DetailFooter3);
+
+	        return _possibleConstructorReturn(this, (DetailFooter3.__proto__ || Object.getPrototypeOf(DetailFooter3)).apply(this, arguments));
+	    }
+
+	    _createClass(DetailFooter3, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _detail2.default.footer3Box },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.footer3Title },
+	                    '\u6B64\u5546\u54C1'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.footer3Div },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _detail2.default.footer3Item },
+	                        '3\u4E2A\u5DE5\u4F5C\u65E5\u53D1\u8D27'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _detail2.default.footer3Item },
+	                        '\u6B63\u54C1\u4FDD\u969C'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _detail2.default.footer3Item },
+	                        '\u65E0\u5FE7\u9000\u8D27'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return DetailFooter3;
+	}(_react.Component);
+
+	var DetailFooter4 = function (_Component6) {
+	    _inherits(DetailFooter4, _Component6);
+
+	    function DetailFooter4() {
+	        _classCallCheck(this, DetailFooter4);
+
+	        return _possibleConstructorReturn(this, (DetailFooter4.__proto__ || Object.getPrototypeOf(DetailFooter4)).apply(this, arguments));
+	    }
+
+	    _createClass(DetailFooter4, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _detail2.default.footer4Box },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.footer4Title },
+	                    '\u5E38\u89C1\u95EE\u9898'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: _detail2.default.que },
+	                    '\u706B\u7403\u4E70\u624B\u7684\u5546\u54C1\u4ECE\u54EA\u91CC\u53D1\u8D27\uFF1F'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: _detail2.default.ans },
+	                    '\u591A\u4ED3\u76F4\u53D1\uFF0C\u6BCF\u4E2A\u4E70\u624B\u6709\u591A\u4E2A\u5408\u4F5C\u5546\u5BB6\u3002'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: _detail2.default.que },
+	                    '\u706B\u7403\u4E70\u624B\u7684\u5546\u54C1\u4ECE\u54EA\u91CC\u53D1\u8D27\uFF1F'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: _detail2.default.ans },
+	                    '\u591A\u4ED3\u76F4\u53D1\uFF0C\u6BCF\u4E2A\u4E70\u624B\u6709\u591A\u4E2A\u5408\u4F5C\u5546\u5BB6\u3002'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: _detail2.default.que },
+	                    '\u706B\u7403\u4E70\u624B\u7684\u5546\u54C1\u4ECE\u54EA\u91CC\u53D1\u8D27\uFF1F'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: _detail2.default.ans },
+	                    '\u591A\u4ED3\u76F4\u53D1\uFF0C\u6BCF\u4E2A\u4E70\u624B\u6709\u591A\u4E2A\u5408\u4F5C\u5546\u5BB6\u3002'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: _detail2.default.que },
+	                    '\u706B\u7403\u4E70\u624B\u7684\u5546\u54C1\u4ECE\u54EA\u91CC\u53D1\u8D27\uFF1F'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: _detail2.default.ans },
+	                    '\u591A\u4ED3\u76F4\u53D1\uFF0C\u6BCF\u4E2A\u4E70\u624B\u6709\u591A\u4E2A\u5408\u4F5C\u5546\u5BB6\u3002'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return DetailFooter4;
+	}(_react.Component);
+
+	var DetailFooter = function (_Component7) {
+	    _inherits(DetailFooter, _Component7);
+
+	    function DetailFooter() {
+	        _classCallCheck(this, DetailFooter);
+
+	        return _possibleConstructorReturn(this, (DetailFooter.__proto__ || Object.getPrototypeOf(DetailFooter)).apply(this, arguments));
+	    }
+
+	    _createClass(DetailFooter, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _detail2.default.detailFooter },
+	                _react2.default.createElement(DetailFooter1, null),
+	                _react2.default.createElement(DetailFooter2, null),
+	                _react2.default.createElement(DetailFooter3, null),
+	                _react2.default.createElement(DetailFooter4, null)
+	            );
+	        }
+	    }]);
+
+	    return DetailFooter;
+	}(_react.Component);
+
+	var DetailBottom = function (_Component8) {
+	    _inherits(DetailBottom, _Component8);
 
 	    function DetailBottom() {
 	        _classCallCheck(this, DetailBottom);
@@ -28493,8 +28687,8 @@
 	    return DetailBottom;
 	}(_react.Component);
 
-	var GoBackBtn = function (_Component4) {
-	    _inherits(GoBackBtn, _Component4);
+	var GoBackBtn = function (_Component9) {
+	    _inherits(GoBackBtn, _Component9);
 
 	    function GoBackBtn() {
 	        _classCallCheck(this, GoBackBtn);
@@ -28524,8 +28718,8 @@
 	    return GoBackBtn;
 	}(_react.Component);
 
-	var ToBuyBtn = function (_Component5) {
-	    _inherits(ToBuyBtn, _Component5);
+	var ToBuyBtn = function (_Component10) {
+	    _inherits(ToBuyBtn, _Component10);
 
 	    function ToBuyBtn() {
 	        _classCallCheck(this, ToBuyBtn);
@@ -28547,8 +28741,8 @@
 	    return ToBuyBtn;
 	}(_react.Component);
 
-	var Detail = function (_Component6) {
-	    _inherits(Detail, _Component6);
+	var Detail = function (_Component11) {
+	    _inherits(Detail, _Component11);
 
 	    function Detail() {
 	        _classCallCheck(this, Detail);
@@ -28564,6 +28758,7 @@
 	                { className: _detail2.default.detailBox },
 	                _react2.default.createElement(DetailTop, null),
 	                _react2.default.createElement(DetailMain, null),
+	                _react2.default.createElement(DetailFooter, null),
 	                _react2.default.createElement(DetailBottom, null)
 	            );
 	        }
@@ -28609,7 +28804,7 @@
 
 
 	// module
-	exports.push([module.id, ".detail__detailBox-1b6ne{\r\n    position: relative;\r\n}\r\n\r\n.detail__detailTop-y67pU{\r\n    display: flex;\r\n    position: relative;\r\n    height: 40px;\r\n    padding: 10px 20px;\r\n    border-bottom: 1px solid #eee;\r\n    background-color: #fff;\r\n    z-index: 5;\r\n}\r\n\r\n.detail__topHeadImg-1F-dC{\r\n    width: 40px;\r\n    height: 40px;\r\n    border-radius: 50%;\r\n    background-color: #eee;\r\n    margin-right: 15px;\r\n}\r\n\r\n.detail__topMain-2ocL_{\r\n    flex: 1;\r\n    position: relative;\r\n}\r\n\r\n.detail__detailTop-y67pU::after{\r\n    content: \">\";\r\n    position: absolute;\r\n    right: 20px;\r\n    top: 20px;\r\n}\r\n\r\n.detail__detailMain-2FgJ8{\r\n    background-color: #fff;\r\n    padding: 0 20px 20px;\r\n    margin-bottom: 80px;\r\n    line-height: 200%;\r\n    font-size: 1.8rem;\r\n    word-wrap: break-word;\r\n}\r\n\r\n.detail__detailBottom-wwWK5{\r\n    position: fixed;\r\n    display: flex;\r\n    height: 40px;\r\n    padding: 10px 20px;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    background-color: #fff;\r\n    z-index: 5;\r\n}\r\n\r\n.detail__bottomLeft-2hXUT,\r\n.detail__bottomRight-25V45{\r\n    flex: 1;\r\n}\r\n\r\n.detail__bottomLeft-2hXUT{\r\n    display: flex;\r\n    padding-right: 30px;\r\n}\r\n\r\n.detail__bottomItem-3w1Vl{\r\n    flex:1;\r\n    margin-right: 10px;\r\n    line-height: 40px;\r\n}\r\n\r\n.detail__toBuyBtn-2Ie37{\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 5px;\r\n    background-color: indianred;\r\n    color: #fff;\r\n    text-align: center;\r\n    outline: none;\r\n    border: none;\r\n    font-size: 1.8rem;\r\n}", ""]);
+	exports.push([module.id, ".detail__detailBox-1b6ne{\r\n    position: relative;\r\n}\r\n\r\n.detail__detailTop-y67pU{\r\n    display: flex;\r\n    position: relative;\r\n    height: 40px;\r\n    padding: 10px 20px;\r\n    border-bottom: 1px solid #eee;\r\n    background-color: #fff;\r\n    z-index: 5;\r\n}\r\n\r\n.detail__topHeadImg-1F-dC{\r\n    width: 40px;\r\n    height: 40px;\r\n    border-radius: 50%;\r\n    background-color: #eee;\r\n    margin-right: 15px;\r\n}\r\n\r\n.detail__topMain-2ocL_{\r\n    flex: 1;\r\n    position: relative;\r\n}\r\n\r\n.detail__detailTop-y67pU::after{\r\n    content: \">\";\r\n    position: absolute;\r\n    right: 20px;\r\n    top: 20px;\r\n}\r\n\r\n.detail__detailMain-2FgJ8{\r\n    background-color: #fff;\r\n    padding: 0 20px 20px;\r\n    border-bottom: 1px solid #eee;\r\n    line-height: 200%;\r\n    font-size: 1.8rem;\r\n    word-wrap: break-word;\r\n}\r\n\r\n.detail__detailFooter-2CQc5{\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.detail__footer1Box-32sxZ{\r\n    display: flex;\r\n    margin-bottom: 20px;\r\n    background-color: #fff;\r\n}\r\n\r\n.detail__footer1Item-3c7MH{\r\n    height: 160px;\r\n    line-height: 160px;\r\n    flex: 1;\r\n    text-align: center;\r\n}\r\n\r\n.detail__footer1Item-3c7MH:first-child{\r\n    border-right: 1px solid #eee;\r\n}\r\n\r\n.detail__footer2Box-1I_1V{\r\n    margin-bottom: 20px;\r\n    background-color: #fff;\r\n    height: 100px;\r\n    line-height: 100px;\r\n    text-align: center;\r\n}\r\n\r\n.detail__footer3Box-3-dOX{\r\n    text-align: center;\r\n    background-color: #fff;\r\n    padding: 20px 0;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.detail__footer3Title-3SPcj{\r\n    padding: 10px 0 20px;\r\n}\r\n\r\n.detail__footer3Div-3GtmX{\r\n    display: flex;\r\n}\r\n\r\n.detail__footer3Item-3UbY4{\r\n    flex: 1;\r\n    height: 80px;\r\n    line-height: 80px;\r\n}\r\n\r\n.detail__footer4Box-2AQQs{\r\n    background-color: #fff;\r\n    padding: 20px 0;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.detail__footer4Title-1T6QE{\r\n    text-align: center;\r\n    padding: 10px 0 20px;\r\n}\r\n\r\n.detail__que-Iw08T{\r\n    color: #333;\r\n    font-size: 1.2rem;\r\n    padding: 0 20px;\r\n    margin: 5px 0;\r\n}\r\n\r\n.detail__ans-3cNDb{\r\n    color: #999;\r\n    font-size: 1.2rem;\r\n    padding: 0 20px;\r\n    margin: 5px 0 25px;;\r\n}\r\n\r\n.detail__detailBottom-wwWK5{\r\n    position: fixed;\r\n    display: flex;\r\n    height: 40px;\r\n    padding: 10px 20px;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    background-color: #fff;\r\n    z-index: 5;\r\n}\r\n\r\n.detail__bottomLeft-2hXUT,\r\n.detail__bottomRight-25V45{\r\n    flex: 1;\r\n}\r\n\r\n.detail__bottomLeft-2hXUT{\r\n    display: flex;\r\n    padding-right: 30px;\r\n}\r\n\r\n.detail__bottomItem-3w1Vl{\r\n    flex:1;\r\n    margin-right: 10px;\r\n    line-height: 40px;\r\n}\r\n\r\n.detail__toBuyBtn-2Ie37{\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 5px;\r\n    background-color: indianred;\r\n    color: #fff;\r\n    text-align: center;\r\n    outline: none;\r\n    border: none;\r\n    font-size: 1.8rem;\r\n}", ""]);
 
 	// exports
 	exports.locals = {
@@ -28618,6 +28813,18 @@
 		"topHeadImg": "detail__topHeadImg-1F-dC",
 		"topMain": "detail__topMain-2ocL_",
 		"detailMain": "detail__detailMain-2FgJ8",
+		"detailFooter": "detail__detailFooter-2CQc5",
+		"footer1Box": "detail__footer1Box-32sxZ",
+		"footer1Item": "detail__footer1Item-3c7MH",
+		"footer2Box": "detail__footer2Box-1I_1V",
+		"footer3Box": "detail__footer3Box-3-dOX",
+		"footer3Title": "detail__footer3Title-3SPcj",
+		"footer3Div": "detail__footer3Div-3GtmX",
+		"footer3Item": "detail__footer3Item-3UbY4",
+		"footer4Box": "detail__footer4Box-2AQQs",
+		"footer4Title": "detail__footer4Title-1T6QE",
+		"que": "detail__que-Iw08T",
+		"ans": "detail__ans-3cNDb",
 		"detailBottom": "detail__detailBottom-wwWK5",
 		"bottomLeft": "detail__bottomLeft-2hXUT",
 		"bottomRight": "detail__bottomRight-25V45",
