@@ -2,6 +2,7 @@
 //在build之前记得先把 .babelrc 里的 evn 参数删掉！！！！！！！
 
 var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 
 module.exports = {
@@ -21,7 +22,8 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: "style-loader!css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]"
+                // loader: "style-loader!css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]"
+                loader:  ExtractTextPlugin.extract("style-loader","css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]")
             },
             {
     　　　　　　test: /\.(png|jpg)$/,
@@ -33,5 +35,9 @@ module.exports = {
     　　　　}
         ]
     },
+
+    plugins:  [
+      new ExtractTextPlugin("styles.css"),  
+],
 
 };
