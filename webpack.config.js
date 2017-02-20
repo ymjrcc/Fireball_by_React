@@ -1,4 +1,5 @@
 var webpack = require('webpack');//引入Webpack模块供我们调用，这里只能使用ES5语法，使用ES6语法会报错
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 //__dirname是node.js中的一个全局变量，它指向当前执行脚本所在的目录
 module.exports = {//注意这里是exports不是export
@@ -18,7 +19,9 @@ module.exports = {//注意这里是exports不是export
             },
             {
                 test: /\.css$/,
-                loader: "style-loader!css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]"
+                // loader: "style-loader!css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]"
+                loader:  ExtractTextPlugin.extract("style-loader","css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]")
+
             },
             {
     　　　　　　test: /\.(png|jpg)$/,
@@ -33,6 +36,7 @@ module.exports = {//注意这里是exports不是export
 
     plugins: [
         new webpack.HotModuleReplacementPlugin(),//热模块替换插件
+        new ExtractTextPlugin("styles.css"),
     ],
 
     //webpack-dev-server配置
