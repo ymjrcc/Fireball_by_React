@@ -27456,35 +27456,37 @@
 	    }
 
 	    _createClass(DiscoverBannerImg, [{
-	        key: 'componentDidMount',
-	        value: function componentDidMount() {
-	            var ele = (0, _reactDom.findDOMNode)(this);
-	            var left = parseInt(ele.style.left.substring(0, ele.style.left.length - 1));
-	            var move = 0;
-	            var count = 0;
-	            var flag = false;
-	            setInterval(function () {
-	                if (move < 84 && count == 0) {
-	                    move++;
-	                    if (flag) {
-	                        ele.setAttribute("style", "left:" + --left + "%");
-	                        if (left < -50) {
-	                            left += 336;
-	                            ele.setAttribute("style", "left:" + left + "%");
-	                        }
-	                    }
-	                } else {
-	                    flag = true;
-	                    count++;
-	                    if (count == 200) {
-	                        count = 0;
-	                        move = 0;
-	                    }
-	                }
-	            }, 20);
-	        }
-	    }, {
 	        key: 'render',
+
+
+	        // js动画不如CSS3，故废弃该方案
+	        // componentDidMount(){
+	        //     var ele = findDOMNode(this);
+	        //     var left = parseInt(ele.style.left.substring(0, ele.style.left.length - 1));
+	        //     var move = 0;
+	        //     var count = 0;
+	        //     var flag = false;
+	        //     setInterval(function(){
+	        //         if(move<84 && count==0){
+	        //             move++;
+	        //             if(flag){
+	        //                 ele.setAttribute("style","left:"+(--left)+"%");
+	        //                 if(left<-50){
+	        //                     left+=336;
+	        //                     ele.setAttribute("style","left:"+left+"%");
+	        //                 }
+	        //             }
+	        //         }else{
+	        //             flag = true;
+	        //             count++;
+	        //             if(count==200){
+	        //                 count=0;
+	        //                 move=0;
+	        //             }
+	        //         }
+	        //     },20)
+	        // }
+
 	        value: function render() {
 	            return _react2.default.createElement('div', {
 	                className: _discover2.default.discoverBannerImg,
@@ -27515,7 +27517,8 @@
 	                _react2.default.createElement(DiscoverBannerImg, { index: '0' }),
 	                _react2.default.createElement(DiscoverBannerImg, { index: '1' }),
 	                _react2.default.createElement(DiscoverBannerImg, { index: '2' }),
-	                _react2.default.createElement(DiscoverBannerImg, { index: '3' })
+	                _react2.default.createElement(DiscoverBannerImg, { index: '3' }),
+	                _react2.default.createElement(DiscoverBannerImg, { index: '4' })
 	            );
 	        }
 	    }]);
@@ -27730,7 +27733,7 @@
 
 
 	// module
-	exports.push([module.id, ".discover__discoverTop-HspIP{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 50px;\r\n    line-height: 50px;\r\n    font-size: 2rem;\r\n    font-weight: bold;\r\n    background-color: #f8f8f8;\r\n    opacity: 0.8;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ddd;\r\n}\r\n\r\n.discover__discoverBox-24RGv{\r\n    margin-top: 50px;\r\n    margin-bottom: 50px;\r\n    background-color: #f3f3f3;\r\n    overflow-x: hidden;\r\n}\r\n\r\n.discover__discoverTopRow-3octI{\r\n    display: flex;\r\n    padding: 20px;\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx{\r\n    flex: 1;\r\n    height: 80px;\r\n    line-height: 80px;\r\n    background-color: #eee;\r\n    text-align: center;\r\n    border-radius: 5px;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx:first-child{\r\n    margin-right: 20px;\r\n}\r\n\r\n.discover__discoverSection-2h8hz{\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px;\r\n}\r\n\r\n.discover__sectionImgBox-20_bn{\r\n    display: flex;\r\n    padding-bottom: 20px;\r\n}\r\n.discover__sectionImg-3M5wQ{\r\n    flex: 1;\r\n    height: 100px;\r\n    background-color: #eee;\r\n    border-radius: 5px;\r\n}\r\n\r\n.discover__sectionImg-3M5wQ:nth-child(even){\r\n    margin: 0 20px;\r\n}\r\n\r\n.discover__discoverBanner-3M_yZ{\r\n    margin: 20px 0;\r\n    overflow-x: hidden;\r\n    position: relative;\r\n    height: 102px;\r\n}\r\n\r\n.discover__discoverBannerImg-1dlDI{\r\n    position: absolute;\r\n    transform: translateX(-50%);\r\n    width: 80%;\r\n    height: 100px;\r\n    background-color: #eee;\r\n    border: 1px solid #999;\r\n    border-radius: 10px;\r\n    opacity: 0.5;\r\n}\r\n\r\n.discover__discoverBannerImg-1dlDI[data-index=\"0\"],\r\n.discover__discoverBannerImg-1dlDI[data-index=\"2\"]{\r\n    background-color: #aaa;\r\n\r\n}\r\n.discover__discoverBannerImg-1dlDI[data-index=\"1\"],\r\n.discover__discoverBannerImg-1dlDI[data-index=\"3\"]{\r\n    background-color: #ccc;\r\n}\r\n\r\n.discover__recommendSection-aZ8W2{\r\n    background-color: #fff;\r\n    margin-bottom: 50px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px 30px;\r\n}\r\n\r\n.discover__recommendItemBox-oGHTb{\r\n    display: flex;\r\n}\r\n\r\n.discover__recommendItem-1hDAE{\r\n    flex: 1;\r\n    text-align: center;\r\n}\r\n\r\n.discover__recommendItemImg-1EIxm{\r\n    width: 80px;\r\n    height: 80px;\r\n    background-color: #eee;\r\n    border-radius: 50%;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendItemName-2hgdv{\r\n    width: 100px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    font-size: 1.8rem;\r\n    margin: 10px auto;\r\n}\r\n\r\n.discover__recommendItemDesc-2qIP7{\r\n    font-size: 1.4rem;\r\n    color: #999;\r\n    width: 90px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendFollowBtn-26_9S{\r\n    background-color: #fff;\r\n    border: 1px solid indianred;\r\n    color: indianred;\r\n    border-radius: 2px;\r\n    width: 60px;\r\n    height: 28px;\r\n    line-height: 28px;\r\n    outline: none;\r\n}\r\n\r\n.discover__recommendFollowingBtn-2AyEM{\r\n    background-color: #eee;\r\n    border: 1px solid #eee;\r\n    color: #666;\r\n    border-radius: 2px;\r\n    width: 60px;\r\n    height: 28px;\r\n    line-height: 28px;\r\n    outline: none;\r\n}", ""]);
+	exports.push([module.id, ".discover__discoverTop-HspIP{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 50px;\r\n    line-height: 50px;\r\n    font-size: 2rem;\r\n    font-weight: bold;\r\n    background-color: #f8f8f8;\r\n    opacity: 0.8;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ddd;\r\n}\r\n\r\n.discover__discoverBox-24RGv{\r\n    margin-top: 50px;\r\n    margin-bottom: 50px;\r\n    background-color: #f3f3f3;\r\n    overflow-x: hidden;\r\n}\r\n\r\n.discover__discoverTopRow-3octI{\r\n    display: flex;\r\n    padding: 20px;\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx{\r\n    flex: 1;\r\n    height: 80px;\r\n    line-height: 80px;\r\n    background-color: #eee;\r\n    text-align: center;\r\n    border-radius: 5px;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx:first-child{\r\n    margin-right: 20px;\r\n}\r\n\r\n.discover__discoverSection-2h8hz{\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px;\r\n}\r\n\r\n.discover__sectionImgBox-20_bn{\r\n    display: flex;\r\n    padding-bottom: 20px;\r\n}\r\n.discover__sectionImg-3M5wQ{\r\n    flex: 1;\r\n    height: 100px;\r\n    background-color: #eee;\r\n    border-radius: 5px;\r\n}\r\n\r\n.discover__sectionImg-3M5wQ:nth-child(even){\r\n    margin: 0 20px;\r\n}\r\n\r\n.discover__discoverBanner-3M_yZ{\r\n    margin: 20px 0;\r\n    overflow-x: hidden;\r\n    position: relative;\r\n    height: 102px;\r\n}\r\n\r\n.discover__discoverBannerImg-1dlDI{\r\n    position: absolute;\r\n    transform: translateX(-50%);\r\n    width: 80%;\r\n    height: 100px;\r\n    background-color: #eee;\r\n    border: 1px solid #999;\r\n    border-radius: 10px;\r\n    opacity: 0.5;\r\n}\r\n\r\n@keyframes discover__banner0-1VN53{\r\n    0% {left: -34%;}\r\n    20% {left: -34%;}\r\n    50% {left: -118%;}\r\n    70% {left: -118%;}\r\n    100% {left: -202%;}\r\n}\r\n.discover__discoverBannerImg-1dlDI[data-index=\"0\"]{\r\n    animation: discover__banner0-1VN53 8s infinite;\r\n    background-color: #aaa;\r\n}\r\n\r\n@keyframes discover__banner1-2x17G{\r\n    0% {left: 50%;}\r\n    20% {left: 50%;}\r\n    50% {left: -34%;}\r\n    70% {left: -34%;}\r\n    100% {left: -118%;}\r\n}\r\n.discover__discoverBannerImg-1dlDI[data-index=\"1\"]{\r\n    animation: discover__banner1-2x17G 8s infinite;\r\n    background-color: #ccc;\r\n\r\n}\r\n\r\n@keyframes discover__banner2-3O8wW{\r\n    0% {left: 134%;}\r\n    20% {left: 134%;}\r\n    50% {left: 50%;}\r\n    70% {left: 50%;}\r\n    100% {left: -34%;}\r\n}\r\n.discover__discoverBannerImg-1dlDI[data-index=\"2\"]{\r\n    animation: discover__banner2-3O8wW 8s infinite;\r\n    background-color: #aaa;\r\n}\r\n\r\n@keyframes discover__banner3-Uc41O{\r\n    0% {left: 218%;}\r\n    20% {left: 218%;}\r\n    50% {left: 134%;}\r\n    70% {left: 134%;}\r\n    100% {left: 50%;}\r\n}\r\n.discover__discoverBannerImg-1dlDI[data-index=\"3\"]{\r\n    animation: discover__banner3-Uc41O 8s infinite;\r\n    background-color: #ccc;\r\n}\r\n\r\n@keyframes discover__banner4-3ElA_{\r\n    0% {left: 302%;}\r\n    20% {left: 302%;}\r\n    50% {left: 218%;}\r\n    70% {left: 218%;}\r\n    100% {left: 134%;}\r\n}\r\n.discover__discoverBannerImg-1dlDI[data-index=\"4\"]{\r\n    animation: discover__banner4-3ElA_ 8s infinite;\r\n    background-color: #aaa;\r\n}\r\n\r\n.discover__recommendSection-aZ8W2{\r\n    background-color: #fff;\r\n    margin-bottom: 50px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px 30px;\r\n}\r\n\r\n.discover__recommendItemBox-oGHTb{\r\n    display: flex;\r\n}\r\n\r\n.discover__recommendItem-1hDAE{\r\n    flex: 1;\r\n    text-align: center;\r\n}\r\n\r\n.discover__recommendItemImg-1EIxm{\r\n    width: 80px;\r\n    height: 80px;\r\n    background-color: #eee;\r\n    border-radius: 50%;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendItemName-2hgdv{\r\n    width: 100px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    font-size: 1.8rem;\r\n    margin: 10px auto;\r\n}\r\n\r\n.discover__recommendItemDesc-2qIP7{\r\n    font-size: 1.4rem;\r\n    color: #999;\r\n    width: 90px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendFollowBtn-26_9S{\r\n    background-color: #fff;\r\n    border: 1px solid indianred;\r\n    color: indianred;\r\n    border-radius: 2px;\r\n    width: 60px;\r\n    height: 28px;\r\n    line-height: 28px;\r\n    outline: none;\r\n}\r\n\r\n.discover__recommendFollowingBtn-2AyEM{\r\n    background-color: #eee;\r\n    border: 1px solid #eee;\r\n    color: #666;\r\n    border-radius: 2px;\r\n    width: 60px;\r\n    height: 28px;\r\n    line-height: 28px;\r\n    outline: none;\r\n}", ""]);
 
 	// exports
 	exports.locals = {
@@ -27743,6 +27746,11 @@
 		"sectionImg": "discover__sectionImg-3M5wQ",
 		"discoverBanner": "discover__discoverBanner-3M_yZ",
 		"discoverBannerImg": "discover__discoverBannerImg-1dlDI",
+		"banner0": "discover__banner0-1VN53",
+		"banner1": "discover__banner1-2x17G",
+		"banner2": "discover__banner2-3O8wW",
+		"banner3": "discover__banner3-Uc41O",
+		"banner4": "discover__banner4-3ElA_",
 		"recommendSection": "discover__recommendSection-aZ8W2",
 		"recommendItemBox": "discover__recommendItemBox-oGHTb",
 		"recommendItem": "discover__recommendItem-1hDAE",

@@ -80,14 +80,65 @@
     opacity: 0.5;
 }
 
-.discoverBannerImg[data-index="0"],
-.discoverBannerImg[data-index="2"]{
+@keyframes banner0{
+    0% {left: -34%;}
+    20% {left: -34%;}
+    50% {left: -118%;}
+    70% {left: -118%;}
+    100% {left: -202%;}
+}
+.discoverBannerImg[data-index="0"]{
+    animation: banner0 8s infinite;
     background-color: #aaa;
+}
+
+@keyframes banner1{
+    0% {left: 50%;}
+    20% {left: 50%;}
+    50% {left: -34%;}
+    70% {left: -34%;}
+    100% {left: -118%;}
+}
+.discoverBannerImg[data-index="1"]{
+    animation: banner1 8s infinite;
+    background-color: #ccc;
 
 }
-.discoverBannerImg[data-index="1"],
+
+@keyframes banner2{
+    0% {left: 134%;}
+    20% {left: 134%;}
+    50% {left: 50%;}
+    70% {left: 50%;}
+    100% {left: -34%;}
+}
+.discoverBannerImg[data-index="2"]{
+    animation: banner2 8s infinite;
+    background-color: #aaa;
+}
+
+@keyframes banner3{
+    0% {left: 218%;}
+    20% {left: 218%;}
+    50% {left: 134%;}
+    70% {left: 134%;}
+    100% {left: 50%;}
+}
 .discoverBannerImg[data-index="3"]{
+    animation: banner3 8s infinite;
     background-color: #ccc;
+}
+
+@keyframes banner4{
+    0% {left: 302%;}
+    20% {left: 302%;}
+    50% {left: 218%;}
+    70% {left: 218%;}
+    100% {left: 134%;}
+}
+.discoverBannerImg[data-index="4"]{
+    animation: banner4 8s infinite;
+    background-color: #aaa;
 }
 
 .recommendSection{

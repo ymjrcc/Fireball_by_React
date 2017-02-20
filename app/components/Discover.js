@@ -35,32 +35,33 @@ class DiscoverSection extends Component{
 
 class DiscoverBannerImg extends Component{
 
-    componentDidMount(){
-        var ele = findDOMNode(this);
-        var left = parseInt(ele.style.left.substring(0, ele.style.left.length - 1));
-        var move = 0;
-        var count = 0;
-        var flag = false;
-        setInterval(function(){
-            if(move<84 && count==0){
-                move++;
-                if(flag){
-                    ele.setAttribute("style","left:"+(--left)+"%");
-                    if(left<-50){
-                        left+=336;
-                        ele.setAttribute("style","left:"+left+"%");
-                    }
-                }
-            }else{
-                flag = true;
-                count++;
-                if(count==200){
-                    count=0;
-                    move=0;
-                }
-            }
-        },20)
-    }
+    // js动画不如CSS3，故废弃该方案
+    // componentDidMount(){
+    //     var ele = findDOMNode(this);
+    //     var left = parseInt(ele.style.left.substring(0, ele.style.left.length - 1));
+    //     var move = 0;
+    //     var count = 0;
+    //     var flag = false;
+    //     setInterval(function(){
+    //         if(move<84 && count==0){
+    //             move++;
+    //             if(flag){
+    //                 ele.setAttribute("style","left:"+(--left)+"%");
+    //                 if(left<-50){
+    //                     left+=336;
+    //                     ele.setAttribute("style","left:"+left+"%");
+    //                 }
+    //             }
+    //         }else{
+    //             flag = true;
+    //             count++;
+    //             if(count==200){
+    //                 count=0;
+    //                 move=0;
+    //             }
+    //         }
+    //     },20)
+    // }
 
     render(){
         return (
@@ -83,6 +84,7 @@ class DiscoverBanner extends Component{
                 <DiscoverBannerImg index="1" />
                 <DiscoverBannerImg index="2" />
                 <DiscoverBannerImg index="3" />
+                <DiscoverBannerImg index="4" />
             </div>
         )
     }
