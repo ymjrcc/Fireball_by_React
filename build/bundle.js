@@ -26866,8 +26866,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/.npminstall/css-loader/0.26.1/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./bottom.css", function() {
-				var newContent = require("!!./../../node_modules/.npminstall/css-loader/0.26.1/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./bottom.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./bottom.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./bottom.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -26885,7 +26885,7 @@
 
 
 	// module
-	exports.push([module.id, ".bottom__bottomTab-2qxSD{\n    position: fixed;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    height: 50px;\n    line-height: 50px;\n    background-color: #f8f8f8;\n    display: flex;\n}\n\n.bottom__tabItem-3Pb4R{\n    flex: 1;\n    text-align: center;\n\n}", ""]);
+	exports.push([module.id, ".bottom__bottomTab-2qxSD{\r\n    position: fixed;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    height: 50px;\r\n    line-height: 50px;\r\n    background-color: #f8f8f8;\r\n    display: flex;\r\n}\r\n\r\n.bottom__tabItem-3Pb4R{\r\n    flex: 1;\r\n    text-align: center;\r\n\r\n}", ""]);
 
 	// exports
 	exports.locals = {
@@ -27217,8 +27217,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/.npminstall/css-loader/0.26.1/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./home.css", function() {
-				var newContent = require("!!./../../node_modules/.npminstall/css-loader/0.26.1/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./home.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./home.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./home.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27347,6 +27347,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactDom = __webpack_require__(32);
+
 	var _reactRouter = __webpack_require__(178);
 
 	var _BottomTab = __webpack_require__(234);
@@ -27444,8 +27446,59 @@
 	    return DiscoverSection;
 	}(_react.Component);
 
-	var DiscoverBanner = function (_Component3) {
-	    _inherits(DiscoverBanner, _Component3);
+	var DiscoverBannerImg = function (_Component3) {
+	    _inherits(DiscoverBannerImg, _Component3);
+
+	    function DiscoverBannerImg() {
+	        _classCallCheck(this, DiscoverBannerImg);
+
+	        return _possibleConstructorReturn(this, (DiscoverBannerImg.__proto__ || Object.getPrototypeOf(DiscoverBannerImg)).apply(this, arguments));
+	    }
+
+	    _createClass(DiscoverBannerImg, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            var ele = (0, _reactDom.findDOMNode)(this);
+	            var left = parseInt(ele.style.left.substring(0, ele.style.left.length - 1));
+	            var move = 0;
+	            var count = 0;
+	            var flag = false;
+	            setInterval(function () {
+	                if (move < 84 && count == 0) {
+	                    move++;
+	                    if (flag) {
+	                        ele.setAttribute("style", "left:" + --left + "%");
+	                        if (left < -50) {
+	                            left += 336;
+	                            ele.setAttribute("style", "left:" + left + "%");
+	                        }
+	                    }
+	                } else {
+	                    flag = true;
+	                    count++;
+	                    if (count == 200) {
+	                        count = 0;
+	                        move = 0;
+	                    }
+	                }
+	            }, 20);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement('div', {
+	                className: _discover2.default.discoverBannerImg,
+	                'data-index': this.props.index,
+	                style: { left: this.props.index * 84 - 34 + "%" }
+	            });
+	        }
+	    }]);
+
+	    return DiscoverBannerImg;
+	}(_react.Component);
+
+	var DiscoverBanner = function (_Component4) {
+	    _inherits(DiscoverBanner, _Component4);
 
 	    function DiscoverBanner() {
 	        _classCallCheck(this, DiscoverBanner);
@@ -27459,8 +27512,10 @@
 	            return _react2.default.createElement(
 	                'div',
 	                { className: _discover2.default.discoverBanner },
-	                _react2.default.createElement('div', { className: _discover2.default.discoverBannerImg }),
-	                _react2.default.createElement('div', { className: _discover2.default.discoverBannerImg })
+	                _react2.default.createElement(DiscoverBannerImg, { index: '0' }),
+	                _react2.default.createElement(DiscoverBannerImg, { index: '1' }),
+	                _react2.default.createElement(DiscoverBannerImg, { index: '2' }),
+	                _react2.default.createElement(DiscoverBannerImg, { index: '3' })
 	            );
 	        }
 	    }]);
@@ -27468,8 +27523,8 @@
 	    return DiscoverBanner;
 	}(_react.Component);
 
-	var RecommendItem = function (_Component4) {
-	    _inherits(RecommendItem, _Component4);
+	var RecommendItem = function (_Component5) {
+	    _inherits(RecommendItem, _Component5);
 
 	    function RecommendItem() {
 	        _classCallCheck(this, RecommendItem);
@@ -27502,19 +27557,19 @@
 	    return RecommendItem;
 	}(_react.Component);
 
-	var RecommendFollowBtn = function (_Component5) {
-	    _inherits(RecommendFollowBtn, _Component5);
+	var RecommendFollowBtn = function (_Component6) {
+	    _inherits(RecommendFollowBtn, _Component6);
 
 	    function RecommendFollowBtn(props) {
 	        _classCallCheck(this, RecommendFollowBtn);
 
-	        var _this5 = _possibleConstructorReturn(this, (RecommendFollowBtn.__proto__ || Object.getPrototypeOf(RecommendFollowBtn)).call(this, props));
+	        var _this6 = _possibleConstructorReturn(this, (RecommendFollowBtn.__proto__ || Object.getPrototypeOf(RecommendFollowBtn)).call(this, props));
 
-	        _this5.state = {
+	        _this6.state = {
 	            className: "recommendFollowBtn",
 	            content: "关注"
 	        };
-	        return _this5;
+	        return _this6;
 	    }
 
 	    _createClass(RecommendFollowBtn, [{
@@ -27542,8 +27597,8 @@
 	    return RecommendFollowBtn;
 	}(_react.Component);
 
-	var RecommendSection = function (_Component6) {
-	    _inherits(RecommendSection, _Component6);
+	var RecommendSection = function (_Component7) {
+	    _inherits(RecommendSection, _Component7);
 
 	    function RecommendSection() {
 	        _classCallCheck(this, RecommendSection);
@@ -27581,8 +27636,8 @@
 	    return RecommendSection;
 	}(_react.Component);
 
-	var DiscoverBox = function (_Component7) {
-	    _inherits(DiscoverBox, _Component7);
+	var DiscoverBox = function (_Component8) {
+	    _inherits(DiscoverBox, _Component8);
 
 	    function DiscoverBox() {
 	        _classCallCheck(this, DiscoverBox);
@@ -27613,8 +27668,8 @@
 	    return DiscoverBox;
 	}(_react.Component);
 
-	var Discover = function (_Component8) {
-	    _inherits(Discover, _Component8);
+	var Discover = function (_Component9) {
+	    _inherits(Discover, _Component9);
 
 	    function Discover() {
 	        _classCallCheck(this, Discover);
@@ -27656,8 +27711,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/.npminstall/css-loader/0.26.1/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./discover.css", function() {
-				var newContent = require("!!./../../node_modules/.npminstall/css-loader/0.26.1/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./discover.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./discover.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./discover.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27675,7 +27730,7 @@
 
 
 	// module
-	exports.push([module.id, ".discover__discoverTop-HspIP{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 50px;\r\n    line-height: 50px;\r\n    font-size: 2rem;\r\n    font-weight: bold;\r\n    background-color: #f8f8f8;\r\n    opacity: 0.8;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ddd;\r\n}\r\n\r\n.discover__discoverBox-24RGv{\r\n    margin-top: 50px;\r\n    margin-bottom: 50px;\r\n    background-color: #f3f3f3;\r\n    overflow-x: hidden;\r\n}\r\n\r\n.discover__discoverTopRow-3octI{\r\n    display: flex;\r\n    padding: 20px;\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx{\r\n    flex: 1;\r\n    height: 80px;\r\n    line-height: 80px;\r\n    background-color: #eee;\r\n    text-align: center;\r\n    border-radius: 5px;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx:first-child{\r\n    margin-right: 20px;\r\n}\r\n\r\n.discover__discoverSection-2h8hz{\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px;\r\n}\r\n\r\n.discover__sectionImgBox-20_bn{\r\n    display: flex;\r\n    padding-bottom: 20px;\r\n}\r\n.discover__sectionImg-3M5wQ{\r\n    flex: 1;\r\n    height: 100px;\r\n    background-color: #eee;\r\n    border-radius: 5px;\r\n}\r\n\r\n.discover__sectionImg-3M5wQ:nth-child(even){\r\n    margin: 0 20px;\r\n}\r\n\r\n.discover__discoverBanner-3M_yZ{\r\n    margin: 20px 10px;\r\n    overflow-x: hidden;\r\n    width: 900%;\r\n}\r\n\r\n.discover__discoverBannerImg-1dlDI{\r\n    display: inline-block;\r\n    width: 80vw;\r\n    height: 100px;\r\n    margin: 0 10px;\r\n    background-color: #eee;\r\n    border: 1px solid #999;\r\n    border-radius: 10px;\r\n}\r\n\r\n.discover__recommendSection-aZ8W2{\r\n    background-color: #fff;\r\n    margin-bottom: 50px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px 30px;\r\n}\r\n\r\n.discover__recommendItemBox-oGHTb{\r\n    display: flex;\r\n}\r\n\r\n.discover__recommendItem-1hDAE{\r\n    flex: 1;\r\n    text-align: center;\r\n}\r\n\r\n.discover__recommendItemImg-1EIxm{\r\n    width: 80px;\r\n    height: 80px;\r\n    background-color: #eee;\r\n    border-radius: 50%;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendItemName-2hgdv{\r\n    width: 100px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    font-size: 1.8rem;\r\n    margin: 10px auto;\r\n}\r\n\r\n.discover__recommendItemDesc-2qIP7{\r\n    font-size: 1.4rem;\r\n    color: #999;\r\n    width: 90px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendFollowBtn-26_9S{\r\n    background-color: #fff;\r\n    border: 1px solid indianred;\r\n    color: indianred;\r\n    border-radius: 2px;\r\n    width: 60px;\r\n    height: 28px;\r\n    line-height: 28px;\r\n    outline: none;\r\n}\r\n\r\n.discover__recommendFollowingBtn-2AyEM{\r\n    background-color: #eee;\r\n    border: 1px solid #eee;\r\n    color: #666;\r\n    border-radius: 2px;\r\n    width: 60px;\r\n    height: 28px;\r\n    line-height: 28px;\r\n    outline: none;\r\n}", ""]);
+	exports.push([module.id, ".discover__discoverTop-HspIP{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    height: 50px;\r\n    line-height: 50px;\r\n    font-size: 2rem;\r\n    font-weight: bold;\r\n    background-color: #f8f8f8;\r\n    opacity: 0.8;\r\n    text-align: center;\r\n    border-bottom: 1px solid #ddd;\r\n}\r\n\r\n.discover__discoverBox-24RGv{\r\n    margin-top: 50px;\r\n    margin-bottom: 50px;\r\n    background-color: #f3f3f3;\r\n    overflow-x: hidden;\r\n}\r\n\r\n.discover__discoverTopRow-3octI{\r\n    display: flex;\r\n    padding: 20px;\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx{\r\n    flex: 1;\r\n    height: 80px;\r\n    line-height: 80px;\r\n    background-color: #eee;\r\n    text-align: center;\r\n    border-radius: 5px;\r\n}\r\n\r\n.discover__discoverTopItem-2AGnx:first-child{\r\n    margin-right: 20px;\r\n}\r\n\r\n.discover__discoverSection-2h8hz{\r\n    background-color: #fff;\r\n    margin-bottom: 20px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px;\r\n}\r\n\r\n.discover__sectionImgBox-20_bn{\r\n    display: flex;\r\n    padding-bottom: 20px;\r\n}\r\n.discover__sectionImg-3M5wQ{\r\n    flex: 1;\r\n    height: 100px;\r\n    background-color: #eee;\r\n    border-radius: 5px;\r\n}\r\n\r\n.discover__sectionImg-3M5wQ:nth-child(even){\r\n    margin: 0 20px;\r\n}\r\n\r\n.discover__discoverBanner-3M_yZ{\r\n    margin: 20px 0;\r\n    overflow-x: hidden;\r\n    position: relative;\r\n    height: 102px;\r\n}\r\n\r\n.discover__discoverBannerImg-1dlDI{\r\n    position: absolute;\r\n    transform: translateX(-50%);\r\n    width: 80%;\r\n    height: 100px;\r\n    background-color: #eee;\r\n    border: 1px solid #999;\r\n    border-radius: 10px;\r\n    opacity: 0.5;\r\n}\r\n\r\n.discover__discoverBannerImg-1dlDI[data-index=\"0\"],\r\n.discover__discoverBannerImg-1dlDI[data-index=\"2\"]{\r\n    background-color: #aaa;\r\n\r\n}\r\n.discover__discoverBannerImg-1dlDI[data-index=\"1\"],\r\n.discover__discoverBannerImg-1dlDI[data-index=\"3\"]{\r\n    background-color: #ccc;\r\n}\r\n\r\n.discover__recommendSection-aZ8W2{\r\n    background-color: #fff;\r\n    margin-bottom: 50px;\r\n    border-top: 1px solid #f3f3f3;\r\n    padding: 0 20px 30px;\r\n}\r\n\r\n.discover__recommendItemBox-oGHTb{\r\n    display: flex;\r\n}\r\n\r\n.discover__recommendItem-1hDAE{\r\n    flex: 1;\r\n    text-align: center;\r\n}\r\n\r\n.discover__recommendItemImg-1EIxm{\r\n    width: 80px;\r\n    height: 80px;\r\n    background-color: #eee;\r\n    border-radius: 50%;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendItemName-2hgdv{\r\n    width: 100px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    font-size: 1.8rem;\r\n    margin: 10px auto;\r\n}\r\n\r\n.discover__recommendItemDesc-2qIP7{\r\n    font-size: 1.4rem;\r\n    color: #999;\r\n    width: 90px;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    margin: 0 auto 10px;\r\n}\r\n\r\n.discover__recommendFollowBtn-26_9S{\r\n    background-color: #fff;\r\n    border: 1px solid indianred;\r\n    color: indianred;\r\n    border-radius: 2px;\r\n    width: 60px;\r\n    height: 28px;\r\n    line-height: 28px;\r\n    outline: none;\r\n}\r\n\r\n.discover__recommendFollowingBtn-2AyEM{\r\n    background-color: #eee;\r\n    border: 1px solid #eee;\r\n    color: #666;\r\n    border-radius: 2px;\r\n    width: 60px;\r\n    height: 28px;\r\n    line-height: 28px;\r\n    outline: none;\r\n}", ""]);
 
 	// exports
 	exports.locals = {
@@ -27914,8 +27969,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/.npminstall/css-loader/0.26.1/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./personal.css", function() {
-				var newContent = require("!!./../../node_modules/.npminstall/css-loader/0.26.1/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./personal.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./personal.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./personal.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27933,7 +27988,7 @@
 
 
 	// module
-	exports.push([module.id, ".personal__personal-jvg88{\n    background-color: #efefef;\n    height: 100vh;\n}\n\n.personal__headBox-TXmdM{\n    background-color: #444;\n    padding: 20px 0;\n}\n\n.personal__headImg-JTpbE{\n    width: 80px;\n    height: 80px;\n    border-radius: 50%;\n    background-image: url(" + __webpack_require__(245) + ");\n    background-size: cover; \n    margin: 0 auto;\n}\n\n.personal__headInfo-eFuZk{\n    text-align: center;\n    color: #fff;\n}\n\n.personal__settingItem-2PHWd{\n    height: 36px;\n    line-height: 36px;\n    border-bottom: 1px solid #ccc;\n    padding: 0 25px;\n    position: relative;\n    background-color: #fff;\n}\n\n.personal__settingItem-2PHWd::after{\n    content: \">\";\n    position: absolute;\n    right: 20px;\n\n}", ""]);
+	exports.push([module.id, ".personal__personal-jvg88{\r\n    background-color: #efefef;\r\n    height: 100vh;\r\n}\r\n\r\n.personal__headBox-TXmdM{\r\n    background-color: #444;\r\n    padding: 20px 0;\r\n}\r\n\r\n.personal__headImg-JTpbE{\r\n    width: 80px;\r\n    height: 80px;\r\n    border-radius: 50%;\r\n    background-image: url(" + __webpack_require__(245) + ");\r\n    background-size: cover; \r\n    margin: 0 auto;\r\n}\r\n\r\n.personal__headInfo-eFuZk{\r\n    text-align: center;\r\n    color: #fff;\r\n}\r\n\r\n.personal__settingItem-2PHWd{\r\n    height: 36px;\r\n    line-height: 36px;\r\n    border-bottom: 1px solid #ccc;\r\n    padding: 0 25px;\r\n    position: relative;\r\n    background-color: #fff;\r\n}\r\n\r\n.personal__settingItem-2PHWd::after{\r\n    content: \">\";\r\n    position: absolute;\r\n    right: 20px;\r\n\r\n}", ""]);
 
 	// exports
 	exports.locals = {
@@ -28527,8 +28582,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/.npminstall/css-loader/0.26.1/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./detail.css", function() {
-				var newContent = require("!!./../../node_modules/.npminstall/css-loader/0.26.1/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./detail.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./detail.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]-[hash:base64:5]!./detail.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});

@@ -63,19 +63,31 @@
 }
 
 .discoverBanner{
-    margin: 20px 10px;
+    margin: 20px 0;
     overflow-x: hidden;
-    width: 900%;
+    position: relative;
+    height: 102px;
 }
 
 .discoverBannerImg{
-    display: inline-block;
-    width: 80vw;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 80%;
     height: 100px;
-    margin: 0 10px;
     background-color: #eee;
     border: 1px solid #999;
     border-radius: 10px;
+    opacity: 0.5;
+}
+
+.discoverBannerImg[data-index="0"],
+.discoverBannerImg[data-index="2"]{
+    background-color: #aaa;
+
+}
+.discoverBannerImg[data-index="1"],
+.discoverBannerImg[data-index="3"]{
+    background-color: #ccc;
 }
 
 .recommendSection{

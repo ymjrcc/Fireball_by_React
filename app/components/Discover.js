@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import {findDOMNode} from 'react-dom'
 import {Link} from 'react-router'
 import BottomTab from './BottomTab'
 import style from '../css/discover.css'
@@ -32,12 +33,56 @@ class DiscoverSection extends Component{
     }
 }
 
+class DiscoverBannerImg extends Component{
+
+    componentDidMount(){
+        var ele = findDOMNode(this);
+        var left = parseInt(ele.style.left.substring(0, ele.style.left.length - 1));
+        var move = 0;
+        var count = 0;
+        var flag = false;
+        setInterval(function(){
+            if(move<84 && count==0){
+                move++;
+                if(flag){
+                    ele.setAttribute("style","left:"+(--left)+"%");
+                    if(left<-50){
+                        left+=336;
+                        ele.setAttribute("style","left:"+left+"%");
+                    }
+                }
+            }else{
+                flag = true;
+                count++;
+                if(count==200){
+                    count=0;
+                    move=0;
+                }
+            }
+        },20)
+    }
+
+    render(){
+        return (
+            <div 
+                className={style.discoverBannerImg}
+                data-index={this.props.index}
+                style={{left: (this.props.index * 84 - 34)+"%"}}
+            >
+                
+            </div>
+        )
+    }
+}
+
 class DiscoverBanner extends Component{
     render(){
         return (
             <div className={style.discoverBanner}>
-                <div className={style.discoverBannerImg}></div>
-                <div className={style.discoverBannerImg}></div>
+                <DiscoverBannerImg index="0" />
+                <DiscoverBannerImg index="1" />
+                <DiscoverBannerImg index="2" />
+                <DiscoverBannerImg index="3" />
             </div>
         )
     }
