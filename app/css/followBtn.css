@@ -1,0 +1,27 @@
+.followBtn{
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid indianred;
+    color: indianred;
+    border-radius: 2px;
+    width: 48px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 1.2rem;
+    text-align: center;
+    outline: none;
+}
+
+.followingBtn{
+    display: inline-block;
+    background-color: #eee;
+    border: 1px solid #eee;
+    color: #666;
+    border-radius: 2px;
+    width: 48px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 1.2rem;
+    text-align: center;
+    outline: none;
+}

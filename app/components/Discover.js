@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import {findDOMNode} from 'react-dom'
 import {Link} from 'react-router'
+import FollowBtn from './FollowBtn'
 import BottomTab from './BottomTab'
 import style from '../css/discover.css'
 
@@ -71,13 +72,15 @@ class DiscoverBannerImg extends Component{
 
     render(){
         return (
-            <div 
-                className={style.discoverBannerImg}
-                data-index={this.props.index}
-                style={{left: (this.props.index * 84 - 34)+"%"}}
-            >
-                
-            </div>
+            <Link to="/detail">
+                <div 
+                    className={style.discoverBannerImg}
+                    data-index={this.props.index}
+                    style={{left: (this.props.index * 84 - 34)+"%"}}
+                >
+                    
+                </div>
+            </Link>
         )
     }
 }
@@ -103,40 +106,12 @@ class RecommendItem extends Component{
                 <div className={style.recommendItemImg}></div>
                 <div className={style.recommendItemName}>{this.props.name}</div>
                 <div className={style.recommendItemDesc}>{this.props.desc}</div>
-                <RecommendFollowBtn />
+                <FollowBtn following={false} />
             </div>
         )
     }
 }
 
-class RecommendFollowBtn extends Component{
-
-    constructor(props){
-        super(props);
-        this.state = {
-            className: "recommendFollowBtn",
-            content: "关注"
-        }
-    }
-
-    handleClick(){
-        this.setState({
-            className: this.state.className=="recommendFollowBtn"?"recommendFollowingBtn":"recommendFollowBtn",
-            content: this.state.content=="关注"?"已关注":"关注"
-        })
-    }
-
-    render(){
-        return (
-            <button 
-                className={style[this.state.className]}
-                onClick={this.handleClick.bind(this)}
-            >
-                {this.state.content}
-            </button>
-        )
-    }
-}
 
 class RecommendSection extends Component{
     render(){

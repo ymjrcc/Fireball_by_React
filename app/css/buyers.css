@@ -1,4 +1,59 @@
 .buyersList{
-    padding-top: 50px;
+    margin-top: 65px;
     background-color: #fff;
+}
+
+.buyerItem{
+    display: flex;
+    padding: 20px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.buyerImg{
+    flex: 3;
+    background-color: #eee;
+    margin-right: 20px;
+    border-radius: 5px;
+    min-height: 120px;
+}
+
+.buyerInfo{
+    flex: 7;
+    position: relative;
+}
+
+.name{
+    padding-bottom: 8px;
+}
+
+.desc{
+    font-size: 1.2rem;
+    padding-bottom: 12px;
+}
+
+.label{
+    
+}
+
+.label span{
+    display: inline-block;
+    border: 1px solid #eee;
+    font-size: 1rem;
+    color: #999;
+    padding: 2px 10px;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.followers{
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.followBtnBox{
+    position: absolute;
+    top: 0;
+    right: 0;
 }

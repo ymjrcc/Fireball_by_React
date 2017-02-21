@@ -145,25 +145,3 @@
     white-space: nowrap;
     margin: 0 auto 10px;
 }
-
-.recommendFollowBtn{
-    background-color: #fff;
-    border: 1px solid indianred;
-    color: indianred;
-    border-radius: 2px;
-    width: 60px;
-    height: 28px;
-    line-height: 28px;
-    outline: none;
-}
-
-.recommendFollowingBtn{
-    background-color: #eee;
-    border: 1px solid #eee;
-    color: #666;
-    border-radius: 2px;
-    width: 60px;
-    height: 28px;
-    line-height: 28px;
-    outline: none;
-}
