@@ -57,6 +57,32 @@
 
 .home__date-18DcC{
     color: #999;
+}.followBtn__followBtn-2M59F{
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid indianred;
+    color: indianred;
+    border-radius: 2px;
+    width: 48px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 1.2rem;
+    text-align: center;
+    outline: none;
+}
+
+.followBtn__followingBtn-2citV{
+    display: inline-block;
+    background-color: #eee;
+    border: 1px solid #eee;
+    color: #666;
+    border-radius: 2px;
+    width: 48px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 1.2rem;
+    text-align: center;
+    outline: none;
 }.discover__discoverTop-HspIP{
     position: fixed;
     top: 0;
@@ -203,28 +229,6 @@
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto 10px;
-}
-
-.discover__recommendFollowBtn-26_9S{
-    background-color: #fff;
-    border: 1px solid indianred;
-    color: indianred;
-    border-radius: 2px;
-    width: 60px;
-    height: 28px;
-    line-height: 28px;
-    outline: none;
-}
-
-.discover__recommendFollowingBtn-2AyEM{
-    background-color: #eee;
-    border: 1px solid #eee;
-    color: #666;
-    border-radius: 2px;
-    width: 60px;
-    height: 28px;
-    line-height: 28px;
-    outline: none;
 }.personal__personal-jvg88{
     background-color: #efefef;
     height: 100vh;
@@ -528,6 +532,61 @@
 .ranking__rankingList-2qjCZ{
     padding-top: 50px;
 }.buyers__buyersList-3bONT{
-    padding-top: 50px;
+    margin-top: 65px;
     background-color: #fff;
+}
+
+.buyers__buyerItem-6UuY8{
+    display: flex;
+    padding: 20px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.buyers__buyerImg-1bp6B{
+    flex: 3;
+    background-color: #eee;
+    margin-right: 20px;
+    border-radius: 5px;
+    min-height: 120px;
+}
+
+.buyers__buyerInfo-3Y6Uj{
+    flex: 7;
+    position: relative;
+}
+
+.buyers__name-TagUH{
+    padding-bottom: 8px;
+}
+
+.buyers__desc-wqAa8{
+    font-size: 1.2rem;
+    padding-bottom: 12px;
+}
+
+.buyers__label-2xzbG{
+    
+}
+
+.buyers__label-2xzbG span{
+    display: inline-block;
+    border: 1px solid #eee;
+    font-size: 1rem;
+    color: #999;
+    padding: 2px 10px;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.buyers__followers-2QytB{
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.buyers__followBtnBox-2YpUz{
+    position: absolute;
+    top: 0;
+    right: 0;
 }

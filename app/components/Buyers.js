@@ -7,7 +7,6 @@ import buyersData from '../data/buyersData.json'
 class BuyerItem extends Component{
     render(){
         let label = this.props.label.join("</span><span>");
-        console.log(label);
         return (
             <div className={style.buyerItem}>
                 <div className={style.buyerImg}></div>
@@ -30,7 +29,6 @@ class BuyersList extends Component{
     renderBuyers(data){
         let dataArr = [];
         for(let i = 0; i < data.length; i++){
-            console.log(data[i].label);
             dataArr.push(<BuyerItem key={data[i].id} name={data[i].name} desc={data[i].desc} label={data[i].label} followers={data[i].followers} following={data[i].following} />);
         }
         return dataArr;
