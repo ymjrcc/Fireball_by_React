@@ -22,6 +22,10 @@
     color: #fff;
 }
 
+.settingBox{
+    padding-bottom: 80px;
+}
+
 .settingItem{
     height: 36px;
     line-height: 36px;

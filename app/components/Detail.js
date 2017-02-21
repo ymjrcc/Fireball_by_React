@@ -121,15 +121,11 @@ class DetailBottom extends Component{
 
 class GoBackBtn extends Component{
 
-    handleClick(){
-        hashHistory.goBack();
-    }
-
     render(){
         return (
             <span 
                 className={style.bottomItem}
-                onClick={this.handleClick.bind(this)}
+                onClick={function(){hashHistory.goBack();}}
             >
                 返回
             </span>

@@ -10,7 +10,10 @@ import MyLikes from './components/MyLikes'
 import Coupons from './components/Coupons'
 import Helps from './components/Helps'
 import Settings from './components/Settings'
+import Topic from './components/Topic'
 import Detail from './components/Detail'
+import Ranking from './components/Ranking'
+import Buyers from './components/Buyers'
 
 ReactDOM.render(
     (
@@ -28,7 +31,13 @@ ReactDOM.render(
             <Route path="/personal/help" component={Helps} />
             <Route path="/personal/setting" component={Settings} />
 
+            <Route path="/topic" component={Topic} />
+
             <Route path="/detail" component={Detail} />
+
+            <Route path="/ranking" component={Ranking} />
+            <Route path="/buyers" component={Buyers} />
+
         </Router>
     ),
     document.getElementById('content')

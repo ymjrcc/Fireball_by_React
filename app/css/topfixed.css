@@ -1,0 +1,21 @@
+.topFixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #f8f8f8;
+    opacity: 0.8;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.backBtn{
+    font-size: 1.6rem;
+    font-weight: normal;
+    position: absolute;
+    left: 20px;
+}

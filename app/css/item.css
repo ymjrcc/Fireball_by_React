@@ -1,0 +1,37 @@
+.item{
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+}
+
+.img{
+    flex: 2;
+    background-color: #eee;
+    margin-right: 20px;
+    border-radius: 5px;
+    min-width: 104px;
+}
+
+.info{
+    flex: 3;
+    height: 86px;
+    position: relative;
+}
+
+.title{
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.likes{
+    font-size: 1.2rem;
+    color: #999;
+    margin-bottom: 25px;
+}
+
+.price{
+    color: red;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

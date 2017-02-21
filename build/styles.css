@@ -249,6 +249,10 @@
     color: #fff;
 }
 
+.personal__settingBox-2_UbL{
+    padding-bottom: 80px;
+}
+
 .personal__settingItem-2PHWd{
     height: 36px;
     line-height: 36px;
@@ -263,6 +267,84 @@
     position: absolute;
     right: 20px;
 
+}.item__item-3X-cC{
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+}
+
+.item__img-18IC2{
+    flex: 2;
+    background-color: #eee;
+    margin-right: 20px;
+    border-radius: 5px;
+    min-width: 104px;
+}
+
+.item__info-22TU-{
+    flex: 3;
+    height: 86px;
+    position: relative;
+}
+
+.item__title-a5ySn{
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.item__likes-1k1M9{
+    font-size: 1.2rem;
+    color: #999;
+    margin-bottom: 25px;
+}
+
+.item__price-173VH{
+    color: red;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}.topic__topicHeader-1ZRk6{
+    height: 160px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topic__topicHeaderBack-i3tEb{
+    content: "<";
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    color: #fff;
+}
+
+.topic__topicBox-2xNOv{
+    background-color: #fff;
+}
+
+.topic__topicNav-2Yz8w{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #eee;
+    padding: 0 20px;
+}
+
+.topic__navItem-2S0_j{
+    padding-right: 20px;
+    color: #999;
+}
+
+.topic__choosenItem-1tlXz{
+    color: #333;
+}
+
+.topic__topicList-tw2bY{
+    background-color: #fff;
 }.detail__detailBox-1b6ne{
     position: relative;
 }
@@ -419,4 +501,33 @@
     outline: none;
     border: none;
     font-size: 1.8rem;
+}.topfixed__topFixed-2sM1q{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #f8f8f8;
+    opacity: 0.8;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.topfixed__backBtn-2AVN2{
+    font-size: 1.6rem;
+    font-weight: normal;
+    position: absolute;
+    left: 20px;
+}.ranking__ranking-3AuN8{
+    background-color: #fff;
+}
+
+.ranking__rankingList-2qjCZ{
+    padding-top: 50px;
+}.buyers__buyersList-3bONT{
+    padding-top: 50px;
+    background-color: #fff;
 }

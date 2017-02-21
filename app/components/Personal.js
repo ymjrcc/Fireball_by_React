@@ -42,7 +42,7 @@ class HeaderBox extends Component{
 class SettingBox extends Component{
     render(){
         return (
-            <div>
+            <div className={style.settingBox}>
                 {this.props.children}
             </div>
         )

@@ -9,7 +9,7 @@ module.exports = {
     devtool: false,
     entry:  {
         bundle: __dirname + '/app/main.js',
-        vendor: ['react','react-dom','react-router']
+        vendor: ['react','react-dom','react-router','classnames']
     },
     output: {
         path: __dirname + "/build",

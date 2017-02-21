@@ -10,8 +10,12 @@ class DiscoverTopRow extends Component{
     render(){
         return (
             <div className={style.discoverTopRow}>
-                <div className={style.discoverTopItem}>本周好物排行</div>
-                <div className={style.discoverTopItem}>所有买手</div>
+                <Link to="/ranking" className={style.discoverTopItem}>
+                    <div>本周好物排行</div>
+                </Link>
+                <Link to="/buyers" className={style.discoverTopItem}> 
+                    <div>所有买手</div>
+                </Link>
             </div>
         )
     }
@@ -20,15 +24,17 @@ class DiscoverTopRow extends Component{
 class DiscoverSection extends Component{
     render(){
         return (
-            <div className={style.discoverSection}>
-                <h3>{this.props.name}</h3>
-                <p>{this.props.number + ' 篇推荐'}</p>
-                <div className={style.sectionImgBox}>
-                    <div className={style.sectionImg}></div>
-                    <div className={style.sectionImg}></div>
-                    <div className={style.sectionImg}></div>
-                </div>
-            </div>
+            <Link to="/topic">
+                <div className={style.discoverSection}>
+                    <h3>{this.props.name}</h3>
+                    <p>{this.props.number + ' 篇推荐'}</p>
+                    <div className={style.sectionImgBox}>
+                        <div className={style.sectionImg}></div>
+                        <div className={style.sectionImg}></div>
+                        <div className={style.sectionImg}></div>
+                    </div>
+                </div>           
+            </Link>
         )
     }
 }
