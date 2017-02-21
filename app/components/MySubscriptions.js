@@ -1,13 +1,17 @@
-import React,{Component} from 'react';
+import React,{Component} from 'react'
 import {Link} from 'react-router'
+import TopFixed from './TopFixed'
 
 class MySubscriptions extends Component{
+
+    componentDidMount(){
+        document.body.scrollTop=0;
+    }
+    
     render(){
         return (
             <div>
-                <Link to="/">返回</Link>
-                <br/>
-                {'this is my MySubscriptions.'}
+                <TopFixed>我的订阅</TopFixed>
             </div>
         )
     }

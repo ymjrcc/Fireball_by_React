@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import style from '../css/detail.css'
 import {hashHistory} from 'react-router'
+import detailData from '../data/homeData.json'
 
 class DetailTop extends Component{
     render(){
@@ -17,19 +18,25 @@ class DetailTop extends Component{
 }
 
 class DetailMain extends Component{
+
+    renderDetail(data){
+        let id = location.hash.split("/").pop();
+        let text = {title:"WARNING",text: "未找到对应的文章！"};
+        if(data[id] && typeof data[id].text=="string"){
+            text = data[id];
+        }
+        return text;
+    }
+
     render(){
         return (
             <div className={style.detailMain}>
-楼上有个提到eneloop的彩虹电池然后一副矫情模样的顺便还在回答里假装纠结自己这是不是矫情的懒得艾特姓名的哥们，我想说，没错你这就是矫情，矫情的跟个姑娘似的，矫情得让我看完你的答案就浑身难受。
-<br/>
-小米所推出的一系列生活上的小产品，从来都不是面向所谓的geek的，他们只是为普通大众消费者提供了更多的消费选择，并且一直是优质低价的（相比同价位）所以最烦这些所谓geek以一副站在行业最高点的姿态对平民产品评头论足，指指点点。本来也不是卖给你的玩意儿咋那么多废话呢。
-<br/>
-有谁看过米其林三星大厨会对早餐摊子的包子说"看了他包子，这让我一整天都不太舒服，因为他让我想到了克里斯丁的蛋糕，并且你们看，长的是不是很像"…呵呵你一脸…
-<br/>
-作者：Dr.Waltson<br/>
-链接：https://www.zhihu.com/question/36980488/answer/69987224<br/>
-来源：知乎<br/>
-著作权归作者所有，转载请联系作者获得授权。
+                <h4 style={{textAlign:"center"}}>
+                    {this.renderDetail(detailData).title}
+                </h4>
+                <p>
+                    {this.renderDetail(detailData).text}
+                </p>
             </div>
         )
     }
@@ -142,6 +149,11 @@ class ToBuyBtn extends Component{
 }
 
 class Detail extends Component{
+
+    componentDidMount(){
+        document.body.scrollTop=0;
+    }
+
     render(){
         return (
             <div className={style.detailBox}>

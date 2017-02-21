@@ -33,12 +33,12 @@ ReactDOM.render(
 
             <Route path="/topic" component={Topic} />
 
-            <Route path="/detail" component={Detail} />
+            <Route path="/detail(/:id)" component={Detail} />
 
             <Route path="/ranking" component={Ranking} />
             <Route path="/buyers" component={Buyers} />
 
         </Router>
     ),
-    document.getElementById('content')
+    document.getElementById('app')
 );

@@ -88,6 +88,11 @@ class TopicBox extends Component{
 }
 
 class Topic extends Component{
+
+    componentDidMount(){
+        document.body.scrollTop=0;
+    }
+    
     render(){
         return (
             <div className={style.topic}>

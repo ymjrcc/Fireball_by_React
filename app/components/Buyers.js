@@ -44,6 +44,11 @@ class BuyersList extends Component{
 }
 
 class Buyers extends Component{
+
+    componentDidMount(){
+        document.body.scrollTop=0;
+    }
+
     render(){
         return (
             <div>

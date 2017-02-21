@@ -266,11 +266,39 @@
     background-color: #fff;
 }
 
-.personal__settingItem-2PHWd::after{
-    content: ">";
+.personal__rightIcon-1xA4w{
+    width: 16px;
+    height: 16px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAnElEQVQ4T6WSyw3CMBBEd6YSSkg6CM1Y8g2qseRL6AQ6gBKoZI2McogUZ9dRfJ+3ng/k5MNJvWwAKaULgJnkPYTw8Q40ASSrsAC4epCmhZzzUEp59UB2M+iFmCH2QNwW1hBVHWOM33WwvYCniEBVh0OA5fpfDGBqNeKFaIqrFatGV9wE1CWSfFvfNkNcAA8AN2+Fuxa8/R+q0YP9AOl9XxFPX5yGAAAAAElFTkSuQmCC);
+    background-size: cover; 
     position: absolute;
     right: 20px;
+    top: 10px;
+}.topfixed__topFixed-2sM1q{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #f8f8f8;
+    opacity: 0.8;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
 
+.topfixed__backBtn-2AVN2{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAsUlEQVRIS63W0Q3DIAxFUTxBMwqChZINOkpHyChdAItRsgGRpUbKRwP2MwxwD3wYoDBhxRhjrbX+S5G3n3PeW2tfZt6nAxKXaCllfdoofAJNXFAI0MYhwBI3A9a4CUDiagCNqwBPfAh4410gpfQhoqU3RJpb4HEOBAghvJh504SgSf7dM82DDCfZiwwBOboHUQEeRA2giAlAEDNgRSDAgsCAFnEBN+Rg5vf0R/8K9r4tJygljBm8sptYAAAAAElFTkSuQmCC);
+    background-size: cover; 
+    position: absolute;
+    left: 15px;
+    top: 15px;
 }.item__item-3X-cC{
     padding: 20px;
     border-bottom: 1px solid #eee;
@@ -358,7 +386,6 @@
     position: relative;
     height: 40px;
     padding: 10px 20px;
-    border-bottom: 1px solid #eee;
     background-color: #fff;
     z-index: 5;
 }
@@ -386,6 +413,7 @@
 .detail__detailMain-2FgJ8{
     background-color: #fff;
     padding: 0 20px 20px;
+    border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     line-height: 200%;
     font-size: 1.8rem;
@@ -505,26 +533,6 @@
     outline: none;
     border: none;
     font-size: 1.8rem;
-}.topfixed__topFixed-2sM1q{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    line-height: 50px;
-    font-size: 2rem;
-    font-weight: bold;
-    background-color: #f8f8f8;
-    opacity: 0.8;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-
-.topfixed__backBtn-2AVN2{
-    font-size: 1.6rem;
-    font-weight: normal;
-    position: absolute;
-    left: 20px;
 }.ranking__ranking-3AuN8{
     background-color: #fff;
 }

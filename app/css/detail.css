@@ -7,7 +7,6 @@
     position: relative;
     height: 40px;
     padding: 10px 20px;
-    border-bottom: 1px solid #eee;
     background-color: #fff;
     z-index: 5;
 }
@@ -35,6 +34,7 @@
 .detailMain{
     background-color: #fff;
     padding: 0 20px 20px;
+    border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     line-height: 200%;
     font-size: 1.8rem;

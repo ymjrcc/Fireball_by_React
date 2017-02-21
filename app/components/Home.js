@@ -19,7 +19,7 @@ class RecommendBox extends Component{
 class RecommendItem extends Component{
     render(){
         return (
-            <Link to="/detail">
+            <Link to={ "/detail/" + this.props.id }>
                 <div className={style.recommendItem}>
                     <div className={style.recommendImgBox}>
                         <img className={style.recommendImg} src={require('../images/'+this.props.img)} />
@@ -38,6 +38,10 @@ class RecommendItem extends Component{
 
 class Home extends Component{
 
+    componentDidMount(){
+        document.body.scrollTop=0;
+    }
+
     // ajax方法获取本地数据，这个路径在build模式下有效
     // componentDidMount(){
     //     function ajax(url){
@@ -54,7 +58,7 @@ class Home extends Component{
     renderRecommendBox(data){
         let dataArr = [];
         for(let i = 0; i < data.length; i++){
-            dataArr.push(<RecommendItem key={data[i].id} img={data[i].img} author={data[i].author} date={data[i].date} title={data[i].title} />);
+            dataArr.push(<RecommendItem key={data[i].id} id={data[i].id} img={data[i].img} author={data[i].author} date={data[i].date} title={data[i].title} />);
         }
         return dataArr;
     }

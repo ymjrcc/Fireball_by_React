@@ -6,7 +6,7 @@ class TopFixed extends Component{
     render(){
         return (
             <div className={style.topFixed}>
-                <span className={style.backBtn} onClick={function(){hashHistory.goBack()}}>&lt;</span>
+                <span className={style.backBtn} onClick={function(){hashHistory.goBack()}}></span>
                 {this.props.children}
             </div>
         )

@@ -54,6 +54,7 @@ class SettingItem extends Component{
         return (
             <Link to={this.props.to}>
                 <div className={style.settingItem}>
+                    <div className={style.rightIcon}></div>
                     {this.props.name}
                 </div>
             </Link>
@@ -62,6 +63,11 @@ class SettingItem extends Component{
 }
 
 class Personal extends Component{
+
+    componentDidMount(){
+        document.body.scrollTop=0;
+    }
+
     render(){
         return (
             <div className={style.personal}>

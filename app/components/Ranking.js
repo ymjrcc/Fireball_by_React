@@ -6,6 +6,11 @@ import style from '../css/ranking.css'
 import topicData from '../data/topicData.json'
 
 class Ranking extends Component{
+
+    componentDidMount(){
+        document.body.scrollTop=0;
+    }
+    
     render(){
         return (
             <div className={style.ranking}>

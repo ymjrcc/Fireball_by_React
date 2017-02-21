@@ -19,51 +19,51 @@ webpackJsonp([0,2],{
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Discover = __webpack_require__(247);
+	var _Discover = __webpack_require__(249);
 
 	var _Discover2 = _interopRequireDefault(_Discover);
 
-	var _Personal = __webpack_require__(253);
+	var _Personal = __webpack_require__(255);
 
 	var _Personal2 = _interopRequireDefault(_Personal);
 
-	var _MyOrders = __webpack_require__(256);
+	var _MyOrders = __webpack_require__(258);
 
 	var _MyOrders2 = _interopRequireDefault(_MyOrders);
 
-	var _MySubscriptions = __webpack_require__(257);
+	var _MySubscriptions = __webpack_require__(262);
 
 	var _MySubscriptions2 = _interopRequireDefault(_MySubscriptions);
 
-	var _MyLikes = __webpack_require__(258);
+	var _MyLikes = __webpack_require__(263);
 
 	var _MyLikes2 = _interopRequireDefault(_MyLikes);
 
-	var _Coupons = __webpack_require__(259);
+	var _Coupons = __webpack_require__(264);
 
 	var _Coupons2 = _interopRequireDefault(_Coupons);
 
-	var _Helps = __webpack_require__(260);
+	var _Helps = __webpack_require__(265);
 
 	var _Helps2 = _interopRequireDefault(_Helps);
 
-	var _Settings = __webpack_require__(261);
+	var _Settings = __webpack_require__(266);
 
 	var _Settings2 = _interopRequireDefault(_Settings);
 
-	var _Topic = __webpack_require__(262);
+	var _Topic = __webpack_require__(267);
 
 	var _Topic2 = _interopRequireDefault(_Topic);
 
-	var _Detail = __webpack_require__(270);
+	var _Detail = __webpack_require__(275);
 
 	var _Detail2 = _interopRequireDefault(_Detail);
 
-	var _Ranking = __webpack_require__(273);
+	var _Ranking = __webpack_require__(278);
 
 	var _Ranking2 = _interopRequireDefault(_Ranking);
 
-	var _Buyers = __webpack_require__(279);
+	var _Buyers = __webpack_require__(281);
 
 	var _Buyers2 = _interopRequireDefault(_Buyers);
 
@@ -83,10 +83,10 @@ webpackJsonp([0,2],{
 	            _react2.default.createElement(_reactRouter.Route, { path: '/personal/help', component: _Helps2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: '/personal/setting', component: _Settings2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: '/topic', component: _Topic2.default }),
-	            _react2.default.createElement(_reactRouter.Route, { path: '/detail', component: _Detail2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/detail(/:id)', component: _Detail2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: '/ranking', component: _Ranking2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: '/buyers', component: _Buyers2.default })
-	), document.getElementById('content'));
+	), document.getElementById('app'));
 
 /***/ },
 
@@ -187,7 +187,7 @@ webpackJsonp([0,2],{
 	        value: function render() {
 	            return _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: '/detail' },
+	                { to: "/detail/" + this.props.id },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _home2.default.recommendItem },
@@ -234,8 +234,10 @@ webpackJsonp([0,2],{
 	    }
 
 	    _createClass(Home, [{
-	        key: 'renderRecommendBox',
-
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
 
 	        // ajax方法获取本地数据，这个路径在build模式下有效
 	        // componentDidMount(){
@@ -250,10 +252,12 @@ webpackJsonp([0,2],{
 	        //     ajax("../app/data/homeData.json");
 	        // }
 
+	    }, {
+	        key: 'renderRecommendBox',
 	        value: function renderRecommendBox(data) {
 	            var dataArr = [];
 	            for (var i = 0; i < data.length; i++) {
-	                dataArr.push(_react2.default.createElement(RecommendItem, { key: data[i].id, img: data[i].img, author: data[i].author, date: data[i].date, title: data[i].title }));
+	                dataArr.push(_react2.default.createElement(RecommendItem, { key: data[i].id, id: data[i].id, img: data[i].img, author: data[i].author, date: data[i].date, title: data[i].title }));
 	            }
 	            return dataArr;
 	        }
@@ -387,28 +391,32 @@ webpackJsonp([0,2],{
 			"img": "ym.jpg",
 			"author": "Yiming",
 			"date": "2017-02-19",
-			"title": "今天一鸣写代码了吗？"
+			"title": "今天一鸣写代码了吗？",
+			"text": "0曲曲折折的荷塘上面，弥望的是田田的叶子。叶子出水很高，像亭亭的舞女的裙。层层的叶子中间，零星地点缀着些白花，有袅娜地开着的，有羞涩地打着朵儿的；正如一粒粒的明珠，又如碧天里的星星，又如刚出浴的美人。微风过处，送来缕缕清香，仿佛远处高楼上渺茫的歌声似的。这时候叶子与花也有一丝的颤动，像闪电般，霎时传过荷塘的那边去了。叶子本是肩并肩密密地挨着，这便宛然有了一道凝碧的波痕。叶子底下是脉脉的流水，遮住了，不能见一些颜色；而叶子却更见风致了。月光如流水一般，静静地泻在这一片叶子和花上。薄薄的青雾浮起在荷塘里。叶子和花仿佛在牛乳中洗过一样；又像笼着轻纱的梦。虽然是满月，天上却有一层淡淡的云，所以不能朗照；但我以为这恰是到了好处——酣眠固不可少，小睡也别有风味的。月光是隔了树照过来的，高处丛生的灌木，落下参差的斑驳的黑影，峭楞楞如鬼一般；弯弯的杨柳的稀疏的倩影，却又像是画在荷叶上。塘中的月色并不均匀；但光与影有着和谐的旋律，如梵婀玲上奏着的名曲。"
 		},
 		{
 			"id": 1,
 			"img": "daomadan.jpg",
 			"author": "ChrisLee",
 			"date": "2017-02-18",
-			"title": "向着阳光，野蛮生长"
+			"title": "向着阳光，野蛮生长",
+			"text": "1曲曲折折的荷塘上面，弥望的是田田的叶子。叶子出水很高，像亭亭的舞女的裙。层层的叶子中间，零星地点缀着些白花，有袅娜地开着的，有羞涩地打着朵儿的；正如一粒粒的明珠，又如碧天里的星星，又如刚出浴的美人。微风过处，送来缕缕清香，仿佛远处高楼上渺茫的歌声似的。这时候叶子与花也有一丝的颤动，像闪电般，霎时传过荷塘的那边去了。叶子本是肩并肩密密地挨着，这便宛然有了一道凝碧的波痕。叶子底下是脉脉的流水，遮住了，不能见一些颜色；而叶子却更见风致了。月光如流水一般，静静地泻在这一片叶子和花上。薄薄的青雾浮起在荷塘里。叶子和花仿佛在牛乳中洗过一样；又像笼着轻纱的梦。虽然是满月，天上却有一层淡淡的云，所以不能朗照；但我以为这恰是到了好处——酣眠固不可少，小睡也别有风味的。月光是隔了树照过来的，高处丛生的灌木，落下参差的斑驳的黑影，峭楞楞如鬼一般；弯弯的杨柳的稀疏的倩影，却又像是画在荷叶上。塘中的月色并不均匀；但光与影有着和谐的旋律，如梵婀玲上奏着的名曲。"
 		},
 		{
 			"id": 2,
 			"img": "boxman.jpg",
 			"author": "boxman",
 			"date": "2017-02-17",
-			"title": "孤独的流浪"
+			"title": "孤独的流浪",
+			"text": "2曲曲折折的荷塘上面，弥望的是田田的叶子。叶子出水很高，像亭亭的舞女的裙。层层的叶子中间，零星地点缀着些白花，有袅娜地开着的，有羞涩地打着朵儿的；正如一粒粒的明珠，又如碧天里的星星，又如刚出浴的美人。微风过处，送来缕缕清香，仿佛远处高楼上渺茫的歌声似的。这时候叶子与花也有一丝的颤动，像闪电般，霎时传过荷塘的那边去了。叶子本是肩并肩密密地挨着，这便宛然有了一道凝碧的波痕。叶子底下是脉脉的流水，遮住了，不能见一些颜色；而叶子却更见风致了。月光如流水一般，静静地泻在这一片叶子和花上。薄薄的青雾浮起在荷塘里。叶子和花仿佛在牛乳中洗过一样；又像笼着轻纱的梦。虽然是满月，天上却有一层淡淡的云，所以不能朗照；但我以为这恰是到了好处——酣眠固不可少，小睡也别有风味的。月光是隔了树照过来的，高处丛生的灌木，落下参差的斑驳的黑影，峭楞楞如鬼一般；弯弯的杨柳的稀疏的倩影，却又像是画在荷叶上。塘中的月色并不均匀；但光与影有着和谐的旋律，如梵婀玲上奏着的名曲。"
 		},
 		{
 			"id": 3,
 			"img": "pen.png",
 			"author": "头条新闻",
 			"date": "2017-02-16",
-			"title": "明天要下雨，后天有雾霾"
+			"title": "明天要下雨，后天有雾霾",
+			"text": "3曲曲折折的荷塘上面，弥望的是田田的叶子。叶子出水很高，像亭亭的舞女的裙。层层的叶子中间，零星地点缀着些白花，有袅娜地开着的，有羞涩地打着朵儿的；正如一粒粒的明珠，又如碧天里的星星，又如刚出浴的美人。微风过处，送来缕缕清香，仿佛远处高楼上渺茫的歌声似的。这时候叶子与花也有一丝的颤动，像闪电般，霎时传过荷塘的那边去了。叶子本是肩并肩密密地挨着，这便宛然有了一道凝碧的波痕。叶子底下是脉脉的流水，遮住了，不能见一些颜色；而叶子却更见风致了。月光如流水一般，静静地泻在这一片叶子和花上。薄薄的青雾浮起在荷塘里。叶子和花仿佛在牛乳中洗过一样；又像笼着轻纱的梦。虽然是满月，天上却有一层淡淡的云，所以不能朗照；但我以为这恰是到了好处——酣眠固不可少，小睡也别有风味的。月光是隔了树照过来的，高处丛生的灌木，落下参差的斑驳的黑影，峭楞楞如鬼一般；弯弯的杨柳的稀疏的倩影，却又像是画在荷叶上。塘中的月色并不均匀；但光与影有着和谐的旋律，如梵婀玲上奏着的名曲。"
 		}
 	];
 
@@ -420,8 +428,10 @@ webpackJsonp([0,2],{
 	var map = {
 		"./boxman.jpg": 243,
 		"./daomadan.jpg": 244,
-		"./pen.png": 245,
-		"./ym.jpg": 246
+		"./left.png": 245,
+		"./pen.png": 246,
+		"./right.png": 247,
+		"./ym.jpg": 248
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -454,20 +464,34 @@ webpackJsonp([0,2],{
 /***/ },
 
 /***/ 245:
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	module.exports = __webpack_require__.p + "images/2c04d755.pen.png";
+	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAsUlEQVRIS63W0Q3DIAxFUTxBMwqChZINOkpHyChdAItRsgGRpUbKRwP2MwxwD3wYoDBhxRhjrbX+S5G3n3PeW2tfZt6nAxKXaCllfdoofAJNXFAI0MYhwBI3A9a4CUDiagCNqwBPfAh4410gpfQhoqU3RJpb4HEOBAghvJh504SgSf7dM82DDCfZiwwBOboHUQEeRA2giAlAEDNgRSDAgsCAFnEBN+Rg5vf0R/8K9r4tJygljBm8sptYAAAAAElFTkSuQmCC"
 
 /***/ },
 
 /***/ 246:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/97eaacb1.ym.jpg";
+	module.exports = __webpack_require__.p + "images/2c04d755.pen.png";
 
 /***/ },
 
 /***/ 247:
+/***/ function(module, exports) {
+
+	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAnElEQVQ4T6WSyw3CMBBEd6YSSkg6CM1Y8g2qseRL6AQ6gBKoZI2McogUZ9dRfJ+3ng/k5MNJvWwAKaULgJnkPYTw8Q40ASSrsAC4epCmhZzzUEp59UB2M+iFmCH2QNwW1hBVHWOM33WwvYCniEBVh0OA5fpfDGBqNeKFaIqrFatGV9wE1CWSfFvfNkNcAA8AN2+Fuxa8/R+q0YP9AOl9XxFPX5yGAAAAAElFTkSuQmCC"
+
+/***/ },
+
+/***/ 248:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/97eaacb1.ym.jpg";
+
+/***/ },
+
+/***/ 249:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -486,7 +510,7 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _FollowBtn = __webpack_require__(248);
+	var _FollowBtn = __webpack_require__(250);
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
@@ -494,7 +518,7 @@ webpackJsonp([0,2],{
 
 	var _BottomTab2 = _interopRequireDefault(_BottomTab);
 
-	var _discover = __webpack_require__(251);
+	var _discover = __webpack_require__(253);
 
 	var _discover2 = _interopRequireDefault(_discover);
 
@@ -796,6 +820,11 @@ webpackJsonp([0,2],{
 	    }
 
 	    _createClass(Discover, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -815,7 +844,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 248:
+/***/ 250:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -830,7 +859,7 @@ webpackJsonp([0,2],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _followBtn = __webpack_require__(249);
+	var _followBtn = __webpack_require__(251);
 
 	var _followBtn2 = _interopRequireDefault(_followBtn);
 
@@ -884,7 +913,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 249:
+/***/ 251:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -892,7 +921,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 251:
+/***/ 253:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -900,7 +929,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 253:
+/***/ 255:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -921,7 +950,7 @@ webpackJsonp([0,2],{
 
 	var _BottomTab2 = _interopRequireDefault(_BottomTab);
 
-	var _personal = __webpack_require__(254);
+	var _personal = __webpack_require__(256);
 
 	var _personal2 = _interopRequireDefault(_personal);
 
@@ -1053,6 +1082,7 @@ webpackJsonp([0,2],{
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _personal2.default.settingItem },
+	                    _react2.default.createElement('div', { className: _personal2.default.rightIcon }),
 	                    this.props.name
 	                )
 	            );
@@ -1072,6 +1102,11 @@ webpackJsonp([0,2],{
 	    }
 
 	    _createClass(Personal, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -1101,127 +1136,11 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 254:
+/***/ 256:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"personal":"personal__personal-jvg88","headBox":"personal__headBox-TXmdM","headImg":"personal__headImg-JTpbE","headInfo":"personal__headInfo-eFuZk","settingBox":"personal__settingBox-2_UbL","settingItem":"personal__settingItem-2PHWd"};
-
-/***/ },
-
-/***/ 256:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(178);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var MyOrders = function (_Component) {
-	    _inherits(MyOrders, _Component);
-
-	    function MyOrders() {
-	        _classCallCheck(this, MyOrders);
-
-	        return _possibleConstructorReturn(this, (MyOrders.__proto__ || Object.getPrototypeOf(MyOrders)).apply(this, arguments));
-	    }
-
-	    _createClass(MyOrders, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/' },
-	                    '\u8FD4\u56DE'
-	                ),
-	                _react2.default.createElement('br', null),
-	                'this is my order.'
-	            );
-	        }
-	    }]);
-
-	    return MyOrders;
-	}(_react.Component);
-
-	exports.default = MyOrders;
-
-/***/ },
-
-/***/ 257:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(178);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var MySubscriptions = function (_Component) {
-	    _inherits(MySubscriptions, _Component);
-
-	    function MySubscriptions() {
-	        _classCallCheck(this, MySubscriptions);
-
-	        return _possibleConstructorReturn(this, (MySubscriptions.__proto__ || Object.getPrototypeOf(MySubscriptions)).apply(this, arguments));
-	    }
-
-	    _createClass(MySubscriptions, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/' },
-	                    '\u8FD4\u56DE'
-	                ),
-	                _react2.default.createElement('br', null),
-	                'this is my MySubscriptions.'
-	            );
-	        }
-	    }]);
-
-	    return MySubscriptions;
-	}(_react.Component);
-
-	exports.default = MySubscriptions;
+	module.exports = {"personal":"personal__personal-jvg88","headBox":"personal__headBox-TXmdM","headImg":"personal__headImg-JTpbE","headInfo":"personal__headInfo-eFuZk","settingBox":"personal__settingBox-2_UbL","settingItem":"personal__settingItem-2PHWd","rightIcon":"personal__rightIcon-1xA4w"};
 
 /***/ },
 
@@ -1242,6 +1161,10 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
+	var _TopFixed = __webpack_require__(259);
+
+	var _TopFixed2 = _interopRequireDefault(_TopFixed);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1250,36 +1173,39 @@ webpackJsonp([0,2],{
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var MyLikes = function (_Component) {
-	    _inherits(MyLikes, _Component);
+	var MyOrders = function (_Component) {
+	    _inherits(MyOrders, _Component);
 
-	    function MyLikes() {
-	        _classCallCheck(this, MyLikes);
+	    function MyOrders() {
+	        _classCallCheck(this, MyOrders);
 
-	        return _possibleConstructorReturn(this, (MyLikes.__proto__ || Object.getPrototypeOf(MyLikes)).apply(this, arguments));
+	        return _possibleConstructorReturn(this, (MyOrders.__proto__ || Object.getPrototypeOf(MyOrders)).apply(this, arguments));
 	    }
 
-	    _createClass(MyLikes, [{
+	    _createClass(MyOrders, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
 	                null,
 	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/' },
-	                    '\u8FD4\u56DE'
-	                ),
-	                _react2.default.createElement('br', null),
-	                'this is my MyLikes.'
+	                    _TopFixed2.default,
+	                    null,
+	                    '\u6211\u7684\u8BA2\u5355'
+	                )
 	            );
 	        }
 	    }]);
 
-	    return MyLikes;
+	    return MyOrders;
 	}(_react.Component);
 
-	exports.default = MyLikes;
+	exports.default = MyOrders;
 
 /***/ },
 
@@ -1300,6 +1226,10 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
+	var _topfixed = __webpack_require__(260);
+
+	var _topfixed2 = _interopRequireDefault(_topfixed);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1308,152 +1238,41 @@ webpackJsonp([0,2],{
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Coupons = function (_Component) {
-	    _inherits(Coupons, _Component);
+	var TopFixed = function (_Component) {
+	    _inherits(TopFixed, _Component);
 
-	    function Coupons() {
-	        _classCallCheck(this, Coupons);
+	    function TopFixed() {
+	        _classCallCheck(this, TopFixed);
 
-	        return _possibleConstructorReturn(this, (Coupons.__proto__ || Object.getPrototypeOf(Coupons)).apply(this, arguments));
+	        return _possibleConstructorReturn(this, (TopFixed.__proto__ || Object.getPrototypeOf(TopFixed)).apply(this, arguments));
 	    }
 
-	    _createClass(Coupons, [{
+	    _createClass(TopFixed, [{
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/' },
-	                    '\u8FD4\u56DE'
-	                ),
-	                _react2.default.createElement('br', null),
-	                'this is my Coupons.'
+	                { className: _topfixed2.default.topFixed },
+	                _react2.default.createElement('span', { className: _topfixed2.default.backBtn, onClick: function onClick() {
+	                        _reactRouter.hashHistory.goBack();
+	                    } }),
+	                this.props.children
 	            );
 	        }
 	    }]);
 
-	    return Coupons;
+	    return TopFixed;
 	}(_react.Component);
 
-	exports.default = Coupons;
+	exports.default = TopFixed;
 
 /***/ },
 
 /***/ 260:
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(178);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Helps = function (_Component) {
-	    _inherits(Helps, _Component);
-
-	    function Helps() {
-	        _classCallCheck(this, Helps);
-
-	        return _possibleConstructorReturn(this, (Helps.__proto__ || Object.getPrototypeOf(Helps)).apply(this, arguments));
-	    }
-
-	    _createClass(Helps, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/' },
-	                    '\u8FD4\u56DE'
-	                ),
-	                _react2.default.createElement('br', null),
-	                'this is my Helps.'
-	            );
-	        }
-	    }]);
-
-	    return Helps;
-	}(_react.Component);
-
-	exports.default = Helps;
-
-/***/ },
-
-/***/ 261:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(178);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Settings = function (_Component) {
-	    _inherits(Settings, _Component);
-
-	    function Settings() {
-	        _classCallCheck(this, Settings);
-
-	        return _possibleConstructorReturn(this, (Settings.__proto__ || Object.getPrototypeOf(Settings)).apply(this, arguments));
-	    }
-
-	    _createClass(Settings, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/' },
-	                    '\u8FD4\u56DE'
-	                ),
-	                _react2.default.createElement('br', null),
-	                'this is my Settings.'
-	            );
-	        }
-	    }]);
-
-	    return Settings;
-	}(_react.Component);
-
-	exports.default = Settings;
+	// removed by extract-text-webpack-plugin
+	module.exports = {"topFixed":"topfixed__topFixed-2sM1q","backBtn":"topfixed__backBtn-2AVN2"};
 
 /***/ },
 
@@ -1474,19 +1293,344 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _classnames2 = __webpack_require__(263);
+	var _TopFixed = __webpack_require__(259);
+
+	var _TopFixed2 = _interopRequireDefault(_TopFixed);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var MySubscriptions = function (_Component) {
+	    _inherits(MySubscriptions, _Component);
+
+	    function MySubscriptions() {
+	        _classCallCheck(this, MySubscriptions);
+
+	        return _possibleConstructorReturn(this, (MySubscriptions.__proto__ || Object.getPrototypeOf(MySubscriptions)).apply(this, arguments));
+	    }
+
+	    _createClass(MySubscriptions, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    _TopFixed2.default,
+	                    null,
+	                    '\u6211\u7684\u8BA2\u9605'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return MySubscriptions;
+	}(_react.Component);
+
+	exports.default = MySubscriptions;
+
+/***/ },
+
+/***/ 263:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(178);
+
+	var _TopFixed = __webpack_require__(259);
+
+	var _TopFixed2 = _interopRequireDefault(_TopFixed);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var MyLikes = function (_Component) {
+	    _inherits(MyLikes, _Component);
+
+	    function MyLikes() {
+	        _classCallCheck(this, MyLikes);
+
+	        return _possibleConstructorReturn(this, (MyLikes.__proto__ || Object.getPrototypeOf(MyLikes)).apply(this, arguments));
+	    }
+
+	    _createClass(MyLikes, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    _TopFixed2.default,
+	                    null,
+	                    '\u6211\u7684\u559C\u6B22'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return MyLikes;
+	}(_react.Component);
+
+	exports.default = MyLikes;
+
+/***/ },
+
+/***/ 264:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(178);
+
+	var _TopFixed = __webpack_require__(259);
+
+	var _TopFixed2 = _interopRequireDefault(_TopFixed);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Coupons = function (_Component) {
+	    _inherits(Coupons, _Component);
+
+	    function Coupons() {
+	        _classCallCheck(this, Coupons);
+
+	        return _possibleConstructorReturn(this, (Coupons.__proto__ || Object.getPrototypeOf(Coupons)).apply(this, arguments));
+	    }
+
+	    _createClass(Coupons, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    _TopFixed2.default,
+	                    null,
+	                    '\u4F18\u60E0\u5238'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Coupons;
+	}(_react.Component);
+
+	exports.default = Coupons;
+
+/***/ },
+
+/***/ 265:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(178);
+
+	var _TopFixed = __webpack_require__(259);
+
+	var _TopFixed2 = _interopRequireDefault(_TopFixed);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Helps = function (_Component) {
+	    _inherits(Helps, _Component);
+
+	    function Helps() {
+	        _classCallCheck(this, Helps);
+
+	        return _possibleConstructorReturn(this, (Helps.__proto__ || Object.getPrototypeOf(Helps)).apply(this, arguments));
+	    }
+
+	    _createClass(Helps, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    _TopFixed2.default,
+	                    null,
+	                    '\u5BA2\u670D\u4E0E\u5E2E\u52A9'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Helps;
+	}(_react.Component);
+
+	exports.default = Helps;
+
+/***/ },
+
+/***/ 266:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(178);
+
+	var _TopFixed = __webpack_require__(259);
+
+	var _TopFixed2 = _interopRequireDefault(_TopFixed);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Settings = function (_Component) {
+	    _inherits(Settings, _Component);
+
+	    function Settings() {
+	        _classCallCheck(this, Settings);
+
+	        return _possibleConstructorReturn(this, (Settings.__proto__ || Object.getPrototypeOf(Settings)).apply(this, arguments));
+	    }
+
+	    _createClass(Settings, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    _TopFixed2.default,
+	                    null,
+	                    '\u8BBE\u7F6E'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Settings;
+	}(_react.Component);
+
+	exports.default = Settings;
+
+/***/ },
+
+/***/ 267:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(178);
+
+	var _classnames2 = __webpack_require__(268);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _Item = __webpack_require__(264);
+	var _Item = __webpack_require__(269);
 
 	var _Item2 = _interopRequireDefault(_Item);
 
-	var _topic = __webpack_require__(267);
+	var _topic = __webpack_require__(272);
 
 	var _topic2 = _interopRequireDefault(_topic);
 
-	var _topicData = __webpack_require__(269);
+	var _topicData = __webpack_require__(274);
 
 	var _topicData2 = _interopRequireDefault(_topicData);
 
@@ -1669,6 +1813,11 @@ webpackJsonp([0,2],{
 	    }
 
 	    _createClass(Topic, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -1687,7 +1836,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 264:
+/***/ 269:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1702,7 +1851,7 @@ webpackJsonp([0,2],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _item = __webpack_require__(265);
+	var _item = __webpack_require__(270);
 
 	var _item2 = _interopRequireDefault(_item);
 
@@ -1760,7 +1909,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 265:
+/***/ 270:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -1768,7 +1917,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 267:
+/***/ 272:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -1776,7 +1925,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 269:
+/***/ 274:
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -1832,7 +1981,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 270:
+/***/ 275:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1847,11 +1996,15 @@ webpackJsonp([0,2],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _detail = __webpack_require__(271);
+	var _detail = __webpack_require__(276);
 
 	var _detail2 = _interopRequireDefault(_detail);
 
 	var _reactRouter = __webpack_require__(178);
+
+	var _homeData = __webpack_require__(241);
+
+	var _homeData2 = _interopRequireDefault(_homeData);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1908,24 +2061,31 @@ webpackJsonp([0,2],{
 	    }
 
 	    _createClass(DetailMain, [{
+	        key: 'renderDetail',
+	        value: function renderDetail(data) {
+	            var id = location.hash.split("/").pop();
+	            var text = { title: "WARNING", text: "未找到对应的文章！" };
+	            if (data[id] && typeof data[id].text == "string") {
+	                text = data[id];
+	            }
+	            return text;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
 	                { className: _detail2.default.detailMain },
-	                '\u697C\u4E0A\u6709\u4E2A\u63D0\u5230eneloop\u7684\u5F69\u8679\u7535\u6C60\u7136\u540E\u4E00\u526F\u77EB\u60C5\u6A21\u6837\u7684\u987A\u4FBF\u8FD8\u5728\u56DE\u7B54\u91CC\u5047\u88C5\u7EA0\u7ED3\u81EA\u5DF1\u8FD9\u662F\u4E0D\u662F\u77EB\u60C5\u7684\u61D2\u5F97\u827E\u7279\u59D3\u540D\u7684\u54E5\u4EEC\uFF0C\u6211\u60F3\u8BF4\uFF0C\u6CA1\u9519\u4F60\u8FD9\u5C31\u662F\u77EB\u60C5\uFF0C\u77EB\u60C5\u7684\u8DDF\u4E2A\u59D1\u5A18\u4F3C\u7684\uFF0C\u77EB\u60C5\u5F97\u8BA9\u6211\u770B\u5B8C\u4F60\u7684\u7B54\u6848\u5C31\u6D51\u8EAB\u96BE\u53D7\u3002',
-	                _react2.default.createElement('br', null),
-	                '\u5C0F\u7C73\u6240\u63A8\u51FA\u7684\u4E00\u7CFB\u5217\u751F\u6D3B\u4E0A\u7684\u5C0F\u4EA7\u54C1\uFF0C\u4ECE\u6765\u90FD\u4E0D\u662F\u9762\u5411\u6240\u8C13\u7684geek\u7684\uFF0C\u4ED6\u4EEC\u53EA\u662F\u4E3A\u666E\u901A\u5927\u4F17\u6D88\u8D39\u8005\u63D0\u4F9B\u4E86\u66F4\u591A\u7684\u6D88\u8D39\u9009\u62E9\uFF0C\u5E76\u4E14\u4E00\u76F4\u662F\u4F18\u8D28\u4F4E\u4EF7\u7684\uFF08\u76F8\u6BD4\u540C\u4EF7\u4F4D\uFF09\u6240\u4EE5\u6700\u70E6\u8FD9\u4E9B\u6240\u8C13geek\u4EE5\u4E00\u526F\u7AD9\u5728\u884C\u4E1A\u6700\u9AD8\u70B9\u7684\u59FF\u6001\u5BF9\u5E73\u6C11\u4EA7\u54C1\u8BC4\u5934\u8BBA\u8DB3\uFF0C\u6307\u6307\u70B9\u70B9\u3002\u672C\u6765\u4E5F\u4E0D\u662F\u5356\u7ED9\u4F60\u7684\u73A9\u610F\u513F\u548B\u90A3\u4E48\u591A\u5E9F\u8BDD\u5462\u3002',
-	                _react2.default.createElement('br', null),
-	                '\u6709\u8C01\u770B\u8FC7\u7C73\u5176\u6797\u4E09\u661F\u5927\u53A8\u4F1A\u5BF9\u65E9\u9910\u644A\u5B50\u7684\u5305\u5B50\u8BF4"\u770B\u4E86\u4ED6\u5305\u5B50\uFF0C\u8FD9\u8BA9\u6211\u4E00\u6574\u5929\u90FD\u4E0D\u592A\u8212\u670D\uFF0C\u56E0\u4E3A\u4ED6\u8BA9\u6211\u60F3\u5230\u4E86\u514B\u91CC\u65AF\u4E01\u7684\u86CB\u7CD5\uFF0C\u5E76\u4E14\u4F60\u4EEC\u770B\uFF0C\u957F\u7684\u662F\u4E0D\u662F\u5F88\u50CF"\u2026\u5475\u5475\u4F60\u4E00\u8138\u2026',
-	                _react2.default.createElement('br', null),
-	                '\u4F5C\u8005\uFF1ADr.Waltson',
-	                _react2.default.createElement('br', null),
-	                '\u94FE\u63A5\uFF1Ahttps://www.zhihu.com/question/36980488/answer/69987224',
-	                _react2.default.createElement('br', null),
-	                '\u6765\u6E90\uFF1A\u77E5\u4E4E',
-	                _react2.default.createElement('br', null),
-	                '\u8457\u4F5C\u6743\u5F52\u4F5C\u8005\u6240\u6709\uFF0C\u8F6C\u8F7D\u8BF7\u8054\u7CFB\u4F5C\u8005\u83B7\u5F97\u6388\u6743\u3002'
+	                _react2.default.createElement(
+	                    'h4',
+	                    { style: { textAlign: "center" } },
+	                    this.renderDetail(_homeData2.default).title
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    this.renderDetail(_homeData2.default).text
+	                )
 	            );
 	        }
 	    }]);
@@ -2230,6 +2390,11 @@ webpackJsonp([0,2],{
 	    }
 
 	    _createClass(Detail, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -2250,7 +2415,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 271:
+/***/ 276:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -2258,7 +2423,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 273:
+/***/ 278:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2275,19 +2440,19 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _Item = __webpack_require__(264);
+	var _Item = __webpack_require__(269);
 
 	var _Item2 = _interopRequireDefault(_Item);
 
-	var _TopFixed = __webpack_require__(274);
+	var _TopFixed = __webpack_require__(259);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _ranking = __webpack_require__(277);
+	var _ranking = __webpack_require__(279);
 
 	var _ranking2 = _interopRequireDefault(_ranking);
 
-	var _topicData = __webpack_require__(269);
+	var _topicData = __webpack_require__(274);
 
 	var _topicData2 = _interopRequireDefault(_topicData);
 
@@ -2309,6 +2474,11 @@ webpackJsonp([0,2],{
 	    }
 
 	    _createClass(Ranking, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -2363,78 +2533,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 274:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(178);
-
-	var _topfixed = __webpack_require__(275);
-
-	var _topfixed2 = _interopRequireDefault(_topfixed);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var TopFixed = function (_Component) {
-	    _inherits(TopFixed, _Component);
-
-	    function TopFixed() {
-	        _classCallCheck(this, TopFixed);
-
-	        return _possibleConstructorReturn(this, (TopFixed.__proto__ || Object.getPrototypeOf(TopFixed)).apply(this, arguments));
-	    }
-
-	    _createClass(TopFixed, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { className: _topfixed2.default.topFixed },
-	                _react2.default.createElement(
-	                    'span',
-	                    { className: _topfixed2.default.backBtn, onClick: function onClick() {
-	                            _reactRouter.hashHistory.goBack();
-	                        } },
-	                    '<'
-	                ),
-	                this.props.children
-	            );
-	        }
-	    }]);
-
-	    return TopFixed;
-	}(_react.Component);
-
-	exports.default = TopFixed;
-
-/***/ },
-
-/***/ 275:
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-	module.exports = {"topFixed":"topfixed__topFixed-2sM1q","backBtn":"topfixed__backBtn-2AVN2"};
-
-/***/ },
-
-/***/ 277:
+/***/ 279:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -2442,7 +2541,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 279:
+/***/ 281:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2457,19 +2556,19 @@ webpackJsonp([0,2],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _TopFixed = __webpack_require__(274);
+	var _TopFixed = __webpack_require__(259);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _FollowBtn = __webpack_require__(248);
+	var _FollowBtn = __webpack_require__(250);
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _buyers = __webpack_require__(280);
+	var _buyers = __webpack_require__(282);
 
 	var _buyers2 = _interopRequireDefault(_buyers);
 
-	var _buyersData = __webpack_require__(282);
+	var _buyersData = __webpack_require__(284);
 
 	var _buyersData2 = _interopRequireDefault(_buyersData);
 
@@ -2572,6 +2671,11 @@ webpackJsonp([0,2],{
 	    }
 
 	    _createClass(Buyers, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -2594,7 +2698,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 280:
+/***/ 282:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -2602,7 +2706,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 282:
+/***/ 284:
 /***/ function(module, exports) {
 
 	module.exports = [
