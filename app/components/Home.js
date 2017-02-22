@@ -63,7 +63,7 @@ class Home extends Component{
 
     render(){
         return (
-            <div>
+            <div className={style.home}>
                 <HomeTop />
                 <RecommendBox>
                     {this.renderRecommendBox(homeData)}

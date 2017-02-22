@@ -23,16 +23,55 @@
 }
 
 .settingBox{
-    padding-bottom: 80px;
+    padding-bottom: 60px;
+}
+
+.settingArea{
+    background-color: #fff;
+    margin-bottom: 20px;
 }
 
 .settingItem{
     height: 36px;
     line-height: 36px;
-    border-bottom: 1px solid #ccc;
-    padding: 0 25px;
+    border-bottom: 1px solid #eee;
+    padding-right: 25px;
     position: relative;
     background-color: #fff;
+    margin-left: 45px;
+}
+
+.settingTitle{
+    position: relative;
+}
+
+.settingIcon{
+    position: absolute;
+    left: -30px;
+    top: 8px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.order{
+    background-image: url('../images/order.png');
+}
+.subscription{
+    background-image: url('../images/subscription.png');
+}
+.like{
+    background-image: url('../images/like.png');
+}
+.coupon{
+    background-image: url('../images/coupon.png');
+}
+.help{
+    background-image: url('../images/help.png');
+}
+.setting{
+    background-image: url('../images/setting.png');
 }
 
 .rightIcon{

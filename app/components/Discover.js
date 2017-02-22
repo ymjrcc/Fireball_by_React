@@ -156,7 +156,7 @@ class Discover extends Component{
 
     render(){
         return (
-            <div>
+            <div className={style.discover}>
                 <DiscoverTop />
                 <DiscoverBox />
                 <BottomTab />

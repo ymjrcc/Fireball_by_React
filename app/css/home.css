@@ -1,3 +1,7 @@
+.home{
+    padding: 60px 0;
+}
+
 .homeTop{
     position: fixed;
     top: 0;
@@ -21,8 +25,10 @@
 }
 
 .recommendBox{
-    margin: 60px 0;
+    /*margin: 60px 0;*/
     background-color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 
 .recommendItem{
@@ -34,6 +40,7 @@
 
 .recommendItem:last-child{
     border-bottom: none;
+    margin-bottom: 0;
 }
 
 .recommendImgBox{

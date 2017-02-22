@@ -138,18 +138,49 @@
 
 .bottomLeft{
     display: flex;
-    padding-right: 30px;
+    padding-right: 10px;
 }
 
 .bottomItem{
     flex:1;
-    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
     line-height: 40px;
+    color: #aaa;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.back{
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/back.png');
+    background-size: cover;
+}
+
+.bottomItem div{
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin-right: 5px;
+}
+
+.like{
+    background-image: url('../images/like.png');
+}
+
+.share{
+    background-image: url('../images/share.png');
 }
 
 .toBuyBtn{
     width: 100%;
-    height: 100%;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;

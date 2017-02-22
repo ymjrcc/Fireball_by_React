@@ -12,7 +12,36 @@
 }
 
 .tabItem{
+    display: flex;
     flex: 1;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
+.tabItem div{
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+}
+
+.home0{
+    background-image: url('../images/home0.png');
+}
+.home1{
+    background-image: url('../images/home1.png');
+}
+
+.discover0{
+    background-image: url('../images/discover0.png');
+}
+.discover1{
+    background-image: url('../images/discover1.png');
+}
+
+.personal0{
+    background-image: url('../images/personal0.png');
+}
+.personal1{
+    background-image: url('../images/personal1.png');
 }

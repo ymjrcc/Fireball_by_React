@@ -84,7 +84,7 @@ class Products extends Component{
 class Buyer extends Component{
     render(){
         return (
-            <div>
+            <div className={style.buyer}>
                 <TopFixed />
                 <Card />
                 <Popular />

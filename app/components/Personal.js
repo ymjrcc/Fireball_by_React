@@ -52,10 +52,13 @@ class SettingBox extends Component{
 class SettingItem extends Component{
     render(){
         return (
-            <Link to={this.props.to}>
+            <Link to={"/personal/" + this.props.name}>
                 <div className={style.settingItem}>
+                    <div className={style.settingTitle}>
+                        <span className={style.settingIcon + " " + style[this.props.name]}></span>
+                        {this.props.title}
+                    </div>
                     <div className={style.rightIcon}></div>
-                    {this.props.name}
                 </div>
             </Link>
         )
@@ -73,13 +76,16 @@ class Personal extends Component{
             <div className={style.personal}>
                 <HeaderBox />
                 <SettingBox>
-                    <SettingItem name="我的订单" to="/personal/order" />
-                    <SettingItem name="我的订阅" to="/personal/subscription" />
-                    <SettingItem name="我的喜欢" to="/personal/like" />
-                    <SettingItem name="优惠券" to="/personal/coupon" />
-                    <br/>
-                    <SettingItem name="客服与帮助" to="/personal/help" />
-                    <SettingItem name="设置" to="/personal/setting" />
+                    <div className={style.settingArea}>
+                        <SettingItem name="order" title="我的订单" />
+                        <SettingItem name="subscription" title="我的订阅" />
+                        <SettingItem name="like" title="我的喜欢"  />
+                        <SettingItem name="coupon" title="优惠券" />
+                    </div>
+                    <div className={style.settingArea}>
+                        <SettingItem name="help" title="客服与帮助" />
+                        <SettingItem name="setting" title="设置" />
+                    </div>
                 </SettingBox>
                 <BottomTab />
             </div>

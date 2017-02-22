@@ -1,3 +1,8 @@
+.discover{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .discoverTop{
     position: fixed;
     top: 0;
@@ -16,8 +21,6 @@
 }
 
 .discoverBox{
-    margin-top: 50px;
-    margin-bottom: 50px;
     background-color: #f3f3f3;
     overflow-x: hidden;
 }

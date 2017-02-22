@@ -115,8 +115,14 @@ class DetailBottom extends Component{
             <div data-maxwidth className={style.detailBottom}>
                 <div className={style.bottomLeft}>
                     <GoBackBtn />
-                    <span className={style.bottomItem}>喜欢</span>
-                    <span className={style.bottomItem}>分享</span>
+                    <span className={style.bottomItem}>
+                        <div className={style.like}></div>
+                        10.5k
+                    </span>
+                    <span className={style.bottomItem}>
+                        <div className={style.share}></div>
+                        1.2k
+                    </span>
                 </div>
                 <div className={style.bottomRight}>
                     <ToBuyBtn />
@@ -134,7 +140,7 @@ class GoBackBtn extends Component{
                 className={style.bottomItem}
                 onClick={function(){hashHistory.goBack();}}
             >
-                返回
+                <div className={style.back}></div>
             </span>
         )
     }
