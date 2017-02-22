@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import {Link} from 'react-router'
 import BottomTab from './BottomTab'
 import style from '../css/home.css'
-import homeData from '../data/homeData.json'
+import productsData from '../data/productsData.json'
 
 class HomeTop extends Component{
     render(){
@@ -21,7 +21,7 @@ class RecommendItem extends Component{
         return (
             <Link to={ "/detail/" + this.props.id } className={style.recommendItem}>
                 <div className={style.recommendImgBox}>
-                    <img className={style.recommendImg} src={require('../images/'+this.props.img)} />
+                    <img className={style.recommendImg} src={require('../images/covers/'+this.props.cover)} />
                 </div>
                 <p>
                     <span className={style.author}>{this.props.author}</span>
@@ -29,6 +29,9 @@ class RecommendItem extends Component{
                     <span className={style.date}>{this.props.date}</span>
                 </p>
                 <h2 className={style.title}>{this.props.title}</h2>
+                <div className={style.likesRow}>
+                    <span className={style.likes}>{this.props.likes}</span>
+                </div>
             </Link>   
         )
     }
@@ -50,13 +53,23 @@ class Home extends Component{
     //         xhr.open("get", url, true);
     //         xhr.send();
     //     }
-    //     ajax("../app/data/homeData.json");
+    //     ajax("../app/data/productsData.json");
     // }
 
     renderRecommendBox(data){
         let dataArr = [];
         for(let i = 0; i < data.length; i++){
-            dataArr.push(<RecommendItem key={data[i].id} id={data[i].id} img={data[i].img} author={data[i].author} date={data[i].date} title={data[i].title} />);
+            dataArr.push(
+                <RecommendItem 
+                    key={data[i].id} 
+                    id={data[i].id} 
+                    cover={data[i].cover} 
+                    author={data[i].author} 
+                    date={data[i].date} 
+                    title={data[i].title} 
+                    likes={data[i].likes}
+                />
+            );
         }
         return dataArr;
     }
@@ -66,7 +79,7 @@ class Home extends Component{
             <div className={style.home}>
                 <HomeTop />
                 <RecommendBox>
-                    {this.renderRecommendBox(homeData)}
+                    {this.renderRecommendBox(productsData)}
                 </RecommendBox>
                 <BottomTab />
             </div>

@@ -34,7 +34,7 @@
 .recommendItem{
     display: block;
     margin: 20px;
-    padding: 20px;
+    padding: 20px 0;
     border-bottom: 1px solid #ccc;
 }
 
@@ -44,17 +44,45 @@
 }
 
 .recommendImgBox{
-    height: 200px;
-    background-color: #eee;
     overflow: hidden;
 }
 
 .recommendImg{
-    height: 100%;
+    width: 100%;
     display: block;
-    margin: 0 auto;
 }
 
 .date{
     color: #999;
+}
+
+.title{
+    margin-bottom: 10px;
+}
+
+.likesRow{
+    text-align: right;
+}
+
+.likes{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    text-align: left;
+    color: #aaa;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.likes::before{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -20px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    background-image: url('../images/like.png');
+    background-size: cover;
 }

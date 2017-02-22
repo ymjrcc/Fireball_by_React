@@ -1,16 +1,18 @@
 import React,{Component} from 'react'
 import style from '../css/detail.css'
 import {hashHistory} from 'react-router'
-import detailData from '../data/homeData.json'
+import productsData from '../data/productsData.json'
 
 class DetailTop extends Component{
     render(){
+        const res = this.props.productInfo;
         return (
             <div className={style.detailTop}>
                 <div className={style.topHeadImg}></div>
                 <div className={style.topMain}>
-                    <div>爱生活的马克君</div>
-                    <div>6小时前</div>
+                    <div className={style.topAuthor}>{res.author}</div>
+                    <div className={style.topDate}>{res.date}</div>
+                    <div className={style.topToAutor}></div>
                 </div>
             </div>
         )
@@ -18,24 +20,18 @@ class DetailTop extends Component{
 }
 
 class DetailMain extends Component{
-
-    renderDetail(data){
-        let id = location.hash.split("/").pop();
-        let text = {title:"WARNING",text: "未找到对应的文章！"};
-        if(data[id] && typeof data[id].text=="string"){
-            text = data[id];
-        }
-        return text;
-    }
-
     render(){
+        const res = this.props.productInfo;
         return (
             <div className={style.detailMain}>
-                <h4 style={{textAlign:"center"}}>
-                    {this.renderDetail(detailData).title}
+                <div className={style.coverBox}>
+                    <img src={require('../images/covers/'+res.cover)} />
+                </div>
+                <h4 className={style.title}>
+                    {res.title}
                 </h4>
-                <p>
-                    {this.renderDetail(detailData).text}
+                <p className={style.text}>
+                    {res.text}
                 </p>
             </div>
         )
@@ -44,10 +40,11 @@ class DetailMain extends Component{
 
 class DetailFooter1 extends Component{
     render(){
+        const res = this.props.productInfo;
         return (
             <div className={style.footer1Box}>
-                <div className={style.footer1Item}>1026人喜欢</div>
-                <div className={style.footer1Item}>86人告诉朋友</div>
+                <div className={style.footer1Item}>{res.likes}人喜欢</div>
+                <div className={style.footer1Item}>{res.share}人告诉朋友</div>
             </div>
         )
     }
@@ -84,13 +81,13 @@ class DetailFooter4 extends Component{
             <div className={style.footer4Box}>
                 <div className={style.footer4Title}>常见问题</div>
                 <p className={style.que}>火球买手的商品从哪里发货？</p>
-                <p className={style.ans}>多仓直发，每个买手有多个合作商家。</p>
-                <p className={style.que}>火球买手的商品从哪里发货？</p>
-                <p className={style.ans}>多仓直发，每个买手有多个合作商家。</p>
-                <p className={style.que}>火球买手的商品从哪里发货？</p>
-                <p className={style.ans}>多仓直发，每个买手有多个合作商家。</p>
-                <p className={style.que}>火球买手的商品从哪里发货？</p>
-                <p className={style.ans}>多仓直发，每个买手有多个合作商家。</p>
+                <p className={style.ans}>多仓直发：每个买手有多个合作商家，发货地点根据商家不同而改变。</p>
+                <p className={style.que}>什么时候发货？</p>
+                <p className={style.ans}>请参考商品详情页底部标注的“预计发货时间”。预售商品及海外代购商品发货时间会有相应延长。</p>
+                <p className={style.que}>如何办理退/换货？</p>
+                <p className={style.ans}>1.非特殊商品自收到之日起7天内，可办理退换货服务，涉及退款将原路返回，预计1-7个工作日到账；商品详情页底部标注的特殊商品暂不支持退货。<br/>2.在“我的订单”页面，选择需要退/换货的订单，找到底部“退/换货”按钮申请售后。</p>
+                <p className={style.que}>退换货运费谁承担？</p>
+                <p className={style.ans}>因火球买手商品问题产生的退换货，运费由相应买手店承担，寄出运费需要顾客先行垫付，商家收到货物后，退回顾客寄出费用；因顾客个人原因产生的退换货，购买和寄回运费由顾客个人承担。</p>
             </div>
         )
     }
@@ -98,9 +95,10 @@ class DetailFooter4 extends Component{
 
 class DetailFooter extends Component{
     render(){
+        const res = this.props.productInfo;
         return (
             <div className={style.detailFooter}>
-                <DetailFooter1 />
+                <DetailFooter1 productInfo={res} />
                 <DetailFooter2 />
                 <DetailFooter3 />
                 <DetailFooter4 />
@@ -111,21 +109,22 @@ class DetailFooter extends Component{
 
 class DetailBottom extends Component{
     render(){
+        const res = this.props.productInfo;
         return (
             <div data-maxwidth className={style.detailBottom}>
                 <div className={style.bottomLeft}>
                     <GoBackBtn />
                     <span className={style.bottomItem}>
                         <div className={style.like}></div>
-                        10.5k
+                        {res.likes}
                     </span>
                     <span className={style.bottomItem}>
                         <div className={style.share}></div>
-                        1.2k
+                        {res.share}
                     </span>
                 </div>
                 <div className={style.bottomRight}>
-                    <ToBuyBtn />
+                    <ToBuyBtn productInfo={res} />
                 </div>
             </div>
         )
@@ -148,8 +147,9 @@ class GoBackBtn extends Component{
 
 class ToBuyBtn extends Component{
     render(){
+        const res = this.props.productInfo;
         return (
-            <div className={style.toBuyBtn}>￥ 28 购买 ></div>
+            <div className={style.toBuyBtn}>￥ {res.price} 购买 ></div>
         )
     }
 }
@@ -160,15 +160,34 @@ class Detail extends Component{
         document.body.scrollTop=0;
     }
 
+    getProductInfo(data){
+        let id = location.hash.split("/").pop();
+        let productObj = {id:"__WARNING__"};
+        for(let i = 0; i < data.length; i++){
+            if(data[i].id === id){
+                productObj = data[i];
+                break;
+            }
+        }
+        return productObj;
+    }
+
     render(){
-        return (
-            <div className={style.detailBox}>
-                <DetailTop />
-                <DetailMain />
-                <DetailFooter />
-                <DetailBottom />
-            </div>
-        )
+        const productInfo = this.getProductInfo(productsData);
+        if(productInfo.id=="__WARNING__"){
+            setTimeout(function(){location.hash="#/"},2000);
+            return <div>找不到资源！</div>
+        }else{
+            return (
+                <div className={style.detailBox}>
+                    <DetailTop productInfo={productInfo} />
+                    <DetailMain productInfo={productInfo} />
+                    <DetailFooter productInfo={productInfo} />
+                    <DetailBottom productInfo={productInfo} />
+                </div>
+            )
+        }
+        
     }
 }
 

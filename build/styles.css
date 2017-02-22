@@ -80,7 +80,7 @@
 .home__recommendItem-3ELmm{
     display: block;
     margin: 20px;
-    padding: 20px;
+    padding: 20px 0;
     border-bottom: 1px solid #ccc;
 }
 
@@ -90,19 +90,47 @@
 }
 
 .home__recommendImgBox-1gMr0{
-    height: 200px;
-    background-color: #eee;
     overflow: hidden;
 }
 
 .home__recommendImg-atweB{
-    height: 100%;
+    width: 100%;
     display: block;
-    margin: 0 auto;
 }
 
 .home__date-18DcC{
     color: #999;
+}
+
+.home__title-1WgcK{
+    margin-bottom: 10px;
+}
+
+.home__likesRow-1g9T1{
+    text-align: right;
+}
+
+.home__likes-1f_1r{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    text-align: left;
+    color: #aaa;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.home__likes-1f_1r::before{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -20px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAADUklEQVRYR+1YzVUbMRCeAcQVOgBXgKkAp4Lgg0ePU3AFmApwKsCpAHPiST7YVBCngpgKSCoguRqLyRs/KU+sd9e7y/IeB+uq2ZlP3/wvwgc/+MHxwQbgWz1UiEFrbRMAThBx3xucLRaLh7Ozs19FAYzH4/3n5+cjRGyFb5j5nohmeTpyAY5GoxYzXwOAAEw7U2Yeaq1vs4yIjpeXlwtEPE2TYWZ5ZD9LRyZAa+0FAAwA4DciDhaLxSQw5o22EPEcAA4AYOqc68aMesbkcSLzFwCGiDjZ2dmZtdvtP/5eQMv9idwTUTf5iFSAo9GoJ8wx863WWhRkHi/bBwBGxHan05lKSDDzGBEPmfmr1lru1+mQx6yAXAFojDlFxHERcMHi3d3d4dbW1gQRJcb6zNwDWFaI1roYCzqMMX1EvELEy06nI55bnjSAj4iISqmmuKJMEszn86mA9C4tDC7YsNZOxN1KqUaw/QqgtVbcecPMba21CJc6Elfz+bwnsVaUudiAeGJ7e/sxDotXAI0xEsinRBTKSSmAdQhba6cAsEdExysu9pdARP9rVR1Gy+gIsUhES/KSLhb0G4B5jK5jcMLMR1rrRhm31CnrM7lJRIcrLg4FGgCOq2RhHUCttU/So0ODeBWDvv2IwNoOUgeYpI60MpdWqKXUfHHONcpMK3UANsYsm0Rwb2oniYrlRGvdrsNwER1ReHWJaJjZ6uQiZFLVjlIEUEoH+QkAD8kanDluGWNmiHjgnDt+b1dbawVcwznXTNrKmwdlSJXC/aiU+lRmcCjDoLX2RmbCLG/lTtTR6PUu8RhCCQC+EZGMaCtn7U4SUj9r4i3DViwblZTckrYWoCitG2RRcKllJouRSOlkd3e3WzUmjTHXiCgrRaFmUIjBADpiclYlcaKEKASuFIMJkANmfpIlqUjP9i30u6yvRZao2IulGIxAhhLEAHAZV/6U/iqyAk5s9fJkK2VxVkz6/SMsSUOl1GUyLuPdGgBklcj9i1ArwIhNWRFlyRfj0kdnvp9LAZbV4V4pdV41qSq5OPlS/4tEtsA9Zh74Pw4ymPTjHbdKzawFoBj2iSBTyGcA+OGcO6+jh9cGME6gKrGWxW7tAKu4Me+bDcC3Mrph8K0M/gOXt+44UevCkQAAAABJRU5ErkJggg==);
+    background-size: cover;
 }.followBtn__followBtn-2M59F{
     display: inline-block;
     background-color: #fff;
@@ -294,7 +322,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-image: url(images/2c04d755.pen.png);
+    background-image: url(images/a807a9c3.pen.jpg);
     background-size: cover; 
     margin: 0 auto;
 }
@@ -491,15 +519,14 @@
 .detail__detailTop-y67pU{
     display: flex;
     position: relative;
-    height: 40px;
     padding: 10px 20px;
     background-color: #fff;
     z-index: 5;
 }
 
 .detail__topHeadImg-1F-dC{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: #eee;
     margin-right: 15px;
@@ -510,21 +537,51 @@
     position: relative;
 }
 
-.detail__detailTop-y67pU::after{
-    content: ">";
+.detail__topAuthor-2S8CJ{
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.detail__topDate-3g-mq{
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.detail__topToAutor-3yV1r{
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 0;
+    top: 15px;
+    width: 16px;
+    height: 16px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAnElEQVQ4T6WSyw3CMBBEd6YSSkg6CM1Y8g2qseRL6AQ6gBKoZI2McogUZ9dRfJ+3ng/k5MNJvWwAKaULgJnkPYTw8Q40ASSrsAC4epCmhZzzUEp59UB2M+iFmCH2QNwW1hBVHWOM33WwvYCniEBVh0OA5fpfDGBqNeKFaIqrFatGV9wE1CWSfFvfNkNcAA8AN2+Fuxa8/R+q0YP9AOl9XxFPX5yGAAAAAElFTkSuQmCC);
+    background-size: cover;
 }
 
 .detail__detailMain-2FgJ8{
     background-color: #fafafa;
-    padding: 0 20px 20px;
+    padding-bottom: 20px;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     line-height: 200%;
     font-size: 1.8rem;
     word-wrap: break-word;
+}
+
+.detail__title-25WQY{
+    padding: 0 20px;
+    text-align: center;
+}
+
+.detail__text-1Itjd{
+    padding: 0 20px;
+}
+
+.detail__coverBox-RTVdl{
+    overflow: hidden;
+}
+
+.detail__coverBox-RTVdl img{
+    width: 100%;
 }
 
 .detail__detailFooter-2CQc5{

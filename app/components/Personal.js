@@ -3,14 +3,6 @@ import {Link} from 'react-router'
 import BottomTab from './BottomTab'
 import style from "../css/personal.css"
 
-class HeaderImg extends Component{
-    render(){
-        return (
-            <div className={style.headImg}></div>
-        )
-    }
-}
-
 class HeaderInfo extends Component{
     render(){
         return (
@@ -32,7 +24,7 @@ class HeaderBox extends Component{
     render(){
         return (
             <div className={style.headBox}>
-                <HeaderImg src="../images/pen.png" />
+                <div className={style.headImg}></div>
                 <HeaderInfo name="Yiming" goods="0" subscription="12" likes="0" />
             </div>
         )
