@@ -14,6 +14,7 @@ import Topic from './components/Topic'
 import Detail from './components/Detail'
 import Ranking from './components/Ranking'
 import Buyers from './components/Buyers'
+import Buyer from './components/Buyer'
 
 ReactDOM.render(
     (
@@ -37,6 +38,8 @@ ReactDOM.render(
 
             <Route path="/ranking" component={Ranking} />
             <Route path="/buyers" component={Buyers} />
+
+            <Route path="/buyer" component={Buyer} />
 
         </Router>
     ),

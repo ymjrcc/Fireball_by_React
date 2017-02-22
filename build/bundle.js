@@ -19,53 +19,57 @@ webpackJsonp([0,2],{
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Discover = __webpack_require__(249);
+	var _Discover = __webpack_require__(250);
 
 	var _Discover2 = _interopRequireDefault(_Discover);
 
-	var _Personal = __webpack_require__(255);
+	var _Personal = __webpack_require__(256);
 
 	var _Personal2 = _interopRequireDefault(_Personal);
 
-	var _MyOrders = __webpack_require__(258);
+	var _MyOrders = __webpack_require__(259);
 
 	var _MyOrders2 = _interopRequireDefault(_MyOrders);
 
-	var _MySubscriptions = __webpack_require__(262);
+	var _MySubscriptions = __webpack_require__(263);
 
 	var _MySubscriptions2 = _interopRequireDefault(_MySubscriptions);
 
-	var _MyLikes = __webpack_require__(263);
+	var _MyLikes = __webpack_require__(264);
 
 	var _MyLikes2 = _interopRequireDefault(_MyLikes);
 
-	var _Coupons = __webpack_require__(264);
+	var _Coupons = __webpack_require__(265);
 
 	var _Coupons2 = _interopRequireDefault(_Coupons);
 
-	var _Helps = __webpack_require__(265);
+	var _Helps = __webpack_require__(266);
 
 	var _Helps2 = _interopRequireDefault(_Helps);
 
-	var _Settings = __webpack_require__(266);
+	var _Settings = __webpack_require__(267);
 
 	var _Settings2 = _interopRequireDefault(_Settings);
 
-	var _Topic = __webpack_require__(267);
+	var _Topic = __webpack_require__(268);
 
 	var _Topic2 = _interopRequireDefault(_Topic);
 
-	var _Detail = __webpack_require__(275);
+	var _Detail = __webpack_require__(276);
 
 	var _Detail2 = _interopRequireDefault(_Detail);
 
-	var _Ranking = __webpack_require__(278);
+	var _Ranking = __webpack_require__(279);
 
 	var _Ranking2 = _interopRequireDefault(_Ranking);
 
-	var _Buyers = __webpack_require__(281);
+	var _Buyers = __webpack_require__(282);
 
 	var _Buyers2 = _interopRequireDefault(_Buyers);
+
+	var _Buyer = __webpack_require__(286);
+
+	var _Buyer2 = _interopRequireDefault(_Buyer);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -85,7 +89,8 @@ webpackJsonp([0,2],{
 	            _react2.default.createElement(_reactRouter.Route, { path: '/topic', component: _Topic2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: '/detail(/:id)', component: _Detail2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: '/ranking', component: _Ranking2.default }),
-	            _react2.default.createElement(_reactRouter.Route, { path: '/buyers', component: _Buyers2.default })
+	            _react2.default.createElement(_reactRouter.Route, { path: '/buyers', component: _Buyers2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/buyer', component: _Buyer2.default })
 	), document.getElementById('app'));
 
 /***/ },
@@ -430,8 +435,9 @@ webpackJsonp([0,2],{
 		"./daomadan.jpg": 244,
 		"./left.png": 245,
 		"./pen.png": 246,
-		"./right.png": 247,
-		"./ym.jpg": 248
+		"./quote.png": 247,
+		"./right.png": 248,
+		"./ym.jpg": 249
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -480,18 +486,25 @@ webpackJsonp([0,2],{
 /***/ 247:
 /***/ function(module, exports) {
 
-	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAnElEQVQ4T6WSyw3CMBBEd6YSSkg6CM1Y8g2qseRL6AQ6gBKoZI2McogUZ9dRfJ+3ng/k5MNJvWwAKaULgJnkPYTw8Q40ASSrsAC4epCmhZzzUEp59UB2M+iFmCH2QNwW1hBVHWOM33WwvYCniEBVh0OA5fpfDGBqNeKFaIqrFatGV9wE1CWSfFvfNkNcAA8AN2+Fuxa8/R+q0YP9AOl9XxFPX5yGAAAAAElFTkSuQmCC"
+	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAABlElEQVQ4T4VU3VHDMAyWzn6nG1AmoLkoz5QNygSUCYAJODZoJihMAJ2g5TnuOUxAOwH0PT5x8tm9JJcfPeXsL58+fZKM0BFFUcwR8QUApkqpJEmSvy5cPNvv90tmFvwB60Br7cQ5twaAhZwz85fWetFHaK2dVVW1RsRZ4MnPhHLpnPsQVQBwAoAlEX32KQtVCH4CAEellCQuPaEoq6pqGzKdlFJzuewjC8m3gew74L0tntAY8wYA9/IdPOslC/gDAFwGZbO6JRh8+w1qNkTk/RspVdQBIj6nabqqYzF0SBohgIc0TUVtb4xVg3UAM6+01q9DY2KMieVK0iciyhsKjTHi13VL0g4A8naXW/bEX6QZO6WUCClFIQ9UeFcnDaPi/esKpdSVENZLaOCYucyyLImH1tqpc+5nQECORVHsEPGmD0REjW0aqkg2SxRK2x97CI9EJJtzjhEBmziHUvZFm7RrzoZ8ZObbuHqyx7K3Mv0x3olo2aU8zK5UdhYRZ7jhj2QXAq11OfZkhf33r0yWZTJmPv4Bx2zZf1kf/DAAAAAASUVORK5CYII="
 
 /***/ },
 
 /***/ 248:
+/***/ function(module, exports) {
+
+	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAnElEQVQ4T6WSyw3CMBBEd6YSSkg6CM1Y8g2qseRL6AQ6gBKoZI2McogUZ9dRfJ+3ng/k5MNJvWwAKaULgJnkPYTw8Q40ASSrsAC4epCmhZzzUEp59UB2M+iFmCH2QNwW1hBVHWOM33WwvYCniEBVh0OA5fpfDGBqNeKFaIqrFatGV9wE1CWSfFvfNkNcAA8AN2+Fuxa8/R+q0YP9AOl9XxFPX5yGAAAAAElFTkSuQmCC"
+
+/***/ },
+
+/***/ 249:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/97eaacb1.ym.jpg";
 
 /***/ },
 
-/***/ 249:
+/***/ 250:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -510,7 +523,7 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _FollowBtn = __webpack_require__(250);
+	var _FollowBtn = __webpack_require__(251);
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
@@ -518,7 +531,7 @@ webpackJsonp([0,2],{
 
 	var _BottomTab2 = _interopRequireDefault(_BottomTab);
 
-	var _discover = __webpack_require__(253);
+	var _discover = __webpack_require__(254);
 
 	var _discover2 = _interopRequireDefault(_discover);
 
@@ -844,7 +857,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 250:
+/***/ 251:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -859,7 +872,7 @@ webpackJsonp([0,2],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _followBtn = __webpack_require__(251);
+	var _followBtn = __webpack_require__(252);
 
 	var _followBtn2 = _interopRequireDefault(_followBtn);
 
@@ -887,7 +900,9 @@ webpackJsonp([0,2],{
 
 	    _createClass(FollowingBtn, [{
 	        key: 'handleClick',
-	        value: function handleClick() {
+	        value: function handleClick(e) {
+	            e.preventDefault();
+	            e.stopPropagation();
 	            this.setState({
 	                following: !this.state.following
 	            });
@@ -913,7 +928,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 251:
+/***/ 252:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -921,7 +936,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 253:
+/***/ 254:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -929,7 +944,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 255:
+/***/ 256:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -950,7 +965,7 @@ webpackJsonp([0,2],{
 
 	var _BottomTab2 = _interopRequireDefault(_BottomTab);
 
-	var _personal = __webpack_require__(256);
+	var _personal = __webpack_require__(257);
 
 	var _personal2 = _interopRequireDefault(_personal);
 
@@ -1136,7 +1151,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 256:
+/***/ 257:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -1144,7 +1159,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 258:
+/***/ 259:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1161,7 +1176,7 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(259);
+	var _TopFixed = __webpack_require__(260);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
@@ -1209,7 +1224,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 259:
+/***/ 260:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1226,7 +1241,7 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _topfixed = __webpack_require__(260);
+	var _topfixed = __webpack_require__(261);
 
 	var _topfixed2 = _interopRequireDefault(_topfixed);
 
@@ -1268,7 +1283,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 260:
+/***/ 261:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -1276,7 +1291,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 262:
+/***/ 263:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1293,7 +1308,7 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(259);
+	var _TopFixed = __webpack_require__(260);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
@@ -1341,7 +1356,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 263:
+/***/ 264:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1358,7 +1373,7 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(259);
+	var _TopFixed = __webpack_require__(260);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
@@ -1406,7 +1421,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 264:
+/***/ 265:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1423,7 +1438,7 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(259);
+	var _TopFixed = __webpack_require__(260);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
@@ -1471,7 +1486,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 265:
+/***/ 266:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1488,7 +1503,7 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(259);
+	var _TopFixed = __webpack_require__(260);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
@@ -1536,7 +1551,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 266:
+/***/ 267:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1553,7 +1568,7 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(259);
+	var _TopFixed = __webpack_require__(260);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
@@ -1601,7 +1616,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 267:
+/***/ 268:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1618,19 +1633,19 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _classnames2 = __webpack_require__(268);
+	var _classnames2 = __webpack_require__(269);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _Item = __webpack_require__(269);
+	var _Item = __webpack_require__(270);
 
 	var _Item2 = _interopRequireDefault(_Item);
 
-	var _topic = __webpack_require__(272);
+	var _topic = __webpack_require__(273);
 
 	var _topic2 = _interopRequireDefault(_topic);
 
-	var _topicData = __webpack_require__(274);
+	var _topicData = __webpack_require__(275);
 
 	var _topicData2 = _interopRequireDefault(_topicData);
 
@@ -1836,7 +1851,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 269:
+/***/ 270:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1851,7 +1866,7 @@ webpackJsonp([0,2],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _item = __webpack_require__(270);
+	var _item = __webpack_require__(271);
 
 	var _item2 = _interopRequireDefault(_item);
 
@@ -1909,7 +1924,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 270:
+/***/ 271:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -1917,7 +1932,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 272:
+/***/ 273:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -1925,7 +1940,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 274:
+/***/ 275:
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -1981,7 +1996,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 275:
+/***/ 276:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1996,7 +2011,7 @@ webpackJsonp([0,2],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _detail = __webpack_require__(276);
+	var _detail = __webpack_require__(277);
 
 	var _detail2 = _interopRequireDefault(_detail);
 
@@ -2415,7 +2430,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 276:
+/***/ 277:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -2423,7 +2438,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 278:
+/***/ 279:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2440,19 +2455,19 @@ webpackJsonp([0,2],{
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _Item = __webpack_require__(269);
+	var _Item = __webpack_require__(270);
 
 	var _Item2 = _interopRequireDefault(_Item);
 
-	var _TopFixed = __webpack_require__(259);
+	var _TopFixed = __webpack_require__(260);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _ranking = __webpack_require__(279);
+	var _ranking = __webpack_require__(280);
 
 	var _ranking2 = _interopRequireDefault(_ranking);
 
-	var _topicData = __webpack_require__(274);
+	var _topicData = __webpack_require__(275);
 
 	var _topicData2 = _interopRequireDefault(_topicData);
 
@@ -2533,7 +2548,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 279:
+/***/ 280:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -2541,7 +2556,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 281:
+/***/ 282:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2556,19 +2571,21 @@ webpackJsonp([0,2],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _TopFixed = __webpack_require__(259);
+	var _reactRouter = __webpack_require__(178);
+
+	var _TopFixed = __webpack_require__(260);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _FollowBtn = __webpack_require__(250);
+	var _FollowBtn = __webpack_require__(251);
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _buyers = __webpack_require__(282);
+	var _buyers = __webpack_require__(283);
 
 	var _buyers2 = _interopRequireDefault(_buyers);
 
-	var _buyersData = __webpack_require__(284);
+	var _buyersData = __webpack_require__(285);
 
 	var _buyersData2 = _interopRequireDefault(_buyersData);
 
@@ -2592,34 +2609,38 @@ webpackJsonp([0,2],{
 	    _createClass(BuyerItem, [{
 	        key: 'render',
 	        value: function render() {
-	            var label = this.props.label.join("</span><span>");
+	            var label = "<span>" + this.props.label.join("</span><span>") + "</span>";
 	            return _react2.default.createElement(
-	                'div',
-	                { className: _buyers2.default.buyerItem },
-	                _react2.default.createElement('div', { className: _buyers2.default.buyerImg }),
+	                _reactRouter.Link,
+	                { to: '/buyer' },
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: _buyers2.default.buyerInfo },
+	                    { className: _buyers2.default.buyerItem },
+	                    _react2.default.createElement('div', { className: _buyers2.default.buyerImg }),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: _buyers2.default.name },
-	                        this.props.name
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: _buyers2.default.desc },
-	                        this.props.desc
-	                    ),
-	                    _react2.default.createElement('div', { className: _buyers2.default.label, dangerouslySetInnerHTML: { __html: "<span>" + label + "</span>" } }),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: _buyers2.default.followers },
-	                        this.props.followers + "人关注"
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: _buyers2.default.followBtnBox },
-	                        _react2.default.createElement(_FollowBtn2.default, { following: this.props.following })
+	                        { className: _buyers2.default.buyerInfo },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _buyers2.default.name },
+	                            this.props.name
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _buyers2.default.desc },
+	                            this.props.desc
+	                        ),
+	                        _react2.default.createElement('div', { className: _buyers2.default.label, dangerouslySetInnerHTML: { __html: label } }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _buyers2.default.followers },
+	                            this.props.followers + "人关注"
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _buyers2.default.followBtnBox },
+	                            _react2.default.createElement(_FollowBtn2.default, { following: this.props.following })
+	                        )
 	                    )
 	                )
 	            );
@@ -2698,7 +2719,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 282:
+/***/ 283:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -2706,7 +2727,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 284:
+/***/ 285:
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -2791,6 +2812,262 @@ webpackJsonp([0,2],{
 			"following": false
 		}
 	];
+
+/***/ },
+
+/***/ 286:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _TopFixed = __webpack_require__(260);
+
+	var _TopFixed2 = _interopRequireDefault(_TopFixed);
+
+	var _FollowBtn = __webpack_require__(251);
+
+	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
+
+	var _buyer = __webpack_require__(287);
+
+	var _buyer2 = _interopRequireDefault(_buyer);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Card = function (_Component) {
+	    _inherits(Card, _Component);
+
+	    function Card() {
+	        _classCallCheck(this, Card);
+
+	        return _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).apply(this, arguments));
+	    }
+
+	    _createClass(Card, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _buyer2.default.card },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _buyer2.default.cardMain },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _buyer2.default.cardImgBox },
+	                        _react2.default.createElement('div', { className: _buyer2.default.cardImg })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _buyer2.default.cardInfo },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _buyer2.default.name },
+	                            '\u68B5\u9AD8\u5148\u751F'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _buyer2.default.followers },
+	                            '7.2\u4E07\u4EBA\u8BA2\u9605'
+	                        ),
+	                        _react2.default.createElement(_FollowBtn2.default, { following: true })
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _buyer2.default.desc },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _buyer2.default.quoteBox },
+	                        _react2.default.createElement('div', { className: _buyer2.default.quote })
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        '\u5FAE\u535A\uFF1A\u68B5\u9AD8\u4E0D\u5148\u751F'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        '\u4EE5\u72EC\u5230\u7684\u773C\u5149\uFF0C\u5E2E\u4F60\u6311\u9009\u63D0\u5347\u81EA\u8EAB\u903C\u683C\u7684\u6BD2\u8FA3\u597D\u7269\uFF0C\u8BA9\u903C\u683C\u5F7B\u5E95\u878D\u8FDB\u4F60\u7684\u751F\u6D3B\u3002'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Card;
+	}(_react.Component);
+
+	var Popular = function (_Component2) {
+	    _inherits(Popular, _Component2);
+
+	    function Popular() {
+	        _classCallCheck(this, Popular);
+
+	        return _possibleConstructorReturn(this, (Popular.__proto__ || Object.getPrototypeOf(Popular)).apply(this, arguments));
+	    }
+
+	    _createClass(Popular, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _buyer2.default.popular },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _buyer2.default.title },
+	                    '\u6700\u53D7\u6B22\u8FCE'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _buyer2.default.subTitle },
+	                    'POPULAR'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _buyer2.default.popularBox },
+	                    _react2.default.createElement('div', null),
+	                    _react2.default.createElement('div', null),
+	                    _react2.default.createElement('div', null),
+	                    _react2.default.createElement('div', null),
+	                    _react2.default.createElement('div', null),
+	                    _react2.default.createElement('div', null),
+	                    _react2.default.createElement('div', null),
+	                    _react2.default.createElement('div', null),
+	                    _react2.default.createElement('div', null)
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Popular;
+	}(_react.Component);
+
+	var ProductItem = function (_Component3) {
+	    _inherits(ProductItem, _Component3);
+
+	    function ProductItem() {
+	        _classCallCheck(this, ProductItem);
+
+	        return _possibleConstructorReturn(this, (ProductItem.__proto__ || Object.getPrototypeOf(ProductItem)).apply(this, arguments));
+	    }
+
+	    _createClass(ProductItem, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _buyer2.default.productItem },
+	                _react2.default.createElement('div', { className: _buyer2.default.productImg }),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _buyer2.default.productTitle },
+	                    '\u8FD9\u628A\u5200\u6233\u5230\u4E86\u6211\u5FC3\u4E2D\u7684\u67D0\u4E2AG\u70B9\u4E86'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _buyer2.default.productDesc },
+	                    '14\u5C0F\u65F6\u524D\u53D1\u5E03 1641\u4EBA\u559C\u6B22'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return ProductItem;
+	}(_react.Component);
+
+	var Products = function (_Component4) {
+	    _inherits(Products, _Component4);
+
+	    function Products() {
+	        _classCallCheck(this, Products);
+
+	        return _possibleConstructorReturn(this, (Products.__proto__ || Object.getPrototypeOf(Products)).apply(this, arguments));
+	    }
+
+	    _createClass(Products, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _buyer2.default.products },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _buyer2.default.productsHeader },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _buyer2.default.title },
+	                        '\u6700\u65B0\u5546\u54C1'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _buyer2.default.subTitle },
+	                        '48 PRODUCTS'
+	                    )
+	                ),
+	                _react2.default.createElement(ProductItem, null),
+	                _react2.default.createElement(ProductItem, null),
+	                _react2.default.createElement(ProductItem, null),
+	                _react2.default.createElement(ProductItem, null)
+	            );
+	        }
+	    }]);
+
+	    return Products;
+	}(_react.Component);
+
+	var Buyer = function (_Component5) {
+	    _inherits(Buyer, _Component5);
+
+	    function Buyer() {
+	        _classCallCheck(this, Buyer);
+
+	        return _possibleConstructorReturn(this, (Buyer.__proto__ || Object.getPrototypeOf(Buyer)).apply(this, arguments));
+	    }
+
+	    _createClass(Buyer, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(_TopFixed2.default, null),
+	                _react2.default.createElement(Card, null),
+	                _react2.default.createElement(Popular, null),
+	                _react2.default.createElement(Products, null)
+	            );
+	        }
+	    }]);
+
+	    return Buyer;
+	}(_react.Component);
+
+	exports.default = Buyer;
+
+/***/ },
+
+/***/ 287:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"card":"buyer__card-3KyMo","cardMain":"buyer__cardMain-9zEPT","cardImgBox":"buyer__cardImgBox-13HAw","cardImg":"buyer__cardImg-2mmBS","cardInfo":"buyer__cardInfo-1j5Uo","quoteBox":"buyer__quoteBox-1M3ug","quote":"buyer__quote-348CC","name":"buyer__name-1Cdol","followers":"buyer__followers-2BR9j","desc":"buyer__desc-3t9ju","popular":"buyer__popular-3eidV","title":"buyer__title-X9Uq0","subTitle":"buyer__subTitle-1gFeF","popularBox":"buyer__popularBox-2ObYe","productsHeader":"buyer__productsHeader-3gu78","productItem":"buyer__productItem-3Gl8t","productImg":"buyer__productImg-3FQZN","productTitle":"buyer__productTitle-11stn","productDesc":"buyer__productDesc-2fhsb"};
 
 /***/ }
 

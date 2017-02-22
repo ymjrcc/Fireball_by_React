@@ -11,7 +11,9 @@ class FollowingBtn extends Component{
         }
     }
 
-    handleClick(){
+    handleClick(e){
+        e.preventDefault();
+        e.stopPropagation();
         this.setState({
             following: !this.state.following
         })
