@@ -146,7 +146,7 @@ webpackJsonp([0,2],{
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                { className: _home2.default.homeTop },
+	                { 'data-maxwidth': true, className: _home2.default.homeTop },
 	                '\u4ECA\u65E5\u63A8\u8350'
 	            );
 	        }
@@ -192,35 +192,31 @@ webpackJsonp([0,2],{
 	        value: function render() {
 	            return _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: "/detail/" + this.props.id },
+	                { to: "/detail/" + this.props.id, className: _home2.default.recommendItem },
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: _home2.default.recommendItem },
+	                    { className: _home2.default.recommendImgBox },
+	                    _react2.default.createElement('img', { className: _home2.default.recommendImg, src: __webpack_require__(242)("./" + this.props.img) })
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
 	                    _react2.default.createElement(
-	                        'div',
-	                        { className: _home2.default.recommendImgBox },
-	                        _react2.default.createElement('img', { className: _home2.default.recommendImg, src: __webpack_require__(242)("./" + this.props.img) })
+	                        'span',
+	                        { className: _home2.default.author },
+	                        this.props.author
 	                    ),
+	                    ' · ',
 	                    _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                            'span',
-	                            { className: _home2.default.author },
-	                            this.props.author
-	                        ),
-	                        ' · ',
-	                        _react2.default.createElement(
-	                            'span',
-	                            { className: _home2.default.date },
-	                            this.props.date
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'h2',
-	                        { className: _home2.default.title },
-	                        this.props.title
+	                        'span',
+	                        { className: _home2.default.date },
+	                        this.props.date
 	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'h2',
+	                    { className: _home2.default.title },
+	                    this.props.title
 	                )
 	            );
 	        }
@@ -356,7 +352,7 @@ webpackJsonp([0,2],{
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                { className: _bottom2.default.bottomTab },
+	                { 'data-maxwidth': true, className: _bottom2.default.bottomTab },
 	                _react2.default.createElement(TabItem, { name: 'Home', to: '/home' }),
 	                _react2.default.createElement(TabItem, { name: 'Discover', to: '/discover' }),
 	                _react2.default.createElement(TabItem, { name: 'Personal', to: '/personal' })
@@ -546,7 +542,7 @@ webpackJsonp([0,2],{
 	var DiscoverTop = function DiscoverTop() {
 	    return _react2.default.createElement(
 	        'div',
-	        { className: _discover2.default.discoverTop },
+	        { 'data-maxwidth': true, className: _discover2.default.discoverTop },
 	        '\u53D1 \u73B0'
 	    );
 	};
@@ -780,7 +776,7 @@ webpackJsonp([0,2],{
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _discover2.default.recommendItemBox },
-	                    _react2.default.createElement(RecommendItem, { name: 'Irena. T', desc: '\u5065\u8EAB\xD7\u4E50\u8DA3=\u751F\u6D3B' }),
+	                    _react2.default.createElement(RecommendItem, { name: '\u963F\u65AF\u8482\u82AC', desc: '\u5065\u8EAB\xD7\u4E50\u8DA3=\u751F\u6D3B' }),
 	                    _react2.default.createElement(RecommendItem, { name: '\u81EA\u7136\u9009\u62E9\u53F7', desc: '\u674E\u53D4\u5E26\u4F60\u53D1\u73B0\u597D\u4E1C\u897F' }),
 	                    _react2.default.createElement(RecommendItem, { name: '\u76D0', desc: '\u4E00\u4E2A\u76D0\u7CFB\u7537\u5B50\u7684\u65E5\u5E38' })
 	                )
@@ -1267,7 +1263,7 @@ webpackJsonp([0,2],{
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                { className: _topfixed2.default.topFixed },
+	                { 'data-maxwidth': true, className: _topfixed2.default.topFixed },
 	                _react2.default.createElement('span', { className: _topfixed2.default.backBtn, onClick: function onClick() {
 	                        _reactRouter.hashHistory.goBack();
 	                    } }),
@@ -2316,7 +2312,7 @@ webpackJsonp([0,2],{
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                { className: _detail2.default.detailBottom },
+	                { 'data-maxwidth': true, className: _detail2.default.detailBottom },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _detail2.default.bottomLeft },
@@ -2385,7 +2381,7 @@ webpackJsonp([0,2],{
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
-	                'button',
+	                'div',
 	                { className: _detail2.default.toBuyBtn },
 	                '\uFFE5 28 \u8D2D\u4E70 >'
 	            );
