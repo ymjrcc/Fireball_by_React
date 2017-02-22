@@ -5,7 +5,7 @@
 
 .headBox{
     background-color: #444;
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 .headImg{
@@ -20,6 +20,17 @@
 .headInfo{
     text-align: center;
     color: #fff;
+}
+
+.name{
+    font-size: 2rem;
+    margin: 15px 0 10px;
+}
+
+.desc{
+    font-size: 1.2rem;
+    margin: 0;
+    color: #aaa;
 }
 
 .settingBox{
@@ -43,6 +54,7 @@
 
 .settingTitle{
     position: relative;
+    font-size: 1.4rem;
 }
 
 .settingIcon{

@@ -20,7 +20,7 @@ class TabItem extends Component{
 
 class BottomTab extends Component{
     render(){
-        let curHash = location.hash.substring(2);
+        let curHash = location.hash.substring(2) || "home";
         return (
             <div data-maxwidth className={style.bottomTab}>
                 <TabItem curTab={curHash} name="home" />

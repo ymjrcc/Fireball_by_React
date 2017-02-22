@@ -15,8 +15,8 @@ class HeaderInfo extends Component{
     render(){
         return (
             <div className={style.headInfo}>
-                <p>{this.props.name}</p>
-                <p>
+                <p className={style.name}>{this.props.name}</p>
+                <p className={style.desc}>
                     {'买到 ' + this.props.goods + ' 个好物'}
                     {' · '}
                     {this.props.subscription + ' 个订阅'}
@@ -43,7 +43,16 @@ class SettingBox extends Component{
     render(){
         return (
             <div className={style.settingBox}>
-                {this.props.children}
+                <div className={style.settingArea}>
+                    <SettingItem name="order" title="我的订单" />
+                    <SettingItem name="subscription" title="我的订阅" />
+                    <SettingItem name="like" title="我的喜欢"  />
+                    <SettingItem name="coupon" title="优惠券" />
+                </div>
+                <div className={style.settingArea}>
+                    <SettingItem name="help" title="客服与帮助" />
+                    <SettingItem name="setting" title="设置" />
+                </div>
             </div>
         )
     }
@@ -75,18 +84,7 @@ class Personal extends Component{
         return (
             <div className={style.personal}>
                 <HeaderBox />
-                <SettingBox>
-                    <div className={style.settingArea}>
-                        <SettingItem name="order" title="我的订单" />
-                        <SettingItem name="subscription" title="我的订阅" />
-                        <SettingItem name="like" title="我的喜欢"  />
-                        <SettingItem name="coupon" title="优惠券" />
-                    </div>
-                    <div className={style.settingArea}>
-                        <SettingItem name="help" title="客服与帮助" />
-                        <SettingItem name="setting" title="设置" />
-                    </div>
-                </SettingBox>
+                <SettingBox />
                 <BottomTab />
             </div>
         )
