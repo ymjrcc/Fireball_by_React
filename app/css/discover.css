@@ -1,8 +1,6 @@
 .discoverTop{
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
     height: 50px;
     line-height: 50px;
     font-size: 2rem;
@@ -11,6 +9,10 @@
     opacity: 0.8;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    width: 100%;
+    max-width: 768px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .discoverBox{
@@ -105,7 +107,7 @@
 
 .recommendSection{
     background-color: #fff;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     border-top: 1px solid #f3f3f3;
     padding: 0 20px 30px;
 }

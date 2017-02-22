@@ -5,7 +5,7 @@ import style from '../css/topfixed.css'
 class TopFixed extends Component{
     render(){
         return (
-            <div className={style.topFixed}>
+            <div data-maxwidth className={style.topFixed}>
                 <span className={style.backBtn} onClick={function(){hashHistory.goBack()}}></span>
                 {this.props.children}
             </div>

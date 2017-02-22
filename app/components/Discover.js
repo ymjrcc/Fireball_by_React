@@ -5,7 +5,7 @@ import FollowBtn from './FollowBtn'
 import BottomTab from './BottomTab'
 import style from '../css/discover.css'
 
-let DiscoverTop = ()=>(<div className={style.discoverTop}>发 现</div>);
+let DiscoverTop = ()=>(<div data-maxwidth className={style.discoverTop}>发 现</div>);
 
 class DiscoverTopRow extends Component{
     render(){
@@ -120,7 +120,7 @@ class RecommendSection extends Component{
                 <h3>本周推荐</h3>
                 <p>3个推荐买手</p>
                 <div className={style.recommendItemBox}>
-                    <RecommendItem name="Irena. T" desc="健身×乐趣=生活" />
+                    <RecommendItem name="阿斯蒂芬" desc="健身×乐趣=生活" />
                     <RecommendItem name="自然选择号" desc="李叔带你发现好东西" />
                     <RecommendItem name="盐" desc="一个盐系男子的日常" />
                 </div>

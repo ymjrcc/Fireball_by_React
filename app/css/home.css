@@ -1,8 +1,6 @@
 .homeTop{
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
     height: 60px;
     line-height: 60px;
     font-size: 2.4rem;
@@ -10,6 +8,11 @@
     background-color: #fff;
     opacity: 0.8;
     padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 768px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .homeTop::after{
@@ -23,9 +26,14 @@
 }
 
 .recommendItem{
+    display: block;
     margin: 20px;
     padding: 20px;
     border-bottom: 1px solid #ccc;
+}
+
+.recommendItem:last-child{
+    border-bottom: none;
 }
 
 .recommendImgBox{

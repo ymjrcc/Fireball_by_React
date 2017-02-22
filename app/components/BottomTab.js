@@ -13,7 +13,7 @@ class TabItem extends Component{
 class BottomTab extends Component{
     render(){
         return (
-            <div className={style.bottomTab}>
+            <div data-maxwidth className={style.bottomTab}>
                 <TabItem name="Home" to="/home" />
                 <TabItem name="Discover" to="/discover" />
                 <TabItem name="Personal" to="/personal" />

@@ -24,3 +24,9 @@ a{
     max-width: 768px;
     margin: 0 auto;
 }
+
+@media (min-width:769px){
+    #app,[data-maxwidth]{
+        max-width: 414px !important;
+    }
+}

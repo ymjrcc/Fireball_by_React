@@ -1,12 +1,14 @@
 .bottomTab{
     position: fixed;
-    left: 0;
-    right: 0;
     bottom: 0;
     height: 50px;
     line-height: 50px;
     background-color: #f8f8f8;
     display: flex;
+    width: 100%;
+    max-width: 768px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .tabItem{

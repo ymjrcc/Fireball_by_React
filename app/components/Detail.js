@@ -112,7 +112,7 @@ class DetailFooter extends Component{
 class DetailBottom extends Component{
     render(){
         return (
-            <div className={style.detailBottom}>
+            <div data-maxwidth className={style.detailBottom}>
                 <div className={style.bottomLeft}>
                     <GoBackBtn />
                     <span className={style.bottomItem}>喜欢</span>
@@ -143,7 +143,7 @@ class GoBackBtn extends Component{
 class ToBuyBtn extends Component{
     render(){
         return (
-            <button className={style.toBuyBtn}>￥ 28 购买 ></button>
+            <div className={style.toBuyBtn}>￥ 28 购买 ></div>
         )
     }
 }

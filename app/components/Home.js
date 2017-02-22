@@ -6,7 +6,7 @@ import homeData from '../data/homeData.json'
 
 class HomeTop extends Component{
     render(){
-        return <div className={style.homeTop}>今日推荐</div>
+        return <div data-maxwidth className={style.homeTop}>今日推荐</div>
     }
 }
 
@@ -19,19 +19,17 @@ class RecommendBox extends Component{
 class RecommendItem extends Component{
     render(){
         return (
-            <Link to={ "/detail/" + this.props.id }>
-                <div className={style.recommendItem}>
-                    <div className={style.recommendImgBox}>
-                        <img className={style.recommendImg} src={require('../images/'+this.props.img)} />
-                    </div>
-                    <p>
-                        <span className={style.author}>{this.props.author}</span>
-                        {' · '}
-                        <span className={style.date}>{this.props.date}</span>
-                    </p>
-                    <h2 className={style.title}>{this.props.title}</h2>
+            <Link to={ "/detail/" + this.props.id } className={style.recommendItem}>
+                <div className={style.recommendImgBox}>
+                    <img className={style.recommendImg} src={require('../images/'+this.props.img)} />
                 </div>
-            </Link>
+                <p>
+                    <span className={style.author}>{this.props.author}</span>
+                    {' · '}
+                    <span className={style.date}>{this.props.date}</span>
+                </p>
+                <h2 className={style.title}>{this.props.title}</h2>
+            </Link>   
         )
     }
 }

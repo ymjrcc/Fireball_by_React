@@ -32,7 +32,7 @@
 }
 
 .detailMain{
-    background-color: #fff;
+    background-color: #fafafa;
     padding: 0 20px 20px;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
@@ -48,7 +48,7 @@
 .footer1Box{
     display: flex;
     margin-bottom: 20px;
-    background-color: #fff;
+    background-color: #fafafa;
 }
 
 .footer1Item{
@@ -64,7 +64,7 @@
 
 .footer2Box{
     margin-bottom: 20px;
-    background-color: #fff;
+    background-color: #fafafa;
     height: 100px;
     line-height: 100px;
     text-align: center;
@@ -72,7 +72,7 @@
 
 .footer3Box{
     text-align: center;
-    background-color: #fff;
+    background-color: #fafafa;
     padding: 20px 0;
     margin-bottom: 20px;
 }
@@ -92,7 +92,7 @@
 }
 
 .footer4Box{
-    background-color: #fff;
+    background-color: #fafafa;
     padding: 20px 0;
     margin-bottom: 20px;
 }
@@ -119,13 +119,16 @@
 .detailBottom{
     position: fixed;
     display: flex;
-    height: 40px;
+    height: 60px;
     padding: 10px 20px;
     bottom: 0;
-    left: 0;
-    right: 0;
     background-color: #fff;
     z-index: 5;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 768px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .bottomLeft,
@@ -147,6 +150,9 @@
 .toBuyBtn{
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
     background-color: indianred;
     color: #fff;
