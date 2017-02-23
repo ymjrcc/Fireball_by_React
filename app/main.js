@@ -32,7 +32,7 @@ ReactDOM.render(
             <Route path="/personal/help" component={Helps} />
             <Route path="/personal/setting" component={Settings} />
 
-            <Route path="/topic" component={Topic} />
+            <Route path="/topic(/:name)" component={Topic} />
 
             <Route path="/detail/:id" component={Detail} />
 

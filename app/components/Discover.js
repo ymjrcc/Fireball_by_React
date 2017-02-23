@@ -12,10 +12,10 @@ class DiscoverTopRow extends Component{
         return (
             <div className={style.discoverTopRow}>
                 <Link to="/ranking" className={style.discoverTopItem}>
-                    <div>本周好物排行</div>
+                    <div>本 周 好 物 排 行</div>
                 </Link>
                 <Link to="/buyers" className={style.discoverTopItem}> 
-                    <div>所有买手</div>
+                    <div>所 有 买 手</div>
                 </Link>
             </div>
         )
@@ -24,16 +24,23 @@ class DiscoverTopRow extends Component{
 
 class DiscoverSection extends Component{
     render(){
+        const name = encodeURIComponent(this.props.name);
         return (
-            <Link to="/topic">
+            <Link to={"/topic/" + name}>
                 <div className={style.discoverSection}>
                     <div className={style.rightIcon}></div>
                     <h3>{this.props.name}</h3>
                     <p>{this.props.number + ' 篇推荐'}</p>
                     <div className={style.sectionImgBox}>
-                        <div className={style.sectionImg}></div>
-                        <div className={style.sectionImg}></div>
-                        <div className={style.sectionImg}></div>
+                        <div className={style.sectionImg}>
+                            <img src={require('../images/discovers/' + this.props.imgs[0] + '.jpg')} />
+                        </div>
+                        <div className={style.sectionImg}>
+                            <img src={require('../images/discovers/' + this.props.imgs[1] + '.jpg')} />
+                        </div>
+                        <div className={style.sectionImg}>
+                            <img src={require('../images/discovers/' + this.props.imgs[2] + '.jpg')} />
+                        </div>
                     </div>
                 </div>           
             </Link>
@@ -134,14 +141,14 @@ class DiscoverBox extends Component{
         return (
             <div className={style.discoverBox}>
                 <DiscoverTopRow />
-                <DiscoverSection name="火球精选" number="34" />
+                <DiscoverSection name="火球精选" number="34" imgs={[1,2,3]} />
                 <DiscoverBanner />
-                <DiscoverSection name="吃点儿好的" number="31" />
-                <DiscoverSection name="品质生活" number="18" />
-                <DiscoverSection name="新奇酷玩" number="25" />
-                <DiscoverSection name="型格指南" number="34" />
-                <DiscoverSection name="穿衣搭配" number="26" />
-                <DiscoverSection name="礼物指南" number="13" />
+                <DiscoverSection name="吃点儿好的" number="31" imgs={[4,5,6]} />
+                <DiscoverSection name="品质生活" number="18" imgs={[7,8,9]} />
+                <DiscoverSection name="新奇酷玩" number="25" imgs={[10,11,12]} />
+                <DiscoverSection name="型格指南" number="34" imgs={[2,3,13]} />
+                <DiscoverSection name="穿衣搭配" number="26" imgs={[14,15,16]} />
+                <DiscoverSection name="礼物指南" number="13" imgs={[17,18,19]} />
                 <RecommendSection />
             </div>
         )

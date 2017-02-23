@@ -7,10 +7,12 @@ import topicData from '../data/topicData.json'
 
 class TopicHeader extends Component{
     render(){
+        const str = location.hash.split("/").pop();
+        const title = decodeURIComponent(str);
         return (
             <div className={style.topicHeader}>
                 <div className={style.topicHeaderBack} onClick={function(){hashHistory.goBack();}}></div>
-                火球精选
+                {title}
             </div>
         )
     }

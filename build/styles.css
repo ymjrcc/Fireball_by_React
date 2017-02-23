@@ -207,13 +207,22 @@
     flex: 1;
     height: 80px;
     line-height: 80px;
-    background-color: #eee;
     text-align: center;
     border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 5px #333;
 }
 
 .discover__discoverTopItem-2AGnx:first-child{
     margin-right: 20px;
+    background-image: url(images/91a34956.weekRanking.png);
+    background-size: cover;
+}
+
+.discover__discoverTopItem-2AGnx:last-child{
+    background-image: url(images/dab01d33.allBuyers.png);
+    background-size: cover;
 }
 
 .discover__discoverSection-2h8hz{
@@ -251,11 +260,17 @@
     display: flex;
     padding-bottom: 20px;
 }
+
 .discover__sectionImg-3M5wQ{
     flex: 1;
     height: 100px;
-    background-color: #eee;
-    border-radius: 5px;
+    overflow: hidden;
+}
+
+.discover__sectionImg-3M5wQ img{
+    display: block;
+    margin: 0 auto;
+    height: 100%;
 }
 
 .discover__sectionImg-3M5wQ:nth-child(even){
