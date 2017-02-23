@@ -9,7 +9,7 @@ class BuyerItem extends Component{
     render(){
         let label = "<span>" + this.props.label.join("</span><span>") + "</span>";
         return (
-            <Link to="/buyer">
+            <Link to={"/buyer/"+this.props.id}>
                 <div className={style.buyerItem}>
                     <div className={style.buyerImg}></div>
                     <div className={style.buyerInfo}>
@@ -32,7 +32,15 @@ class BuyersList extends Component{
     renderBuyers(data){
         let dataArr = [];
         for(let i = 0; i < data.length; i++){
-            dataArr.push(<BuyerItem key={data[i].id} name={data[i].name} desc={data[i].desc} label={data[i].label} followers={data[i].followers} following={data[i].following} />);
+            dataArr.push(<
+                BuyerItem key={data[i].id} 
+                id={data[i].id}
+                name={data[i].name} 
+                desc={data[i].desc} 
+                label={data[i].label} 
+                followers={data[i].followers} 
+                following={data[i].following} 
+            />);
         }
         return dataArr;
     }

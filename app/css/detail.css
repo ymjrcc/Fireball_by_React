@@ -1,5 +1,6 @@
 .detailBox{
     position: relative;
+    padding-bottom: 80px;
 }
 
 .detailTop{
@@ -11,8 +12,8 @@
 }
 
 .topHeadImg{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #eee;
     margin-right: 15px;
@@ -24,7 +25,7 @@
 }
 
 .topAuthor{
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin-bottom: 5px;
 }
 
@@ -36,7 +37,7 @@
 .topToAutor{
     position: absolute;
     right: 0;
-    top: 15px;
+    top: 10px;
     width: 16px;
     height: 16px;
     background-image: url('../images/right.png');
@@ -68,10 +69,6 @@
 
 .coverBox img{
     width: 100%;
-}
-
-.detailFooter{
-    margin-bottom: 80px;
 }
 
 .footer1Box{
@@ -123,7 +120,6 @@
 .footer4Box{
     background-color: #fafafa;
     padding: 20px 0;
-    margin-bottom: 20px;
 }
 
 .footer4Title{

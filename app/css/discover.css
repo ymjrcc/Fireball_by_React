@@ -50,6 +50,30 @@
     margin-bottom: 20px;
     border-top: 1px solid #f3f3f3;
     padding: 0 20px;
+    position: relative;
+}
+
+.rightIcon{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 20px;
+    top: 20px;
+    background-image: url('../images/right.png');
+    background-size: cover;
+}
+
+.discoverSection h3{
+    margin: 0;
+    padding: 15px 0 8px;
+    font-size: 1.8rem;
+}
+
+.discoverSection p{
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    color: #aaa;
 }
 
 .sectionImgBox{
@@ -71,7 +95,7 @@
     margin: 20px 0;
     overflow-x: hidden;
     position: relative;
-    height: 102px;
+    height: 30vw;
 }
 
 @keyframes banner{
@@ -85,27 +109,38 @@
     position: absolute;
     transform: translateX(-50%);
     width: 80%;
-    height: 100px;
-    background-color: #eee;
+    height: 30vw;
     border-radius: 10px;
-    opacity: 0.5;
-    animation: banner 8s infinite;
+    animation: banner 8s infinite cubic-bezier(0.68, -0.4, 0.27, 1.4);
+    background-position: 50% 40%;      
+}
+
+@media (min-width: 769px){
+    .discoverBanner,
+    .discoverBannerImg{
+        max-height: 105px;
+    }
 }
 
 .discoverBannerImg[data-index="0"]{
-    background-color: #aaa;
+    background-image: url('../images/covers/c-p003.jpg');
+    background-size: cover;
 }
 .discoverBannerImg[data-index="1"]{
-    background-color: #ccc;
+    background-image: url('../images/covers/c-p005.jpg');
+    background-size: cover;
 }
 .discoverBannerImg[data-index="2"]{
-    background-color: #aaa;
+    background-image: url('../images/covers/c-p003.jpg');
+    background-size: cover;
 }
 .discoverBannerImg[data-index="3"]{
-    background-color: #ccc;
+    background-image: url('../images/covers/c-p005.jpg');
+    background-size: cover;
 }
 .discoverBannerImg[data-index="4"]{
-    background-color: #aaa;
+    background-image: url('../images/covers/c-p003.jpg');
+    background-size: cover;
 }
 
 .recommendSection{
@@ -113,6 +148,20 @@
     margin-bottom: 20px;
     border-top: 1px solid #f3f3f3;
     padding: 0 20px 30px;
+    position: relative;
+}
+
+.recommendSection h3{
+    margin: 0;
+    padding: 15px 0 8px;
+    font-size: 1.8rem;
+}
+
+.recommendSection p{
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    color: #aaa;
 }
 
 .recommendItemBox{
@@ -137,12 +186,11 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 1.8rem;
-    margin: 10px auto;
+    margin: 10px auto 5px;
 }
 
 .recommendItemDesc{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #999;
     width: 90px;
     text-overflow: ellipsis;

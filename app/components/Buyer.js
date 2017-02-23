@@ -2,9 +2,14 @@ import React,{Component} from 'react'
 import TopFixed from './TopFixed'
 import FollowBtn from './FollowBtn'
 import style from '../css/buyer.css'
+import buyersData from '../data/buyersData.json'
+import productsData from '../data/productsData.json'
 
 class Card extends Component{
     render(){
+
+        const res = this.props.buyerInfo;
+
         return (
             <div className={style.card}>
                 <div className={style.cardMain}>
@@ -12,17 +17,17 @@ class Card extends Component{
                         <div className={style.cardImg}></div>
                     </div>
                     <div className={style.cardInfo}>
-                        <div className={style.name}>梵高先生</div>
-                        <div className={style.followers}>7.2万人订阅</div>
-                        <FollowBtn following={true} />
+                        <div className={style.name}>{res.name}</div>
+                        <div className={style.followers}>{res.followers}人订阅</div>
+                        <FollowBtn following={res.following} />
                     </div>
                 </div>
                 <div className={style.desc}>
                     <div className={style.quoteBox}>
                         <div className={style.quote}></div>
                     </div>
-                    <p>微博：梵高不先生</p>
-                    <p>以独到的眼光，帮你挑选提升自身逼格的毒辣好物，让逼格彻底融进你的生活。</p>
+                    <p>{res.label.join("，")}</p>
+                    <p>{res.desc}</p>
                 </div>
             </div>
         )
@@ -82,15 +87,39 @@ class Products extends Component{
 }
 
 class Buyer extends Component{
+
+    componentDidMount(){
+        document.body.scrollTop=0;
+    }
+
+    getBuyerInfo(data){
+        let id = location.hash.split("/").pop();
+        let buyerObj = {id:"__WARNING__"};
+        for(let i = 0; i < data.length; i++){
+            if(data[i].id === id){
+                buyerObj = data[i];
+                break;
+            }
+        }
+        return buyerObj;
+    }
+
     render(){
-        return (
-            <div className={style.buyer}>
-                <TopFixed />
-                <Card />
-                <Popular />
-                <Products />
-            </div>
-        )
+
+        const buyerInfo = this.getBuyerInfo(buyersData);
+        if(buyerInfo.id=="__WARNING__"){
+            setTimeout(function(){location.hash="#/"},2000);
+            return <div>找不到资源！</div>
+        }else{
+            return (
+                <div className={style.buyer}>
+                    <TopFixed />
+                    <Card buyerInfo={buyerInfo} />
+                    <Popular />
+                    <Products />
+                </div>
+            )
+        }
     }
 }
 

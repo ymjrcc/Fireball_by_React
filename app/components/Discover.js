@@ -27,6 +27,7 @@ class DiscoverSection extends Component{
         return (
             <Link to="/topic">
                 <div className={style.discoverSection}>
+                    <div className={style.rightIcon}></div>
                     <h3>{this.props.name}</h3>
                     <p>{this.props.number + ' 篇推荐'}</p>
                     <div className={style.sectionImgBox}>
@@ -72,15 +73,13 @@ class DiscoverBannerImg extends Component{
 
     render(){
         return (
-            <Link to="/detail">
-                <div 
-                    className={style.discoverBannerImg}
-                    data-index={this.props.index}
-                    style={{left: (this.props.index * 84 - 34)+"%"}}
-                >
-                    
-                </div>
-            </Link>
+            <div 
+                className={style.discoverBannerImg}
+                data-index={this.props.index}
+                style={{left: (this.props.index * 84 - 34)+"%"}}
+            >
+                
+            </div>
         )
     }
 }
@@ -89,11 +88,11 @@ class DiscoverBanner extends Component{
     render(){
         return (
             <div className={style.discoverBanner}>
-                <DiscoverBannerImg index="0" />
-                <DiscoverBannerImg index="1" />
-                <DiscoverBannerImg index="2" />
-                <DiscoverBannerImg index="3" />
-                <DiscoverBannerImg index="4" />
+                <Link to="/detail/p003"><DiscoverBannerImg index="0" /></Link>
+                <Link to="/detail/p005"><DiscoverBannerImg index="1" /></Link>
+                <Link to="/detail/p003"><DiscoverBannerImg index="2" /></Link>
+                <Link to="/detail/p005"><DiscoverBannerImg index="3" /></Link>
+                <Link to="/detail/p003"><DiscoverBannerImg index="4" /></Link>
             </div>
         )
     }
@@ -117,6 +116,7 @@ class RecommendSection extends Component{
     render(){
         return (
             <div className={style.recommendSection}>
+                <div className={style.rightIcon}></div>
                 <h3>本周推荐</h3>
                 <p>3个推荐买手</p>
                 <div className={style.recommendItemBox}>

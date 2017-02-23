@@ -34,7 +34,7 @@
 .recommendItem{
     display: block;
     margin: 20px;
-    padding: 20px 0;
+    padding: 20px 0 15px;
     border-bottom: 1px solid #ccc;
 }
 
@@ -52,12 +52,24 @@
     display: block;
 }
 
+.authorRow{
+    margin-top: 10px;
+}
+
+.author{
+    font-size: 1.2rem;
+}
+
 .date{
+    font-size: 1.2rem;
     color: #999;
 }
 
 .title{
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .likesRow{

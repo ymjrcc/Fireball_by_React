@@ -1,20 +1,20 @@
 import React,{Component} from 'react'
 import style from '../css/detail.css'
-import {hashHistory} from 'react-router'
+import {hashHistory,Link} from 'react-router'
 import productsData from '../data/productsData.json'
 
 class DetailTop extends Component{
     render(){
         const res = this.props.productInfo;
         return (
-            <div className={style.detailTop}>
+            <Link to={"/buyer/"+res.authorId} className={style.detailTop}>
                 <div className={style.topHeadImg}></div>
                 <div className={style.topMain}>
                     <div className={style.topAuthor}>{res.author}</div>
                     <div className={style.topDate}>{res.date}</div>
                     <div className={style.topToAutor}></div>
                 </div>
-            </div>
+            </Link>
         )
     }
 }
@@ -116,11 +116,11 @@ class DetailBottom extends Component{
                     <GoBackBtn />
                     <span className={style.bottomItem}>
                         <div className={style.like}></div>
-                        {res.likes}
+                        {res.likes>999?((res.likes/1000).toFixed(1)+"k"):res.likes}
                     </span>
                     <span className={style.bottomItem}>
                         <div className={style.share}></div>
-                        {res.share}
+                        {res.share>999?((res.share/1000.0).toFixed(1)+"k"):res.share}
                     </span>
                 </div>
                 <div className={style.bottomRight}>
@@ -149,7 +149,7 @@ class ToBuyBtn extends Component{
     render(){
         const res = this.props.productInfo;
         return (
-            <div className={style.toBuyBtn}>￥ {res.price} 购买 ></div>
+            <div className={style.toBuyBtn}>￥ {res.price} 购买 </div>
         )
     }
 }

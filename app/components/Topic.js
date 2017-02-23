@@ -9,7 +9,7 @@ class TopicHeader extends Component{
     render(){
         return (
             <div className={style.topicHeader}>
-                <div className={style.topicHeaderBack} onClick={function(){hashHistory.goBack();}}>&lt;</div>
+                <div className={style.topicHeaderBack} onClick={function(){hashHistory.goBack();}}></div>
                 火球精选
             </div>
         )

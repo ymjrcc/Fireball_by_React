@@ -1,6 +1,6 @@
 [
     {
-        "id": 0,
+        "id": "b000",
         "name": "梵高先生",
         "desc": "专注提升逼格",
         "label": ["逼格好物","服饰穿搭"],
@@ -8,7 +8,7 @@
         "following": true
     },
     {
-        "id": 1,
+        "id": "b001",
         "name": "盐",
         "desc": "一个盐系男子的日常穿搭",
         "label": ["日系","穿搭","男士"],
@@ -16,7 +16,7 @@
         "following": true
     },
     {
-        "id": 2,
+        "id": "b002",
         "name": "有怪售",
         "desc": "脑洞少女的次元穿梭日记",
         "label": ["趣玩","设计感"],
@@ -24,7 +24,7 @@
         "following": true
     },
     {
-        "id": 3,
+        "id": "b003",
         "name": "九磅十五便士",
         "desc": "男士生活指南",
         "label": ["男式、男士、男事"],
@@ -32,7 +32,7 @@
         "following": true
     },
     {
-        "id": 4,
+        "id": "b004",
         "name": "桥豆麻袋",
         "desc": "青春貌美是你的宇宙特质",
         "label": ["颜控","少女向","服饰穿搭"],
@@ -40,7 +40,7 @@
         "following": false
     },
     {
-        "id": 5,
+        "id": "b005",
         "name": "阿多斯日志",
         "desc": "男士时尚生活",
         "label": ["欧美","服饰","鞋包","配饰"],
@@ -48,11 +48,35 @@
         "following": false
     },
     {
-        "id": 6,
+        "id": "b006",
         "name": "STAR",
         "desc": "是你身上的亮点",
         "label": ["首饰","欧美"],
         "followers": 22765,
         "following": false
+    },
+    {
+        "id": "b007",
+        "name": "吃喝找野马",
+        "desc": "神经大条的射手座",
+        "label": ["爱吃爱喝爱睡觉","记性差"],
+        "followers": 39547,
+        "following": true
+    },
+    {
+        "id": "b008",
+        "name": "八号丸子",
+        "desc": "给你带来网红零食的一手报告",
+        "label": ["网红","零食"],
+        "followers": 67421,
+        "following": true
+    },
+    {
+        "id": "b009",
+        "name": "贪吃鬼小埋",
+        "desc": "只为找到最好吃的你",
+        "label": ["懂吃会吃","狮子座"],
+        "followers": 126742,
+        "following": true
     }
 ]

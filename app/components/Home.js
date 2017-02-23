@@ -23,14 +23,16 @@ class RecommendItem extends Component{
                 <div className={style.recommendImgBox}>
                     <img className={style.recommendImg} src={require('../images/covers/'+this.props.cover)} />
                 </div>
-                <p>
+                <div className={style.authorRow}>
                     <span className={style.author}>{this.props.author}</span>
                     {' · '}
                     <span className={style.date}>{this.props.date}</span>
-                </p>
-                <h2 className={style.title}>{this.props.title}</h2>
+                </div>
+                <div className={style.title}>{this.props.title}</div>
                 <div className={style.likesRow}>
-                    <span className={style.likes}>{this.props.likes}</span>
+                    <span className={style.likes}>
+                        {this.props.likes>999?((this.props.likes/1000).toFixed(1)+"k"):this.props.likes}
+                    </span>
                 </div>
             </Link>   
         )

@@ -34,12 +34,12 @@ ReactDOM.render(
 
             <Route path="/topic" component={Topic} />
 
-            <Route path="/detail(/:id)" component={Detail} />
+            <Route path="/detail/:id" component={Detail} />
 
             <Route path="/ranking" component={Ranking} />
             <Route path="/buyers" component={Buyers} />
 
-            <Route path="/buyer" component={Buyer} />
+            <Route path="/buyer/:id" component={Buyer} />
 
         </Router>
     ),
