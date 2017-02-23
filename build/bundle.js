@@ -23,7 +23,7 @@ webpackJsonp([0,2],{
 
 	var _Discover2 = _interopRequireDefault(_Discover);
 
-	var _Personal = __webpack_require__(262);
+	var _Personal = __webpack_require__(263);
 
 	var _Personal2 = _interopRequireDefault(_Personal);
 
@@ -55,42 +55,42 @@ webpackJsonp([0,2],{
 
 	var _Topic2 = _interopRequireDefault(_Topic);
 
-	var _Detail = __webpack_require__(290);
+	var _Detail = __webpack_require__(291);
 
 	var _Detail2 = _interopRequireDefault(_Detail);
 
-	var _Ranking = __webpack_require__(295);
+	var _Ranking = __webpack_require__(296);
 
 	var _Ranking2 = _interopRequireDefault(_Ranking);
 
-	var _Buyers = __webpack_require__(298);
+	var _Buyers = __webpack_require__(299);
 
 	var _Buyers2 = _interopRequireDefault(_Buyers);
 
-	var _Buyer = __webpack_require__(302);
+	var _Buyer = __webpack_require__(303);
 
 	var _Buyer2 = _interopRequireDefault(_Buyer);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	_reactDom2.default.render(_react2.default.createElement(
-	    _reactRouter.Router,
-	    { history: _reactRouter.hashHistory },
-	    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Home2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/home', component: _Home2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/discover', component: _Discover2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/personal', component: _Personal2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/personal/order', component: _MyOrders2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/personal/subscription', component: _MySubscriptions2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/personal/like', component: _MyLikes2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/personal/coupon', component: _Coupons2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/personal/help', component: _Helps2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/personal/setting', component: _Settings2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/topic', component: _Topic2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/detail(/:id)', component: _Detail2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/ranking', component: _Ranking2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/buyers', component: _Buyers2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/buyer', component: _Buyer2.default })
+	            _reactRouter.Router,
+	            { history: _reactRouter.hashHistory },
+	            _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Home2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/home', component: _Home2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/discover', component: _Discover2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/personal', component: _Personal2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/personal/order', component: _MyOrders2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/personal/subscription', component: _MySubscriptions2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/personal/like', component: _MyLikes2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/personal/coupon', component: _Coupons2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/personal/help', component: _Helps2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/personal/setting', component: _Settings2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/topic', component: _Topic2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/detail/:id', component: _Detail2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/ranking', component: _Ranking2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/buyers', component: _Buyers2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/buyer/:id', component: _Buyer2.default })
 	), document.getElementById('app'));
 
 /***/ },
@@ -199,8 +199,8 @@ webpackJsonp([0,2],{
 	                    _react2.default.createElement('img', { className: _home2.default.recommendImg, src: __webpack_require__(249)("./" + this.props.cover) })
 	                ),
 	                _react2.default.createElement(
-	                    'p',
-	                    null,
+	                    'div',
+	                    { className: _home2.default.authorRow },
 	                    _react2.default.createElement(
 	                        'span',
 	                        { className: _home2.default.author },
@@ -214,7 +214,7 @@ webpackJsonp([0,2],{
 	                    )
 	                ),
 	                _react2.default.createElement(
-	                    'h2',
+	                    'div',
 	                    { className: _home2.default.title },
 	                    this.props.title
 	                ),
@@ -224,7 +224,7 @@ webpackJsonp([0,2],{
 	                    _react2.default.createElement(
 	                        'span',
 	                        { className: _home2.default.likes },
-	                        this.props.likes
+	                        this.props.likes > 999 ? (this.props.likes / 1000).toFixed(1) + "k" : this.props.likes
 	                    )
 	                )
 	            );
@@ -401,7 +401,7 @@ webpackJsonp([0,2],{
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"home":"home__home-eoHdD","homeTop":"home__homeTop-1lDmB","recommendBox":"home__recommendBox-7ndF7","recommendItem":"home__recommendItem-3ELmm","recommendImgBox":"home__recommendImgBox-1gMr0","recommendImg":"home__recommendImg-atweB","date":"home__date-18DcC","title":"home__title-1WgcK","likesRow":"home__likesRow-1g9T1","likes":"home__likes-1f_1r"};
+	module.exports = {"home":"home__home-eoHdD","homeTop":"home__homeTop-1lDmB","recommendBox":"home__recommendBox-7ndF7","recommendItem":"home__recommendItem-3ELmm","recommendImgBox":"home__recommendImgBox-1gMr0","recommendImg":"home__recommendImg-atweB","authorRow":"home__authorRow-3tv4Q","author":"home__author-2055G","date":"home__date-18DcC","title":"home__title-1WgcK","likesRow":"home__likesRow-1g9T1","likes":"home__likes-1f_1r"};
 
 /***/ },
 
@@ -413,7 +413,7 @@ webpackJsonp([0,2],{
 			"id": "p000",
 			"title": "论百搭，我只服MA-1飞行夹克",
 			"author": "九磅十五便士",
-			"authorId": "",
+			"authorId": "b003",
 			"cover": "c-p000.jpg",
 			"date": "2017-02-22",
 			"likes": 93,
@@ -425,7 +425,7 @@ webpackJsonp([0,2],{
 			"id": "p001",
 			"title": "吃冻干水果，像宇航员一样健康（二）",
 			"author": "吃喝找野马",
-			"authorId": "",
+			"authorId": "b007",
 			"cover": "c-p001.jpg",
 			"date": "2017-02-21",
 			"likes": 2343,
@@ -437,7 +437,7 @@ webpackJsonp([0,2],{
 			"id": "p002",
 			"title": "开学了，你的麦片准备好了吗？",
 			"author": "八号丸子",
-			"authorId": "",
+			"authorId": "b008",
 			"cover": "c-p002.jpg",
 			"date": "2017-02-21",
 			"likes": 2956,
@@ -449,7 +449,7 @@ webpackJsonp([0,2],{
 			"id": "p003",
 			"title": "这把刀戳到我心中的某个G点了",
 			"author": "梵高先生",
-			"authorId": "",
+			"authorId": "b000",
 			"cover": "c-p003.jpg",
 			"date": "2017-02-21",
 			"likes": 2366,
@@ -461,7 +461,7 @@ webpackJsonp([0,2],{
 			"id": "p004",
 			"title": "套上壳，回到那个红白机年代",
 			"author": "有怪售",
-			"authorId": "",
+			"authorId": "b002",
 			"cover": "c-p004.jpg",
 			"date": "2017-02-20",
 			"likes": 4935,
@@ -473,7 +473,7 @@ webpackJsonp([0,2],{
 			"id": "p005",
 			"title": "在家如何自制COCO奶茶？",
 			"author": "贪吃鬼小埋",
-			"authorId": "",
+			"authorId": "b009",
 			"cover": "c-p005.jpg",
 			"date": "2017-02-20",
 			"likes": 6098,
@@ -659,6 +659,7 @@ webpackJsonp([0,2],{
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _discover2.default.discoverSection },
+	                    _react2.default.createElement('div', { className: _discover2.default.rightIcon }),
 	                    _react2.default.createElement(
 	                        'h3',
 	                        null,
@@ -726,15 +727,11 @@ webpackJsonp([0,2],{
 	        // }
 
 	        value: function render() {
-	            return _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/detail' },
-	                _react2.default.createElement('div', {
-	                    className: _discover2.default.discoverBannerImg,
-	                    'data-index': this.props.index,
-	                    style: { left: this.props.index * 84 - 34 + "%" }
-	                })
-	            );
+	            return _react2.default.createElement('div', {
+	                className: _discover2.default.discoverBannerImg,
+	                'data-index': this.props.index,
+	                style: { left: this.props.index * 84 - 34 + "%" }
+	            });
 	        }
 	    }]);
 
@@ -756,11 +753,31 @@ webpackJsonp([0,2],{
 	            return _react2.default.createElement(
 	                'div',
 	                { className: _discover2.default.discoverBanner },
-	                _react2.default.createElement(DiscoverBannerImg, { index: '0' }),
-	                _react2.default.createElement(DiscoverBannerImg, { index: '1' }),
-	                _react2.default.createElement(DiscoverBannerImg, { index: '2' }),
-	                _react2.default.createElement(DiscoverBannerImg, { index: '3' }),
-	                _react2.default.createElement(DiscoverBannerImg, { index: '4' })
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/detail/p003' },
+	                    _react2.default.createElement(DiscoverBannerImg, { index: '0' })
+	                ),
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/detail/p005' },
+	                    _react2.default.createElement(DiscoverBannerImg, { index: '1' })
+	                ),
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/detail/p003' },
+	                    _react2.default.createElement(DiscoverBannerImg, { index: '2' })
+	                ),
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/detail/p005' },
+	                    _react2.default.createElement(DiscoverBannerImg, { index: '3' })
+	                ),
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/detail/p003' },
+	                    _react2.default.createElement(DiscoverBannerImg, { index: '4' })
+	                )
 	            );
 	        }
 	    }]);
@@ -817,6 +834,7 @@ webpackJsonp([0,2],{
 	            return _react2.default.createElement(
 	                'div',
 	                { className: _discover2.default.recommendSection },
+	                _react2.default.createElement('div', { className: _discover2.default.rightIcon }),
 	                _react2.default.createElement(
 	                    'h3',
 	                    null,
@@ -990,11 +1008,11 @@ webpackJsonp([0,2],{
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"discover":"discover__discover-2D-4H","discoverTop":"discover__discoverTop-HspIP","discoverBox":"discover__discoverBox-24RGv","discoverTopRow":"discover__discoverTopRow-3octI","discoverTopItem":"discover__discoverTopItem-2AGnx","discoverSection":"discover__discoverSection-2h8hz","sectionImgBox":"discover__sectionImgBox-20_bn","sectionImg":"discover__sectionImg-3M5wQ","discoverBanner":"discover__discoverBanner-3M_yZ","discoverBannerImg":"discover__discoverBannerImg-1dlDI","banner":"discover__banner-2Z9Qk","recommendSection":"discover__recommendSection-aZ8W2","recommendItemBox":"discover__recommendItemBox-oGHTb","recommendItem":"discover__recommendItem-1hDAE","recommendItemImg":"discover__recommendItemImg-1EIxm","recommendItemName":"discover__recommendItemName-2hgdv","recommendItemDesc":"discover__recommendItemDesc-2qIP7"};
+	module.exports = {"discover":"discover__discover-2D-4H","discoverTop":"discover__discoverTop-HspIP","discoverBox":"discover__discoverBox-24RGv","discoverTopRow":"discover__discoverTopRow-3octI","discoverTopItem":"discover__discoverTopItem-2AGnx","discoverSection":"discover__discoverSection-2h8hz","rightIcon":"discover__rightIcon-2cKu2","sectionImgBox":"discover__sectionImgBox-20_bn","sectionImg":"discover__sectionImg-3M5wQ","discoverBanner":"discover__discoverBanner-3M_yZ","discoverBannerImg":"discover__discoverBannerImg-1dlDI","banner":"discover__banner-2Z9Qk","recommendSection":"discover__recommendSection-aZ8W2","recommendItemBox":"discover__recommendItemBox-oGHTb","recommendItem":"discover__recommendItem-1hDAE","recommendItemImg":"discover__recommendItemImg-1EIxm","recommendItemName":"discover__recommendItemName-2hgdv","recommendItemDesc":"discover__recommendItemDesc-2qIP7"};
 
 /***/ },
 
-/***/ 262:
+/***/ 263:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1015,7 +1033,7 @@ webpackJsonp([0,2],{
 
 	var _BottomTab2 = _interopRequireDefault(_BottomTab);
 
-	var _personal = __webpack_require__(263);
+	var _personal = __webpack_require__(264);
 
 	var _personal2 = _interopRequireDefault(_personal);
 
@@ -1190,7 +1208,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 263:
+/***/ 264:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -1684,7 +1702,7 @@ webpackJsonp([0,2],{
 
 	var _topic2 = _interopRequireDefault(_topic);
 
-	var _topicData = __webpack_require__(289);
+	var _topicData = __webpack_require__(290);
 
 	var _topicData2 = _interopRequireDefault(_topicData);
 
@@ -1713,13 +1731,9 @@ webpackJsonp([0,2],{
 	            return _react2.default.createElement(
 	                'div',
 	                { className: _topic2.default.topicHeader },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: _topic2.default.topicHeaderBack, onClick: function onClick() {
-	                            _reactRouter.hashHistory.goBack();
-	                        } },
-	                    '<'
-	                ),
+	                _react2.default.createElement('div', { className: _topic2.default.topicHeaderBack, onClick: function onClick() {
+	                        _reactRouter.hashHistory.goBack();
+	                    } }),
 	                '\u706B\u7403\u7CBE\u9009'
 	            );
 	        }
@@ -1979,7 +1993,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 289:
+/***/ 290:
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -2035,7 +2049,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 290:
+/***/ 291:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2050,7 +2064,7 @@ webpackJsonp([0,2],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _detail = __webpack_require__(291);
+	var _detail = __webpack_require__(292);
 
 	var _detail2 = _interopRequireDefault(_detail);
 
@@ -2082,8 +2096,8 @@ webpackJsonp([0,2],{
 	        value: function render() {
 	            var res = this.props.productInfo;
 	            return _react2.default.createElement(
-	                'div',
-	                { className: _detail2.default.detailTop },
+	                _reactRouter.Link,
+	                { to: "/buyer/" + res.authorId, className: _detail2.default.detailTop },
 	                _react2.default.createElement('div', { className: _detail2.default.topHeadImg }),
 	                _react2.default.createElement(
 	                    'div',
@@ -2369,13 +2383,13 @@ webpackJsonp([0,2],{
 	                        'span',
 	                        { className: _detail2.default.bottomItem },
 	                        _react2.default.createElement('div', { className: _detail2.default.like }),
-	                        res.likes
+	                        res.likes > 999 ? (res.likes / 1000).toFixed(1) + "k" : res.likes
 	                    ),
 	                    _react2.default.createElement(
 	                        'span',
 	                        { className: _detail2.default.bottomItem },
 	                        _react2.default.createElement('div', { className: _detail2.default.share }),
-	                        res.share
+	                        res.share > 999 ? (res.share / 1000.0).toFixed(1) + "k" : res.share
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -2436,7 +2450,7 @@ webpackJsonp([0,2],{
 	                { className: _detail2.default.toBuyBtn },
 	                '\uFFE5 ',
 	                res.price,
-	                ' \u8D2D\u4E70 >'
+	                ' \u8D2D\u4E70 '
 	            );
 	        }
 	    }]);
@@ -2504,15 +2518,15 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 291:
+/***/ 292:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"detailBox":"detail__detailBox-1b6ne","detailTop":"detail__detailTop-y67pU","topHeadImg":"detail__topHeadImg-1F-dC","topMain":"detail__topMain-2ocL_","topAuthor":"detail__topAuthor-2S8CJ","topDate":"detail__topDate-3g-mq","topToAutor":"detail__topToAutor-3yV1r","detailMain":"detail__detailMain-2FgJ8","title":"detail__title-25WQY","text":"detail__text-1Itjd","coverBox":"detail__coverBox-RTVdl","detailFooter":"detail__detailFooter-2CQc5","footer1Box":"detail__footer1Box-32sxZ","footer1Item":"detail__footer1Item-3c7MH","footer2Box":"detail__footer2Box-1I_1V","footer3Box":"detail__footer3Box-3-dOX","footer3Title":"detail__footer3Title-3SPcj","footer3Div":"detail__footer3Div-3GtmX","footer3Item":"detail__footer3Item-3UbY4","footer4Box":"detail__footer4Box-2AQQs","footer4Title":"detail__footer4Title-1T6QE","que":"detail__que-Iw08T","ans":"detail__ans-3cNDb","detailBottom":"detail__detailBottom-wwWK5","bottomLeft":"detail__bottomLeft-2hXUT","bottomRight":"detail__bottomRight-25V45","bottomItem":"detail__bottomItem-3w1Vl","back":"detail__back-Kvo7c","like":"detail__like-37XOr","share":"detail__share-2dNpf","toBuyBtn":"detail__toBuyBtn-2Ie37"};
+	module.exports = {"detailBox":"detail__detailBox-1b6ne","detailTop":"detail__detailTop-y67pU","topHeadImg":"detail__topHeadImg-1F-dC","topMain":"detail__topMain-2ocL_","topAuthor":"detail__topAuthor-2S8CJ","topDate":"detail__topDate-3g-mq","topToAutor":"detail__topToAutor-3yV1r","detailMain":"detail__detailMain-2FgJ8","title":"detail__title-25WQY","text":"detail__text-1Itjd","coverBox":"detail__coverBox-RTVdl","footer1Box":"detail__footer1Box-32sxZ","footer1Item":"detail__footer1Item-3c7MH","footer2Box":"detail__footer2Box-1I_1V","footer3Box":"detail__footer3Box-3-dOX","footer3Title":"detail__footer3Title-3SPcj","footer3Div":"detail__footer3Div-3GtmX","footer3Item":"detail__footer3Item-3UbY4","footer4Box":"detail__footer4Box-2AQQs","footer4Title":"detail__footer4Title-1T6QE","que":"detail__que-Iw08T","ans":"detail__ans-3cNDb","detailBottom":"detail__detailBottom-wwWK5","bottomLeft":"detail__bottomLeft-2hXUT","bottomRight":"detail__bottomRight-25V45","bottomItem":"detail__bottomItem-3w1Vl","back":"detail__back-Kvo7c","like":"detail__like-37XOr","share":"detail__share-2dNpf","toBuyBtn":"detail__toBuyBtn-2Ie37"};
 
 /***/ },
 
-/***/ 295:
+/***/ 296:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2537,11 +2551,11 @@ webpackJsonp([0,2],{
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _ranking = __webpack_require__(296);
+	var _ranking = __webpack_require__(297);
 
 	var _ranking2 = _interopRequireDefault(_ranking);
 
-	var _topicData = __webpack_require__(289);
+	var _topicData = __webpack_require__(290);
 
 	var _topicData2 = _interopRequireDefault(_topicData);
 
@@ -2622,7 +2636,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 296:
+/***/ 297:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -2630,7 +2644,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 298:
+/***/ 299:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2655,11 +2669,11 @@ webpackJsonp([0,2],{
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _buyers = __webpack_require__(299);
+	var _buyers = __webpack_require__(300);
 
 	var _buyers2 = _interopRequireDefault(_buyers);
 
-	var _buyersData = __webpack_require__(301);
+	var _buyersData = __webpack_require__(302);
 
 	var _buyersData2 = _interopRequireDefault(_buyersData);
 
@@ -2686,7 +2700,7 @@ webpackJsonp([0,2],{
 	            var label = "<span>" + this.props.label.join("</span><span>") + "</span>";
 	            return _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: '/buyer' },
+	                { to: "/buyer/" + this.props.id },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _buyers2.default.buyerItem },
@@ -2738,7 +2752,14 @@ webpackJsonp([0,2],{
 	        value: function renderBuyers(data) {
 	            var dataArr = [];
 	            for (var i = 0; i < data.length; i++) {
-	                dataArr.push(_react2.default.createElement(BuyerItem, { key: data[i].id, name: data[i].name, desc: data[i].desc, label: data[i].label, followers: data[i].followers, following: data[i].following }));
+	                dataArr.push(_react2.default.createElement(BuyerItem, { key: data[i].id,
+	                    id: data[i].id,
+	                    name: data[i].name,
+	                    desc: data[i].desc,
+	                    label: data[i].label,
+	                    followers: data[i].followers,
+	                    following: data[i].following
+	                }));
 	            }
 	            return dataArr;
 	        }
@@ -2793,7 +2814,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 299:
+/***/ 300:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
@@ -2801,12 +2822,12 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 301:
+/***/ 302:
 /***/ function(module, exports) {
 
 	module.exports = [
 		{
-			"id": 0,
+			"id": "b000",
 			"name": "梵高先生",
 			"desc": "专注提升逼格",
 			"label": [
@@ -2817,7 +2838,7 @@ webpackJsonp([0,2],{
 			"following": true
 		},
 		{
-			"id": 1,
+			"id": "b001",
 			"name": "盐",
 			"desc": "一个盐系男子的日常穿搭",
 			"label": [
@@ -2829,7 +2850,7 @@ webpackJsonp([0,2],{
 			"following": true
 		},
 		{
-			"id": 2,
+			"id": "b002",
 			"name": "有怪售",
 			"desc": "脑洞少女的次元穿梭日记",
 			"label": [
@@ -2840,7 +2861,7 @@ webpackJsonp([0,2],{
 			"following": true
 		},
 		{
-			"id": 3,
+			"id": "b003",
 			"name": "九磅十五便士",
 			"desc": "男士生活指南",
 			"label": [
@@ -2850,7 +2871,7 @@ webpackJsonp([0,2],{
 			"following": true
 		},
 		{
-			"id": 4,
+			"id": "b004",
 			"name": "桥豆麻袋",
 			"desc": "青春貌美是你的宇宙特质",
 			"label": [
@@ -2862,7 +2883,7 @@ webpackJsonp([0,2],{
 			"following": false
 		},
 		{
-			"id": 5,
+			"id": "b005",
 			"name": "阿多斯日志",
 			"desc": "男士时尚生活",
 			"label": [
@@ -2875,7 +2896,7 @@ webpackJsonp([0,2],{
 			"following": false
 		},
 		{
-			"id": 6,
+			"id": "b006",
 			"name": "STAR",
 			"desc": "是你身上的亮点",
 			"label": [
@@ -2884,12 +2905,45 @@ webpackJsonp([0,2],{
 			],
 			"followers": 22765,
 			"following": false
+		},
+		{
+			"id": "b007",
+			"name": "吃喝找野马",
+			"desc": "神经大条的射手座",
+			"label": [
+				"爱吃爱喝爱睡觉",
+				"记性差"
+			],
+			"followers": 39547,
+			"following": true
+		},
+		{
+			"id": "b008",
+			"name": "八号丸子",
+			"desc": "给你带来网红零食的一手报告",
+			"label": [
+				"网红",
+				"零食"
+			],
+			"followers": 67421,
+			"following": true
+		},
+		{
+			"id": "b009",
+			"name": "贪吃鬼小埋",
+			"desc": "只为找到最好吃的你",
+			"label": [
+				"懂吃会吃",
+				"狮子座"
+			],
+			"followers": 126742,
+			"following": true
 		}
 	];
 
 /***/ },
 
-/***/ 302:
+/***/ 303:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2912,9 +2966,17 @@ webpackJsonp([0,2],{
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _buyer = __webpack_require__(303);
+	var _buyer = __webpack_require__(304);
 
 	var _buyer2 = _interopRequireDefault(_buyer);
+
+	var _buyersData = __webpack_require__(302);
+
+	var _buyersData2 = _interopRequireDefault(_buyersData);
+
+	var _productsData = __webpack_require__(248);
+
+	var _productsData2 = _interopRequireDefault(_productsData);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2936,6 +2998,9 @@ webpackJsonp([0,2],{
 	    _createClass(Card, [{
 	        key: 'render',
 	        value: function render() {
+
+	            var res = this.props.buyerInfo;
+
 	            return _react2.default.createElement(
 	                'div',
 	                { className: _buyer2.default.card },
@@ -2953,14 +3018,15 @@ webpackJsonp([0,2],{
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: _buyer2.default.name },
-	                            '\u68B5\u9AD8\u5148\u751F'
+	                            res.name
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: _buyer2.default.followers },
-	                            '7.2\u4E07\u4EBA\u8BA2\u9605'
+	                            res.followers,
+	                            '\u4EBA\u8BA2\u9605'
 	                        ),
-	                        _react2.default.createElement(_FollowBtn2.default, { following: true })
+	                        _react2.default.createElement(_FollowBtn2.default, { following: res.following })
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -2974,12 +3040,12 @@ webpackJsonp([0,2],{
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
-	                        '\u5FAE\u535A\uFF1A\u68B5\u9AD8\u4E0D\u5148\u751F'
+	                        res.label.join("，")
 	                    ),
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
-	                        '\u4EE5\u72EC\u5230\u7684\u773C\u5149\uFF0C\u5E2E\u4F60\u6311\u9009\u63D0\u5347\u81EA\u8EAB\u903C\u683C\u7684\u6BD2\u8FA3\u597D\u7269\uFF0C\u8BA9\u903C\u683C\u5F7B\u5E95\u878D\u8FDB\u4F60\u7684\u751F\u6D3B\u3002'
+	                        res.desc
 	                    )
 	                )
 	            );
@@ -3117,16 +3183,47 @@ webpackJsonp([0,2],{
 	    }
 
 	    _createClass(Buyer, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            document.body.scrollTop = 0;
+	        }
+	    }, {
+	        key: 'getBuyerInfo',
+	        value: function getBuyerInfo(data) {
+	            var id = location.hash.split("/").pop();
+	            var buyerObj = { id: "__WARNING__" };
+	            for (var i = 0; i < data.length; i++) {
+	                if (data[i].id === id) {
+	                    buyerObj = data[i];
+	                    break;
+	                }
+	            }
+	            return buyerObj;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { className: _buyer2.default.buyer },
-	                _react2.default.createElement(_TopFixed2.default, null),
-	                _react2.default.createElement(Card, null),
-	                _react2.default.createElement(Popular, null),
-	                _react2.default.createElement(Products, null)
-	            );
+
+	            var buyerInfo = this.getBuyerInfo(_buyersData2.default);
+	            if (buyerInfo.id == "__WARNING__") {
+	                setTimeout(function () {
+	                    location.hash = "#/";
+	                }, 2000);
+	                return _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    '\u627E\u4E0D\u5230\u8D44\u6E90\uFF01'
+	                );
+	            } else {
+	                return _react2.default.createElement(
+	                    'div',
+	                    { className: _buyer2.default.buyer },
+	                    _react2.default.createElement(_TopFixed2.default, null),
+	                    _react2.default.createElement(Card, { buyerInfo: buyerInfo }),
+	                    _react2.default.createElement(Popular, null),
+	                    _react2.default.createElement(Products, null)
+	                );
+	            }
 	        }
 	    }]);
 
@@ -3137,7 +3234,7 @@ webpackJsonp([0,2],{
 
 /***/ },
 
-/***/ 303:
+/***/ 304:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
