@@ -12,6 +12,14 @@ class Coupons extends Component{
         return (
             <div>
                 <TopFixed>优惠券</TopFixed>
+                <h2 style={{
+                    position: "relative",
+                    top: "200px",
+                    textAlign: "center",
+                    color: "#444",
+                    fontStyle: "italic",
+                    margin: "0"
+                }}>暂无可用优惠券</h2>
             </div>
         )
     }

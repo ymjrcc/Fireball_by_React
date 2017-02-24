@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import {Link} from 'react-router'
 import BottomTab from './BottomTab'
+import SettingItem from './SettingItem'
 import style from "../css/personal.css"
 
 class HeaderInfo extends Component{
@@ -31,37 +32,31 @@ class HeaderBox extends Component{
     }
 }
 
+class SettingRoute extends Component{
+    render(){
+        return (
+            <Link to={ "/personal/" + this.props.name }>
+                <SettingItem name={this.props.name} title={this.props.title} />
+            </Link>
+        )
+    }
+}
+
 class SettingBox extends Component{
     render(){
         return (
             <div className={style.settingBox}>
                 <div className={style.settingArea}>
-                    <SettingItem name="order" title="我的订单" />
-                    <SettingItem name="subscription" title="我的订阅" />
-                    <SettingItem name="like" title="我的喜欢"  />
-                    <SettingItem name="coupon" title="优惠券" />
+                    <SettingRoute name="order" title="我的订单" />
+                    <SettingRoute name="subscription" title="我的订阅" />
+                    <SettingRoute name="like" title="我的喜欢"  />
+                    <SettingRoute name="coupon" title="优惠券" />
                 </div>
                 <div className={style.settingArea}>
-                    <SettingItem name="help" title="客服与帮助" />
-                    <SettingItem name="setting" title="设置" />
+                    <SettingRoute name="help" title="客服与帮助" />
+                    <SettingRoute name="setting" title="设置" />
                 </div>
             </div>
-        )
-    }
-}
-
-class SettingItem extends Component{
-    render(){
-        return (
-            <Link to={"/personal/" + this.props.name}>
-                <div className={style.settingItem}>
-                    <div className={style.settingTitle}>
-                        <span className={style.settingIcon + " " + style[this.props.name]}></span>
-                        {this.props.title}
-                    </div>
-                    <div className={style.rightIcon}></div>
-                </div>
-            </Link>
         )
     }
 }

@@ -8,7 +8,7 @@ import buyersData from '../data/buyersData.json'
 class SubscriptionItem extends Component{
     render(){
         return (
-            <div className={style.subscriptionItem}>
+            <Link to={"/buyer/"+this.props.id} className={style.subscriptionItem}>
                 <div className={style.headImg}></div>
                 <div className={style.name}>
                     {this.props.name}
@@ -16,8 +16,7 @@ class SubscriptionItem extends Component{
                         <FollowBtn following={true} />
                     </div>
                 </div>
-                
-            </div>
+            </Link>
         )
     }
 }

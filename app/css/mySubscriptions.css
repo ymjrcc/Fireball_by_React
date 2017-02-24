@@ -3,6 +3,7 @@
 }
 
 .subscriptionItem{
+    display: block;
     background-color: #fff;
     padding: 15px 20px;
     display: flex;

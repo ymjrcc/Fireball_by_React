@@ -1,0 +1,34 @@
+.myLikes{
+    height: 100vh;
+    background-color: #fff;
+    padding: 0 5px;
+}
+
+.likesBox{
+    padding-top: 61px;
+}
+
+.likeItem{
+    float: left;
+    width: 50%;
+    height: 150px;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-clip: content-box;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.likeItem[data-index="0"]{
+    background-image: url('../images/covers/c-p001.jpg');
+}
+.likeItem[data-index="1"]{
+    background-image: url('../images/covers/c-p002.jpg');
+}
+.likeItem[data-index="2"]{
+    background-image: url('../images/covers/c-p004.jpg');
+}

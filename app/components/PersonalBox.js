@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import style from '../css/personal.css'
 
 class PersonalBox extends Component{
