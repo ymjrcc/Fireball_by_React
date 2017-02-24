@@ -479,7 +479,32 @@
     position: absolute;
     right: 20px;
     top: 10px;
-}.topfixed__topFixed-2sM1q{
+}
+
+
+/*动画*/
+
+/*.transitionWrapper {
+    position: relative;
+}
+
+:global(.transitionWrapper-enter) {
+    left: 100%;
+    transition: left 400ms linear;
+}
+ 
+:global(.transitionWrapper-enter.transitionWrapper-enter-active) {
+    left: 0;
+}
+ 
+:global(.transitionWrapper-leave) {
+    left: 0;
+    transition: left 400ms linear;
+}
+ 
+:global(.transitionWrapper-leave.transitionWrapper-leave-active) {
+    left: -100%;
+}*/.topfixed__topFixed-2sM1q{
     z-index: 10;
     position: fixed;
     top: 0;
