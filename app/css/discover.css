@@ -18,6 +18,7 @@
     max-width: 768px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 5;
 }
 
 .discoverBox{
@@ -41,17 +42,17 @@
     color: #fff;
     font-weight: bold;
     text-shadow: 0 0 5px #333;
+    background-position: 50% 50%;
+    background-size: cover;    
 }
 
 .discoverTopItem:first-child{
     margin-right: 20px;
     background-image: url('../images/weekRanking.png');
-    background-size: cover;
 }
 
 .discoverTopItem:last-child{
     background-image: url('../images/allBuyers.png');
-    background-size: cover;
 }
 
 .discoverSection{

@@ -34,43 +34,43 @@ webpackJsonp([0,2],[
 
 	var _MyOrders2 = _interopRequireDefault(_MyOrders);
 
-	var _MySubscriptions = __webpack_require__(313);
+	var _MySubscriptions = __webpack_require__(315);
 
 	var _MySubscriptions2 = _interopRequireDefault(_MySubscriptions);
 
-	var _MyLikes = __webpack_require__(314);
+	var _MyLikes = __webpack_require__(319);
 
 	var _MyLikes2 = _interopRequireDefault(_MyLikes);
 
-	var _Coupons = __webpack_require__(315);
+	var _Coupons = __webpack_require__(320);
 
 	var _Coupons2 = _interopRequireDefault(_Coupons);
 
-	var _Helps = __webpack_require__(316);
+	var _Helps = __webpack_require__(321);
 
 	var _Helps2 = _interopRequireDefault(_Helps);
 
-	var _Settings = __webpack_require__(317);
+	var _Settings = __webpack_require__(322);
 
 	var _Settings2 = _interopRequireDefault(_Settings);
 
-	var _Topic = __webpack_require__(318);
+	var _Topic = __webpack_require__(323);
 
 	var _Topic2 = _interopRequireDefault(_Topic);
 
-	var _Detail = __webpack_require__(327);
+	var _Detail = __webpack_require__(332);
 
 	var _Detail2 = _interopRequireDefault(_Detail);
 
-	var _Ranking = __webpack_require__(332);
+	var _Ranking = __webpack_require__(337);
 
 	var _Ranking2 = _interopRequireDefault(_Ranking);
 
-	var _Buyers = __webpack_require__(335);
+	var _Buyers = __webpack_require__(340);
 
 	var _Buyers2 = _interopRequireDefault(_Buyers);
 
-	var _Buyer = __webpack_require__(339);
+	var _Buyer = __webpack_require__(343);
 
 	var _Buyer2 = _interopRequireDefault(_Buyer);
 
@@ -3702,7 +3702,7 @@ webpackJsonp([0,2],[
 	                'div',
 	                { className: _personal2.default.headBox },
 	                _react2.default.createElement('div', { className: _personal2.default.headImg }),
-	                _react2.default.createElement(HeaderInfo, { name: 'Yiming', goods: '0', subscription: '12', likes: '0' })
+	                _react2.default.createElement(HeaderInfo, { name: 'Yiming', goods: '0', subscription: '6', likes: '0' })
 	            );
 	        }
 	    }]);
@@ -3833,6 +3833,10 @@ webpackJsonp([0,2],[
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
+	var _myOrders = __webpack_require__(313);
+
+	var _myOrders2 = _interopRequireDefault(_myOrders);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -3841,8 +3845,88 @@ webpackJsonp([0,2],[
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var MyOrders = function (_Component) {
-	    _inherits(MyOrders, _Component);
+	var OrdersBox = function (_Component) {
+	    _inherits(OrdersBox, _Component);
+
+	    function OrdersBox() {
+	        _classCallCheck(this, OrdersBox);
+
+	        return _possibleConstructorReturn(this, (OrdersBox.__proto__ || Object.getPrototypeOf(OrdersBox)).apply(this, arguments));
+	    }
+
+	    _createClass(OrdersBox, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _myOrders2.default.ordersBox },
+	                _react2.default.createElement(Order, null)
+	            );
+	        }
+	    }]);
+
+	    return OrdersBox;
+	}(_react.Component);
+
+	var Order = function (_Component2) {
+	    _inherits(Order, _Component2);
+
+	    function Order() {
+	        _classCallCheck(this, Order);
+
+	        return _possibleConstructorReturn(this, (Order.__proto__ || Object.getPrototypeOf(Order)).apply(this, arguments));
+	    }
+
+	    _createClass(Order, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _myOrders2.default.order },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _myOrders2.default.orderInfoBox },
+	                    _react2.default.createElement('div', { className: _myOrders2.default.orderImg }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _myOrders2.default.orderInfo },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _myOrders2.default.orderTitle },
+	                            'ILLUMINATOR|\u73A9\u6781\u81F4 \u7231\u751F\u6D3B \u591F\u6D12\u8131'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _myOrders2.default.orderDesc },
+	                            '\u89C4\u683C\uFF1A\u7070\u8272\u5730\u56FE\uFF08\u6A61\u80F6\u5E26\uFF09 \xD71'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _myOrders2.default.orderPrice },
+	                            '\u603B\u989D\uFF1A',
+	                            _react2.default.createElement(
+	                                'span',
+	                                null,
+	                                ' 310.00 '
+	                            ),
+	                            '\u5143'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _myOrders2.default.orderStatus },
+	                    '\u5DF2\u53D6\u6D88'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Order;
+	}(_react.Component);
+
+	var MyOrders = function (_Component3) {
+	    _inherits(MyOrders, _Component3);
 
 	    function MyOrders() {
 	        _classCallCheck(this, MyOrders);
@@ -3865,7 +3949,8 @@ webpackJsonp([0,2],[
 	                    _TopFixed2.default,
 	                    null,
 	                    '\u6211\u7684\u8BA2\u5355'
-	                )
+	                ),
+	                _react2.default.createElement(OrdersBox, null)
 	            );
 	        }
 	    }]);
@@ -3944,6 +4029,14 @@ webpackJsonp([0,2],[
 /* 311 */,
 /* 312 */,
 /* 313 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"ordersBox":"myOrders__ordersBox-3f8ca","order":"myOrders__order-3Tlcd","orderInfoBox":"myOrders__orderInfoBox-2dD9O","orderImg":"myOrders__orderImg-cZhVk","orderInfo":"myOrders__orderInfo-duwdU","orderTitle":"myOrders__orderTitle-1ph3J","orderDesc":"myOrders__orderDesc-2xjIa","orderPrice":"myOrders__orderPrice-1op8j","orderStatus":"myOrders__orderStatus-1-YVO"};
+
+/***/ },
+/* 314 */,
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3964,6 +4057,18 @@ webpackJsonp([0,2],[
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
+	var _FollowBtn = __webpack_require__(257);
+
+	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
+
+	var _mySubscriptions = __webpack_require__(316);
+
+	var _mySubscriptions2 = _interopRequireDefault(_mySubscriptions);
+
+	var _buyersData = __webpack_require__(318);
+
+	var _buyersData2 = _interopRequireDefault(_buyersData);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -3972,8 +4077,78 @@ webpackJsonp([0,2],[
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var MySubscriptions = function (_Component) {
-	    _inherits(MySubscriptions, _Component);
+	var SubscriptionItem = function (_Component) {
+	    _inherits(SubscriptionItem, _Component);
+
+	    function SubscriptionItem() {
+	        _classCallCheck(this, SubscriptionItem);
+
+	        return _possibleConstructorReturn(this, (SubscriptionItem.__proto__ || Object.getPrototypeOf(SubscriptionItem)).apply(this, arguments));
+	    }
+
+	    _createClass(SubscriptionItem, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _mySubscriptions2.default.subscriptionItem },
+	                _react2.default.createElement('div', { className: _mySubscriptions2.default.headImg }),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _mySubscriptions2.default.name },
+	                    this.props.name,
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _mySubscriptions2.default.btnBox },
+	                        _react2.default.createElement(_FollowBtn2.default, { following: true })
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return SubscriptionItem;
+	}(_react.Component);
+
+	var SubscriptionsBox = function (_Component2) {
+	    _inherits(SubscriptionsBox, _Component2);
+
+	    function SubscriptionsBox() {
+	        _classCallCheck(this, SubscriptionsBox);
+
+	        return _possibleConstructorReturn(this, (SubscriptionsBox.__proto__ || Object.getPrototypeOf(SubscriptionsBox)).apply(this, arguments));
+	    }
+
+	    _createClass(SubscriptionsBox, [{
+	        key: 'renderSubscriptions',
+	        value: function renderSubscriptions(data) {
+	            var dataArr = [];
+	            for (var i = 0; i < data.length; i++) {
+	                if (data[i].following == true) {
+	                    dataArr.push(_react2.default.createElement(SubscriptionItem, { key: data[i].id,
+	                        id: data[i].id,
+	                        name: data[i].name
+	                    }));
+	                }
+	            }
+	            return dataArr;
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _mySubscriptions2.default.subscriptionsBox },
+	                this.renderSubscriptions(_buyersData2.default)
+	            );
+	        }
+	    }]);
+
+	    return SubscriptionsBox;
+	}(_react.Component);
+
+	var MySubscriptions = function (_Component3) {
+	    _inherits(MySubscriptions, _Component3);
 
 	    function MySubscriptions() {
 	        _classCallCheck(this, MySubscriptions);
@@ -3996,7 +4171,8 @@ webpackJsonp([0,2],[
 	                    _TopFixed2.default,
 	                    null,
 	                    '\u6211\u7684\u8BA2\u9605'
-	                )
+	                ),
+	                _react2.default.createElement(SubscriptionsBox, null)
 	            );
 	        }
 	    }]);
@@ -4007,7 +4183,135 @@ webpackJsonp([0,2],[
 	exports.default = MySubscriptions;
 
 /***/ },
-/* 314 */
+/* 316 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"subscriptionsBox":"mySubscriptions__subscriptionsBox-3QRr_","subscriptionItem":"mySubscriptions__subscriptionItem-2z0sS","headImg":"mySubscriptions__headImg-1A0ks","name":"mySubscriptions__name-VO4X2","btnBox":"mySubscriptions__btnBox-eNU-t"};
+
+/***/ },
+/* 317 */,
+/* 318 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"id": "b000",
+			"name": "梵高先生",
+			"desc": "专注提升逼格",
+			"label": [
+				"逼格好物",
+				"服饰穿搭"
+			],
+			"followers": 72951,
+			"following": true
+		},
+		{
+			"id": "b001",
+			"name": "盐",
+			"desc": "一个盐系男子的日常穿搭",
+			"label": [
+				"日系",
+				"穿搭",
+				"男士"
+			],
+			"followers": 40679,
+			"following": true
+		},
+		{
+			"id": "b002",
+			"name": "有怪售",
+			"desc": "脑洞少女的次元穿梭日记",
+			"label": [
+				"趣玩",
+				"设计感"
+			],
+			"followers": 122475,
+			"following": true
+		},
+		{
+			"id": "b003",
+			"name": "九磅十五便士",
+			"desc": "男士生活指南",
+			"label": [
+				"男式、男士、男事"
+			],
+			"followers": 85763,
+			"following": true
+		},
+		{
+			"id": "b004",
+			"name": "桥豆麻袋",
+			"desc": "青春貌美是你的宇宙特质",
+			"label": [
+				"颜控",
+				"少女向",
+				"服饰穿搭"
+			],
+			"followers": 61463,
+			"following": false
+		},
+		{
+			"id": "b005",
+			"name": "阿多斯日志",
+			"desc": "男士时尚生活",
+			"label": [
+				"欧美",
+				"服饰",
+				"鞋包",
+				"配饰"
+			],
+			"followers": 24236,
+			"following": false
+		},
+		{
+			"id": "b006",
+			"name": "STAR",
+			"desc": "是你身上的亮点",
+			"label": [
+				"首饰",
+				"欧美"
+			],
+			"followers": 22765,
+			"following": false
+		},
+		{
+			"id": "b007",
+			"name": "吃喝找野马",
+			"desc": "神经大条的射手座",
+			"label": [
+				"爱吃爱喝爱睡觉",
+				"记性差"
+			],
+			"followers": 39547,
+			"following": true
+		},
+		{
+			"id": "b008",
+			"name": "八号丸子",
+			"desc": "给你带来网红零食的一手报告",
+			"label": [
+				"网红",
+				"零食"
+			],
+			"followers": 67421,
+			"following": true
+		},
+		{
+			"id": "b009",
+			"name": "贪吃鬼小埋",
+			"desc": "只为找到最好吃的你",
+			"label": [
+				"懂吃会吃",
+				"狮子座"
+			],
+			"followers": 126742,
+			"following": true
+		}
+	];
+
+/***/ },
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4071,7 +4375,7 @@ webpackJsonp([0,2],[
 	exports.default = MyLikes;
 
 /***/ },
-/* 315 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4135,7 +4439,7 @@ webpackJsonp([0,2],[
 	exports.default = Coupons;
 
 /***/ },
-/* 316 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4199,7 +4503,7 @@ webpackJsonp([0,2],[
 	exports.default = Helps;
 
 /***/ },
-/* 317 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4263,7 +4567,7 @@ webpackJsonp([0,2],[
 	exports.default = Settings;
 
 /***/ },
-/* 318 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4280,19 +4584,19 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _classnames2 = __webpack_require__(319);
+	var _classnames2 = __webpack_require__(324);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _Item = __webpack_require__(320);
+	var _Item = __webpack_require__(325);
 
 	var _Item2 = _interopRequireDefault(_Item);
 
-	var _topic = __webpack_require__(323);
+	var _topic = __webpack_require__(328);
 
 	var _topic2 = _interopRequireDefault(_topic);
 
-	var _topicData = __webpack_require__(326);
+	var _topicData = __webpack_require__(331);
 
 	var _topicData2 = _interopRequireDefault(_topicData);
 
@@ -4495,8 +4799,8 @@ webpackJsonp([0,2],[
 	exports.default = Topic;
 
 /***/ },
-/* 319 */,
-/* 320 */
+/* 324 */,
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4511,7 +4815,7 @@ webpackJsonp([0,2],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _item = __webpack_require__(321);
+	var _item = __webpack_require__(326);
 
 	var _item2 = _interopRequireDefault(_item);
 
@@ -4568,24 +4872,24 @@ webpackJsonp([0,2],[
 	exports.default = Item;
 
 /***/ },
-/* 321 */
+/* 326 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"item":"item__item-3X-cC","img":"item__img-18IC2","info":"item__info-22TU-","title":"item__title-a5ySn","likes":"item__likes-1k1M9","price":"item__price-173VH"};
 
 /***/ },
-/* 322 */,
-/* 323 */
+/* 327 */,
+/* 328 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"topicHeader":"topic__topicHeader-1ZRk6","topicHeaderBack":"topic__topicHeaderBack-i3tEb","topicBox":"topic__topicBox-2xNOv","topicNav":"topic__topicNav-2Yz8w","navItem":"topic__navItem-2S0_j","choosenItem":"topic__choosenItem-1tlXz","topicList":"topic__topicList-tw2bY"};
 
 /***/ },
-/* 324 */,
-/* 325 */,
-/* 326 */
+/* 329 */,
+/* 330 */,
+/* 331 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -4640,7 +4944,7 @@ webpackJsonp([0,2],[
 	];
 
 /***/ },
-/* 327 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4655,7 +4959,7 @@ webpackJsonp([0,2],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _detail = __webpack_require__(328);
+	var _detail = __webpack_require__(333);
 
 	var _detail2 = _interopRequireDefault(_detail);
 
@@ -5108,17 +5412,17 @@ webpackJsonp([0,2],[
 	exports.default = Detail;
 
 /***/ },
-/* 328 */
+/* 333 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"detailBox":"detail__detailBox-1b6ne","detailTop":"detail__detailTop-y67pU","topHeadImg":"detail__topHeadImg-1F-dC","topMain":"detail__topMain-2ocL_","topAuthor":"detail__topAuthor-2S8CJ","topDate":"detail__topDate-3g-mq","topToAutor":"detail__topToAutor-3yV1r","detailMain":"detail__detailMain-2FgJ8","title":"detail__title-25WQY","text":"detail__text-1Itjd","coverBox":"detail__coverBox-RTVdl","footer1Box":"detail__footer1Box-32sxZ","footer1Item":"detail__footer1Item-3c7MH","footer2Box":"detail__footer2Box-1I_1V","footer3Box":"detail__footer3Box-3-dOX","footer3Title":"detail__footer3Title-3SPcj","footer3Div":"detail__footer3Div-3GtmX","footer3Item":"detail__footer3Item-3UbY4","footer4Box":"detail__footer4Box-2AQQs","footer4Title":"detail__footer4Title-1T6QE","que":"detail__que-Iw08T","ans":"detail__ans-3cNDb","detailBottom":"detail__detailBottom-wwWK5","bottomLeft":"detail__bottomLeft-2hXUT","bottomRight":"detail__bottomRight-25V45","bottomItem":"detail__bottomItem-3w1Vl","back":"detail__back-Kvo7c","like":"detail__like-37XOr","share":"detail__share-2dNpf","toBuyBtn":"detail__toBuyBtn-2Ie37"};
 
 /***/ },
-/* 329 */,
-/* 330 */,
-/* 331 */,
-/* 332 */
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5135,7 +5439,7 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _Item = __webpack_require__(320);
+	var _Item = __webpack_require__(325);
 
 	var _Item2 = _interopRequireDefault(_Item);
 
@@ -5143,11 +5447,11 @@ webpackJsonp([0,2],[
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _ranking = __webpack_require__(333);
+	var _ranking = __webpack_require__(338);
 
 	var _ranking2 = _interopRequireDefault(_ranking);
 
-	var _topicData = __webpack_require__(326);
+	var _topicData = __webpack_require__(331);
 
 	var _topicData2 = _interopRequireDefault(_topicData);
 
@@ -5227,15 +5531,15 @@ webpackJsonp([0,2],[
 	exports.default = Ranking;
 
 /***/ },
-/* 333 */
+/* 338 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"ranking":"ranking__ranking-3AuN8","rankingList":"ranking__rankingList-2qjCZ"};
 
 /***/ },
-/* 334 */,
-/* 335 */
+/* 339 */,
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5260,11 +5564,11 @@ webpackJsonp([0,2],[
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _buyers = __webpack_require__(336);
+	var _buyers = __webpack_require__(341);
 
 	var _buyers2 = _interopRequireDefault(_buyers);
 
-	var _buyersData = __webpack_require__(338);
+	var _buyersData = __webpack_require__(318);
 
 	var _buyersData2 = _interopRequireDefault(_buyersData);
 
@@ -5404,135 +5708,15 @@ webpackJsonp([0,2],[
 	exports.default = Buyers;
 
 /***/ },
-/* 336 */
+/* 341 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"buyersList":"buyers__buyersList-3bONT","buyerItem":"buyers__buyerItem-6UuY8","buyerImg":"buyers__buyerImg-1bp6B","buyerInfo":"buyers__buyerInfo-3Y6Uj","name":"buyers__name-TagUH","desc":"buyers__desc-wqAa8","label":"buyers__label-2xzbG","followers":"buyers__followers-2QytB","followBtnBox":"buyers__followBtnBox-2YpUz"};
 
 /***/ },
-/* 337 */,
-/* 338 */
-/***/ function(module, exports) {
-
-	module.exports = [
-		{
-			"id": "b000",
-			"name": "梵高先生",
-			"desc": "专注提升逼格",
-			"label": [
-				"逼格好物",
-				"服饰穿搭"
-			],
-			"followers": 72951,
-			"following": true
-		},
-		{
-			"id": "b001",
-			"name": "盐",
-			"desc": "一个盐系男子的日常穿搭",
-			"label": [
-				"日系",
-				"穿搭",
-				"男士"
-			],
-			"followers": 40679,
-			"following": true
-		},
-		{
-			"id": "b002",
-			"name": "有怪售",
-			"desc": "脑洞少女的次元穿梭日记",
-			"label": [
-				"趣玩",
-				"设计感"
-			],
-			"followers": 122475,
-			"following": true
-		},
-		{
-			"id": "b003",
-			"name": "九磅十五便士",
-			"desc": "男士生活指南",
-			"label": [
-				"男式、男士、男事"
-			],
-			"followers": 85763,
-			"following": true
-		},
-		{
-			"id": "b004",
-			"name": "桥豆麻袋",
-			"desc": "青春貌美是你的宇宙特质",
-			"label": [
-				"颜控",
-				"少女向",
-				"服饰穿搭"
-			],
-			"followers": 61463,
-			"following": false
-		},
-		{
-			"id": "b005",
-			"name": "阿多斯日志",
-			"desc": "男士时尚生活",
-			"label": [
-				"欧美",
-				"服饰",
-				"鞋包",
-				"配饰"
-			],
-			"followers": 24236,
-			"following": false
-		},
-		{
-			"id": "b006",
-			"name": "STAR",
-			"desc": "是你身上的亮点",
-			"label": [
-				"首饰",
-				"欧美"
-			],
-			"followers": 22765,
-			"following": false
-		},
-		{
-			"id": "b007",
-			"name": "吃喝找野马",
-			"desc": "神经大条的射手座",
-			"label": [
-				"爱吃爱喝爱睡觉",
-				"记性差"
-			],
-			"followers": 39547,
-			"following": true
-		},
-		{
-			"id": "b008",
-			"name": "八号丸子",
-			"desc": "给你带来网红零食的一手报告",
-			"label": [
-				"网红",
-				"零食"
-			],
-			"followers": 67421,
-			"following": true
-		},
-		{
-			"id": "b009",
-			"name": "贪吃鬼小埋",
-			"desc": "只为找到最好吃的你",
-			"label": [
-				"懂吃会吃",
-				"狮子座"
-			],
-			"followers": 126742,
-			"following": true
-		}
-	];
-
-/***/ },
-/* 339 */
+/* 342 */,
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5555,11 +5739,11 @@ webpackJsonp([0,2],[
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _buyer = __webpack_require__(340);
+	var _buyer = __webpack_require__(344);
 
 	var _buyer2 = _interopRequireDefault(_buyer);
 
-	var _buyersData = __webpack_require__(338);
+	var _buyersData = __webpack_require__(318);
 
 	var _buyersData2 = _interopRequireDefault(_buyersData);
 
@@ -5822,7 +6006,7 @@ webpackJsonp([0,2],[
 	exports.default = Buyer;
 
 /***/ },
-/* 340 */
+/* 344 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

@@ -1,0 +1,48 @@
+.ordersBox{
+    padding-top: 60px;
+}
+
+.order{
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.orderInfoBox{
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+}
+
+.orderImg{
+    flex: 3;
+    margin-right: 10px;
+    background-image: url('../images/discovers/3.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.orderInfo{
+    flex: 7;
+}
+
+.orderTitle{
+    padding-bottom: 5px;
+}
+
+.orderDesc,
+.orderPrice{
+    padding-bottom: 5px;
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.orderPrice span{
+    font-weight: bold;
+}
+
+.orderStatus{
+    padding: 10px 15px;
+    font-size: 1.4rem;
+    color: #aaa;
+}

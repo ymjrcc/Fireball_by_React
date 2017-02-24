@@ -189,6 +189,7 @@
     max-width: 768px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 5;
 }
 
 .discover__discoverBox-24RGv{
@@ -212,17 +213,17 @@
     color: #fff;
     font-weight: bold;
     text-shadow: 0 0 5px #333;
+    background-position: 50% 50%;
+    background-size: cover;    
 }
 
 .discover__discoverTopItem-2AGnx:first-child{
     margin-right: 20px;
     background-image: url(images/91a34956.weekRanking.png);
-    background-size: cover;
 }
 
 .discover__discoverTopItem-2AGnx:last-child{
     background-image: url(images/dab01d33.allBuyers.png);
-    background-size: cover;
 }
 
 .discover__discoverSection-2h8hz{
@@ -399,6 +400,7 @@
     border-radius: 50%;
     background-image: url(images/a807a9c3.pen.jpg);
     background-size: cover; 
+    background-position: 50% 50%;
     margin: 0 auto;
 }
 
@@ -534,6 +536,83 @@
     position: absolute;
     left: 15px;
     top: 15px;
+}.myOrders__ordersBox-3f8ca{
+    padding-top: 60px;
+}
+
+.myOrders__order-3Tlcd{
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.myOrders__orderInfoBox-2dD9O{
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+}
+
+.myOrders__orderImg-cZhVk{
+    flex: 3;
+    margin-right: 10px;
+    background-image: url(images/e6eb7217.3.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.myOrders__orderInfo-duwdU{
+    flex: 7;
+}
+
+.myOrders__orderTitle-1ph3J{
+    padding-bottom: 5px;
+}
+
+.myOrders__orderDesc-2xjIa,
+.myOrders__orderPrice-1op8j{
+    padding-bottom: 5px;
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.myOrders__orderPrice-1op8j span{
+    font-weight: bold;
+}
+
+.myOrders__orderStatus-1-YVO{
+    padding: 10px 15px;
+    font-size: 1.4rem;
+    color: #aaa;
+}.mySubscriptions__subscriptionsBox-3QRr_{
+    padding-top: 51px;
+}
+
+.mySubscriptions__subscriptionItem-2z0sS{
+    background-color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.mySubscriptions__headImg-1A0ks{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eee;
+    margin-right: 20px;
+}
+
+.mySubscriptions__name-VO4X2{
+    height: 50px;
+    line-height: 50px;
+    flex: 1;
+    position: relative;
+}
+
+.mySubscriptions__btnBox-eNU-t{
+    position: absolute;
+    right: 0;
+    top: -2px;
 }.item__item-3X-cC{
     padding: 20px;
     border-bottom: 1px solid #eee;
