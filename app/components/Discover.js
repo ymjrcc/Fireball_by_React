@@ -1,5 +1,4 @@
 import React,{Component} from 'react'
-import {findDOMNode} from 'react-dom'
 import {Link} from 'react-router'
 import FollowBtn from './FollowBtn'
 import BottomTab from './BottomTab'

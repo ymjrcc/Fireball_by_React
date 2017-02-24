@@ -95,3 +95,28 @@
     right: 20px;
     top: 10px;
 }
+
+
+/*动画*/
+
+/*.transitionWrapper {
+    position: relative;
+}
+
+:global(.transitionWrapper-enter) {
+    left: 100%;
+    transition: left 400ms linear;
+}
+ 
+:global(.transitionWrapper-enter.transitionWrapper-enter-active) {
+    left: 0;
+}
+ 
+:global(.transitionWrapper-leave) {
+    left: 0;
+    transition: left 400ms linear;
+}
+ 
+:global(.transitionWrapper-leave.transitionWrapper-leave-active) {
+    left: -100%;
+}*/
