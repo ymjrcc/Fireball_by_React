@@ -99,7 +99,7 @@
 .popular{
     border-top: 1px solid #eee;
     background-color: #fff;
-    padding: 10px 0;
+    padding: 10px 0 20px;
     width: 100%;
     overflow: hidden;
     margin-bottom: 20px;
@@ -119,16 +119,15 @@
 }
 
 .popularBox{
-    overflow-x: scroll;
-    width: 900%;
+    display: flex;
+    padding: 0 10px;
 }
 
 .popularBox div{
-    display: inline-block;
-    width: 100px;
+    flex: 1;
     height: 100px;
     background-color: #eee;
-    margin-left: 10px;
+    margin: 0 10px;
 
 }
 
@@ -138,14 +137,18 @@
 }
 
 .productItem{
+    display: block;
     background-color: #fff;
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
 
 .productImg{
-    height: 200px;
-    background-color: #ddd;
+    overflow: hidden;
+}
+
+.productImg img{
+    width: 100%;
 }
 
 .productTitle{

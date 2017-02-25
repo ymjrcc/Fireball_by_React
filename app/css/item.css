@@ -10,6 +10,12 @@
     margin-right: 20px;
     border-radius: 5px;
     min-width: 104px;
+    overflow: hidden;
+}
+
+.img img{
+    width: 100%;
+    border-radius: 5px;
 }
 
 .info{
@@ -26,7 +32,21 @@
 .likes{
     font-size: 1.2rem;
     color: #999;
+    padding-left: 22px;
     margin-bottom: 25px;
+    position: relative;
+}
+
+.likes::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    background-image: url('../images/like.png');
+    background-size: cover;
 }
 
 .price{

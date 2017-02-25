@@ -4,6 +4,7 @@ import classnames from 'classnames'
 import Item from './Item'
 import style from '../css/topic.css'
 import topicData from '../data/topicData.json'
+import productsData from '../data/productsData.json'
 
 class TopicHeader extends Component{
     render(){
@@ -36,7 +37,7 @@ class NavItem extends Component{
     }
 }
 
-class TopicNav extends Component{
+class TopicBox extends Component{
 
     constructor(props){
         super(props);
@@ -51,9 +52,12 @@ class TopicNav extends Component{
 
     render(){
         return (
-            <div className={style.topicNav}>
-                <NavItem choosen={this.state.value=="new"} type="new" handleChoose={this.handleChoose.bind(this)}>最新</NavItem>
-                <NavItem choosen={this.state.value=="hot"} type="hot" handleChoose={this.handleChoose.bind(this)}>最热</NavItem>
+            <div className={style.topicBox}>
+                <div className={style.topicNav}>
+                    <NavItem choosen={this.state.value=="new"} type="new" handleChoose={this.handleChoose.bind(this)}>最新</NavItem>
+                    <NavItem choosen={this.state.value=="hot"} type="hot" handleChoose={this.handleChoose.bind(this)}>最热</NavItem>
+                </div>
+                <TopicList choosen={this.state.value} />
             </div>
         )
     }
@@ -61,29 +65,51 @@ class TopicNav extends Component{
 
 class TopicList extends Component{
 
-    renderTopicList(data){
+    renderLatestList(data){
+        let dataArr = [];
+        for(let i = 0; i < 5; i++){
+            dataArr.push(
+                <Item 
+                    key={data[i].id} 
+                    id={data[i].id} 
+                    title={data[i].title} 
+                    likes={data[i].likes} 
+                    price={data[i].price} 
+                    cover={data[i].cover} 
+                />
+            );
+        }
+        return dataArr;
+    }
+
+    renderPopularList(data){
         let dataArr = [];
         for(let i = 0; i < data.length; i++){
-            dataArr.push(<Item key={data[i].id} title={data[i].title} likes={data[i].likes} price={data[i].price} />);
+            if(data[i].likes>3000){
+                dataArr.push(
+                    <Item 
+                        key={data[i].id} 
+                        id={data[i].id} 
+                        title={data[i].title} 
+                        likes={data[i].likes} 
+                        price={data[i].price} 
+                        cover={data[i].cover} 
+                    />
+                );
+            }
+            if(dataArr.length==5)break;
         }
         return dataArr;
     }
 
     render(){
+        let res = this.renderLatestList(productsData);
+        if(this.props.choosen=="hot"){
+            res = this.renderPopularList(productsData);
+        }
         return (
             <div className={style.topicList}>
-                {this.renderTopicList(topicData)}
-            </div>
-        )
-    }
-}
-
-class TopicBox extends Component{
-    render(){
-        return (
-            <div className={style.topicBox}>
-                <TopicNav />
-                <TopicList />
+                {res}
             </div>
         )
     }

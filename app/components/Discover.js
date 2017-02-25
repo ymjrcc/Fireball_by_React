@@ -107,12 +107,12 @@ class DiscoverBanner extends Component{
 class RecommendItem extends Component{
     render(){
         return (
-            <div className={style.recommendItem}>
-                <div className={style.recommendItemImg}></div>
+            <Link to={"/buyer/" + this.props.id} className={style.recommendItem}>
+                <div className={style.recommendItemImg} style={{backgroundColor: this.props.img}}></div>
                 <div className={style.recommendItemName}>{this.props.name}</div>
                 <div className={style.recommendItemDesc}>{this.props.desc}</div>
-                <FollowBtn following={false} />
-            </div>
+                <FollowBtn following={true} />
+            </Link>
         )
     }
 }
@@ -126,9 +126,9 @@ class RecommendSection extends Component{
                 <h3>本周推荐</h3>
                 <p>3个推荐买手</p>
                 <div className={style.recommendItemBox}>
-                    <RecommendItem name="阿斯蒂芬" desc="健身×乐趣=生活" />
-                    <RecommendItem name="自然选择号" desc="李叔带你发现好东西" />
-                    <RecommendItem name="盐" desc="一个盐系男子的日常" />
+                    <RecommendItem id="b008" name="八号丸子" desc="给你带来网红零食的一手报告" img="#ff6" />
+                    <RecommendItem id="b002" name="有怪售" desc="脑洞少女的次元穿梭日志" img="#fcc" />
+                    <RecommendItem id="b001" name="盐" desc="一个盐系男子的日常" img="#ccf" />
                 </div>
             </div>
         )

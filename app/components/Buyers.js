@@ -11,7 +11,7 @@ class BuyerItem extends Component{
         return (
             <Link to={"/buyer/"+this.props.id}>
                 <div className={style.buyerItem}>
-                    <div className={style.buyerImg}></div>
+                    <div className={style.buyerImg} style={{backgroundColor:this.props.img}}></div>
                     <div className={style.buyerInfo}>
                         <div className={style.name}>{this.props.name}</div>
                         <div className={style.desc}>{this.props.desc}</div>
@@ -38,6 +38,7 @@ class BuyersList extends Component{
                 name={data[i].name} 
                 desc={data[i].desc} 
                 label={data[i].label} 
+                img={data[i].img}
                 followers={data[i].followers} 
                 following={data[i].following} 
             />);

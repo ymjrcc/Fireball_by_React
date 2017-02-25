@@ -26,7 +26,7 @@ class HeaderBox extends Component{
         return (
             <div className={style.headBox}>
                 <div className={style.headImg}></div>
-                <HeaderInfo name="Yiming" goods="0" subscription="6" likes="0" />
+                <HeaderInfo name="Yiming" goods="0" subscription="6" likes="3" />
             </div>
         )
     }

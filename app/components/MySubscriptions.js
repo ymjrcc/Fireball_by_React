@@ -9,7 +9,7 @@ class SubscriptionItem extends Component{
     render(){
         return (
             <Link to={"/buyer/"+this.props.id} className={style.subscriptionItem}>
-                <div className={style.headImg}></div>
+                <div className={style.headImg} style={{backgroundColor: this.props.img}}></div>
                 <div className={style.name}>
                     {this.props.name}
                     <div className={style.btnBox}>
@@ -31,6 +31,7 @@ class SubscriptionsBox extends Component{
                     SubscriptionItem key={data[i].id} 
                     id={data[i].id}
                     name={data[i].name} 
+                    img={data[i].img}
                 />);
             }
             

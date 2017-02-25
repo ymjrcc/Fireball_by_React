@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import {Link} from 'react-router'
 import TopFixed from './TopFixed'
 import FollowBtn from './FollowBtn'
 import style from '../css/buyer.css'
@@ -14,7 +15,7 @@ class Card extends Component{
             <div className={style.card}>
                 <div className={style.cardMain}>
                     <div className={style.cardImgBox}>
-                        <div className={style.cardImg}></div>
+                        <div className={style.cardImg} style={{backgroundColor: res.img}}></div>
                     </div>
                     <div className={style.cardInfo}>
                         <div className={style.name}>{res.name}</div>
@@ -39,14 +40,8 @@ class Popular extends Component{
         return (
             <div className={style.popular}>
                 <div className={style.title}>最受欢迎</div>
-                <div className={style.subTitle}>POPULAR</div>
+                <div className={style.subTitle}>MOST POPULAR</div>
                 <div className={style.popularBox}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
                     <div></div>
                     <div></div>
                     <div></div>
@@ -59,28 +54,51 @@ class Popular extends Component{
 class ProductItem extends Component{
     render(){
         return (
-            <div className={style.productItem}>
-                <div className={style.productImg}></div>
-                <div className={style.productTitle}>这把刀戳到了我心中的某个G点了</div>
-                <div className={style.productDesc}>14小时前发布 1641人喜欢</div>
-            </div>
+            <Link to={"/detail/"+this.props.id} className={style.productItem}>
+                <div className={style.productImg}>
+                    <img src={require('../images/covers/'+this.props.cover)} />
+                </div>
+                <div className={style.productTitle}>{this.props.title}</div>
+                <div className={style.productDesc}>
+                    {this.props.date}
+                    {' '}
+                    {this.props.likes + '人喜欢'}
+                </div>
+            </Link>
         )
     }
 }
 
 class Products extends Component{
+
+    renderItemList(data){
+        let id = location.hash.split("/").pop();
+        let dataArr = [];
+        for(let i = 0; i < data.length; i++){
+            if(data[i].authorId==id){
+                dataArr.push(<
+                    ProductItem key={data[i].id} 
+                    id={data[i].id}
+                    title={data[i].title}
+                    cover={data[i].cover} 
+                    date={data[i].date}
+                    likes={data[i].likes}
+                />);
+            }
+            
+        }
+        return dataArr;
+    }
+
     render(){
         return (
             <div className={style.products}>
                 <div className={style.productsHeader}>
                     <div className={style.title}>最新商品</div>
-                    <div className={style.subTitle}>48 PRODUCTS</div>
+                    <div className={style.subTitle}>LATEST PRODUCTS</div>
                 </div>
                 
-                <ProductItem />
-                <ProductItem />
-                <ProductItem />
-                <ProductItem />
+                {this.renderItemList(productsData)}
             </div>
         )
     }
