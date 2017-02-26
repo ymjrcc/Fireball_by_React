@@ -18,59 +18,59 @@ webpackJsonp([0,2],[
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Discover = __webpack_require__(257);
+	var _Discover = __webpack_require__(262);
 
 	var _Discover2 = _interopRequireDefault(_Discover);
 
-	var _PersonalBox = __webpack_require__(286);
+	var _PersonalBox = __webpack_require__(291);
 
 	var _PersonalBox2 = _interopRequireDefault(_PersonalBox);
 
-	var _Personal = __webpack_require__(295);
+	var _Personal = __webpack_require__(300);
 
 	var _Personal2 = _interopRequireDefault(_Personal);
 
-	var _MyOrders = __webpack_require__(297);
+	var _MyOrders = __webpack_require__(302);
 
 	var _MyOrders2 = _interopRequireDefault(_MyOrders);
 
-	var _MySubscriptions = __webpack_require__(304);
+	var _MySubscriptions = __webpack_require__(309);
 
 	var _MySubscriptions2 = _interopRequireDefault(_MySubscriptions);
 
-	var _MyLikes = __webpack_require__(308);
+	var _MyLikes = __webpack_require__(313);
 
 	var _MyLikes2 = _interopRequireDefault(_MyLikes);
 
-	var _Coupons = __webpack_require__(311);
+	var _Coupons = __webpack_require__(316);
 
 	var _Coupons2 = _interopRequireDefault(_Coupons);
 
-	var _Helps = __webpack_require__(312);
+	var _Helps = __webpack_require__(317);
 
 	var _Helps2 = _interopRequireDefault(_Helps);
 
-	var _Settings = __webpack_require__(315);
+	var _Settings = __webpack_require__(320);
 
 	var _Settings2 = _interopRequireDefault(_Settings);
 
-	var _Topic = __webpack_require__(318);
+	var _Topic = __webpack_require__(323);
 
 	var _Topic2 = _interopRequireDefault(_Topic);
 
-	var _Detail = __webpack_require__(326);
+	var _Detail = __webpack_require__(331);
 
 	var _Detail2 = _interopRequireDefault(_Detail);
 
-	var _Ranking = __webpack_require__(339);
+	var _Ranking = __webpack_require__(344);
 
 	var _Ranking2 = _interopRequireDefault(_Ranking);
 
-	var _Buyers = __webpack_require__(342);
+	var _Buyers = __webpack_require__(347);
 
 	var _Buyers2 = _interopRequireDefault(_Buyers);
 
-	var _Buyer = __webpack_require__(345);
+	var _Buyer = __webpack_require__(350);
 
 	var _Buyer2 = _interopRequireDefault(_Buyer);
 
@@ -358,7 +358,7 @@ webpackJsonp([0,2],[
 
 	var _home2 = _interopRequireDefault(_home);
 
-	var _productsData = __webpack_require__(248);
+	var _productsData = __webpack_require__(249);
 
 	var _productsData2 = _interopRequireDefault(_productsData);
 
@@ -385,7 +385,8 @@ webpackJsonp([0,2],[
 	            return _react2.default.createElement(
 	                'div',
 	                { 'data-maxwidth': true, className: _home2.default.homeTop },
-	                '\u4ECA\u65E5\u63A8\u8350'
+	                '\u4ECA\u65E5\u63A8\u8350',
+	                _react2.default.createElement(_reactRouter.Link, { to: '/buyers', className: _home2.default.buyersIcon })
 	            );
 	        }
 	    }]);
@@ -434,7 +435,7 @@ webpackJsonp([0,2],[
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _home2.default.recommendImgBox },
-	                    _react2.default.createElement('img', { className: _home2.default.recommendImg, src: __webpack_require__(249)("./" + this.props.cover) })
+	                    _react2.default.createElement('img', { className: _home2.default.recommendImg, src: __webpack_require__(250)("./" + this.props.cover) })
 	                ),
 	                _react2.default.createElement(
 	                    'div',
@@ -645,15 +646,68 @@ webpackJsonp([0,2],[
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"home":"home__home-eoHdD","homeTop":"home__homeTop-1lDmB","recommendBox":"home__recommendBox-7ndF7","recommendItem":"home__recommendItem-3ELmm","recommendImgBox":"home__recommendImgBox-1gMr0","recommendImg":"home__recommendImg-atweB","authorRow":"home__authorRow-3tv4Q","author":"home__author-2055G","date":"home__date-18DcC","title":"home__title-1WgcK","likesRow":"home__likesRow-1g9T1","likes":"home__likes-1f_1r"};
+	module.exports = {"home":"home__home-eoHdD","homeTop":"home__homeTop-1lDmB","buyersIcon":"home__buyersIcon-28xB-","recommendBox":"home__recommendBox-7ndF7","recommendItem":"home__recommendItem-3ELmm","recommendImgBox":"home__recommendImgBox-1gMr0","recommendImg":"home__recommendImg-atweB","authorRow":"home__authorRow-3tv4Q","author":"home__author-2055G","date":"home__date-18DcC","title":"home__title-1WgcK","likesRow":"home__likesRow-1g9T1","likes":"home__likes-1f_1r"};
 
 /***/ },
 /* 246 */,
 /* 247 */,
-/* 248 */
+/* 248 */,
+/* 249 */
 /***/ function(module, exports) {
 
 	module.exports = [
+		{
+			"id": "p010",
+			"title": "穷玩车，富玩表",
+			"author": "梵高先生",
+			"authorId": "b000",
+			"cover": "c-p010.jpg",
+			"date": "2017-02-26",
+			"likes": 28835,
+			"liked": true,
+			"share": 3948,
+			"price": 288,
+			"text": "正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；正文：穷玩车，富玩表；"
+		},
+		{
+			"id": "p009",
+			"title": "迪士尼积木大暴走",
+			"author": "有怪售",
+			"authorId": "b002",
+			"cover": "c-p009.jpg",
+			"date": "2017-02-26",
+			"likes": 5657,
+			"liked": true,
+			"share": 701,
+			"price": 22,
+			"text": "正文：迪士尼积木大暴走迪士尼积木大暴走；正文：迪士尼积木大暴走迪士尼积木大暴走；正文：迪士尼积木大暴走迪士尼积木大暴走；正文：迪士尼积木大暴走迪士尼积木大暴走；正文：迪士尼积木大暴走迪士尼积木大暴走；正文：迪士尼积木大暴走迪士尼积木大暴走；正文：迪士尼积木大暴走迪士尼积木大暴走；正文：迪士尼积木大暴走迪士尼积木大暴走；正文：迪士尼积木大暴走迪士尼积木大暴走；正文：迪士尼积木大暴走迪士尼积木大暴走；"
+		},
+		{
+			"id": "p008",
+			"title": "村上春树说——如果我们的语言是威士忌",
+			"author": "梵高先生",
+			"authorId": "b000",
+			"cover": "c-p008.jpg",
+			"date": "2017-02-26",
+			"likes": 1928,
+			"liked": true,
+			"share": 246,
+			"price": 255,
+			"text": "正文：村上春树说——如果我们的语言是威士忌；正文：村上春树说——如果我们的语言是威士忌；正文：村上春树说——如果我们的语言是威士忌；正文：村上春树说——如果我们的语言是威士忌；正文：村上春树说——如果我们的语言是威士忌；正文：村上春树说——如果我们的语言是威士忌；正文：村上春树说——如果我们的语言是威士忌；正文：村上春树说——如果我们的语言是威士忌；正文：村上春树说——如果我们的语言是威士忌；正文：村上春树说——如果我们的语言是威士忌；正文：村上春树说——如果我们的语言是威士忌；"
+		},
+		{
+			"id": "p007",
+			"title": "像漫画家一样写便利贴",
+			"author": "有怪售",
+			"authorId": "b002",
+			"cover": "c-p007.jpg",
+			"date": "2017-02-26",
+			"likes": 2654,
+			"liked": false,
+			"share": 311,
+			"price": 9,
+			"text": "正文：像漫画家一样写便利贴；正文：像漫画家一样写便利贴；正文：像漫画家一样写便利贴；正文：像漫画家一样写便利贴；正文：像漫画家一样写便利贴；正文：像漫画家一样写便利贴；正文：像漫画家一样写便利贴；正文：像漫画家一样写便利贴；正文：像漫画家一样写便利贴；正文：像漫画家一样写便利贴；正文：像漫画家一样写便利贴；正文：像漫画家一样写便利贴；正文：像漫画家一样写便利贴；正文：像漫画家一样写便利贴；"
+		},
 		{
 			"id": "p006",
 			"title": "深海生物烹饪指南——一本有趣的科普图书",
@@ -748,17 +802,21 @@ webpackJsonp([0,2],[
 	];
 
 /***/ },
-/* 249 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./c-p000.jpg": 250,
-		"./c-p001.jpg": 251,
-		"./c-p002.jpg": 252,
-		"./c-p003.jpg": 253,
-		"./c-p004.jpg": 254,
-		"./c-p005.jpg": 255,
-		"./c-p006.jpg": 256
+		"./c-p000.jpg": 251,
+		"./c-p001.jpg": 252,
+		"./c-p002.jpg": 253,
+		"./c-p003.jpg": 254,
+		"./c-p004.jpg": 255,
+		"./c-p005.jpg": 256,
+		"./c-p006.jpg": 257,
+		"./c-p007.jpg": 258,
+		"./c-p008.jpg": 259,
+		"./c-p009.jpg": 260,
+		"./c-p010.jpg": 261
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -771,53 +829,77 @@ webpackJsonp([0,2],[
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 249;
+	webpackContext.id = 250;
 
 
 /***/ },
-/* 250 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/10cfb6b6.c-p000.jpg";
 
 /***/ },
-/* 251 */
+/* 252 */
 /***/ function(module, exports) {
 
 	module.exports = "data:image/jpeg;base64,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"
 
 /***/ },
-/* 252 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/7f31dece.c-p002.jpg";
 
 /***/ },
-/* 253 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/9c5865ba.c-p003.jpg";
 
 /***/ },
-/* 254 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/7bd7e239.c-p004.jpg";
 
 /***/ },
-/* 255 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/acea6f14.c-p005.jpg";
 
 /***/ },
-/* 256 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "images/a9d76574.c-p006.jpg";
 
 /***/ },
-/* 257 */
+/* 258 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/389df6a7.c-p007.jpg";
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/81a2bca3.c-p008.jpg";
+
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/9dfe4054.c-p009.jpg";
+
+/***/ },
+/* 261 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/5ea9c408.c-p010.jpg";
+
+/***/ },
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -834,7 +916,7 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _FollowBtn = __webpack_require__(258);
+	var _FollowBtn = __webpack_require__(263);
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
@@ -842,7 +924,7 @@ webpackJsonp([0,2],[
 
 	var _BottomTab2 = _interopRequireDefault(_BottomTab);
 
-	var _discover = __webpack_require__(261);
+	var _discover = __webpack_require__(266);
 
 	var _discover2 = _interopRequireDefault(_discover);
 
@@ -938,17 +1020,17 @@ webpackJsonp([0,2],[
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: _discover2.default.sectionImg },
-	                            _react2.default.createElement('img', { src: __webpack_require__(266)("./" + this.props.imgs[0] + '.jpg') })
+	                            _react2.default.createElement('img', { src: __webpack_require__(271)("./" + this.props.imgs[0] + '.jpg') })
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: _discover2.default.sectionImg },
-	                            _react2.default.createElement('img', { src: __webpack_require__(266)("./" + this.props.imgs[1] + '.jpg') })
+	                            _react2.default.createElement('img', { src: __webpack_require__(271)("./" + this.props.imgs[1] + '.jpg') })
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: _discover2.default.sectionImg },
-	                            _react2.default.createElement('img', { src: __webpack_require__(266)("./" + this.props.imgs[2] + '.jpg') })
+	                            _react2.default.createElement('img', { src: __webpack_require__(271)("./" + this.props.imgs[2] + '.jpg') })
 	                        )
 	                    )
 	                )
@@ -1198,7 +1280,7 @@ webpackJsonp([0,2],[
 	exports.default = Discover;
 
 /***/ },
-/* 258 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1213,7 +1295,7 @@ webpackJsonp([0,2],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _followBtn = __webpack_require__(259);
+	var _followBtn = __webpack_require__(264);
 
 	var _followBtn2 = _interopRequireDefault(_followBtn);
 
@@ -1268,48 +1350,48 @@ webpackJsonp([0,2],[
 	exports.default = FollowingBtn;
 
 /***/ },
-/* 259 */
+/* 264 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"followBtn":"followBtn__followBtn-2M59F","followingBtn":"followBtn__followingBtn-2citV"};
 
 /***/ },
-/* 260 */,
-/* 261 */
+/* 265 */,
+/* 266 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"discover":"discover__discover-2D-4H","discoverTop":"discover__discoverTop-HspIP","discoverBox":"discover__discoverBox-24RGv","discoverTopRow":"discover__discoverTopRow-3octI","discoverTopItem":"discover__discoverTopItem-2AGnx","discoverSection":"discover__discoverSection-2h8hz","rightIcon":"discover__rightIcon-2cKu2","sectionImgBox":"discover__sectionImgBox-20_bn","sectionImg":"discover__sectionImg-3M5wQ","discoverBanner":"discover__discoverBanner-3M_yZ","discoverBannerImg":"discover__discoverBannerImg-1dlDI","banner":"discover__banner-2Z9Qk","recommendSection":"discover__recommendSection-aZ8W2","recommendItemBox":"discover__recommendItemBox-oGHTb","recommendItem":"discover__recommendItem-1hDAE","recommendItemImg":"discover__recommendItemImg-1EIxm","recommendItemName":"discover__recommendItemName-2hgdv","recommendItemDesc":"discover__recommendItemDesc-2qIP7"};
 
 /***/ },
-/* 262 */,
-/* 263 */,
-/* 264 */,
-/* 265 */,
-/* 266 */
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./1.jpg": 267,
-		"./10.jpg": 268,
-		"./11.jpg": 269,
-		"./12.jpg": 270,
-		"./13.jpg": 271,
-		"./14.jpg": 272,
-		"./15.jpg": 273,
-		"./16.jpg": 274,
-		"./17.jpg": 275,
-		"./18.jpg": 276,
-		"./19.jpg": 277,
-		"./2.jpg": 278,
-		"./3.jpg": 279,
-		"./4.jpg": 280,
-		"./5.jpg": 281,
-		"./6.jpg": 282,
-		"./7.jpg": 283,
-		"./8.jpg": 284,
-		"./9.jpg": 285
+		"./1.jpg": 272,
+		"./10.jpg": 273,
+		"./11.jpg": 274,
+		"./12.jpg": 275,
+		"./13.jpg": 276,
+		"./14.jpg": 277,
+		"./15.jpg": 278,
+		"./16.jpg": 279,
+		"./17.jpg": 280,
+		"./18.jpg": 281,
+		"./19.jpg": 282,
+		"./2.jpg": 283,
+		"./3.jpg": 284,
+		"./4.jpg": 285,
+		"./5.jpg": 286,
+		"./6.jpg": 287,
+		"./7.jpg": 288,
+		"./8.jpg": 289,
+		"./9.jpg": 290
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -1322,125 +1404,125 @@ webpackJsonp([0,2],[
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 266;
+	webpackContext.id = 271;
 
-
-/***/ },
-/* 267 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/c7942c2e.1.jpg";
-
-/***/ },
-/* 268 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/d6478e1c.10.jpg";
-
-/***/ },
-/* 269 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/2fbb7c0e.11.jpg";
-
-/***/ },
-/* 270 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/a260de1b.12.jpg";
-
-/***/ },
-/* 271 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/40b6cd1b.13.jpg";
 
 /***/ },
 /* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/6009cd53.14.jpg";
+	module.exports = __webpack_require__.p + "images/c7942c2e.1.jpg";
 
 /***/ },
 /* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/b6f9d0c6.15.jpg";
+	module.exports = __webpack_require__.p + "images/d6478e1c.10.jpg";
 
 /***/ },
 /* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/d9986009.16.jpg";
+	module.exports = __webpack_require__.p + "images/2fbb7c0e.11.jpg";
 
 /***/ },
 /* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/86bb1854.17.jpg";
+	module.exports = __webpack_require__.p + "images/a260de1b.12.jpg";
 
 /***/ },
 /* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/3e1dd9c8.18.jpg";
+	module.exports = __webpack_require__.p + "images/40b6cd1b.13.jpg";
 
 /***/ },
 /* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/18f8c31e.19.jpg";
+	module.exports = __webpack_require__.p + "images/6009cd53.14.jpg";
 
 /***/ },
 /* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/997587af.2.jpg";
+	module.exports = __webpack_require__.p + "images/b6f9d0c6.15.jpg";
 
 /***/ },
 /* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/e6eb7217.3.jpg";
+	module.exports = __webpack_require__.p + "images/d9986009.16.jpg";
 
 /***/ },
 /* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/40098fcb.4.jpg";
+	module.exports = __webpack_require__.p + "images/86bb1854.17.jpg";
 
 /***/ },
 /* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/a68b3507.5.jpg";
+	module.exports = __webpack_require__.p + "images/3e1dd9c8.18.jpg";
 
 /***/ },
 /* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/1de328d1.6.jpg";
+	module.exports = __webpack_require__.p + "images/18f8c31e.19.jpg";
 
 /***/ },
 /* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/67435905.7.jpg";
+	module.exports = __webpack_require__.p + "images/997587af.2.jpg";
 
 /***/ },
 /* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/a2753398.8.jpg";
+	module.exports = __webpack_require__.p + "images/e6eb7217.3.jpg";
 
 /***/ },
 /* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/622b2df7.9.jpg";
+	module.exports = __webpack_require__.p + "images/40098fcb.4.jpg";
 
 /***/ },
 /* 286 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/a68b3507.5.jpg";
+
+/***/ },
+/* 287 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/1de328d1.6.jpg";
+
+/***/ },
+/* 288 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/67435905.7.jpg";
+
+/***/ },
+/* 289 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/a2753398.8.jpg";
+
+/***/ },
+/* 290 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/622b2df7.9.jpg";
+
+/***/ },
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1455,7 +1537,7 @@ webpackJsonp([0,2],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _personal = __webpack_require__(287);
+	var _personal = __webpack_require__(292);
 
 	var _personal2 = _interopRequireDefault(_personal);
 
@@ -1514,21 +1596,21 @@ webpackJsonp([0,2],[
 	exports.default = PersonalBox;
 
 /***/ },
-/* 287 */
+/* 292 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"personal":"personal__personal-jvg88","headBox":"personal__headBox-TXmdM","headImg":"personal__headImg-JTpbE","headInfo":"personal__headInfo-eFuZk","name":"personal__name-2piJJ","desc":"personal__desc-XW6rW","settingBox":"personal__settingBox-2_UbL","settingArea":"personal__settingArea-qAB4U","settingItem":"personal__settingItem-2PHWd","settingTitle":"personal__settingTitle-3YTGb","settingIcon":"personal__settingIcon-3T74r","order":"personal__order-mzuVB","subscription":"personal__subscription-2xEYu","like":"personal__like-109Dn","coupon":"personal__coupon-1N8fj","help":"personal__help-3RVmA","setting":"personal__setting-3HqCW","rightIcon":"personal__rightIcon-1xA4w"};
 
 /***/ },
-/* 288 */,
-/* 289 */,
-/* 290 */,
-/* 291 */,
-/* 292 */,
 /* 293 */,
 /* 294 */,
-/* 295 */
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1549,11 +1631,11 @@ webpackJsonp([0,2],[
 
 	var _BottomTab2 = _interopRequireDefault(_BottomTab);
 
-	var _SettingItem = __webpack_require__(296);
+	var _SettingItem = __webpack_require__(301);
 
 	var _SettingItem2 = _interopRequireDefault(_SettingItem);
 
-	var _personal = __webpack_require__(287);
+	var _personal = __webpack_require__(292);
 
 	var _personal2 = _interopRequireDefault(_personal);
 
@@ -1717,7 +1799,7 @@ webpackJsonp([0,2],[
 	exports.default = Personal;
 
 /***/ },
-/* 296 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1734,7 +1816,7 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _personal = __webpack_require__(287);
+	var _personal = __webpack_require__(292);
 
 	var _personal2 = _interopRequireDefault(_personal);
 
@@ -1778,7 +1860,7 @@ webpackJsonp([0,2],[
 	exports.default = SettingItem;
 
 /***/ },
-/* 297 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1795,11 +1877,11 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(298);
+	var _TopFixed = __webpack_require__(303);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _myOrders = __webpack_require__(302);
+	var _myOrders = __webpack_require__(307);
 
 	var _myOrders2 = _interopRequireDefault(_myOrders);
 
@@ -1927,7 +2009,7 @@ webpackJsonp([0,2],[
 	exports.default = MyOrders;
 
 /***/ },
-/* 298 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1944,7 +2026,7 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _topfixed = __webpack_require__(299);
+	var _topfixed = __webpack_require__(304);
 
 	var _topfixed2 = _interopRequireDefault(_topfixed);
 
@@ -1985,24 +2067,24 @@ webpackJsonp([0,2],[
 	exports.default = TopFixed;
 
 /***/ },
-/* 299 */
+/* 304 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"topFixed":"topfixed__topFixed-2sM1q","backBtn":"topfixed__backBtn-2AVN2"};
 
 /***/ },
-/* 300 */,
-/* 301 */,
-/* 302 */
+/* 305 */,
+/* 306 */,
+/* 307 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"ordersBox":"myOrders__ordersBox-3f8ca","order":"myOrders__order-3Tlcd","orderInfoBox":"myOrders__orderInfoBox-2dD9O","orderImg":"myOrders__orderImg-cZhVk","orderInfo":"myOrders__orderInfo-duwdU","orderTitle":"myOrders__orderTitle-1ph3J","orderDesc":"myOrders__orderDesc-2xjIa","orderPrice":"myOrders__orderPrice-1op8j","orderStatus":"myOrders__orderStatus-1-YVO"};
 
 /***/ },
-/* 303 */,
-/* 304 */
+/* 308 */,
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2019,19 +2101,19 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(298);
+	var _TopFixed = __webpack_require__(303);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _FollowBtn = __webpack_require__(258);
+	var _FollowBtn = __webpack_require__(263);
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _mySubscriptions = __webpack_require__(305);
+	var _mySubscriptions = __webpack_require__(310);
 
 	var _mySubscriptions2 = _interopRequireDefault(_mySubscriptions);
 
-	var _buyersData = __webpack_require__(307);
+	var _buyersData = __webpack_require__(312);
 
 	var _buyersData2 = _interopRequireDefault(_buyersData);
 
@@ -2150,15 +2232,15 @@ webpackJsonp([0,2],[
 	exports.default = MySubscriptions;
 
 /***/ },
-/* 305 */
+/* 310 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"subscriptionsBox":"mySubscriptions__subscriptionsBox-3QRr_","subscriptionItem":"mySubscriptions__subscriptionItem-2z0sS","headImg":"mySubscriptions__headImg-1A0ks","name":"mySubscriptions__name-VO4X2","btnBox":"mySubscriptions__btnBox-eNU-t"};
 
 /***/ },
-/* 306 */,
-/* 307 */
+/* 311 */,
+/* 312 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -2172,19 +2254,6 @@ webpackJsonp([0,2],[
 			],
 			"img": "#99c",
 			"followers": 72951,
-			"following": true
-		},
-		{
-			"id": "b001",
-			"name": "盐",
-			"desc": "一个盐系男子的日常穿搭",
-			"label": [
-				"日系",
-				"穿搭",
-				"男士"
-			],
-			"img": "#ccf",
-			"followers": 40679,
 			"following": true
 		},
 		{
@@ -2208,6 +2277,55 @@ webpackJsonp([0,2],[
 			],
 			"img": "#69f",
 			"followers": 85763,
+			"following": true
+		},
+		{
+			"id": "b007",
+			"name": "吃喝找野马",
+			"desc": "神经大条的射手座",
+			"label": [
+				"爱吃爱喝爱睡觉",
+				"记性差"
+			],
+			"img": "#699",
+			"followers": 39547,
+			"following": true
+		},
+		{
+			"id": "b008",
+			"name": "八号丸子",
+			"desc": "给你带来网红零食的一手报告",
+			"label": [
+				"网红",
+				"零食"
+			],
+			"img": "#ff6",
+			"followers": 67421,
+			"following": true
+		},
+		{
+			"id": "b009",
+			"name": "贪吃鬼小埋",
+			"desc": "只为找到最好吃的你",
+			"label": [
+				"懂吃会吃",
+				"狮子座"
+			],
+			"img": "#66c",
+			"followers": 126742,
+			"following": true
+		},
+		{
+			"id": "b001",
+			"name": "盐",
+			"desc": "一个盐系男子的日常穿搭",
+			"label": [
+				"日系",
+				"穿搭",
+				"男士"
+			],
+			"img": "#ccf",
+			"followers": 40679,
 			"following": true
 		},
 		{
@@ -2248,47 +2366,11 @@ webpackJsonp([0,2],[
 			"img": "#ff3",
 			"followers": 22765,
 			"following": false
-		},
-		{
-			"id": "b007",
-			"name": "吃喝找野马",
-			"desc": "神经大条的射手座",
-			"label": [
-				"爱吃爱喝爱睡觉",
-				"记性差"
-			],
-			"img": "#699",
-			"followers": 39547,
-			"following": true
-		},
-		{
-			"id": "b008",
-			"name": "八号丸子",
-			"desc": "给你带来网红零食的一手报告",
-			"label": [
-				"网红",
-				"零食"
-			],
-			"img": "#ff6",
-			"followers": 67421,
-			"following": true
-		},
-		{
-			"id": "b009",
-			"name": "贪吃鬼小埋",
-			"desc": "只为找到最好吃的你",
-			"label": [
-				"懂吃会吃",
-				"狮子座"
-			],
-			"img": "#66c",
-			"followers": 126742,
-			"following": true
 		}
 	];
 
 /***/ },
-/* 308 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2305,11 +2387,11 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(298);
+	var _TopFixed = __webpack_require__(303);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _myLikes = __webpack_require__(309);
+	var _myLikes = __webpack_require__(314);
 
 	var _myLikes2 = _interopRequireDefault(_myLikes);
 
@@ -2405,15 +2487,15 @@ webpackJsonp([0,2],[
 	exports.default = MyLikes;
 
 /***/ },
-/* 309 */
+/* 314 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"myLikes":"myLikes__myLikes-3tBrC","likesBox":"myLikes__likesBox-sfZ_r","likeItem":"myLikes__likeItem-1Gpe6"};
 
 /***/ },
-/* 310 */,
-/* 311 */
+/* 315 */,
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2430,7 +2512,7 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(298);
+	var _TopFixed = __webpack_require__(303);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
@@ -2489,7 +2571,7 @@ webpackJsonp([0,2],[
 	exports.default = Coupons;
 
 /***/ },
-/* 312 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2506,11 +2588,11 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(298);
+	var _TopFixed = __webpack_require__(303);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _helps = __webpack_require__(313);
+	var _helps = __webpack_require__(318);
 
 	var _helps2 = _interopRequireDefault(_helps);
 
@@ -2758,15 +2840,15 @@ webpackJsonp([0,2],[
 	exports.default = Helps;
 
 /***/ },
-/* 313 */
+/* 318 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"helpsBox":"helps__helpsBox-1TlGT","selfTit":"helps__selfTit-pRmWy","selfBox":"helps__selfBox-3hmQf","selfItem":"helps__selfItem-14Qju","questions":"helps__questions-36e4E","queTit":"helps__queTit-3ln0f","queItem":"helps__queItem-rdfEr","arrow":"helps__arrow-KP4I7","arrowUp":"helps__arrowUp-drhQ6","arrowDown":"helps__arrowDown-368pC","ansItem":"helps__ansItem-3kEzv"};
 
 /***/ },
-/* 314 */,
-/* 315 */
+/* 319 */,
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2783,15 +2865,15 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(298);
+	var _TopFixed = __webpack_require__(303);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _SettingItem = __webpack_require__(296);
+	var _SettingItem = __webpack_require__(301);
 
 	var _SettingItem2 = _interopRequireDefault(_SettingItem);
 
-	var _settings = __webpack_require__(316);
+	var _settings = __webpack_require__(321);
 
 	var _settings2 = _interopRequireDefault(_settings);
 
@@ -2877,15 +2959,15 @@ webpackJsonp([0,2],[
 	exports.default = Settings;
 
 /***/ },
-/* 316 */
+/* 321 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"settingBox":"settings__settingBox-1tzL4","settingArea":"settings__settingArea-5_HFB","settingItem":"settings__settingItem-2TaC5"};
 
 /***/ },
-/* 317 */,
-/* 318 */
+/* 322 */,
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2902,19 +2984,19 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _classnames2 = __webpack_require__(319);
+	var _classnames2 = __webpack_require__(324);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _Item = __webpack_require__(320);
+	var _Item = __webpack_require__(325);
 
 	var _Item2 = _interopRequireDefault(_Item);
 
-	var _topic = __webpack_require__(323);
+	var _topic = __webpack_require__(328);
 
 	var _topic2 = _interopRequireDefault(_topic);
 
-	var _productsData = __webpack_require__(248);
+	var _productsData = __webpack_require__(249);
 
 	var _productsData2 = _interopRequireDefault(_productsData);
 
@@ -3128,8 +3210,8 @@ webpackJsonp([0,2],[
 	exports.default = Topic;
 
 /***/ },
-/* 319 */,
-/* 320 */
+/* 324 */,
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3146,7 +3228,7 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _item = __webpack_require__(321);
+	var _item = __webpack_require__(326);
 
 	var _item2 = _interopRequireDefault(_item);
 
@@ -3176,7 +3258,7 @@ webpackJsonp([0,2],[
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _item2.default.img },
-	                    _react2.default.createElement('img', { src: __webpack_require__(249)("./" + this.props.cover) })
+	                    _react2.default.createElement('img', { src: __webpack_require__(250)("./" + this.props.cover) })
 	                ),
 	                _react2.default.createElement(
 	                    'div',
@@ -3207,24 +3289,24 @@ webpackJsonp([0,2],[
 	exports.default = Item;
 
 /***/ },
-/* 321 */
+/* 326 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"item":"item__item-3X-cC","img":"item__img-18IC2","info":"item__info-22TU-","title":"item__title-a5ySn","likes":"item__likes-1k1M9","price":"item__price-173VH"};
 
 /***/ },
-/* 322 */,
-/* 323 */
+/* 327 */,
+/* 328 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"topicHeader":"topic__topicHeader-1ZRk6","topicHeaderBack":"topic__topicHeaderBack-i3tEb","topicBox":"topic__topicBox-2xNOv","topicNav":"topic__topicNav-2Yz8w","navItem":"topic__navItem-2S0_j","choosenItem":"topic__choosenItem-1tlXz","topicList":"topic__topicList-tw2bY"};
 
 /***/ },
-/* 324 */,
-/* 325 */,
-/* 326 */
+/* 329 */,
+/* 330 */,
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3241,15 +3323,15 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _detail = __webpack_require__(327);
+	var _detail = __webpack_require__(332);
 
 	var _detail2 = _interopRequireDefault(_detail);
 
-	var _Modal = __webpack_require__(336);
+	var _Modal = __webpack_require__(341);
 
 	var _Modal2 = _interopRequireDefault(_Modal);
 
-	var _productsData = __webpack_require__(248);
+	var _productsData = __webpack_require__(249);
 
 	var _productsData2 = _interopRequireDefault(_productsData);
 
@@ -3261,47 +3343,24 @@ webpackJsonp([0,2],[
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var DetailTop = function (_Component) {
-	    _inherits(DetailTop, _Component);
-
-	    function DetailTop() {
-	        _classCallCheck(this, DetailTop);
-
-	        return _possibleConstructorReturn(this, (DetailTop.__proto__ || Object.getPrototypeOf(DetailTop)).apply(this, arguments));
+	/*class DetailTop extends Component{
+	    render(){
+	        const res = this.props.productInfo;
+	        return (
+	            <Link to={"/buyer/"+res.authorId} className={style.detailTop}>
+	                <div className={style.topHeadImg}></div>
+	                <div className={style.topMain}>
+	                    <div className={style.topAuthor}>{res.author}</div>
+	                    <div className={style.topDate}>{res.date}</div>
+	                    <div className={style.topToAutor}></div>
+	                </div>
+	            </Link>
+	        )
 	    }
+	}*/
 
-	    _createClass(DetailTop, [{
-	        key: 'render',
-	        value: function render() {
-	            var res = this.props.productInfo;
-	            return _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: "/buyer/" + res.authorId, className: _detail2.default.detailTop },
-	                _react2.default.createElement('div', { className: _detail2.default.topHeadImg }),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: _detail2.default.topMain },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: _detail2.default.topAuthor },
-	                        res.author
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: _detail2.default.topDate },
-	                        res.date
-	                    ),
-	                    _react2.default.createElement('div', { className: _detail2.default.topToAutor })
-	                )
-	            );
-	        }
-	    }]);
-
-	    return DetailTop;
-	}(_react.Component);
-
-	var DetailMain = function (_Component2) {
-	    _inherits(DetailMain, _Component2);
+	var DetailMain = function (_Component) {
+	    _inherits(DetailMain, _Component);
 
 	    function DetailMain() {
 	        _classCallCheck(this, DetailMain);
@@ -3319,7 +3378,21 @@ webpackJsonp([0,2],[
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _detail2.default.coverBox },
-	                    _react2.default.createElement('img', { src: __webpack_require__(249)("./" + res.cover) })
+	                    _react2.default.createElement('img', { src: __webpack_require__(250)("./" + res.cover) }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _detail2.default.coverInfo },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _detail2.default.coverTitle },
+	                            res.title
+	                        ),
+	                        _react2.default.createElement(
+	                            _reactRouter.Link,
+	                            { to: "/buyer/" + res.authorId, className: _detail2.default.coverAuthor },
+	                            res.author
+	                        )
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'h4',
@@ -3338,8 +3411,8 @@ webpackJsonp([0,2],[
 	    return DetailMain;
 	}(_react.Component);
 
-	var DetailFooter1 = function (_Component3) {
-	    _inherits(DetailFooter1, _Component3);
+	var DetailFooter1 = function (_Component2) {
+	    _inherits(DetailFooter1, _Component2);
 
 	    function DetailFooter1() {
 	        _classCallCheck(this, DetailFooter1);
@@ -3373,8 +3446,8 @@ webpackJsonp([0,2],[
 	    return DetailFooter1;
 	}(_react.Component);
 
-	var DetailFooter2 = function (_Component4) {
-	    _inherits(DetailFooter2, _Component4);
+	var DetailFooter2 = function (_Component3) {
+	    _inherits(DetailFooter2, _Component3);
 
 	    function DetailFooter2() {
 	        _classCallCheck(this, DetailFooter2);
@@ -3396,8 +3469,8 @@ webpackJsonp([0,2],[
 	    return DetailFooter2;
 	}(_react.Component);
 
-	var DetailFooter3 = function (_Component5) {
-	    _inherits(DetailFooter3, _Component5);
+	var DetailFooter3 = function (_Component4) {
+	    _inherits(DetailFooter3, _Component4);
 
 	    function DetailFooter3() {
 	        _classCallCheck(this, DetailFooter3);
@@ -3442,8 +3515,8 @@ webpackJsonp([0,2],[
 	    return DetailFooter3;
 	}(_react.Component);
 
-	var DetailFooter4 = function (_Component6) {
-	    _inherits(DetailFooter4, _Component6);
+	var DetailFooter4 = function (_Component5) {
+	    _inherits(DetailFooter4, _Component5);
 
 	    function DetailFooter4() {
 	        _classCallCheck(this, DetailFooter4);
@@ -3511,8 +3584,8 @@ webpackJsonp([0,2],[
 	    return DetailFooter4;
 	}(_react.Component);
 
-	var DetailFooter = function (_Component7) {
-	    _inherits(DetailFooter, _Component7);
+	var DetailFooter = function (_Component6) {
+	    _inherits(DetailFooter, _Component6);
 
 	    function DetailFooter() {
 	        _classCallCheck(this, DetailFooter);
@@ -3538,19 +3611,19 @@ webpackJsonp([0,2],[
 	    return DetailFooter;
 	}(_react.Component);
 
-	var DetailBottom = function (_Component8) {
-	    _inherits(DetailBottom, _Component8);
+	var DetailBottom = function (_Component7) {
+	    _inherits(DetailBottom, _Component7);
 
 	    function DetailBottom(props) {
 	        _classCallCheck(this, DetailBottom);
 
-	        var _this8 = _possibleConstructorReturn(this, (DetailBottom.__proto__ || Object.getPrototypeOf(DetailBottom)).call(this, props));
+	        var _this7 = _possibleConstructorReturn(this, (DetailBottom.__proto__ || Object.getPrototypeOf(DetailBottom)).call(this, props));
 
-	        _this8.state = {
-	            liked: _this8.props.productInfo.liked,
+	        _this7.state = {
+	            liked: _this7.props.productInfo.liked,
 	            share: false
 	        };
-	        return _this8;
+	        return _this7;
 	    }
 
 	    _createClass(DetailBottom, [{
@@ -3605,8 +3678,8 @@ webpackJsonp([0,2],[
 	    return DetailBottom;
 	}(_react.Component);
 
-	var GoBackBtn = function (_Component9) {
-	    _inherits(GoBackBtn, _Component9);
+	var GoBackBtn = function (_Component8) {
+	    _inherits(GoBackBtn, _Component8);
 
 	    function GoBackBtn() {
 	        _classCallCheck(this, GoBackBtn);
@@ -3633,19 +3706,19 @@ webpackJsonp([0,2],[
 	    return GoBackBtn;
 	}(_react.Component);
 
-	var ToBuyBtn = function (_Component10) {
-	    _inherits(ToBuyBtn, _Component10);
+	var ToBuyBtn = function (_Component9) {
+	    _inherits(ToBuyBtn, _Component9);
 
 	    function ToBuyBtn(props) {
 	        _classCallCheck(this, ToBuyBtn);
 
-	        var _this10 = _possibleConstructorReturn(this, (ToBuyBtn.__proto__ || Object.getPrototypeOf(ToBuyBtn)).call(this, props));
+	        var _this9 = _possibleConstructorReturn(this, (ToBuyBtn.__proto__ || Object.getPrototypeOf(ToBuyBtn)).call(this, props));
 
-	        _this10.state = {
+	        _this9.state = {
 	            open: false,
 	            window: "edit"
 	        };
-	        return _this10;
+	        return _this9;
 	    }
 
 	    _createClass(ToBuyBtn, [{
@@ -3709,18 +3782,18 @@ webpackJsonp([0,2],[
 	    return ToBuyBtn;
 	}(_react.Component);
 
-	var EditOrder = function (_Component11) {
-	    _inherits(EditOrder, _Component11);
+	var EditOrder = function (_Component10) {
+	    _inherits(EditOrder, _Component10);
 
 	    function EditOrder(props) {
 	        _classCallCheck(this, EditOrder);
 
-	        var _this11 = _possibleConstructorReturn(this, (EditOrder.__proto__ || Object.getPrototypeOf(EditOrder)).call(this, props));
+	        var _this10 = _possibleConstructorReturn(this, (EditOrder.__proto__ || Object.getPrototypeOf(EditOrder)).call(this, props));
 
-	        _this11.state = {
+	        _this10.state = {
 	            count: 1
 	        };
-	        return _this11;
+	        return _this10;
 	    }
 
 	    _createClass(EditOrder, [{
@@ -3788,7 +3861,7 @@ webpackJsonp([0,2],[
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: _detail2.default.orderCover },
-	                        _react2.default.createElement('img', { src: __webpack_require__(249)("./" + res.cover) })
+	                        _react2.default.createElement('img', { src: __webpack_require__(250)("./" + res.cover) })
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -3836,8 +3909,8 @@ webpackJsonp([0,2],[
 	    return EditOrder;
 	}(_react.Component);
 
-	var SubmitOrder = function (_Component12) {
-	    _inherits(SubmitOrder, _Component12);
+	var SubmitOrder = function (_Component11) {
+	    _inherits(SubmitOrder, _Component11);
 
 	    function SubmitOrder() {
 	        _classCallCheck(this, SubmitOrder);
@@ -3943,8 +4016,8 @@ webpackJsonp([0,2],[
 	    return SubmitOrder;
 	}(_react.Component);
 
-	var ShareAlert = function (_Component13) {
-	    _inherits(ShareAlert, _Component13);
+	var ShareAlert = function (_Component12) {
+	    _inherits(ShareAlert, _Component12);
 
 	    function ShareAlert() {
 	        _classCallCheck(this, ShareAlert);
@@ -4025,8 +4098,8 @@ webpackJsonp([0,2],[
 	    return ShareAlert;
 	}(_react.Component);
 
-	var Detail = function (_Component14) {
-	    _inherits(Detail, _Component14);
+	var Detail = function (_Component13) {
+	    _inherits(Detail, _Component13);
 
 	    function Detail() {
 	        _classCallCheck(this, Detail);
@@ -4069,7 +4142,6 @@ webpackJsonp([0,2],[
 	                return _react2.default.createElement(
 	                    'div',
 	                    { className: _detail2.default.detailBox },
-	                    _react2.default.createElement(DetailTop, { productInfo: productInfo }),
 	                    _react2.default.createElement(DetailMain, { productInfo: productInfo }),
 	                    _react2.default.createElement(DetailFooter, { productInfo: productInfo }),
 	                    _react2.default.createElement(DetailBottom, { productInfo: productInfo })
@@ -4084,22 +4156,22 @@ webpackJsonp([0,2],[
 	exports.default = Detail;
 
 /***/ },
-/* 327 */
+/* 332 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"detailBox":"detail__detailBox-1b6ne","detailTop":"detail__detailTop-y67pU","topHeadImg":"detail__topHeadImg-1F-dC","topMain":"detail__topMain-2ocL_","topAuthor":"detail__topAuthor-2S8CJ","topDate":"detail__topDate-3g-mq","topToAutor":"detail__topToAutor-3yV1r","detailMain":"detail__detailMain-2FgJ8","title":"detail__title-25WQY","text":"detail__text-1Itjd","coverBox":"detail__coverBox-RTVdl","footer1Box":"detail__footer1Box-32sxZ","footer1Item":"detail__footer1Item-3c7MH","footer2Box":"detail__footer2Box-1I_1V","footer3Box":"detail__footer3Box-3-dOX","footer3Title":"detail__footer3Title-3SPcj","footer3Div":"detail__footer3Div-3GtmX","footer3Item":"detail__footer3Item-3UbY4","footer4Box":"detail__footer4Box-2AQQs","footer4Title":"detail__footer4Title-1T6QE","que":"detail__que-Iw08T","ans":"detail__ans-3cNDb","detailBottom":"detail__detailBottom-wwWK5","bottomLeft":"detail__bottomLeft-2hXUT","bottomRight":"detail__bottomRight-25V45","bottomItem":"detail__bottomItem-3w1Vl","back":"detail__back-Kvo7c","liked":"detail__liked-2EUmN","like":"detail__like-37XOr","share":"detail__share-2dNpf","toBuyBtn":"detail__toBuyBtn-2Ie37","shareAlert":"detail__shareAlert-2ymjP","shareInfo":"detail__shareInfo-1z-Yi","shareBox":"detail__shareBox-k9sYO","shareWay":"detail__shareWay-3xdaG","shareItem":"detail__shareItem-2zlZe","shareCancel":"detail__shareCancel-3OP78","editOrder":"detail__editOrder-1Uj4b","submitOrder":"detail__submitOrder-31zfO","orderTop":"detail__orderTop-1lt05","orderCancel":"detail__orderCancel-ElZrY","orderBack":"detail__orderBack-2GqOv","orderDetail":"detail__orderDetail-29uqs","orderTitle":"detail__orderTitle-2Vy9L","orderTips":"detail__orderTips-30Ddf","orderCover":"detail__orderCover-YfSxi","orderUnit":"detail__orderUnit-27Rlq","minusBtn":"detail__minusBtn-1nssf","addBtn":"detail__addBtn-23sIu","minusIcon":"detail__minusIcon-2Q2Pc","addIcon":"detail__addIcon-3d3v7","orderNumber":"detail__orderNumber-o004D","orderSubmitBox":"detail__orderSubmitBox-3itpo","orderSubmitBtn":"detail__orderSubmitBtn-24cat","orderRow":"detail__orderRow-2srLh","count":"detail__count-2E8dn","priceBox":"detail__priceBox-Mzi7I","priceTag":"detail__priceTag-1Yo3o","priceTip":"detail__priceTip-2FDSb","orderNotes":"detail__orderNotes-3-Pos"};
+	module.exports = {"detailBox":"detail__detailBox-1b6ne","detailTop":"detail__detailTop-y67pU","topHeadImg":"detail__topHeadImg-1F-dC","topMain":"detail__topMain-2ocL_","topAuthor":"detail__topAuthor-2S8CJ","topDate":"detail__topDate-3g-mq","topToAutor":"detail__topToAutor-3yV1r","detailMain":"detail__detailMain-2FgJ8","title":"detail__title-25WQY","text":"detail__text-1Itjd","coverBox":"detail__coverBox-RTVdl","coverInfo":"detail__coverInfo-2BB6d","coverTitle":"detail__coverTitle-3cczk","coverAuthor":"detail__coverAuthor-tkzrd","footer1Box":"detail__footer1Box-32sxZ","footer1Item":"detail__footer1Item-3c7MH","footer2Box":"detail__footer2Box-1I_1V","footer3Box":"detail__footer3Box-3-dOX","footer3Title":"detail__footer3Title-3SPcj","footer3Div":"detail__footer3Div-3GtmX","footer3Item":"detail__footer3Item-3UbY4","footer4Box":"detail__footer4Box-2AQQs","footer4Title":"detail__footer4Title-1T6QE","que":"detail__que-Iw08T","ans":"detail__ans-3cNDb","detailBottom":"detail__detailBottom-wwWK5","bottomLeft":"detail__bottomLeft-2hXUT","bottomRight":"detail__bottomRight-25V45","bottomItem":"detail__bottomItem-3w1Vl","back":"detail__back-Kvo7c","liked":"detail__liked-2EUmN","like":"detail__like-37XOr","share":"detail__share-2dNpf","toBuyBtn":"detail__toBuyBtn-2Ie37","shareAlert":"detail__shareAlert-2ymjP","shareInfo":"detail__shareInfo-1z-Yi","shareBox":"detail__shareBox-k9sYO","shareWay":"detail__shareWay-3xdaG","shareItem":"detail__shareItem-2zlZe","shareCancel":"detail__shareCancel-3OP78","editOrder":"detail__editOrder-1Uj4b","submitOrder":"detail__submitOrder-31zfO","orderTop":"detail__orderTop-1lt05","orderCancel":"detail__orderCancel-ElZrY","orderBack":"detail__orderBack-2GqOv","orderDetail":"detail__orderDetail-29uqs","orderTitle":"detail__orderTitle-2Vy9L","orderTips":"detail__orderTips-30Ddf","orderCover":"detail__orderCover-YfSxi","orderUnit":"detail__orderUnit-27Rlq","minusBtn":"detail__minusBtn-1nssf","addBtn":"detail__addBtn-23sIu","minusIcon":"detail__minusIcon-2Q2Pc","addIcon":"detail__addIcon-3d3v7","orderNumber":"detail__orderNumber-o004D","orderSubmitBox":"detail__orderSubmitBox-3itpo","orderSubmitBtn":"detail__orderSubmitBtn-24cat","orderRow":"detail__orderRow-2srLh","count":"detail__count-2E8dn","priceBox":"detail__priceBox-Mzi7I","priceTag":"detail__priceTag-1Yo3o","priceTip":"detail__priceTip-2FDSb","orderNotes":"detail__orderNotes-3-Pos"};
 
 /***/ },
-/* 328 */,
-/* 329 */,
-/* 330 */,
-/* 331 */,
-/* 332 */,
 /* 333 */,
 /* 334 */,
 /* 335 */,
-/* 336 */
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4118,7 +4190,7 @@ webpackJsonp([0,2],[
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _modal = __webpack_require__(337);
+	var _modal = __webpack_require__(342);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
@@ -4187,15 +4259,15 @@ webpackJsonp([0,2],[
 	exports.default = Modal;
 
 /***/ },
-/* 337 */
+/* 342 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"container":"modal__container-EMNoX"};
 
 /***/ },
-/* 338 */,
-/* 339 */
+/* 343 */,
+/* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4212,19 +4284,19 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _Item = __webpack_require__(320);
+	var _Item = __webpack_require__(325);
 
 	var _Item2 = _interopRequireDefault(_Item);
 
-	var _TopFixed = __webpack_require__(298);
+	var _TopFixed = __webpack_require__(303);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _ranking = __webpack_require__(340);
+	var _ranking = __webpack_require__(345);
 
 	var _ranking2 = _interopRequireDefault(_ranking);
 
-	var _productsData = __webpack_require__(248);
+	var _productsData = __webpack_require__(249);
 
 	var _productsData2 = _interopRequireDefault(_productsData);
 
@@ -4311,15 +4383,15 @@ webpackJsonp([0,2],[
 	exports.default = Ranking;
 
 /***/ },
-/* 340 */
+/* 345 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"ranking":"ranking__ranking-3AuN8","rankingList":"ranking__rankingList-2qjCZ"};
 
 /***/ },
-/* 341 */,
-/* 342 */
+/* 346 */,
+/* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4336,19 +4408,19 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(298);
+	var _TopFixed = __webpack_require__(303);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _FollowBtn = __webpack_require__(258);
+	var _FollowBtn = __webpack_require__(263);
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _buyers = __webpack_require__(343);
+	var _buyers = __webpack_require__(348);
 
 	var _buyers2 = _interopRequireDefault(_buyers);
 
-	var _buyersData = __webpack_require__(307);
+	var _buyersData = __webpack_require__(312);
 
 	var _buyersData2 = _interopRequireDefault(_buyersData);
 
@@ -4489,15 +4561,15 @@ webpackJsonp([0,2],[
 	exports.default = Buyers;
 
 /***/ },
-/* 343 */
+/* 348 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"buyersList":"buyers__buyersList-3bONT","buyerItem":"buyers__buyerItem-6UuY8","buyerImg":"buyers__buyerImg-1bp6B","buyerInfo":"buyers__buyerInfo-3Y6Uj","name":"buyers__name-TagUH","desc":"buyers__desc-wqAa8","label":"buyers__label-2xzbG","followers":"buyers__followers-2QytB","followBtnBox":"buyers__followBtnBox-2YpUz"};
 
 /***/ },
-/* 344 */,
-/* 345 */
+/* 349 */,
+/* 350 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4514,23 +4586,23 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(298);
+	var _TopFixed = __webpack_require__(303);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _FollowBtn = __webpack_require__(258);
+	var _FollowBtn = __webpack_require__(263);
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _buyer = __webpack_require__(346);
+	var _buyer = __webpack_require__(351);
 
 	var _buyer2 = _interopRequireDefault(_buyer);
 
-	var _buyersData = __webpack_require__(307);
+	var _buyersData = __webpack_require__(312);
 
 	var _buyersData2 = _interopRequireDefault(_buyersData);
 
-	var _productsData = __webpack_require__(248);
+	var _productsData = __webpack_require__(249);
 
 	var _productsData2 = _interopRequireDefault(_productsData);
 
@@ -4611,8 +4683,31 @@ webpackJsonp([0,2],[
 	    return Card;
 	}(_react.Component);
 
-	var Popular = function (_Component2) {
-	    _inherits(Popular, _Component2);
+	var PopularItem = function (_Component2) {
+	    _inherits(PopularItem, _Component2);
+
+	    function PopularItem() {
+	        _classCallCheck(this, PopularItem);
+
+	        return _possibleConstructorReturn(this, (PopularItem.__proto__ || Object.getPrototypeOf(PopularItem)).apply(this, arguments));
+	    }
+
+	    _createClass(PopularItem, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: "/detail/" + this.props.id, className: _buyer2.default.popularItem },
+	                _react2.default.createElement('img', { src: __webpack_require__(250)("./" + this.props.cover) })
+	            );
+	        }
+	    }]);
+
+	    return PopularItem;
+	}(_react.Component);
+
+	var Popular = function (_Component3) {
+	    _inherits(Popular, _Component3);
 
 	    function Popular() {
 	        _classCallCheck(this, Popular);
@@ -4621,6 +4716,21 @@ webpackJsonp([0,2],[
 	    }
 
 	    _createClass(Popular, [{
+	        key: 'renderPopular',
+	        value: function renderPopular(data) {
+	            var dataArr = [];
+	            var id = location.hash.split("/").pop();
+	            for (var i = 0; i < data.length; i++) {
+	                if (data[i].authorId == id) {
+	                    dataArr.push(_react2.default.createElement(PopularItem, { key: data[i].id,
+	                        id: data[i].id,
+	                        cover: data[i].cover
+	                    }));
+	                }
+	            }
+	            return dataArr;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -4639,9 +4749,7 @@ webpackJsonp([0,2],[
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _buyer2.default.popularBox },
-	                    _react2.default.createElement('div', null),
-	                    _react2.default.createElement('div', null),
-	                    _react2.default.createElement('div', null)
+	                    this.renderPopular(_productsData2.default)
 	                )
 	            );
 	        }
@@ -4650,8 +4758,8 @@ webpackJsonp([0,2],[
 	    return Popular;
 	}(_react.Component);
 
-	var ProductItem = function (_Component3) {
-	    _inherits(ProductItem, _Component3);
+	var ProductItem = function (_Component4) {
+	    _inherits(ProductItem, _Component4);
 
 	    function ProductItem() {
 	        _classCallCheck(this, ProductItem);
@@ -4668,7 +4776,7 @@ webpackJsonp([0,2],[
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _buyer2.default.productImg },
-	                    _react2.default.createElement('img', { src: __webpack_require__(249)("./" + this.props.cover) })
+	                    _react2.default.createElement('img', { src: __webpack_require__(250)("./" + this.props.cover) })
 	                ),
 	                _react2.default.createElement(
 	                    'div',
@@ -4689,8 +4797,8 @@ webpackJsonp([0,2],[
 	    return ProductItem;
 	}(_react.Component);
 
-	var Products = function (_Component4) {
-	    _inherits(Products, _Component4);
+	var Products = function (_Component5) {
+	    _inherits(Products, _Component5);
 
 	    function Products() {
 	        _classCallCheck(this, Products);
@@ -4744,8 +4852,8 @@ webpackJsonp([0,2],[
 	    return Products;
 	}(_react.Component);
 
-	var Buyer = function (_Component5) {
-	    _inherits(Buyer, _Component5);
+	var Buyer = function (_Component6) {
+	    _inherits(Buyer, _Component6);
 
 	    function Buyer() {
 	        _classCallCheck(this, Buyer);
@@ -4804,11 +4912,11 @@ webpackJsonp([0,2],[
 	exports.default = Buyer;
 
 /***/ },
-/* 346 */
+/* 351 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"buyer":"buyer__buyer-3yUTi","card":"buyer__card-3KyMo","cardMain":"buyer__cardMain-9zEPT","cardImgBox":"buyer__cardImgBox-13HAw","cardImg":"buyer__cardImg-2mmBS","cardInfo":"buyer__cardInfo-1j5Uo","quoteBox":"buyer__quoteBox-1M3ug","quote":"buyer__quote-348CC","name":"buyer__name-1Cdol","followers":"buyer__followers-2BR9j","desc":"buyer__desc-3t9ju","popular":"buyer__popular-3eidV","title":"buyer__title-X9Uq0","subTitle":"buyer__subTitle-1gFeF","popularBox":"buyer__popularBox-2ObYe","productsHeader":"buyer__productsHeader-3gu78","productItem":"buyer__productItem-3Gl8t","productImg":"buyer__productImg-3FQZN","productTitle":"buyer__productTitle-11stn","productDesc":"buyer__productDesc-2fhsb"};
+	module.exports = {"buyer":"buyer__buyer-3yUTi","card":"buyer__card-3KyMo","cardMain":"buyer__cardMain-9zEPT","cardImgBox":"buyer__cardImgBox-13HAw","cardImg":"buyer__cardImg-2mmBS","cardInfo":"buyer__cardInfo-1j5Uo","quoteBox":"buyer__quoteBox-1M3ug","quote":"buyer__quote-348CC","name":"buyer__name-1Cdol","followers":"buyer__followers-2BR9j","desc":"buyer__desc-3t9ju","popular":"buyer__popular-3eidV","title":"buyer__title-X9Uq0","subTitle":"buyer__subTitle-1gFeF","popularBox":"buyer__popularBox-2ObYe","popularItem":"buyer__popularItem-F1Z3P","productsHeader":"buyer__productsHeader-3gu78","productItem":"buyer__productItem-3Gl8t","productImg":"buyer__productImg-3FQZN","productTitle":"buyer__productTitle-11stn","productDesc":"buyer__productDesc-2fhsb"};
 
 /***/ }
 ]);

@@ -4,7 +4,7 @@ import style from '../css/detail.css'
 import Modal from './Modal'
 import productsData from '../data/productsData.json'
 
-class DetailTop extends Component{
+/*class DetailTop extends Component{
     render(){
         const res = this.props.productInfo;
         return (
@@ -18,7 +18,7 @@ class DetailTop extends Component{
             </Link>
         )
     }
-}
+}*/
 
 class DetailMain extends Component{
     render(){
@@ -27,6 +27,10 @@ class DetailMain extends Component{
             <div className={style.detailMain}>
                 <div className={style.coverBox}>
                     <img src={require('../images/covers/'+res.cover)} />
+                    <div className={style.coverInfo}>
+                        <div className={style.coverTitle}>{res.title}</div>
+                        <Link to={"/buyer/"+res.authorId} className={style.coverAuthor}>{res.author}</Link>
+                    </div>
                 </div>
                 <h4 className={style.title}>
                     {res.title}
@@ -407,7 +411,7 @@ class Detail extends Component{
         }else{
             return (
                 <div className={style.detailBox}>
-                    <DetailTop productInfo={productInfo} />
+                    {/*<DetailTop productInfo={productInfo} />*/}
                     <DetailMain productInfo={productInfo} />
                     <DetailFooter productInfo={productInfo} />
                     <DetailBottom productInfo={productInfo} />

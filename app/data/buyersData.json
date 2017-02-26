@@ -9,15 +9,6 @@
         "following": true
     },
     {
-        "id": "b001",
-        "name": "盐",
-        "desc": "一个盐系男子的日常穿搭",
-        "label": ["日系","穿搭","男士"],
-        "img": "#ccf",
-        "followers": 40679,
-        "following": true
-    },
-    {
         "id": "b002",
         "name": "有怪售",
         "desc": "脑洞少女的次元穿梭日记",
@@ -33,6 +24,42 @@
         "label": ["男式、男士、男事"],
         "img": "#69f",
         "followers": 85763,
+        "following": true
+    },
+    {
+        "id": "b007",
+        "name": "吃喝找野马",
+        "desc": "神经大条的射手座",
+        "label": ["爱吃爱喝爱睡觉","记性差"],
+        "img": "#699",
+        "followers": 39547,
+        "following": true
+    },
+    {
+        "id": "b008",
+        "name": "八号丸子",
+        "desc": "给你带来网红零食的一手报告",
+        "label": ["网红","零食"],
+        "img": "#ff6",
+        "followers": 67421,
+        "following": true
+    },
+    {
+        "id": "b009",
+        "name": "贪吃鬼小埋",
+        "desc": "只为找到最好吃的你",
+        "label": ["懂吃会吃","狮子座"],
+        "img": "#66c",
+        "followers": 126742,
+        "following": true
+    },
+    {
+        "id": "b001",
+        "name": "盐",
+        "desc": "一个盐系男子的日常穿搭",
+        "label": ["日系","穿搭","男士"],
+        "img": "#ccf",
+        "followers": 40679,
         "following": true
     },
     {
@@ -61,32 +88,5 @@
         "img": "#ff3",
         "followers": 22765,
         "following": false
-    },
-    {
-        "id": "b007",
-        "name": "吃喝找野马",
-        "desc": "神经大条的射手座",
-        "label": ["爱吃爱喝爱睡觉","记性差"],
-        "img": "#699",
-        "followers": 39547,
-        "following": true
-    },
-    {
-        "id": "b008",
-        "name": "八号丸子",
-        "desc": "给你带来网红零食的一手报告",
-        "label": ["网红","零食"],
-        "img": "#ff6",
-        "followers": 67421,
-        "following": true
-    },
-    {
-        "id": "b009",
-        "name": "贪吃鬼小埋",
-        "desc": "只为找到最好吃的你",
-        "label": ["懂吃会吃","狮子座"],
-        "img": "#66c",
-        "followers": 126742,
-        "following": true
     }
 ]

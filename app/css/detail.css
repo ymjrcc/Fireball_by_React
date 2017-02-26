@@ -64,11 +64,39 @@
 }
 
 .coverBox{
+    position: relative;
     overflow: hidden;
+    background-color: #000;
+    height: 300px;
 }
 
 .coverBox img{
     width: 100%;
+    opacity: 0.5;
+    height: 100%;
+}
+
+.coverInfo{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.coverTitle{
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #000;
+}
+
+.coverAuthor{
+    padding-bottom: 20px;
+    font-style: italic;
+    display: block;
+}
+
+a.coverAuthor{
+    color: #fff;
 }
 
 .footer1Box{

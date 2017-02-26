@@ -35,16 +35,40 @@ class Card extends Component{
     }
 }
 
+class PopularItem extends Component{
+    render(){
+        return (
+            <Link to={"/detail/"+this.props.id} className={style.popularItem}>
+                <img src={require('../images/covers/'+this.props.cover)} />
+            </Link>
+        )
+    }
+}
+
 class Popular extends Component{
+
+    renderPopular(data){
+        let dataArr = [];
+        let id = location.hash.split("/").pop();
+        for(let i = 0; i < data.length; i++){
+            if(data[i].authorId==id){
+                dataArr.push(<
+                    PopularItem key={data[i].id} 
+                    id={data[i].id}
+                    cover={data[i].cover}
+                />);
+            }
+        }
+        return dataArr;
+    }
+
     render(){
         return (
             <div className={style.popular}>
                 <div className={style.title}>最受欢迎</div>
                 <div className={style.subTitle}>MOST POPULAR</div>
                 <div className={style.popularBox}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    {this.renderPopular(productsData)}
                 </div>
             </div>
         )

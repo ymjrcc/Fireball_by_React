@@ -123,12 +123,17 @@
     padding: 0 10px;
 }
 
-.popularBox div{
+.popularItem{
     flex: 1;
     height: 100px;
-    background-color: #eee;
     margin: 0 10px;
+    overflow: hidden;
+}
 
+.popularItem img{
+    height: 100px;
+    display: block;
+    margin: 0 auto;
 }
 
 .productsHeader{

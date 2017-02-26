@@ -19,13 +19,18 @@
     transform: translateX(-50%);
 }
 
-.homeTop::after{
-    content: '+';
+.buyersIcon{
+    display: block;
     float: right;
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/buyers.png');
+    background-size: cover;
+    position: relative;
+    top: 20px;
 }
 
 .recommendBox{
-    /*margin: 60px 0;*/
     background-color: #fff;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;

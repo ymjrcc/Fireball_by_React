@@ -6,7 +6,12 @@ import productsData from '../data/productsData.json'
 
 class HomeTop extends Component{
     render(){
-        return <div data-maxwidth className={style.homeTop}>今日推荐</div>
+        return (
+            <div data-maxwidth className={style.homeTop}>
+                今日推荐
+                <Link to="/buyers" className={style.buyersIcon}></Link>
+            </div>
+        )
     }
 }
 
