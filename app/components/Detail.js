@@ -169,10 +169,179 @@ class GoBackBtn extends Component{
 }
 
 class ToBuyBtn extends Component{
+
+    constructor(props){
+        super(props);
+        this.state={
+            open: false,
+            window: "edit",
+        }
+    }
+
+    handleClick(){
+        this.setState({
+            open: !this.state.open,
+        })
+    }
+
+    toggleModal(value){
+        this.setState({
+            open: value,
+            window: "edit" 
+        })
+    }
+
+    toggleWindow(value){
+        this.setState({
+            window: value
+        })
+    }
+
     render(){
         const res = this.props.productInfo;
         return (
-            <div className={style.toBuyBtn}>￥ {res.price} 购买 </div>
+            <div>
+                <div className={style.toBuyBtn} onClick={this.handleClick.bind(this)}>￥ {res.price} 购买 </div>
+                <Modal open={this.state.open} window={this.state.window}>
+                    <div>
+                        <EditOrder
+                            productInfo={res} 
+                            toggleModal={this.toggleModal.bind(this)} 
+                            toggleWindow={this.toggleWindow.bind(this)}
+                        />
+                        <SubmitOrder 
+                            productInfo={res} 
+                            toggleModal={this.toggleModal.bind(this)} 
+                            toggleWindow={this.toggleWindow.bind(this)}
+                        />
+                    </div>
+                </Modal> 
+            </div>
+            
+        )
+    }
+}
+
+class EditOrder extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            count: 1
+        }
+    }
+
+    minusOne(){
+        if(this.state.count>1){
+            this.setState({
+                count: this.state.count-1
+            })
+        }
+    }
+
+    addOne(){
+        this.setState({
+            count: this.state.count+1
+        })
+    }
+
+    handleCancel(){
+        this.props.toggleModal(false);
+    }
+
+    handleBuy(){
+        window.count=this.state.count;
+        window.price=this.props.productInfo.price;
+        this.props.toggleWindow("submit");
+    }
+
+    render(){
+        const res = this.props.productInfo;
+        return (
+            <div className={style.editOrder + " edit"}>
+                <div className={style.orderTop}>
+                    <span className={style.orderCancel} onClick={this.handleCancel.bind(this)}>取消</span>
+                    <div>编辑订单</div>
+                </div>
+                <div className={style.orderDetail}>
+                    <div className={style.orderTitle}>
+                        {res.title}
+                        <div className={style.orderTips}>
+                            运费 10 元 | 库存充足
+                        </div>
+                    </div>
+                    <div className={style.orderCover}>
+                        <img src={require('../images/covers/'+res.cover)} />
+                    </div>
+                </div>
+                <div className={style.orderUnit}>一件</div>
+                <div className={style.orderNumCtrl}>
+                    <span className={style.minusBtn} onClick={this.minusOne.bind(this)}>
+                        <span className={style.minusIcon}></span>
+                    </span>
+                    <span className={style.orderNumber}>{this.state.count}</span>
+                    <span className={style.addBtn} onClick={this.addOne.bind(this)}>
+                        <span className={style.addIcon}></span>
+                    </span>
+                </div>
+                <div className={style.orderSubmitBox}>
+                    <div 
+                        className={style.orderSubmitBtn} 
+                        onClick={this.handleBuy.bind(this)}
+                    >
+                        ￥ {this.state.count * res.price} 确认
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+class SubmitOrder extends Component{
+
+    handleBack(){
+        this.props.toggleWindow("edit");
+    }
+
+    handleSuccess(){
+        this.props.toggleModal(false);
+        alert("支付成功！");
+    }
+
+    render(){
+        const res = this.props.productInfo;
+        return (
+            <div className={style.submitOrder + " submit"}>
+                <div className={style.orderTop}>
+                    <span className={style.orderBack} onClick={this.handleBack.bind(this)}>返回</span>
+                    <div>确认订单</div>
+                </div>
+                <div className={style.orderRow}>杭州市西湖区丰潭路</div>
+                <div className={style.orderRow}>
+                    {res.title}
+                    {' '}
+                    <div className={style.count}>一件×<span id="count"></span></div>
+                </div>
+                <div className={style.orderRow}>暂无可用优惠券</div>
+                <div className={style.orderRow}>
+                    实付款
+                    <div className={style.priceBox}>
+                        <div className={style.priceTag}>￥ <span id="price"></span></div>
+                        <div className={style.priceTip}>含运费10元</div>
+                    </div>
+                </div>
+                <div className={style.orderRow}>
+                    <input className={style.orderNotes} type="text" placeholder="添加备注..." />
+                </div>
+                <div className={style.orderSubmitBox}>
+                    <div 
+                        className={style.orderSubmitBtn} 
+                        onClick={this.handleSuccess.bind(this)}
+                    >
+                        确认支付
+                    </div>
+                </div>
+            </div>
         )
     }
 }

@@ -3636,22 +3636,72 @@ webpackJsonp([0,2],[
 	var ToBuyBtn = function (_Component10) {
 	    _inherits(ToBuyBtn, _Component10);
 
-	    function ToBuyBtn() {
+	    function ToBuyBtn(props) {
 	        _classCallCheck(this, ToBuyBtn);
 
-	        return _possibleConstructorReturn(this, (ToBuyBtn.__proto__ || Object.getPrototypeOf(ToBuyBtn)).apply(this, arguments));
+	        var _this10 = _possibleConstructorReturn(this, (ToBuyBtn.__proto__ || Object.getPrototypeOf(ToBuyBtn)).call(this, props));
+
+	        _this10.state = {
+	            open: false,
+	            window: "edit"
+	        };
+	        return _this10;
 	    }
 
 	    _createClass(ToBuyBtn, [{
+	        key: 'handleClick',
+	        value: function handleClick() {
+	            this.setState({
+	                open: !this.state.open
+	            });
+	        }
+	    }, {
+	        key: 'toggleModal',
+	        value: function toggleModal(value) {
+	            this.setState({
+	                open: value,
+	                window: "edit"
+	            });
+	        }
+	    }, {
+	        key: 'toggleWindow',
+	        value: function toggleWindow(value) {
+	            this.setState({
+	                window: value
+	            });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            var res = this.props.productInfo;
 	            return _react2.default.createElement(
 	                'div',
-	                { className: _detail2.default.toBuyBtn },
-	                '\uFFE5 ',
-	                res.price,
-	                ' \u8D2D\u4E70 '
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.toBuyBtn, onClick: this.handleClick.bind(this) },
+	                    '\uFFE5 ',
+	                    res.price,
+	                    ' \u8D2D\u4E70 '
+	                ),
+	                _react2.default.createElement(
+	                    _Modal2.default,
+	                    { open: this.state.open, window: this.state.window },
+	                    _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        _react2.default.createElement(EditOrder, {
+	                            productInfo: res,
+	                            toggleModal: this.toggleModal.bind(this),
+	                            toggleWindow: this.toggleWindow.bind(this)
+	                        }),
+	                        _react2.default.createElement(SubmitOrder, {
+	                            productInfo: res,
+	                            toggleModal: this.toggleModal.bind(this),
+	                            toggleWindow: this.toggleWindow.bind(this)
+	                        })
+	                    )
+	                )
 	            );
 	        }
 	    }]);
@@ -3659,8 +3709,242 @@ webpackJsonp([0,2],[
 	    return ToBuyBtn;
 	}(_react.Component);
 
-	var ShareAlert = function (_Component11) {
-	    _inherits(ShareAlert, _Component11);
+	var EditOrder = function (_Component11) {
+	    _inherits(EditOrder, _Component11);
+
+	    function EditOrder(props) {
+	        _classCallCheck(this, EditOrder);
+
+	        var _this11 = _possibleConstructorReturn(this, (EditOrder.__proto__ || Object.getPrototypeOf(EditOrder)).call(this, props));
+
+	        _this11.state = {
+	            count: 1
+	        };
+	        return _this11;
+	    }
+
+	    _createClass(EditOrder, [{
+	        key: 'minusOne',
+	        value: function minusOne() {
+	            if (this.state.count > 1) {
+	                this.setState({
+	                    count: this.state.count - 1
+	                });
+	            }
+	        }
+	    }, {
+	        key: 'addOne',
+	        value: function addOne() {
+	            this.setState({
+	                count: this.state.count + 1
+	            });
+	        }
+	    }, {
+	        key: 'handleCancel',
+	        value: function handleCancel() {
+	            this.props.toggleModal(false);
+	        }
+	    }, {
+	        key: 'handleBuy',
+	        value: function handleBuy() {
+	            window.count = this.state.count;
+	            window.price = this.props.productInfo.price;
+	            this.props.toggleWindow("submit");
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var res = this.props.productInfo;
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _detail2.default.editOrder + " edit" },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.orderTop },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: _detail2.default.orderCancel, onClick: this.handleCancel.bind(this) },
+	                        '\u53D6\u6D88'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '\u7F16\u8F91\u8BA2\u5355'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.orderDetail },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _detail2.default.orderTitle },
+	                        res.title,
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _detail2.default.orderTips },
+	                            '\u8FD0\u8D39 10 \u5143 | \u5E93\u5B58\u5145\u8DB3'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _detail2.default.orderCover },
+	                        _react2.default.createElement('img', { src: __webpack_require__(249)("./" + res.cover) })
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.orderUnit },
+	                    '\u4E00\u4EF6'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.orderNumCtrl },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: _detail2.default.minusBtn, onClick: this.minusOne.bind(this) },
+	                        _react2.default.createElement('span', { className: _detail2.default.minusIcon })
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: _detail2.default.orderNumber },
+	                        this.state.count
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: _detail2.default.addBtn, onClick: this.addOne.bind(this) },
+	                        _react2.default.createElement('span', { className: _detail2.default.addIcon })
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.orderSubmitBox },
+	                    _react2.default.createElement(
+	                        'div',
+	                        {
+	                            className: _detail2.default.orderSubmitBtn,
+	                            onClick: this.handleBuy.bind(this)
+	                        },
+	                        '\uFFE5 ',
+	                        this.state.count * res.price,
+	                        ' \u786E\u8BA4'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return EditOrder;
+	}(_react.Component);
+
+	var SubmitOrder = function (_Component12) {
+	    _inherits(SubmitOrder, _Component12);
+
+	    function SubmitOrder() {
+	        _classCallCheck(this, SubmitOrder);
+
+	        return _possibleConstructorReturn(this, (SubmitOrder.__proto__ || Object.getPrototypeOf(SubmitOrder)).apply(this, arguments));
+	    }
+
+	    _createClass(SubmitOrder, [{
+	        key: 'handleBack',
+	        value: function handleBack() {
+	            this.props.toggleWindow("edit");
+	        }
+	    }, {
+	        key: 'handleSuccess',
+	        value: function handleSuccess() {
+	            this.props.toggleModal(false);
+	            alert("支付成功！");
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var res = this.props.productInfo;
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _detail2.default.submitOrder + " submit" },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.orderTop },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: _detail2.default.orderBack, onClick: this.handleBack.bind(this) },
+	                        '\u8FD4\u56DE'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        '\u786E\u8BA4\u8BA2\u5355'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.orderRow },
+	                    '\u676D\u5DDE\u5E02\u897F\u6E56\u533A\u4E30\u6F6D\u8DEF'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.orderRow },
+	                    res.title,
+	                    ' ',
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _detail2.default.count },
+	                        '\u4E00\u4EF6\xD7',
+	                        _react2.default.createElement('span', { id: 'count' })
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.orderRow },
+	                    '\u6682\u65E0\u53EF\u7528\u4F18\u60E0\u5238'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.orderRow },
+	                    '\u5B9E\u4ED8\u6B3E',
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _detail2.default.priceBox },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _detail2.default.priceTag },
+	                            '\uFFE5 ',
+	                            _react2.default.createElement('span', { id: 'price' })
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _detail2.default.priceTip },
+	                            '\u542B\u8FD0\u8D3910\u5143'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.orderRow },
+	                    _react2.default.createElement('input', { className: _detail2.default.orderNotes, type: 'text', placeholder: '\u6DFB\u52A0\u5907\u6CE8...' })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.orderSubmitBox },
+	                    _react2.default.createElement(
+	                        'div',
+	                        {
+	                            className: _detail2.default.orderSubmitBtn,
+	                            onClick: this.handleSuccess.bind(this)
+	                        },
+	                        '\u786E\u8BA4\u652F\u4ED8'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return SubmitOrder;
+	}(_react.Component);
+
+	var ShareAlert = function (_Component13) {
+	    _inherits(ShareAlert, _Component13);
 
 	    function ShareAlert() {
 	        _classCallCheck(this, ShareAlert);
@@ -3741,8 +4025,8 @@ webpackJsonp([0,2],[
 	    return ShareAlert;
 	}(_react.Component);
 
-	var Detail = function (_Component12) {
-	    _inherits(Detail, _Component12);
+	var Detail = function (_Component14) {
+	    _inherits(Detail, _Component14);
 
 	    function Detail() {
 	        _classCallCheck(this, Detail);
@@ -3804,7 +4088,7 @@ webpackJsonp([0,2],[
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"detailBox":"detail__detailBox-1b6ne","detailTop":"detail__detailTop-y67pU","topHeadImg":"detail__topHeadImg-1F-dC","topMain":"detail__topMain-2ocL_","topAuthor":"detail__topAuthor-2S8CJ","topDate":"detail__topDate-3g-mq","topToAutor":"detail__topToAutor-3yV1r","detailMain":"detail__detailMain-2FgJ8","title":"detail__title-25WQY","text":"detail__text-1Itjd","coverBox":"detail__coverBox-RTVdl","footer1Box":"detail__footer1Box-32sxZ","footer1Item":"detail__footer1Item-3c7MH","footer2Box":"detail__footer2Box-1I_1V","footer3Box":"detail__footer3Box-3-dOX","footer3Title":"detail__footer3Title-3SPcj","footer3Div":"detail__footer3Div-3GtmX","footer3Item":"detail__footer3Item-3UbY4","footer4Box":"detail__footer4Box-2AQQs","footer4Title":"detail__footer4Title-1T6QE","que":"detail__que-Iw08T","ans":"detail__ans-3cNDb","detailBottom":"detail__detailBottom-wwWK5","bottomLeft":"detail__bottomLeft-2hXUT","bottomRight":"detail__bottomRight-25V45","bottomItem":"detail__bottomItem-3w1Vl","back":"detail__back-Kvo7c","liked":"detail__liked-2EUmN","like":"detail__like-37XOr","share":"detail__share-2dNpf","toBuyBtn":"detail__toBuyBtn-2Ie37","shareAlert":"detail__shareAlert-2ymjP","shareInfo":"detail__shareInfo-1z-Yi","shareBox":"detail__shareBox-k9sYO","shareWay":"detail__shareWay-3xdaG","shareItem":"detail__shareItem-2zlZe","shareCancel":"detail__shareCancel-3OP78"};
+	module.exports = {"detailBox":"detail__detailBox-1b6ne","detailTop":"detail__detailTop-y67pU","topHeadImg":"detail__topHeadImg-1F-dC","topMain":"detail__topMain-2ocL_","topAuthor":"detail__topAuthor-2S8CJ","topDate":"detail__topDate-3g-mq","topToAutor":"detail__topToAutor-3yV1r","detailMain":"detail__detailMain-2FgJ8","title":"detail__title-25WQY","text":"detail__text-1Itjd","coverBox":"detail__coverBox-RTVdl","footer1Box":"detail__footer1Box-32sxZ","footer1Item":"detail__footer1Item-3c7MH","footer2Box":"detail__footer2Box-1I_1V","footer3Box":"detail__footer3Box-3-dOX","footer3Title":"detail__footer3Title-3SPcj","footer3Div":"detail__footer3Div-3GtmX","footer3Item":"detail__footer3Item-3UbY4","footer4Box":"detail__footer4Box-2AQQs","footer4Title":"detail__footer4Title-1T6QE","que":"detail__que-Iw08T","ans":"detail__ans-3cNDb","detailBottom":"detail__detailBottom-wwWK5","bottomLeft":"detail__bottomLeft-2hXUT","bottomRight":"detail__bottomRight-25V45","bottomItem":"detail__bottomItem-3w1Vl","back":"detail__back-Kvo7c","liked":"detail__liked-2EUmN","like":"detail__like-37XOr","share":"detail__share-2dNpf","toBuyBtn":"detail__toBuyBtn-2Ie37","shareAlert":"detail__shareAlert-2ymjP","shareInfo":"detail__shareInfo-1z-Yi","shareBox":"detail__shareBox-k9sYO","shareWay":"detail__shareWay-3xdaG","shareItem":"detail__shareItem-2zlZe","shareCancel":"detail__shareCancel-3OP78","editOrder":"detail__editOrder-1Uj4b","submitOrder":"detail__submitOrder-31zfO","orderTop":"detail__orderTop-1lt05","orderCancel":"detail__orderCancel-ElZrY","orderBack":"detail__orderBack-2GqOv","orderDetail":"detail__orderDetail-29uqs","orderTitle":"detail__orderTitle-2Vy9L","orderTips":"detail__orderTips-30Ddf","orderCover":"detail__orderCover-YfSxi","orderUnit":"detail__orderUnit-27Rlq","minusBtn":"detail__minusBtn-1nssf","addBtn":"detail__addBtn-23sIu","minusIcon":"detail__minusIcon-2Q2Pc","addIcon":"detail__addIcon-3d3v7","orderNumber":"detail__orderNumber-o004D","orderSubmitBox":"detail__orderSubmitBox-3itpo","orderSubmitBtn":"detail__orderSubmitBtn-24cat","orderRow":"detail__orderRow-2srLh","count":"detail__count-2E8dn","priceBox":"detail__priceBox-Mzi7I","priceTag":"detail__priceTag-1Yo3o","priceTip":"detail__priceTip-2FDSb","orderNotes":"detail__orderNotes-3-Pos"};
 
 /***/ },
 /* 328 */,
@@ -3866,13 +4150,25 @@ webpackJsonp([0,2],[
 	                var modal = _react2.default.createElement(
 	                    'div',
 	                    { className: _modal2.default.container },
-	                    '123456'
+	                    this.props.children
 	                );
 	                var all = document.getElementsByClassName('modal');
 	                _reactDom2.default.render(modal, all[all.length - 1]);
 	            } else if (!nextProps.open && this.props.open) {
 	                //关
-	                _reactDom2.default.unmountComponentAtNode(this.node);
+	                // 方法1：
+	                // ReactDOM.unmountComponentAtNode(this.node);
+	                // 方法2：（不太正规）
+	                document.getElementsByTagName('body')[0].removeChild(document.getElementsByClassName('modal')[0]);
+	            }
+	            if (nextProps.window == "edit") {
+	                document.getElementsByClassName('edit').length > 0 && (document.getElementsByClassName('edit')[0].style.display = "block");
+	                document.getElementsByClassName('submit').length > 0 && (document.getElementsByClassName('submit')[0].style.display = "none");
+	            } else if (nextProps.window == "submit") {
+	                document.getElementById('count').innerHTML = window.count;
+	                document.getElementById('price').innerHTML = window.count * window.price + 10;
+	                document.getElementsByClassName('edit').length > 0 && (document.getElementsByClassName('edit')[0].style.display = "none");
+	                document.getElementsByClassName('submit').length > 0 && (document.getElementsByClassName('submit')[0].style.display = "block");
 	            }
 	        }
 	    }, {
