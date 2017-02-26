@@ -3,7 +3,6 @@ import {hashHistory, Link} from 'react-router'
 import classnames from 'classnames'
 import Item from './Item'
 import style from '../css/topic.css'
-import topicData from '../data/topicData.json'
 import productsData from '../data/productsData.json'
 
 class TopicHeader extends Component{

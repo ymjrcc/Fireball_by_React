@@ -195,6 +195,10 @@
     margin-right: 5px;
 }
 
+.liked{
+    background-image: url('../images/liked.png');
+}
+
 .like{
     background-image: url('../images/like.png');
 }
@@ -216,4 +220,66 @@
     outline: none;
     border: none;
     font-size: 1.8rem;
+}
+
+.shareAlert{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    font-size: 1.4rem;
+    color: #666;
+    border-top: 1px solid #ccc;
+}
+
+.shareInfo{
+    background-color: #f9f9f9;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.shareBox{
+    display: flex;
+    padding: 30px;
+}
+
+.shareWay{
+    flex: 1;
+    text-align: center;
+}
+
+.shareItem{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background-size: cover;
+    background-position: 50% 50%;
+    opacity: 0.8;
+}
+
+.shareItem[data-name="weixin"]{
+    background-image: url('../images/weixin.png');
+}
+.shareItem[data-name="moments"]{
+    background-image: url('../images/moments.png');
+}
+.shareItem[data-name="weibo"]{
+    background-image: url('../images/weibo.png');
+}
+.shareItem[data-name="copy"]{
+    background-image: url('../images/copy.png');
+}
+
+.shareCancel{
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 1.6rem;
 }

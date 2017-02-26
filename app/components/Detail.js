@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
-import style from '../css/detail.css'
 import {hashHistory,Link} from 'react-router'
+import style from '../css/detail.css'
+import Modal from './Modal'
 import productsData from '../data/productsData.json'
 
 class DetailTop extends Component{
@@ -108,17 +109,38 @@ class DetailFooter extends Component{
 }
 
 class DetailBottom extends Component{
+
+    constructor(props){
+        super(props);
+        this.state={
+            liked: this.props.productInfo.liked,
+            share: false
+        }
+    }
+
+    handleLike(){
+        this.setState({liked:!this.state.liked});
+    }
+
+    handleShare(){
+        this.setState({share:!this.state.share});
+    }
+
+    handleCancel(value){
+        this.setState({share:value});
+    }
+
     render(){
         const res = this.props.productInfo;
         return (
             <div data-maxwidth className={style.detailBottom}>
                 <div className={style.bottomLeft}>
                     <GoBackBtn />
-                    <span className={style.bottomItem}>
-                        <div className={style.like}></div>
+                    <span className={style.bottomItem} onClick={this.handleLike.bind(this)}>
+                        <div className={this.state.liked?style.liked:style.like}></div>
                         {res.likes>999?((res.likes/1000).toFixed(1)+"k"):res.likes}
                     </span>
-                    <span className={style.bottomItem}>
+                    <span className={style.bottomItem} onClick={this.handleCancel.bind(this)}>
                         <div className={style.share}></div>
                         {res.share>999?((res.share/1000.0).toFixed(1)+"k"):res.share}
                     </span>
@@ -126,6 +148,7 @@ class DetailBottom extends Component{
                 <div className={style.bottomRight}>
                     <ToBuyBtn productInfo={res} />
                 </div>
+                <ShareAlert show={this.state.share} handleCancel={this.handleCancel.bind(this)}/>                
             </div>
         )
     }
@@ -150,6 +173,41 @@ class ToBuyBtn extends Component{
         const res = this.props.productInfo;
         return (
             <div className={style.toBuyBtn}>￥ {res.price} 购买 </div>
+        )
+    }
+}
+
+class ShareAlert extends Component{
+
+    handleCancel(){
+        this.props.handleCancel(false);
+    }
+
+    render(){
+        let display = this.props.show?"block":"none";
+        return(
+            <div className={style.shareAlert} style={{display:display}}>
+                <div className={style.shareInfo}>每邀请一位好友下单，即得10元无门槛红包</div>
+                <div className={style.shareBox}>
+                    <div className={style.shareWay}>
+                        <div className={style.shareItem} data-name="weixin"></div>
+                        <div className={style.shareText}>微信好友</div>
+                    </div>
+                    <div className={style.shareWay}>
+                        <div className={style.shareItem} data-name="moments"></div>
+                        <div className={style.shareText}>朋友圈</div>
+                    </div>
+                    <div className={style.shareWay}>
+                        <div className={style.shareItem} data-name="weibo"></div>
+                        <div className={style.shareText}>微博</div>
+                    </div>
+                    <div className={style.shareWay}>
+                        <div className={style.shareItem} data-name="copy"></div>
+                        <div className={style.shareText}>复制链接</div>
+                    </div>
+                </div>
+                <div className={style.shareCancel} onClick={this.handleCancel.bind(this)}>取消</div>
+            </div>
         )
     }
 }

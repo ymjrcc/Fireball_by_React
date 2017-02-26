@@ -3,7 +3,7 @@ import {Link} from 'react-router'
 import Item from './Item'
 import TopFixed from './TopFixed'
 import style from '../css/ranking.css'
-import topicData from '../data/topicData.json'
+import productsData from '../data/productsData.json'
 
 class Ranking extends Component{
 
@@ -25,7 +25,16 @@ class RankingList extends Component{
     renderRanking(data){
         let dataArr = [];
         for(let i = 0; i < data.length; i++){
-            dataArr.push(<Item key={data[i].id} title={data[i].title} likes={data[i].likes} price={data[i].price} />);
+            dataArr.push(
+                <Item 
+                    key={data[i].id} 
+                    id={data[i].id} 
+                    title={data[i].title} 
+                    likes={data[i].likes} 
+                    price={data[i].price} 
+                    cover={data[i].cover} 
+                />
+            );
         }
         return dataArr;
     }
@@ -33,7 +42,7 @@ class RankingList extends Component{
     render(){
         return (
             <div className={style.rankingList}>
-                {this.renderRanking(topicData)}
+                {this.renderRanking(productsData)}
             </div>
         )
     }
