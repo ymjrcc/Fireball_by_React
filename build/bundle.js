@@ -58,19 +58,19 @@ webpackJsonp([0,2],[
 
 	var _Topic2 = _interopRequireDefault(_Topic);
 
-	var _Detail = __webpack_require__(327);
+	var _Detail = __webpack_require__(326);
 
 	var _Detail2 = _interopRequireDefault(_Detail);
 
-	var _Ranking = __webpack_require__(332);
+	var _Ranking = __webpack_require__(339);
 
 	var _Ranking2 = _interopRequireDefault(_Ranking);
 
-	var _Buyers = __webpack_require__(335);
+	var _Buyers = __webpack_require__(342);
 
 	var _Buyers2 = _interopRequireDefault(_Buyers);
 
-	var _Buyer = __webpack_require__(338);
+	var _Buyer = __webpack_require__(345);
 
 	var _Buyer2 = _interopRequireDefault(_Buyer);
 
@@ -662,6 +662,7 @@ webpackJsonp([0,2],[
 			"cover": "c-p006.jpg",
 			"date": "2017-02-24",
 			"likes": 2157,
+			"liked": false,
 			"share": 292,
 			"price": 39,
 			"text": "正文：深海生物烹饪指南——一本有趣的科普图书；正文：深海生物烹饪指南——一本有趣的科普图书；正文：深海生物烹饪指南——一本有趣的科普图书；正文：深海生物烹饪指南——一本有趣的科普图书；正文：深海生物烹饪指南——一本有趣的科普图书；正文：深海生物烹饪指南——一本有趣的科普图书；正文：深海生物烹饪指南——一本有趣的科普图书；正文：深海生物烹饪指南——一本有趣的科普图书；正文：深海生物烹饪指南——一本有趣的科普图书；正文：深海生物烹饪指南——一本有趣的科普图书；"
@@ -674,6 +675,7 @@ webpackJsonp([0,2],[
 			"cover": "c-p000.jpg",
 			"date": "2017-02-22",
 			"likes": 3293,
+			"liked": false,
 			"share": 557,
 			"price": 379,
 			"text": "正文：论百搭，我只服MA-1飞行夹克；正文：论百搭，我只服MA-1飞行夹克；正文：论百搭，我只服MA-1飞行夹克；正文：论百搭，我只服MA-1飞行夹克；正文：论百搭，我只服MA-1飞行夹克；正文：论百搭，我只服MA-1飞行夹克；正文：论百搭，我只服MA-1飞行夹克；正文：论百搭，我只服MA-1飞行夹克；正文：论百搭，我只服MA-1飞行夹克；正文：论百搭，我只服MA-1飞行夹克；"
@@ -686,6 +688,7 @@ webpackJsonp([0,2],[
 			"cover": "c-p001.jpg",
 			"date": "2017-02-21",
 			"likes": 2343,
+			"liked": true,
 			"share": 253,
 			"price": 24.8,
 			"text": "正文：吃冻干水果，像宇航员一样健康（二）；吃冻干水果，像宇航员一样健康（二）；吃冻干水果，像宇航员一样健康（二）；吃冻干水果，像宇航员一样健康（二）；吃冻干水果，像宇航员一样健康（二）；吃冻干水果，像宇航员一样健康（二）；吃冻干水果，像宇航员一样健康（二）；吃冻干水果，像宇航员一样健康（二）；吃冻干水果，像宇航员一样健康（二）；吃冻干水果，像宇航员一样健康（二）；"
@@ -698,6 +701,7 @@ webpackJsonp([0,2],[
 			"cover": "c-p002.jpg",
 			"date": "2017-02-21",
 			"likes": 3156,
+			"liked": true,
 			"share": 667,
 			"price": 42,
 			"text": "正文：开学了，你的麦片准备好了吗？正文：开学了，你的麦片准备好了吗？正文：开学了，你的麦片准备好了吗？正文：开学了，你的麦片准备好了吗？正文：开学了，你的麦片准备好了吗？正文：开学了，你的麦片准备好了吗？正文：开学了，你的麦片准备好了吗？正文：开学了，你的麦片准备好了吗？正文：开学了，你的麦片准备好了吗？正文：开学了，你的麦片准备好了吗？"
@@ -710,6 +714,7 @@ webpackJsonp([0,2],[
 			"cover": "c-p003.jpg",
 			"date": "2017-02-21",
 			"likes": 3799,
+			"liked": false,
 			"share": 789,
 			"price": 68,
 			"text": "正文：这把刀戳到我心中的某个G点了；正文：这把刀戳到我心中的某个G点了；正文：这把刀戳到我心中的某个G点了；正文：这把刀戳到我心中的某个G点了；正文：这把刀戳到我心中的某个G点了；正文：这把刀戳到我心中的某个G点了；正文：这把刀戳到我心中的某个G点了；正文：这把刀戳到我心中的某个G点了；正文：这把刀戳到我心中的某个G点了；正文：这把刀戳到我心中的某个G点了；"
@@ -722,6 +727,7 @@ webpackJsonp([0,2],[
 			"cover": "c-p004.jpg",
 			"date": "2017-02-20",
 			"likes": 4935,
+			"liked": true,
 			"share": 2155,
 			"price": 29,
 			"text": "正文：套上壳，回到那个红白机年代；正文：套上壳，回到那个红白机年代；正文：套上壳，回到那个红白机年代；正文：套上壳，回到那个红白机年代；正文：套上壳，回到那个红白机年代；正文：套上壳，回到那个红白机年代；正文：套上壳，回到那个红白机年代；正文：套上壳，回到那个红白机年代；正文：套上壳，回到那个红白机年代；正文：套上壳，回到那个红白机年代；"
@@ -734,6 +740,7 @@ webpackJsonp([0,2],[
 			"cover": "c-p005.jpg",
 			"date": "2017-02-20",
 			"likes": 6098,
+			"liked": false,
 			"share": 1263,
 			"price": 4.5,
 			"text": "正文：在家如何自制COCO奶茶？正文：在家如何自制COCO奶茶？正文：在家如何自制COCO奶茶？正文：在家如何自制COCO奶茶？正文：在家如何自制COCO奶茶？正文：在家如何自制COCO奶茶？正文：在家如何自制COCO奶茶？正文：在家如何自制COCO奶茶？正文：在家如何自制COCO奶茶？正文：在家如何自制COCO奶茶？正文：在家如何自制COCO奶茶？"
@@ -2907,10 +2914,6 @@ webpackJsonp([0,2],[
 
 	var _topic2 = _interopRequireDefault(_topic);
 
-	var _topicData = __webpack_require__(326);
-
-	var _topicData2 = _interopRequireDefault(_topicData);
-
 	var _productsData = __webpack_require__(248);
 
 	var _productsData2 = _interopRequireDefault(_productsData);
@@ -3222,61 +3225,6 @@ webpackJsonp([0,2],[
 /* 324 */,
 /* 325 */,
 /* 326 */
-/***/ function(module, exports) {
-
-	module.exports = [
-		{
-			"id": 0,
-			"title": "一根爽嗨的咖啡因能量棒",
-			"likes": 48621,
-			"price": 49
-		},
-		{
-			"id": 1,
-			"title": "看了这个之后我长高了5公分",
-			"likes": 11047,
-			"price": 198
-		},
-		{
-			"id": 2,
-			"title": "这是属于工装夹克的季节",
-			"likes": 3350,
-			"price": 169
-		},
-		{
-			"id": 3,
-			"title": "露腿之际 | 坐着瘦才是正经事",
-			"likes": 4172,
-			"price": 179
-		},
-		{
-			"id": 4,
-			"title": "让你的袜子一周不重样",
-			"likes": 6699,
-			"price": 35
-		},
-		{
-			"id": 5,
-			"title": "今天，我不难过",
-			"likes": 999,
-			"price": 39
-		},
-		{
-			"id": 6,
-			"title": "开春了，换上新的四件套吧",
-			"likes": 2738,
-			"price": 213
-		},
-		{
-			"id": 7,
-			"title": "外婆家的味道 红糖大暴走",
-			"likes": 1400,
-			"price": 20
-		}
-	];
-
-/***/ },
-/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3291,11 +3239,15 @@ webpackJsonp([0,2],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _detail = __webpack_require__(328);
+	var _reactRouter = __webpack_require__(178);
+
+	var _detail = __webpack_require__(327);
 
 	var _detail2 = _interopRequireDefault(_detail);
 
-	var _reactRouter = __webpack_require__(178);
+	var _Modal = __webpack_require__(336);
+
+	var _Modal2 = _interopRequireDefault(_Modal);
 
 	var _productsData = __webpack_require__(248);
 
@@ -3589,13 +3541,34 @@ webpackJsonp([0,2],[
 	var DetailBottom = function (_Component8) {
 	    _inherits(DetailBottom, _Component8);
 
-	    function DetailBottom() {
+	    function DetailBottom(props) {
 	        _classCallCheck(this, DetailBottom);
 
-	        return _possibleConstructorReturn(this, (DetailBottom.__proto__ || Object.getPrototypeOf(DetailBottom)).apply(this, arguments));
+	        var _this8 = _possibleConstructorReturn(this, (DetailBottom.__proto__ || Object.getPrototypeOf(DetailBottom)).call(this, props));
+
+	        _this8.state = {
+	            liked: _this8.props.productInfo.liked,
+	            share: false
+	        };
+	        return _this8;
 	    }
 
 	    _createClass(DetailBottom, [{
+	        key: 'handleLike',
+	        value: function handleLike() {
+	            this.setState({ liked: !this.state.liked });
+	        }
+	    }, {
+	        key: 'handleShare',
+	        value: function handleShare() {
+	            this.setState({ share: !this.state.share });
+	        }
+	    }, {
+	        key: 'handleCancel',
+	        value: function handleCancel(value) {
+	            this.setState({ share: value });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            var res = this.props.productInfo;
@@ -3608,13 +3581,13 @@ webpackJsonp([0,2],[
 	                    _react2.default.createElement(GoBackBtn, null),
 	                    _react2.default.createElement(
 	                        'span',
-	                        { className: _detail2.default.bottomItem },
-	                        _react2.default.createElement('div', { className: _detail2.default.like }),
+	                        { className: _detail2.default.bottomItem, onClick: this.handleLike.bind(this) },
+	                        _react2.default.createElement('div', { className: this.state.liked ? _detail2.default.liked : _detail2.default.like }),
 	                        res.likes > 999 ? (res.likes / 1000).toFixed(1) + "k" : res.likes
 	                    ),
 	                    _react2.default.createElement(
 	                        'span',
-	                        { className: _detail2.default.bottomItem },
+	                        { className: _detail2.default.bottomItem, onClick: this.handleCancel.bind(this) },
 	                        _react2.default.createElement('div', { className: _detail2.default.share }),
 	                        res.share > 999 ? (res.share / 1000.0).toFixed(1) + "k" : res.share
 	                    )
@@ -3623,7 +3596,8 @@ webpackJsonp([0,2],[
 	                    'div',
 	                    { className: _detail2.default.bottomRight },
 	                    _react2.default.createElement(ToBuyBtn, { productInfo: res })
-	                )
+	                ),
+	                _react2.default.createElement(ShareAlert, { show: this.state.share, handleCancel: this.handleCancel.bind(this) })
 	            );
 	        }
 	    }]);
@@ -3685,8 +3659,90 @@ webpackJsonp([0,2],[
 	    return ToBuyBtn;
 	}(_react.Component);
 
-	var Detail = function (_Component11) {
-	    _inherits(Detail, _Component11);
+	var ShareAlert = function (_Component11) {
+	    _inherits(ShareAlert, _Component11);
+
+	    function ShareAlert() {
+	        _classCallCheck(this, ShareAlert);
+
+	        return _possibleConstructorReturn(this, (ShareAlert.__proto__ || Object.getPrototypeOf(ShareAlert)).apply(this, arguments));
+	    }
+
+	    _createClass(ShareAlert, [{
+	        key: 'handleCancel',
+	        value: function handleCancel() {
+	            this.props.handleCancel(false);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var display = this.props.show ? "block" : "none";
+	            return _react2.default.createElement(
+	                'div',
+	                { className: _detail2.default.shareAlert, style: { display: display } },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.shareInfo },
+	                    '\u6BCF\u9080\u8BF7\u4E00\u4F4D\u597D\u53CB\u4E0B\u5355\uFF0C\u5373\u5F9710\u5143\u65E0\u95E8\u69DB\u7EA2\u5305'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.shareBox },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _detail2.default.shareWay },
+	                        _react2.default.createElement('div', { className: _detail2.default.shareItem, 'data-name': 'weixin' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _detail2.default.shareText },
+	                            '\u5FAE\u4FE1\u597D\u53CB'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _detail2.default.shareWay },
+	                        _react2.default.createElement('div', { className: _detail2.default.shareItem, 'data-name': 'moments' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _detail2.default.shareText },
+	                            '\u670B\u53CB\u5708'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _detail2.default.shareWay },
+	                        _react2.default.createElement('div', { className: _detail2.default.shareItem, 'data-name': 'weibo' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _detail2.default.shareText },
+	                            '\u5FAE\u535A'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: _detail2.default.shareWay },
+	                        _react2.default.createElement('div', { className: _detail2.default.shareItem, 'data-name': 'copy' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _detail2.default.shareText },
+	                            '\u590D\u5236\u94FE\u63A5'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: _detail2.default.shareCancel, onClick: this.handleCancel.bind(this) },
+	                    '\u53D6\u6D88'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return ShareAlert;
+	}(_react.Component);
+
+	var Detail = function (_Component12) {
+	    _inherits(Detail, _Component12);
 
 	    function Detail() {
 	        _classCallCheck(this, Detail);
@@ -3744,17 +3800,106 @@ webpackJsonp([0,2],[
 	exports.default = Detail;
 
 /***/ },
-/* 328 */
+/* 327 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"detailBox":"detail__detailBox-1b6ne","detailTop":"detail__detailTop-y67pU","topHeadImg":"detail__topHeadImg-1F-dC","topMain":"detail__topMain-2ocL_","topAuthor":"detail__topAuthor-2S8CJ","topDate":"detail__topDate-3g-mq","topToAutor":"detail__topToAutor-3yV1r","detailMain":"detail__detailMain-2FgJ8","title":"detail__title-25WQY","text":"detail__text-1Itjd","coverBox":"detail__coverBox-RTVdl","footer1Box":"detail__footer1Box-32sxZ","footer1Item":"detail__footer1Item-3c7MH","footer2Box":"detail__footer2Box-1I_1V","footer3Box":"detail__footer3Box-3-dOX","footer3Title":"detail__footer3Title-3SPcj","footer3Div":"detail__footer3Div-3GtmX","footer3Item":"detail__footer3Item-3UbY4","footer4Box":"detail__footer4Box-2AQQs","footer4Title":"detail__footer4Title-1T6QE","que":"detail__que-Iw08T","ans":"detail__ans-3cNDb","detailBottom":"detail__detailBottom-wwWK5","bottomLeft":"detail__bottomLeft-2hXUT","bottomRight":"detail__bottomRight-25V45","bottomItem":"detail__bottomItem-3w1Vl","back":"detail__back-Kvo7c","like":"detail__like-37XOr","share":"detail__share-2dNpf","toBuyBtn":"detail__toBuyBtn-2Ie37"};
+	module.exports = {"detailBox":"detail__detailBox-1b6ne","detailTop":"detail__detailTop-y67pU","topHeadImg":"detail__topHeadImg-1F-dC","topMain":"detail__topMain-2ocL_","topAuthor":"detail__topAuthor-2S8CJ","topDate":"detail__topDate-3g-mq","topToAutor":"detail__topToAutor-3yV1r","detailMain":"detail__detailMain-2FgJ8","title":"detail__title-25WQY","text":"detail__text-1Itjd","coverBox":"detail__coverBox-RTVdl","footer1Box":"detail__footer1Box-32sxZ","footer1Item":"detail__footer1Item-3c7MH","footer2Box":"detail__footer2Box-1I_1V","footer3Box":"detail__footer3Box-3-dOX","footer3Title":"detail__footer3Title-3SPcj","footer3Div":"detail__footer3Div-3GtmX","footer3Item":"detail__footer3Item-3UbY4","footer4Box":"detail__footer4Box-2AQQs","footer4Title":"detail__footer4Title-1T6QE","que":"detail__que-Iw08T","ans":"detail__ans-3cNDb","detailBottom":"detail__detailBottom-wwWK5","bottomLeft":"detail__bottomLeft-2hXUT","bottomRight":"detail__bottomRight-25V45","bottomItem":"detail__bottomItem-3w1Vl","back":"detail__back-Kvo7c","liked":"detail__liked-2EUmN","like":"detail__like-37XOr","share":"detail__share-2dNpf","toBuyBtn":"detail__toBuyBtn-2Ie37","shareAlert":"detail__shareAlert-2ymjP","shareInfo":"detail__shareInfo-1z-Yi","shareBox":"detail__shareBox-k9sYO","shareWay":"detail__shareWay-3xdaG","shareItem":"detail__shareItem-2zlZe","shareCancel":"detail__shareCancel-3OP78"};
 
 /***/ },
+/* 328 */,
 /* 329 */,
 /* 330 */,
 /* 331 */,
-/* 332 */
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(32);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _modal = __webpack_require__(337);
+
+	var _modal2 = _interopRequireDefault(_modal);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Modal = function (_Component) {
+	    _inherits(Modal, _Component);
+
+	    function Modal() {
+	        _classCallCheck(this, Modal);
+
+	        return _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).apply(this, arguments));
+	    }
+
+	    _createClass(Modal, [{
+	        key: 'componentWillReceiveProps',
+	        value: function componentWillReceiveProps(nextProps) {
+	            if (nextProps.open && !this.props.open) {
+	                //开
+	                this.node = document.createElement('div');
+	                this.node.className = 'modal';
+	                document.getElementsByTagName('body')[0].appendChild(this.node);
+	                var modal = _react2.default.createElement(
+	                    'div',
+	                    { className: _modal2.default.container },
+	                    '123456'
+	                );
+	                var all = document.getElementsByClassName('modal');
+	                _reactDom2.default.render(modal, all[all.length - 1]);
+	            } else if (!nextProps.open && this.props.open) {
+	                //关
+	                _reactDom2.default.unmountComponentAtNode(this.node);
+	            }
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return null;
+	        }
+	    }]);
+
+	    return Modal;
+	}(_react.Component);
+
+	Modal.defaultProps = {
+	    open: false
+	};
+	exports.default = Modal;
+
+/***/ },
+/* 337 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"container":"modal__container-EMNoX"};
+
+/***/ },
+/* 338 */,
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3779,13 +3924,13 @@ webpackJsonp([0,2],[
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _ranking = __webpack_require__(333);
+	var _ranking = __webpack_require__(340);
 
 	var _ranking2 = _interopRequireDefault(_ranking);
 
-	var _topicData = __webpack_require__(326);
+	var _productsData = __webpack_require__(248);
 
-	var _topicData2 = _interopRequireDefault(_topicData);
+	var _productsData2 = _interopRequireDefault(_productsData);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3842,7 +3987,14 @@ webpackJsonp([0,2],[
 	        value: function renderRanking(data) {
 	            var dataArr = [];
 	            for (var i = 0; i < data.length; i++) {
-	                dataArr.push(_react2.default.createElement(_Item2.default, { key: data[i].id, title: data[i].title, likes: data[i].likes, price: data[i].price }));
+	                dataArr.push(_react2.default.createElement(_Item2.default, {
+	                    key: data[i].id,
+	                    id: data[i].id,
+	                    title: data[i].title,
+	                    likes: data[i].likes,
+	                    price: data[i].price,
+	                    cover: data[i].cover
+	                }));
 	            }
 	            return dataArr;
 	        }
@@ -3852,7 +4004,7 @@ webpackJsonp([0,2],[
 	            return _react2.default.createElement(
 	                'div',
 	                { className: _ranking2.default.rankingList },
-	                this.renderRanking(_topicData2.default)
+	                this.renderRanking(_productsData2.default)
 	            );
 	        }
 	    }]);
@@ -3863,15 +4015,15 @@ webpackJsonp([0,2],[
 	exports.default = Ranking;
 
 /***/ },
-/* 333 */
+/* 340 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"ranking":"ranking__ranking-3AuN8","rankingList":"ranking__rankingList-2qjCZ"};
 
 /***/ },
-/* 334 */,
-/* 335 */
+/* 341 */,
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3896,7 +4048,7 @@ webpackJsonp([0,2],[
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _buyers = __webpack_require__(336);
+	var _buyers = __webpack_require__(343);
 
 	var _buyers2 = _interopRequireDefault(_buyers);
 
@@ -4041,15 +4193,15 @@ webpackJsonp([0,2],[
 	exports.default = Buyers;
 
 /***/ },
-/* 336 */
+/* 343 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"buyersList":"buyers__buyersList-3bONT","buyerItem":"buyers__buyerItem-6UuY8","buyerImg":"buyers__buyerImg-1bp6B","buyerInfo":"buyers__buyerInfo-3Y6Uj","name":"buyers__name-TagUH","desc":"buyers__desc-wqAa8","label":"buyers__label-2xzbG","followers":"buyers__followers-2QytB","followBtnBox":"buyers__followBtnBox-2YpUz"};
 
 /***/ },
-/* 337 */,
-/* 338 */
+/* 344 */,
+/* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4074,7 +4226,7 @@ webpackJsonp([0,2],[
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _buyer = __webpack_require__(339);
+	var _buyer = __webpack_require__(346);
 
 	var _buyer2 = _interopRequireDefault(_buyer);
 
@@ -4356,7 +4508,7 @@ webpackJsonp([0,2],[
 	exports.default = Buyer;
 
 /***/ },
-/* 339 */
+/* 346 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
