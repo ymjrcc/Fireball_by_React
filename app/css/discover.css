@@ -48,11 +48,11 @@
 
 .discoverTopItem:first-child{
     margin-right: 20px;
-    background-image: url('../images/weekRanking.png');
+    background-image: url('../images/weekRanking.jpg');
 }
 
 .discoverTopItem:last-child{
-    background-image: url('../images/allBuyers.png');
+    background-image: url('../images/allBuyers.jpg');
 }
 
 .discoverSection{
