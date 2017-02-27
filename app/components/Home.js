@@ -2,45 +2,91 @@ import React,{Component} from 'react'
 import {Link} from 'react-router'
 import BottomTab from './BottomTab'
 import style from '../css/home.css'
+import productsData from '../data/productsData.json'
 
 class HomeTop extends Component{
     render(){
-        return <div className={style.homeTop}>今日推荐</div>
+        return (
+            <div data-maxwidth className={style.homeTop}>
+                今日推荐
+                <Link to="/buyers" className={style.buyersIcon}></Link>
+            </div>
+        )
     }
 }
 
 class RecommendBox extends Component{
     render(){
-        return <div>{this.props.children}</div>
+        return <div className={style.recommendBox}>{this.props.children}</div>
     }
 }
 
 class RecommendItem extends Component{
     render(){
         return (
-            <div className={style.recommendItem}>
-                <div className={style.recommendImg}></div>
-                <p>
+            <Link to={ "/detail/" + this.props.id } className={style.recommendItem}>
+                <div className={style.recommendImgBox}>
+                    <img className={style.recommendImg} src={require('../images/covers/'+this.props.cover)} />
+                </div>
+                <div className={style.authorRow}>
                     <span className={style.author}>{this.props.author}</span>
                     {' · '}
-                    <span className={style.time}>{this.props.time}</span>
-                </p>
-                <h2 className={style.title}>{this.props.title}</h2>
-            </div>
+                    <span className={style.date}>{this.props.date}</span>
+                </div>
+                <div className={style.title}>{this.props.title}</div>
+                <div className={style.likesRow}>
+                    <span className={style.likes}>
+                        {this.props.likes>999?((this.props.likes/1000).toFixed(1)+"k"):this.props.likes}
+                    </span>
+                </div>
+            </Link>   
         )
     }
 }
 
 class Home extends Component{
+
+    componentDidMount(){
+        document.body.scrollTop=0;
+    }
+
+    // ajax方法获取本地数据，这个路径在build模式下有效
+    // componentDidMount(){
+    //     function ajax(url){
+    //         var xhr = new XMLHttpRequest;
+    //         xhr.onload = function() {
+    //             console.log(this.response);
+    //         };
+    //         xhr.open("get", url, true);
+    //         xhr.send();
+    //     }
+    //     ajax("../app/data/productsData.json");
+    // }
+
+    renderRecommendBox(data){
+        let dataArr = [];
+        for(let i = 0; i < data.length; i++){
+            dataArr.push(
+                <RecommendItem 
+                    key={data[i].id} 
+                    id={data[i].id} 
+                    cover={data[i].cover} 
+                    author={data[i].author} 
+                    date={data[i].date} 
+                    title={data[i].title} 
+                    likes={data[i].likes}
+                />
+            );
+        }
+        return dataArr;
+    }
+
     render(){
         return (
-            <div>
+            <div className={style.home}>
                 <HomeTop />
                 <RecommendBox>
-                    <RecommendItem author="Yiming" time="today" title="今天开始好好学习" />
-                    <RecommendItem author="ChrisLee" time="today" title="野蛮生长" />
-                    <RecommendItem author="XY" time="today" title="我要发论文" />
-                    <RecommendItem author="头条新闻" time="today" title="明天有雾霾" />
+                    {this.renderRecommendBox(productsData)}
                 </RecommendBox>
                 <BottomTab />
             </div>

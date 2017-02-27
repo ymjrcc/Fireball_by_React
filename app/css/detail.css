@@ -1,0 +1,540 @@
+.detailBox{
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.detailTop{
+    display: flex;
+    position: relative;
+    padding: 10px 20px;
+    background-color: #fff;
+    z-index: 5;
+}
+
+.topHeadImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee;
+    margin-right: 15px;
+}
+
+.topMain{
+    flex: 1;
+    position: relative;
+}
+
+.topAuthor{
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.topDate{
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.topToAutor{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/right.png');
+    background-size: cover;
+}
+
+.detailMain{
+    background-color: #fafafa;
+    padding-bottom: 20px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    line-height: 200%;
+    font-size: 1.8rem;
+    word-wrap: break-word;
+}
+
+.title{
+    padding: 0 20px;
+    text-align: center;
+}
+
+.text{
+    padding: 0 20px;
+}
+
+.coverBox{
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    height: 300px;
+}
+
+.coverBox img{
+    width: 100%;
+    opacity: 0.5;
+    height: 100%;
+}
+
+.coverInfo{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.coverTitle{
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #000;
+}
+
+.coverAuthor{
+    padding-bottom: 20px;
+    font-style: italic;
+    display: block;
+}
+
+a.coverAuthor{
+    color: #fff;
+}
+
+.footer1Box{
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+
+.footer1Item{
+    padding: 25px 0;
+    flex: 1;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.footer1Like,
+.footer1Share{
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 0 auto 15px;
+}
+
+.footer1Like{
+    background-image: url('../images/like.png');
+}
+
+.footer1Share{
+    background-image: url('../images/share.png');
+}
+
+.footer1Item:first-child{
+    border-right: 1px solid #eee;
+}
+
+.footer2Box{
+    margin-bottom: 20px;
+    padding: 30px 20px;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.footer2Box div:first-child{
+    font-size: 1.4rem;
+    color: #666;
+    padding-bottom: 10px;
+}
+
+.footer2Box div:last-child{
+    font-size: 1.8rem;
+}
+
+.footer3Box{
+    text-align: center;
+    background-color: #fafafa;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.footer3Title{
+    padding: 10px 0 30px;
+}
+
+.footer3Div{
+    display: flex;
+}
+
+.footer3Item{
+    flex: 1;
+}
+
+.footer3Delivery,
+.footer3Ensure,
+.footer3Goods{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 0 auto 20px;
+}
+
+.footer3Delivery{
+    background-image: url('../images/delivery.png');
+}
+
+.footer3Ensure{
+    background-image: url('../images/ensure.png');
+}
+
+.footer3Goods{
+    background-image: url('../images/goods.png');
+}
+
+.footer3Desc{
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+}
+
+.footer4Box{
+    background-color: #fafafa;
+    padding: 20px 0;
+}
+
+.footer4Title{
+    text-align: center;
+    padding: 10px 0 20px;
+}
+
+.que{
+    color: #333;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    margin: 5px 0;
+}
+
+.ans{
+    color: #999;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    margin: 5px 0 25px;;
+}
+
+.detailBottom{
+    position: fixed;
+    display: flex;
+    height: 60px;
+    padding: 10px 20px;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 5;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 768px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottomLeft,
+.bottomRight{
+    flex: 1;
+}
+
+.bottomLeft{
+    display: flex;
+    padding-right: 10px;
+}
+
+.bottomItem{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    line-height: 40px;
+    color: #aaa;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.back{
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/back.png');
+    background-size: cover;
+}
+
+.bottomItem div{
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin-right: 5px;
+}
+
+.liked{
+    background-image: url('../images/liked.png');
+}
+
+.like{
+    background-image: url('../images/like.png');
+}
+
+.share{
+    background-image: url('../images/share.png');
+}
+
+.toBuyBtn{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: indianred;
+    color: #fff;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 1.8rem;
+}
+
+.shareAlert{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    font-size: 1.4rem;
+    color: #666;
+    border-top: 1px solid #ccc;
+}
+
+.shareInfo{
+    background-color: #f9f9f9;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.shareBox{
+    display: flex;
+    padding: 30px;
+}
+
+.shareWay{
+    flex: 1;
+    text-align: center;
+}
+
+.shareItem{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background-size: cover;
+    background-position: 50% 50%;
+    opacity: 0.8;
+}
+
+.shareItem[data-name="weixin"]{
+    background-image: url('../images/weixin.png');
+}
+.shareItem[data-name="moments"]{
+    background-image: url('../images/moments.png');
+}
+.shareItem[data-name="weibo"]{
+    background-image: url('../images/weibo.png');
+}
+.shareItem[data-name="copy"]{
+    background-image: url('../images/copy.png');
+}
+
+.shareCancel{
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.editOrder,
+.submitOrder{
+    width: 80%;
+    max-width: 330px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    z-index: 99;
+    background-color: #fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.orderTop{
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.orderCancel,
+.orderBack{
+    display: inline-block;
+    position: absolute;
+    color: red;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    left: 0;
+}
+
+.orderDetail{
+    display: flex;
+    padding-top: 10px;
+}
+
+.orderTitle{
+    font-size: 1.4rem;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.orderTips{
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.orderCover{
+    width: 80px;
+    overflow: hidden;
+}
+
+.orderCover img{
+    width: 100%;
+    height: 100%;
+}
+
+.orderUnit{
+    font-size: 1.4rem;
+    color: indianred;
+    background-color: #fdd;
+    border: 1px solid indianred;
+    border-radius: 5px;
+    text-align: center;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 5px;
+    width: 30px;
+    margin: 20px 0;
+}
+
+.minusBtn,
+.addBtn{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    width: 48px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.minusIcon,
+.addIcon{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/right.png');
+    background-size: cover;
+    position: relative;
+    top: 3px;
+}
+
+.minusIcon{
+    transform: rotate(180deg);
+}
+
+.orderNumber{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    min-width: 30px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.orderSubmitBox{
+    border-top: 1px solid #ccc;
+    padding: 10px 0 15px;
+    margin-top: 20px;
+}
+
+.orderSubmitBtn{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: indianred;
+    border-radius: 5px;
+}
+
+.orderRow{
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.orderRow:last-child{
+    border-bottom: none;
+    margin-bottom: -15px;
+}
+
+.count{
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.priceBox{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.priceTag{
+    color: indianred;
+}
+
+.priceTip{
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.orderNotes{
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+}

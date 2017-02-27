@@ -1,28 +1,11 @@
-html,body{
-    padding: 0;
-    margin: 0;
-    height: 100%;
-}
-
-html{
-    font-size: 10px;
-}
-
-body{
-    font-family: 'Microsoft YaHei';
-    font-size: 1.6rem;
-}
-
-a{
-    text-decoration: none;
-    color: #666;
+.discover{
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .discoverTop{
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
     height: 50px;
     line-height: 50px;
     font-size: 2rem;
@@ -31,12 +14,45 @@ a{
     opacity: 0.8;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    width: 100%;
+    max-width: 768px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
 }
 
 .discoverBox{
-    margin-top: 50px;
-    margin-bottom: 50px;
     background-color: #f3f3f3;
+    overflow-x: hidden;
+}
+
+.discoverTopRow{
+    display: flex;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.discoverTopItem{
+    flex: 1;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 5px #333;
+    background-position: 50% 50%;
+    background-size: cover;    
+}
+
+.discoverTopItem:first-child{
+    margin-right: 20px;
+    background-image: url('../images/weekRanking.png');
+}
+
+.discoverTopItem:last-child{
+    background-image: url('../images/allBuyers.png');
 }
 
 .discoverSection{
@@ -44,18 +60,158 @@ a{
     margin-bottom: 20px;
     border-top: 1px solid #f3f3f3;
     padding: 0 20px;
+    position: relative;
+}
+
+.rightIcon{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 20px;
+    top: 20px;
+    background-image: url('../images/right.png');
+    background-size: cover;
+}
+
+.discoverSection h3{
+    margin: 0;
+    padding: 15px 0 8px;
+    font-size: 1.8rem;
+}
+
+.discoverSection p{
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    color: #aaa;
 }
 
 .sectionImgBox{
     display: flex;
     padding-bottom: 20px;
 }
+
 .sectionImg{
     flex: 1;
     height: 100px;
-    background-color: #eee;
+    overflow: hidden;
+}
+
+.sectionImg img{
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    border-radius: 5px;
 }
 
 .sectionImg:nth-child(even){
     margin: 0 20px;
+}
+
+.discoverBanner{
+    margin: 20px 0;
+    overflow-x: hidden;
+    position: relative;
+    height: 30vw;
+}
+
+@keyframes banner{
+    0% {transform: translateX(-50%)}
+    40% {transform: translateX(-50%)}
+    50% {transform: translateX(-155%)}
+    90% {transform: translateX(-155%)}
+    100% {transform: translateX(-260%)}
+}
+.discoverBannerImg{
+    position: absolute;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 30vw;
+    border-radius: 10px;
+    animation: banner 8s infinite cubic-bezier(0.68, -0.4, 0.27, 1.4);
+    background-position: 50% 40%;      
+}
+
+@media (min-width: 769px){
+    .discoverBanner,
+    .discoverBannerImg{
+        max-height: 105px;
+    }
+}
+
+.discoverBannerImg[data-index="0"]{
+    background-image: url('../images/covers/c-p003.jpg');
+    background-size: cover;
+}
+.discoverBannerImg[data-index="1"]{
+    background-image: url('../images/covers/c-p005.jpg');
+    background-size: cover;
+}
+.discoverBannerImg[data-index="2"]{
+    background-image: url('../images/covers/c-p003.jpg');
+    background-size: cover;
+}
+.discoverBannerImg[data-index="3"]{
+    background-image: url('../images/covers/c-p005.jpg');
+    background-size: cover;
+}
+.discoverBannerImg[data-index="4"]{
+    background-image: url('../images/covers/c-p003.jpg');
+    background-size: cover;
+}
+
+.recommendSection{
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-top: 1px solid #f3f3f3;
+    padding: 0 20px 30px;
+    position: relative;
+}
+
+.recommendSection h3{
+    margin: 0;
+    padding: 15px 0 8px;
+    font-size: 1.8rem;
+}
+
+.recommendSection p{
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.recommendItemBox{
+    display: flex;
+}
+
+.recommendItem{
+    flex: 1;
+    text-align: center;
+}
+
+.recommendItemImg{
+    width: 80px;
+    height: 80px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.recommendItemName{
+    width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 10px auto 5px;
+}
+
+.recommendItemDesc{
+    font-size: 1.2rem;
+    color: #999;
+    width: 90px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto 10px;
 }

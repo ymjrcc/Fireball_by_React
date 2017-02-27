@@ -1,4 +1,5 @@
 var webpack = require('webpack');//引入Webpack模块供我们调用，这里只能使用ES5语法，使用ES6语法会报错
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 //__dirname是node.js中的一个全局变量，它指向当前执行脚本所在的目录
 module.exports = {//注意这里是exports不是export
@@ -18,17 +19,24 @@ module.exports = {//注意这里是exports不是export
             },
             {
                 test: /\.css$/,
-                loader: "style-loader!css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]"
+                // loader: "style-loader!css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]"
+                loader:  ExtractTextPlugin.extract("style-loader","css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]")
+
             },
             {
     　　　　　　test: /\.(png|jpg)$/,
     　　　　　　loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'
+    　　　　},
+            {
+    　　　　　　test: /\.json$/,
+    　　　　　　loader: 'json-loader'
     　　　　}
         ]
     },
 
     plugins: [
         new webpack.HotModuleReplacementPlugin(),//热模块替换插件
+        new ExtractTextPlugin("styles.css"),
     ],
 
     //webpack-dev-server配置
@@ -37,7 +45,7 @@ module.exports = {//注意这里是exports不是export
         colors: true,//在cmd终端中输出彩色日志
         historyApiFallback: true,//在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
         inline: true,//设置为true，当源文件改变时会自动刷新页面
-        port: 8080,//设置默认监听端口，如果省略，默认为"8080"
+        port: 8082,//设置默认监听端口，如果省略，默认为"8080"
         process: true,//显示合并代码进度
     }
 };

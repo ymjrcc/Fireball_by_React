@@ -1,0 +1,109 @@
+.helpsBox{
+    padding-top: 51px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.selfTit{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.selfHelp,
+.questionIcon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+}
+
+.selfHelp{
+    background-image: url('../images/selfHelp.png');
+}
+
+.questionIcon{
+    background-image: url('../images/question.png');
+}
+
+.selfBox{
+    display: flex;
+}
+
+.selfItem{
+    flex: 1;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1.4rem;
+}
+
+.remind,
+.order,
+.service{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 0 auto;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.remind{
+    background-image: url('../images/remind.png')
+}
+
+.order{
+    background-image: url('../images/orderQue.png')
+}
+
+.service{
+    background-image: url('../images/service.png')
+}
+
+.questions{
+    background-color: #fff;
+}
+
+.queTit,
+.queItem{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.queItem,
+.ansItem{
+    font-size: 1.4rem;
+}
+
+.arrow{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/right.png');
+    background-size: cover;
+}
+
+.arrowUp{
+    transform: rotate(-90deg);
+}
+
+.arrowDown{
+    transform: rotate(90deg);
+}
+
+.ansItem{
+    line-height: 24px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+}

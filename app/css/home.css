@@ -1,28 +1,10 @@
-html,body{
-    padding: 0;
-    margin: 0;
-    height: 100%;
-}
-
-html{
-    font-size: 10px;
-}
-
-body{
-    font-family: 'Microsoft YaHei';
-    font-size: 1.6rem;
-}
-
-a{
-    text-decoration: none;
-    color: #666;
+.home{
+    padding: 60px 0;
 }
 
 .homeTop{
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
     height: 60px;
     line-height: 60px;
     font-size: 2.4rem;
@@ -30,24 +12,94 @@ a{
     background-color: #fff;
     opacity: 0.8;
     padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 768px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.homeTop::after{
-    content: '+';
+.buyersIcon{
+    display: block;
     float: right;
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/buyers.png');
+    background-size: cover;
+    position: relative;
+    top: 20px;
+}
+
+.recommendBox{
+    background-color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 
 .recommendItem{
+    display: block;
     margin: 20px;
-    padding: 20px;
+    padding: 20px 0 15px;
     border-bottom: 1px solid #ccc;
 }
 
-.recommendImg{
-    height: 200px;
-    background-color: #999;
+.recommendItem:last-child{
+    border-bottom: none;
+    margin-bottom: 0;
 }
 
-.time{
+.recommendImgBox{
+    overflow: hidden;
+}
+
+.recommendImg{
+    width: 100%;
+    display: block;
+}
+
+.authorRow{
+    margin-top: 10px;
+}
+
+.author{
+    font-size: 1.2rem;
+}
+
+.date{
+    font-size: 1.2rem;
     color: #999;
+}
+
+.title{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.likesRow{
+    text-align: right;
+}
+
+.likes{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    text-align: left;
+    color: #aaa;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.likes::before{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -20px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    background-image: url('../images/like.png');
+    background-size: cover;
 }
