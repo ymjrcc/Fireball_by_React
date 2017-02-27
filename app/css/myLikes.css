@@ -24,11 +24,20 @@
 }
 
 .likeItem[data-index="0"]{
-    background-image: url('../images/covers/c-p001.jpg');
+    background-image: url('../images/covers/c-p010.jpg');
 }
 .likeItem[data-index="1"]{
-    background-image: url('../images/covers/c-p002.jpg');
+    background-image: url('../images/covers/c-p009.jpg');
 }
 .likeItem[data-index="2"]{
+    background-image: url('../images/covers/c-p008.jpg');
+}
+.likeItem[data-index="3"]{
+    background-image: url('../images/covers/c-p001.jpg');
+}
+.likeItem[data-index="4"]{
+    background-image: url('../images/covers/c-p002.jpg');
+}
+.likeItem[data-index="5"]{
     background-image: url('../images/covers/c-p004.jpg');
 }

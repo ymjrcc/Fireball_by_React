@@ -87,6 +87,22 @@
     background-image: url('../images/setting.png');
 }
 
+.clean{
+    background-image: url('../images/clean.png')
+}
+
+.encourage{
+    background-image: url('../images/encourage.png')
+}
+
+.agreement{
+    background-image: url('../images/agreement.png')
+}
+
+.logout{
+    background-image: url('../images/logout.png')
+}
+
 .rightIcon{
     width: 16px;
     height: 16px;

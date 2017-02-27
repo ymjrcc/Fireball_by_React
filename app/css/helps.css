@@ -11,16 +11,59 @@
     border-bottom: 1px solid #eee;
 }
 
+.selfHelp,
+.questionIcon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+}
+
+.selfHelp{
+    background-image: url('../images/selfHelp.png');
+}
+
+.questionIcon{
+    background-image: url('../images/question.png');
+}
+
 .selfBox{
     display: flex;
 }
 
 .selfItem{
     flex: 1;
-    display: flex;
-    height: 150px;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1.4rem;
+}
+
+.remind,
+.order,
+.service{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 0 auto;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.remind{
+    background-image: url('../images/remind.png')
+}
+
+.order{
+    background-image: url('../images/orderQue.png')
+}
+
+.service{
+    background-image: url('../images/service.png')
 }
 
 .questions{
@@ -34,6 +77,11 @@
     padding: 0 20px;
     border-bottom: 1px solid #eee;
     position: relative;
+}
+
+.queItem,
+.ansItem{
+    font-size: 1.4rem;
 }
 
 .arrow{
@@ -55,7 +103,7 @@
 }
 
 .ansItem{
-    line-height: 30px;
+    line-height: 24px;
     padding: 10px 20px;
     border-bottom: 1px solid #eee;
 }

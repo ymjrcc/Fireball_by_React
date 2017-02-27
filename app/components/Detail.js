@@ -48,8 +48,14 @@ class DetailFooter1 extends Component{
         const res = this.props.productInfo;
         return (
             <div className={style.footer1Box}>
-                <div className={style.footer1Item}>{res.likes}人喜欢</div>
-                <div className={style.footer1Item}>{res.share}人告诉朋友</div>
+                <div className={style.footer1Item}>
+                    <div className={style.footer1Like}></div>
+                    <div>{res.likes}人喜欢</div>
+                </div>
+                <div className={style.footer1Item}>
+                    <div className={style.footer1Share}></div>
+                    <div>{res.share}人告诉朋友</div>
+                </div>
             </div>
         )
     }
@@ -59,7 +65,8 @@ class DetailFooter2 extends Component{
     render(){
         return (
             <div className={style.footer2Box}>
-                限时分享奖励
+                <div>邀请好友下单成功</div>
+                <div>即得<span style={{color:"red"}}> 10 </span>元无门槛红包！</div>
             </div>
         )
     }
@@ -71,9 +78,18 @@ class DetailFooter3 extends Component{
             <div className={style.footer3Box}>
                 <div className={style.footer3Title}>此商品</div>
                 <div className={style.footer3Div}>
-                    <div className={style.footer3Item}>3个工作日发货</div>
-                    <div className={style.footer3Item}>正品保障</div>
-                    <div className={style.footer3Item}>无忧退货</div>
+                    <div className={style.footer3Item}>
+                        <div className={style.footer3Delivery}></div>
+                        <div className={style.footer3Desc}>3个工作日发货</div>
+                    </div>
+                    <div className={style.footer3Item}>
+                        <div className={style.footer3Ensure}></div>
+                        <div className={style.footer3Desc}>正品保障</div>
+                    </div>
+                    <div className={style.footer3Item}>
+                        <div className={style.footer3Goods}></div>
+                        <div className={style.footer3Desc}>无忧退货</div>
+                    </div>
                 </div>
             </div>
         )

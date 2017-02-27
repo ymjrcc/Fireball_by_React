@@ -106,10 +106,32 @@ a.coverAuthor{
 }
 
 .footer1Item{
-    height: 160px;
-    line-height: 160px;
+    padding: 25px 0;
     flex: 1;
     text-align: center;
+    font-size: 1.4rem;
+}
+
+.footer1Like,
+.footer1Share{
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 0 auto 15px;
+}
+
+.footer1Like{
+    background-image: url('../images/like.png');
+}
+
+.footer1Share{
+    background-image: url('../images/share.png');
 }
 
 .footer1Item:first-child{
@@ -118,10 +140,19 @@ a.coverAuthor{
 
 .footer2Box{
     margin-bottom: 20px;
+    padding: 30px 20px;
     background-color: #fafafa;
-    height: 100px;
-    line-height: 100px;
     text-align: center;
+}
+
+.footer2Box div:first-child{
+    font-size: 1.4rem;
+    color: #666;
+    padding-bottom: 10px;
+}
+
+.footer2Box div:last-child{
+    font-size: 1.8rem;
 }
 
 .footer3Box{
@@ -132,7 +163,7 @@ a.coverAuthor{
 }
 
 .footer3Title{
-    padding: 10px 0 20px;
+    padding: 10px 0 30px;
 }
 
 .footer3Div{
@@ -141,8 +172,38 @@ a.coverAuthor{
 
 .footer3Item{
     flex: 1;
-    height: 80px;
-    line-height: 80px;
+}
+
+.footer3Delivery,
+.footer3Ensure,
+.footer3Goods{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 0 auto 20px;
+}
+
+.footer3Delivery{
+    background-image: url('../images/delivery.png');
+}
+
+.footer3Ensure{
+    background-image: url('../images/ensure.png');
+}
+
+.footer3Goods{
+    background-image: url('../images/goods.png');
+}
+
+.footer3Desc{
+    font-size: 1.4rem;
+    padding-bottom: 10px;
 }
 
 .footer4Box{

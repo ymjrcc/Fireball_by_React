@@ -17,9 +17,12 @@ class LikesBox extends Component{
     render(){
         return (
             <div className={style.likesBox}>
-                <LikeItem id="p001" index="0"/>
-                <LikeItem id="p002" index="1"/>
-                <LikeItem id="p004" index="2"/>
+                <LikeItem id="p010" index="0"/>
+                <LikeItem id="p009" index="1"/>
+                <LikeItem id="p008" index="2"/>
+                <LikeItem id="p001" index="3"/>
+                <LikeItem id="p002" index="4"/>
+                <LikeItem id="p004" index="5"/>
             </div>
         )
     }

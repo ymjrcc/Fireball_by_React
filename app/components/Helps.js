@@ -8,12 +8,22 @@ class HelpsBox extends Component{
         return (
             <div className={style.helpsBox}>
                 <div className={style.selfTit}>
+                    <span className={style.selfHelp}></span>
                     自助服务
                 </div>
                 <div className={style.selfBox}>
-                    <div className={style.selfItem}>提醒发货</div>
-                    <div className={style.selfItem}>订单问题</div>
-                    <div className={style.selfItem}>在线客服</div>
+                    <div className={style.selfItem}>
+                        <div className={style.remind}></div>
+                        提醒发货
+                    </div>
+                    <div className={style.selfItem}>
+                        <div className={style.order}></div>
+                        订单问题
+                    </div>
+                    <div className={style.selfItem}>
+                        <div className={style.service}></div>
+                        在线客服
+                    </div>
                 </div>
             </div>
         )
@@ -77,7 +87,10 @@ class Questions extends Component{
     render(){
         return (
             <div className={style.questions}>
-                <div className={style.queTit}>常见问题</div>
+                <div className={style.queTit}>
+                    <span className={style.questionIcon}></span>
+                    常见问题
+                </div>
 
                 <QueItem q="0" show={this.state.a0} toggleAns={this.toggleAns.bind(this)}>火球的商品从哪里发货？</QueItem>             
                 <AnsItem a="0" show={this.state.a0}>
