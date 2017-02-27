@@ -26,78 +26,78 @@ webpackJsonp([0,2],[
 
 	var _PersonalBox2 = _interopRequireDefault(_PersonalBox);
 
-	var _Personal = __webpack_require__(300);
+	var _Personal = __webpack_require__(304);
 
 	var _Personal2 = _interopRequireDefault(_Personal);
 
-	var _MyOrders = __webpack_require__(302);
+	var _MyOrders = __webpack_require__(306);
 
 	var _MyOrders2 = _interopRequireDefault(_MyOrders);
 
-	var _MySubscriptions = __webpack_require__(309);
+	var _MySubscriptions = __webpack_require__(313);
 
 	var _MySubscriptions2 = _interopRequireDefault(_MySubscriptions);
 
-	var _MyLikes = __webpack_require__(313);
+	var _MyLikes = __webpack_require__(317);
 
 	var _MyLikes2 = _interopRequireDefault(_MyLikes);
 
-	var _Coupons = __webpack_require__(316);
+	var _Coupons = __webpack_require__(320);
 
 	var _Coupons2 = _interopRequireDefault(_Coupons);
 
-	var _Helps = __webpack_require__(317);
+	var _Helps = __webpack_require__(321);
 
 	var _Helps2 = _interopRequireDefault(_Helps);
 
-	var _Settings = __webpack_require__(320);
+	var _Settings = __webpack_require__(329);
 
 	var _Settings2 = _interopRequireDefault(_Settings);
 
-	var _Topic = __webpack_require__(323);
+	var _Topic = __webpack_require__(332);
 
 	var _Topic2 = _interopRequireDefault(_Topic);
 
-	var _Detail = __webpack_require__(331);
+	var _Detail = __webpack_require__(340);
 
 	var _Detail2 = _interopRequireDefault(_Detail);
 
-	var _Ranking = __webpack_require__(344);
+	var _Ranking = __webpack_require__(356);
 
 	var _Ranking2 = _interopRequireDefault(_Ranking);
 
-	var _Buyers = __webpack_require__(347);
+	var _Buyers = __webpack_require__(359);
 
 	var _Buyers2 = _interopRequireDefault(_Buyers);
 
-	var _Buyer = __webpack_require__(350);
+	var _Buyer = __webpack_require__(362);
 
 	var _Buyer2 = _interopRequireDefault(_Buyer);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	_reactDom2.default.render(_react2.default.createElement(
-	    _reactRouter.Router,
-	    { history: _reactRouter.hashHistory },
-	    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Home2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/home', component: _Home2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/discover', component: _Discover2.default }),
-	    _react2.default.createElement(
-	        _reactRouter.Route,
-	        { path: '/personal', component: _PersonalBox2.default },
-	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _Personal2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: '/personal/order', component: _MyOrders2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: '/personal/subscription', component: _MySubscriptions2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: '/personal/like', component: _MyLikes2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: '/personal/coupon', component: _Coupons2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: '/personal/help', component: _Helps2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: '/personal/setting', component: _Settings2.default })
-	    ),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/topic/:name', component: _Topic2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/detail/:id', component: _Detail2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/ranking', component: _Ranking2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/buyers', component: _Buyers2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/buyer/:id', component: _Buyer2.default })
+	            _reactRouter.Router,
+	            { history: _reactRouter.hashHistory },
+	            _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Home2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/home', component: _Home2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/discover', component: _Discover2.default }),
+	            _react2.default.createElement(
+	                        _reactRouter.Route,
+	                        { path: '/personal', component: _PersonalBox2.default },
+	                        _react2.default.createElement(_reactRouter.IndexRoute, { component: _Personal2.default }),
+	                        _react2.default.createElement(_reactRouter.Route, { path: '/personal/order', component: _MyOrders2.default }),
+	                        _react2.default.createElement(_reactRouter.Route, { path: '/personal/subscription', component: _MySubscriptions2.default }),
+	                        _react2.default.createElement(_reactRouter.Route, { path: '/personal/like', component: _MyLikes2.default }),
+	                        _react2.default.createElement(_reactRouter.Route, { path: '/personal/coupon', component: _Coupons2.default }),
+	                        _react2.default.createElement(_reactRouter.Route, { path: '/personal/help', component: _Helps2.default }),
+	                        _react2.default.createElement(_reactRouter.Route, { path: '/personal/setting', component: _Settings2.default })
+	            ),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/topic/:name', component: _Topic2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/detail/:id', component: _Detail2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/ranking', component: _Ranking2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/buyers', component: _Buyers2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/buyer/:id', component: _Buyer2.default })
 	), document.getElementById('app'));
 
 /***/ },
@@ -890,7 +890,7 @@ webpackJsonp([0,2],[
 /* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/9dfe4054.c-p009.jpg";
+	module.exports = __webpack_require__.p + "images/533caac9.c-p009.jpg";
 
 /***/ },
 /* 261 */
@@ -1600,7 +1600,7 @@ webpackJsonp([0,2],[
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"personal":"personal__personal-jvg88","headBox":"personal__headBox-TXmdM","headImg":"personal__headImg-JTpbE","headInfo":"personal__headInfo-eFuZk","name":"personal__name-2piJJ","desc":"personal__desc-XW6rW","settingBox":"personal__settingBox-2_UbL","settingArea":"personal__settingArea-qAB4U","settingItem":"personal__settingItem-2PHWd","settingTitle":"personal__settingTitle-3YTGb","settingIcon":"personal__settingIcon-3T74r","order":"personal__order-mzuVB","subscription":"personal__subscription-2xEYu","like":"personal__like-109Dn","coupon":"personal__coupon-1N8fj","help":"personal__help-3RVmA","setting":"personal__setting-3HqCW","rightIcon":"personal__rightIcon-1xA4w"};
+	module.exports = {"personal":"personal__personal-jvg88","headBox":"personal__headBox-TXmdM","headImg":"personal__headImg-JTpbE","headInfo":"personal__headInfo-eFuZk","name":"personal__name-2piJJ","desc":"personal__desc-XW6rW","settingBox":"personal__settingBox-2_UbL","settingArea":"personal__settingArea-qAB4U","settingItem":"personal__settingItem-2PHWd","settingTitle":"personal__settingTitle-3YTGb","settingIcon":"personal__settingIcon-3T74r","order":"personal__order-mzuVB","subscription":"personal__subscription-2xEYu","like":"personal__like-109Dn","coupon":"personal__coupon-1N8fj","help":"personal__help-3RVmA","setting":"personal__setting-3HqCW","clean":"personal__clean-3Cl6r","encourage":"personal__encourage-1MAzc","agreement":"personal__agreement-1rk3F","logout":"personal__logout-3a-dk","rightIcon":"personal__rightIcon-1xA4w"};
 
 /***/ },
 /* 293 */,
@@ -1610,7 +1610,11 @@ webpackJsonp([0,2],[
 /* 297 */,
 /* 298 */,
 /* 299 */,
-/* 300 */
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1631,7 +1635,7 @@ webpackJsonp([0,2],[
 
 	var _BottomTab2 = _interopRequireDefault(_BottomTab);
 
-	var _SettingItem = __webpack_require__(301);
+	var _SettingItem = __webpack_require__(305);
 
 	var _SettingItem2 = _interopRequireDefault(_SettingItem);
 
@@ -1699,7 +1703,7 @@ webpackJsonp([0,2],[
 	                'div',
 	                { className: _personal2.default.headBox },
 	                _react2.default.createElement('div', { className: _personal2.default.headImg }),
-	                _react2.default.createElement(HeaderInfo, { name: 'Yiming', goods: '0', subscription: '6', likes: '3' })
+	                _react2.default.createElement(HeaderInfo, { name: 'Yiming', goods: '0', subscription: '7', likes: '6' })
 	            );
 	        }
 	    }]);
@@ -1799,7 +1803,7 @@ webpackJsonp([0,2],[
 	exports.default = Personal;
 
 /***/ },
-/* 301 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1860,7 +1864,7 @@ webpackJsonp([0,2],[
 	exports.default = SettingItem;
 
 /***/ },
-/* 302 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1877,11 +1881,11 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(303);
+	var _TopFixed = __webpack_require__(307);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _myOrders = __webpack_require__(307);
+	var _myOrders = __webpack_require__(311);
 
 	var _myOrders2 = _interopRequireDefault(_myOrders);
 
@@ -2009,7 +2013,7 @@ webpackJsonp([0,2],[
 	exports.default = MyOrders;
 
 /***/ },
-/* 303 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2026,7 +2030,7 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _topfixed = __webpack_require__(304);
+	var _topfixed = __webpack_require__(308);
 
 	var _topfixed2 = _interopRequireDefault(_topfixed);
 
@@ -2067,24 +2071,24 @@ webpackJsonp([0,2],[
 	exports.default = TopFixed;
 
 /***/ },
-/* 304 */
+/* 308 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"topFixed":"topfixed__topFixed-2sM1q","backBtn":"topfixed__backBtn-2AVN2"};
 
 /***/ },
-/* 305 */,
-/* 306 */,
-/* 307 */
+/* 309 */,
+/* 310 */,
+/* 311 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"ordersBox":"myOrders__ordersBox-3f8ca","order":"myOrders__order-3Tlcd","orderInfoBox":"myOrders__orderInfoBox-2dD9O","orderImg":"myOrders__orderImg-cZhVk","orderInfo":"myOrders__orderInfo-duwdU","orderTitle":"myOrders__orderTitle-1ph3J","orderDesc":"myOrders__orderDesc-2xjIa","orderPrice":"myOrders__orderPrice-1op8j","orderStatus":"myOrders__orderStatus-1-YVO"};
 
 /***/ },
-/* 308 */,
-/* 309 */
+/* 312 */,
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2101,7 +2105,7 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(303);
+	var _TopFixed = __webpack_require__(307);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
@@ -2109,11 +2113,11 @@ webpackJsonp([0,2],[
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _mySubscriptions = __webpack_require__(310);
+	var _mySubscriptions = __webpack_require__(314);
 
 	var _mySubscriptions2 = _interopRequireDefault(_mySubscriptions);
 
-	var _buyersData = __webpack_require__(312);
+	var _buyersData = __webpack_require__(316);
 
 	var _buyersData2 = _interopRequireDefault(_buyersData);
 
@@ -2232,15 +2236,15 @@ webpackJsonp([0,2],[
 	exports.default = MySubscriptions;
 
 /***/ },
-/* 310 */
+/* 314 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"subscriptionsBox":"mySubscriptions__subscriptionsBox-3QRr_","subscriptionItem":"mySubscriptions__subscriptionItem-2z0sS","headImg":"mySubscriptions__headImg-1A0ks","name":"mySubscriptions__name-VO4X2","btnBox":"mySubscriptions__btnBox-eNU-t"};
 
 /***/ },
-/* 311 */,
-/* 312 */
+/* 315 */,
+/* 316 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -2370,7 +2374,7 @@ webpackJsonp([0,2],[
 	];
 
 /***/ },
-/* 313 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2387,11 +2391,11 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(303);
+	var _TopFixed = __webpack_require__(307);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _myLikes = __webpack_require__(314);
+	var _myLikes = __webpack_require__(318);
 
 	var _myLikes2 = _interopRequireDefault(_myLikes);
 
@@ -2441,9 +2445,12 @@ webpackJsonp([0,2],[
 	            return _react2.default.createElement(
 	                'div',
 	                { className: _myLikes2.default.likesBox },
-	                _react2.default.createElement(LikeItem, { id: 'p001', index: '0' }),
-	                _react2.default.createElement(LikeItem, { id: 'p002', index: '1' }),
-	                _react2.default.createElement(LikeItem, { id: 'p004', index: '2' })
+	                _react2.default.createElement(LikeItem, { id: 'p010', index: '0' }),
+	                _react2.default.createElement(LikeItem, { id: 'p009', index: '1' }),
+	                _react2.default.createElement(LikeItem, { id: 'p008', index: '2' }),
+	                _react2.default.createElement(LikeItem, { id: 'p001', index: '3' }),
+	                _react2.default.createElement(LikeItem, { id: 'p002', index: '4' }),
+	                _react2.default.createElement(LikeItem, { id: 'p004', index: '5' })
 	            );
 	        }
 	    }]);
@@ -2487,15 +2494,15 @@ webpackJsonp([0,2],[
 	exports.default = MyLikes;
 
 /***/ },
-/* 314 */
+/* 318 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"myLikes":"myLikes__myLikes-3tBrC","likesBox":"myLikes__likesBox-sfZ_r","likeItem":"myLikes__likeItem-1Gpe6"};
 
 /***/ },
-/* 315 */,
-/* 316 */
+/* 319 */,
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2512,7 +2519,7 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(303);
+	var _TopFixed = __webpack_require__(307);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
@@ -2571,7 +2578,7 @@ webpackJsonp([0,2],[
 	exports.default = Coupons;
 
 /***/ },
-/* 317 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2588,11 +2595,11 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(303);
+	var _TopFixed = __webpack_require__(307);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _helps = __webpack_require__(318);
+	var _helps = __webpack_require__(322);
 
 	var _helps2 = _interopRequireDefault(_helps);
 
@@ -2624,6 +2631,7 @@ webpackJsonp([0,2],[
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _helps2.default.selfTit },
+	                    _react2.default.createElement('span', { className: _helps2.default.selfHelp }),
 	                    '\u81EA\u52A9\u670D\u52A1'
 	                ),
 	                _react2.default.createElement(
@@ -2632,16 +2640,19 @@ webpackJsonp([0,2],[
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: _helps2.default.selfItem },
+	                        _react2.default.createElement('div', { className: _helps2.default.remind }),
 	                        '\u63D0\u9192\u53D1\u8D27'
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: _helps2.default.selfItem },
+	                        _react2.default.createElement('div', { className: _helps2.default.order }),
 	                        '\u8BA2\u5355\u95EE\u9898'
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: _helps2.default.selfItem },
+	                        _react2.default.createElement('div', { className: _helps2.default.service }),
 	                        '\u5728\u7EBF\u5BA2\u670D'
 	                    )
 	                )
@@ -2744,6 +2755,7 @@ webpackJsonp([0,2],[
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _helps2.default.queTit },
+	                    _react2.default.createElement('span', { className: _helps2.default.questionIcon }),
 	                    '\u5E38\u89C1\u95EE\u9898'
 	                ),
 	                _react2.default.createElement(
@@ -2840,15 +2852,20 @@ webpackJsonp([0,2],[
 	exports.default = Helps;
 
 /***/ },
-/* 318 */
+/* 322 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"helpsBox":"helps__helpsBox-1TlGT","selfTit":"helps__selfTit-pRmWy","selfBox":"helps__selfBox-3hmQf","selfItem":"helps__selfItem-14Qju","questions":"helps__questions-36e4E","queTit":"helps__queTit-3ln0f","queItem":"helps__queItem-rdfEr","arrow":"helps__arrow-KP4I7","arrowUp":"helps__arrowUp-drhQ6","arrowDown":"helps__arrowDown-368pC","ansItem":"helps__ansItem-3kEzv"};
+	module.exports = {"helpsBox":"helps__helpsBox-1TlGT","selfTit":"helps__selfTit-pRmWy","selfHelp":"helps__selfHelp-1Py2D","questionIcon":"helps__questionIcon-226-H","selfBox":"helps__selfBox-3hmQf","selfItem":"helps__selfItem-14Qju","remind":"helps__remind-2xbkl","order":"helps__order-25CiL","service":"helps__service-1UFx3","questions":"helps__questions-36e4E","queTit":"helps__queTit-3ln0f","queItem":"helps__queItem-rdfEr","ansItem":"helps__ansItem-3kEzv","arrow":"helps__arrow-KP4I7","arrowUp":"helps__arrowUp-drhQ6","arrowDown":"helps__arrowDown-368pC"};
 
 /***/ },
-/* 319 */,
-/* 320 */
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2865,15 +2882,15 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(303);
+	var _TopFixed = __webpack_require__(307);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _SettingItem = __webpack_require__(301);
+	var _SettingItem = __webpack_require__(305);
 
 	var _SettingItem2 = _interopRequireDefault(_SettingItem);
 
-	var _settings = __webpack_require__(321);
+	var _settings = __webpack_require__(330);
 
 	var _settings2 = _interopRequireDefault(_settings);
 
@@ -2959,15 +2976,15 @@ webpackJsonp([0,2],[
 	exports.default = Settings;
 
 /***/ },
-/* 321 */
+/* 330 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"settingBox":"settings__settingBox-1tzL4","settingArea":"settings__settingArea-5_HFB","settingItem":"settings__settingItem-2TaC5"};
 
 /***/ },
-/* 322 */,
-/* 323 */
+/* 331 */,
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2984,15 +3001,15 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _classnames2 = __webpack_require__(324);
+	var _classnames2 = __webpack_require__(333);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _Item = __webpack_require__(325);
+	var _Item = __webpack_require__(334);
 
 	var _Item2 = _interopRequireDefault(_Item);
 
-	var _topic = __webpack_require__(328);
+	var _topic = __webpack_require__(337);
 
 	var _topic2 = _interopRequireDefault(_topic);
 
@@ -3210,8 +3227,8 @@ webpackJsonp([0,2],[
 	exports.default = Topic;
 
 /***/ },
-/* 324 */,
-/* 325 */
+/* 333 */,
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3228,7 +3245,7 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _item = __webpack_require__(326);
+	var _item = __webpack_require__(335);
 
 	var _item2 = _interopRequireDefault(_item);
 
@@ -3289,24 +3306,24 @@ webpackJsonp([0,2],[
 	exports.default = Item;
 
 /***/ },
-/* 326 */
+/* 335 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"item":"item__item-3X-cC","img":"item__img-18IC2","info":"item__info-22TU-","title":"item__title-a5ySn","likes":"item__likes-1k1M9","price":"item__price-173VH"};
 
 /***/ },
-/* 327 */,
-/* 328 */
+/* 336 */,
+/* 337 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"topicHeader":"topic__topicHeader-1ZRk6","topicHeaderBack":"topic__topicHeaderBack-i3tEb","topicBox":"topic__topicBox-2xNOv","topicNav":"topic__topicNav-2Yz8w","navItem":"topic__navItem-2S0_j","choosenItem":"topic__choosenItem-1tlXz","topicList":"topic__topicList-tw2bY"};
 
 /***/ },
-/* 329 */,
-/* 330 */,
-/* 331 */
+/* 338 */,
+/* 339 */,
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3323,11 +3340,11 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _detail = __webpack_require__(332);
+	var _detail = __webpack_require__(341);
 
 	var _detail2 = _interopRequireDefault(_detail);
 
-	var _Modal = __webpack_require__(341);
+	var _Modal = __webpack_require__(353);
 
 	var _Modal2 = _interopRequireDefault(_Modal);
 
@@ -3430,14 +3447,24 @@ webpackJsonp([0,2],[
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _detail2.default.footer1Item },
-	                    res.likes,
-	                    '\u4EBA\u559C\u6B22'
+	                    _react2.default.createElement('div', { className: _detail2.default.footer1Like }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        res.likes,
+	                        '\u4EBA\u559C\u6B22'
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: _detail2.default.footer1Item },
-	                    res.share,
-	                    '\u4EBA\u544A\u8BC9\u670B\u53CB'
+	                    _react2.default.createElement('div', { className: _detail2.default.footer1Share }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        res.share,
+	                        '\u4EBA\u544A\u8BC9\u670B\u53CB'
+	                    )
 	                )
 	            );
 	        }
@@ -3461,7 +3488,22 @@ webpackJsonp([0,2],[
 	            return _react2.default.createElement(
 	                'div',
 	                { className: _detail2.default.footer2Box },
-	                '\u9650\u65F6\u5206\u4EAB\u5956\u52B1'
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    '\u9080\u8BF7\u597D\u53CB\u4E0B\u5355\u6210\u529F'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    '\u5373\u5F97',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { style: { color: "red" } },
+	                        ' 10 '
+	                    ),
+	                    '\u5143\u65E0\u95E8\u69DB\u7EA2\u5305\uFF01'
+	                )
 	            );
 	        }
 	    }]);
@@ -3495,17 +3537,32 @@ webpackJsonp([0,2],[
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: _detail2.default.footer3Item },
-	                        '3\u4E2A\u5DE5\u4F5C\u65E5\u53D1\u8D27'
+	                        _react2.default.createElement('div', { className: _detail2.default.footer3Delivery }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _detail2.default.footer3Desc },
+	                            '3\u4E2A\u5DE5\u4F5C\u65E5\u53D1\u8D27'
+	                        )
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: _detail2.default.footer3Item },
-	                        '\u6B63\u54C1\u4FDD\u969C'
+	                        _react2.default.createElement('div', { className: _detail2.default.footer3Ensure }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _detail2.default.footer3Desc },
+	                            '\u6B63\u54C1\u4FDD\u969C'
+	                        )
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: _detail2.default.footer3Item },
-	                        '\u65E0\u5FE7\u9000\u8D27'
+	                        _react2.default.createElement('div', { className: _detail2.default.footer3Goods }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: _detail2.default.footer3Desc },
+	                            '\u65E0\u5FE7\u9000\u8D27'
+	                        )
 	                    )
 	                )
 	            );
@@ -4156,22 +4213,25 @@ webpackJsonp([0,2],[
 	exports.default = Detail;
 
 /***/ },
-/* 332 */
+/* 341 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"detailBox":"detail__detailBox-1b6ne","detailTop":"detail__detailTop-y67pU","topHeadImg":"detail__topHeadImg-1F-dC","topMain":"detail__topMain-2ocL_","topAuthor":"detail__topAuthor-2S8CJ","topDate":"detail__topDate-3g-mq","topToAutor":"detail__topToAutor-3yV1r","detailMain":"detail__detailMain-2FgJ8","title":"detail__title-25WQY","text":"detail__text-1Itjd","coverBox":"detail__coverBox-RTVdl","coverInfo":"detail__coverInfo-2BB6d","coverTitle":"detail__coverTitle-3cczk","coverAuthor":"detail__coverAuthor-tkzrd","footer1Box":"detail__footer1Box-32sxZ","footer1Item":"detail__footer1Item-3c7MH","footer2Box":"detail__footer2Box-1I_1V","footer3Box":"detail__footer3Box-3-dOX","footer3Title":"detail__footer3Title-3SPcj","footer3Div":"detail__footer3Div-3GtmX","footer3Item":"detail__footer3Item-3UbY4","footer4Box":"detail__footer4Box-2AQQs","footer4Title":"detail__footer4Title-1T6QE","que":"detail__que-Iw08T","ans":"detail__ans-3cNDb","detailBottom":"detail__detailBottom-wwWK5","bottomLeft":"detail__bottomLeft-2hXUT","bottomRight":"detail__bottomRight-25V45","bottomItem":"detail__bottomItem-3w1Vl","back":"detail__back-Kvo7c","liked":"detail__liked-2EUmN","like":"detail__like-37XOr","share":"detail__share-2dNpf","toBuyBtn":"detail__toBuyBtn-2Ie37","shareAlert":"detail__shareAlert-2ymjP","shareInfo":"detail__shareInfo-1z-Yi","shareBox":"detail__shareBox-k9sYO","shareWay":"detail__shareWay-3xdaG","shareItem":"detail__shareItem-2zlZe","shareCancel":"detail__shareCancel-3OP78","editOrder":"detail__editOrder-1Uj4b","submitOrder":"detail__submitOrder-31zfO","orderTop":"detail__orderTop-1lt05","orderCancel":"detail__orderCancel-ElZrY","orderBack":"detail__orderBack-2GqOv","orderDetail":"detail__orderDetail-29uqs","orderTitle":"detail__orderTitle-2Vy9L","orderTips":"detail__orderTips-30Ddf","orderCover":"detail__orderCover-YfSxi","orderUnit":"detail__orderUnit-27Rlq","minusBtn":"detail__minusBtn-1nssf","addBtn":"detail__addBtn-23sIu","minusIcon":"detail__minusIcon-2Q2Pc","addIcon":"detail__addIcon-3d3v7","orderNumber":"detail__orderNumber-o004D","orderSubmitBox":"detail__orderSubmitBox-3itpo","orderSubmitBtn":"detail__orderSubmitBtn-24cat","orderRow":"detail__orderRow-2srLh","count":"detail__count-2E8dn","priceBox":"detail__priceBox-Mzi7I","priceTag":"detail__priceTag-1Yo3o","priceTip":"detail__priceTip-2FDSb","orderNotes":"detail__orderNotes-3-Pos"};
+	module.exports = {"detailBox":"detail__detailBox-1b6ne","detailTop":"detail__detailTop-y67pU","topHeadImg":"detail__topHeadImg-1F-dC","topMain":"detail__topMain-2ocL_","topAuthor":"detail__topAuthor-2S8CJ","topDate":"detail__topDate-3g-mq","topToAutor":"detail__topToAutor-3yV1r","detailMain":"detail__detailMain-2FgJ8","title":"detail__title-25WQY","text":"detail__text-1Itjd","coverBox":"detail__coverBox-RTVdl","coverInfo":"detail__coverInfo-2BB6d","coverTitle":"detail__coverTitle-3cczk","coverAuthor":"detail__coverAuthor-tkzrd","footer1Box":"detail__footer1Box-32sxZ","footer1Item":"detail__footer1Item-3c7MH","footer1Like":"detail__footer1Like-Qy-of","footer1Share":"detail__footer1Share-ysrUF","footer2Box":"detail__footer2Box-1I_1V","footer3Box":"detail__footer3Box-3-dOX","footer3Title":"detail__footer3Title-3SPcj","footer3Div":"detail__footer3Div-3GtmX","footer3Item":"detail__footer3Item-3UbY4","footer3Delivery":"detail__footer3Delivery-3S1A7","footer3Ensure":"detail__footer3Ensure-29jQN","footer3Goods":"detail__footer3Goods-2aapX","footer3Desc":"detail__footer3Desc-2fXRa","footer4Box":"detail__footer4Box-2AQQs","footer4Title":"detail__footer4Title-1T6QE","que":"detail__que-Iw08T","ans":"detail__ans-3cNDb","detailBottom":"detail__detailBottom-wwWK5","bottomLeft":"detail__bottomLeft-2hXUT","bottomRight":"detail__bottomRight-25V45","bottomItem":"detail__bottomItem-3w1Vl","back":"detail__back-Kvo7c","liked":"detail__liked-2EUmN","like":"detail__like-37XOr","share":"detail__share-2dNpf","toBuyBtn":"detail__toBuyBtn-2Ie37","shareAlert":"detail__shareAlert-2ymjP","shareInfo":"detail__shareInfo-1z-Yi","shareBox":"detail__shareBox-k9sYO","shareWay":"detail__shareWay-3xdaG","shareItem":"detail__shareItem-2zlZe","shareCancel":"detail__shareCancel-3OP78","editOrder":"detail__editOrder-1Uj4b","submitOrder":"detail__submitOrder-31zfO","orderTop":"detail__orderTop-1lt05","orderCancel":"detail__orderCancel-ElZrY","orderBack":"detail__orderBack-2GqOv","orderDetail":"detail__orderDetail-29uqs","orderTitle":"detail__orderTitle-2Vy9L","orderTips":"detail__orderTips-30Ddf","orderCover":"detail__orderCover-YfSxi","orderUnit":"detail__orderUnit-27Rlq","minusBtn":"detail__minusBtn-1nssf","addBtn":"detail__addBtn-23sIu","minusIcon":"detail__minusIcon-2Q2Pc","addIcon":"detail__addIcon-3d3v7","orderNumber":"detail__orderNumber-o004D","orderSubmitBox":"detail__orderSubmitBox-3itpo","orderSubmitBtn":"detail__orderSubmitBtn-24cat","orderRow":"detail__orderRow-2srLh","count":"detail__count-2E8dn","priceBox":"detail__priceBox-Mzi7I","priceTag":"detail__priceTag-1Yo3o","priceTip":"detail__priceTip-2FDSb","orderNotes":"detail__orderNotes-3-Pos"};
 
 /***/ },
-/* 333 */,
-/* 334 */,
-/* 335 */,
-/* 336 */,
-/* 337 */,
-/* 338 */,
-/* 339 */,
-/* 340 */,
-/* 341 */
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4190,7 +4250,7 @@ webpackJsonp([0,2],[
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _modal = __webpack_require__(342);
+	var _modal = __webpack_require__(354);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
@@ -4259,15 +4319,15 @@ webpackJsonp([0,2],[
 	exports.default = Modal;
 
 /***/ },
-/* 342 */
+/* 354 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"container":"modal__container-EMNoX"};
 
 /***/ },
-/* 343 */,
-/* 344 */
+/* 355 */,
+/* 356 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4284,15 +4344,15 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _Item = __webpack_require__(325);
+	var _Item = __webpack_require__(334);
 
 	var _Item2 = _interopRequireDefault(_Item);
 
-	var _TopFixed = __webpack_require__(303);
+	var _TopFixed = __webpack_require__(307);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
-	var _ranking = __webpack_require__(345);
+	var _ranking = __webpack_require__(357);
 
 	var _ranking2 = _interopRequireDefault(_ranking);
 
@@ -4383,15 +4443,15 @@ webpackJsonp([0,2],[
 	exports.default = Ranking;
 
 /***/ },
-/* 345 */
+/* 357 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"ranking":"ranking__ranking-3AuN8","rankingList":"ranking__rankingList-2qjCZ"};
 
 /***/ },
-/* 346 */,
-/* 347 */
+/* 358 */,
+/* 359 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4408,7 +4468,7 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(303);
+	var _TopFixed = __webpack_require__(307);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
@@ -4416,11 +4476,11 @@ webpackJsonp([0,2],[
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _buyers = __webpack_require__(348);
+	var _buyers = __webpack_require__(360);
 
 	var _buyers2 = _interopRequireDefault(_buyers);
 
-	var _buyersData = __webpack_require__(312);
+	var _buyersData = __webpack_require__(316);
 
 	var _buyersData2 = _interopRequireDefault(_buyersData);
 
@@ -4561,15 +4621,15 @@ webpackJsonp([0,2],[
 	exports.default = Buyers;
 
 /***/ },
-/* 348 */
+/* 360 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"buyersList":"buyers__buyersList-3bONT","buyerItem":"buyers__buyerItem-6UuY8","buyerImg":"buyers__buyerImg-1bp6B","buyerInfo":"buyers__buyerInfo-3Y6Uj","name":"buyers__name-TagUH","desc":"buyers__desc-wqAa8","label":"buyers__label-2xzbG","followers":"buyers__followers-2QytB","followBtnBox":"buyers__followBtnBox-2YpUz"};
 
 /***/ },
-/* 349 */,
-/* 350 */
+/* 361 */,
+/* 362 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4586,7 +4646,7 @@ webpackJsonp([0,2],[
 
 	var _reactRouter = __webpack_require__(178);
 
-	var _TopFixed = __webpack_require__(303);
+	var _TopFixed = __webpack_require__(307);
 
 	var _TopFixed2 = _interopRequireDefault(_TopFixed);
 
@@ -4594,11 +4654,11 @@ webpackJsonp([0,2],[
 
 	var _FollowBtn2 = _interopRequireDefault(_FollowBtn);
 
-	var _buyer = __webpack_require__(351);
+	var _buyer = __webpack_require__(363);
 
 	var _buyer2 = _interopRequireDefault(_buyer);
 
-	var _buyersData = __webpack_require__(312);
+	var _buyersData = __webpack_require__(316);
 
 	var _buyersData2 = _interopRequireDefault(_buyersData);
 
@@ -4912,7 +4972,7 @@ webpackJsonp([0,2],[
 	exports.default = Buyer;
 
 /***/ },
-/* 351 */
+/* 363 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
